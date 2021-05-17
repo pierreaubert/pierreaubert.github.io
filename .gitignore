@@ -3,4 +3,6 @@ venv
 *~
 *#
 .DS_Store
+*.lock
+_site
 
