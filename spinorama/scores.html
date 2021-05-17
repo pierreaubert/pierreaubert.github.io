@@ -1,0 +1,7792 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>A collection of loudspeakers measurements</title>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@5.2.1/dist/fuse.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css" integrity="sha256-O8SsQwDg1R10WnKJNyYgd9J3rlom+YSVcGbEF5RmfFk=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css" integrity="sha256-0fuNgzfNIlaClbDtmYyFxY8LTNCDrwsNshywr4AALy0=" crossorigin="anonymous">
+
+  <script src="https://pierreaubert.github.io/spinorama/assets/search.js"></script>
+  <script src="https://pierreaubert.github.io/spinorama/assets/bulma.js"></script> 
+  <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://pierreaubert.github.io/spinorama/assets/spinorama.css" />
+  <link rel="icon" type="image/png" href="https://pierreaubert.github.io/spinorama/assets/favicon-16x16.png" sizes="16x16" />
+
+      <script src="https://pierreaubert.github.io/spinorama/assets/zip.min.js"></script> 
+  <script src="https://pierreaubert.github.io/spinorama/assets/downloadzip.js"></script> 
+  <script src="https://pierreaubert.github.io/spinorama/assets/graph.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.19.1/build/vega.min.js" integrity="sha256-Vxb/KfYgO7QxLQ0lxJZXp4l4Bteqb/h2xKNcXUATo54=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.8/build/vega-lite.min.js" integrity="sha256-PNBC7gvpPY3H7JLnL4DQyK94U3fQ5khIkjIi+fEdVA0=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.15.1/build/vega-embed.min.js" integrity="sha256-jh8y6xR1MbFZrrqorptR4//Fqgf2R5gPY7IySDMLxTE=" crossorigin="anonymous"></script>
+
+  </head>
+<body>
+
+
+
+
+<nav class="navbar is-transparent">
+  <div class="navbar-brand">
+    <a class="navbar-item title" href="https://pierreaubert.github.io/spinorama">Spinorama</a>
+    <div class="navbar-burger" data-target="navbarMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <div id="navbarMenu" class="navbar-menu">
+    <div class="navbar-end">
+      <a class="navbar-item" href="https://pierreaubert.github.io/spinorama/index.html">Search</a>
+      <a class="navbar-item" href="https://pierreaubert.github.io/spinorama/eqs.html">EQs</a>
+      <a class="navbar-item" href="https://pierreaubert.github.io/spinorama/compare.html">Compare</a>
+      <a class="navbar-item" href="https://pierreaubert.github.io/spinorama/scores.html">Scores</a>
+      <a class="navbar-item" href="https://pierreaubert.github.io/spinorama/statistics.html">Statistics</a>
+      <a class="navbar-item" href="https://pierreaubert.github.io/spinorama/help.html">Help</a>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+<div class="section">
+  <div class="table-container">
+    <table class="table is-striped">
+      <thead>
+	<tr>
+	  <th>Speaker</th>
+	  <th>Origin</th>
+	  <th colspan="3" class="has-text-right">Standard Measurements</th>
+	  <th colspan="6" class="has-text-right">Preference Scores from Harman</th>
+	  <th colspan="2" class="has-text-right">Scores (modified)</th>
+	</tr>
+	<tr>
+	  <th></th>
+	  <th></th>
+
+	  <th>
+	    <abbr title="Low Freq -3dB">-3dB (Hz)</abbr>
+	    <span class="has-tooltip-info has-tooltip-multiline" data-tooltip="-3dB w.r.t reference (mean over freq between 400Hz and 10kHz)">(def)</span>
+	  </th>
+	  <th>
+	    <abbr title="Low Freq -6dB">-6dB (Hz)</abbr>
+	    <span class="has-tooltip-info has-tooltip-multiline" data-tooltip="-6dB w.r.t reference (mean over freq between 400Hz and 10kHz)">(def)</span>
+	  </th>
+	  <th>
+	    <abbr title="Deviation (dB)">Dev (dB)</abbr>
+	    <span class="has-tooltip-info has-tooltip-multiline" data-tooltip="+/- w.r.t reference (mean over freq between 400Hz and 10kHz)">(def)</span>
+	  </th>
+
+	  <th>
+	    <abbr title="Low Freq Ext">LFX (Hz)</abbr>
+	  </th>
+	  <th>
+	    <abbr title="Low Freq Quality">LFQ</abbr>
+	  </th>
+	  <th>
+	    <abbr title="Narrow Bandwidth On Axis">NBD ON</abbr>
+	  </th>
+	  <th>
+	    <abbr title="Narrow Bandwidth In Room">NBD PIR</abbr>
+	  </th>
+	  <th>
+	    <abbr title="Smoothness In Room">SM PIR</abbr>
+	  </th>
+	  <th>
+	    <abbr title="Preference Score">Score</abbr>
+	    <span class="has-tooltip-info has-tooltip-multiline" data-tooltip="Preference Score as defined by Harmann. See reference papers in help section">(def)</span>
+	  </th>
+	  
+	  <th>
+	    <abbr title="Preference Score with EQ">Score w/EQ</abbr>
+	    <span class="has-tooltip-info has-tooltip-multiline" data-tooltip="Preference Score with a simple parametric EQ">(def)</span>
+	  </th>
+	  <th>
+	    <abbr title="Preference Score with Subwoofer">Score w/Sub</abbr>
+	    <span class="has-tooltip-info has-tooltip-multiline" data-tooltip="Preference Score with a subwoofer">(def)</span>
+	  </th>
+	</tr>
+      </thead>
+
+            <tr id="Infinity-IL60">
+	      <td>Infinity IL60</td>
+	      
+<td>
+  <a href="Infinity%20IL60/Infinity/index_vendor.html">vendor</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;1.9</td>
+<td>20</td>
+<td>1.95</td>
+<td>0.24</td>    
+<td>0.19</td>
+<td>0.94</td>
+<th>8.1</th>
+<th>
+  8.2
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Infinity%20IL60/iir-autoeq.txt">(eq)</a>
+</th>
+<th>8.7</th>
+
+            </tr>
+
+            <tr id="KEF-Reference-5">
+	      <td>KEF Reference 5</td>
+	      
+<td>
+  <a href="KEF%20Reference%205/KEF/index_vendor.html">vendor</a>
+</td>
+<td>30.0</td>
+<td>27.0</td>
+<td>&plusmn;3.6</td>
+<td>23</td>
+<td>1.91</td>
+<td>0.34</td>    
+<td>0.22</td>
+<td>0.99</td>
+<th>7.6</th>
+<th>
+  7.9
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/KEF%20Reference%205/iir-autoeq.txt">(eq)</a>
+</th>
+<th>8.5</th>
+
+            </tr>
+
+            <tr id="Mesanovic-RTM10">
+	      <td>Mesanovic RTM10</td>
+	      
+<td>
+  <a href="Mesanovic%20RTM10/Mesanovic/index_vendor.html">vendor</a>
+</td>
+<td>28.0</td>
+<td>24.0</td>
+<td>&plusmn;0.8</td>
+<td>23</td>
+<td>1.02</td>
+<td>0.21</td>    
+<td>0.22</td>
+<td>0.88</td>
+<th>7.6</th>
+<th>
+  8.1
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Mesanovic%20RTM10/iir-autoeq.txt">(eq)</a>
+</th>
+<th>8.5</th>
+
+            </tr>
+
+            <tr id="Dutch-Dutch-8C">
+	      <td>Dutch Dutch 8C</td>
+	      
+<td>
+  <a href="Dutch%20Dutch%208C/ErinsAudioCorner/index_eac.html">eac</a>
+</td>
+<td>22.0</td>
+<td>21.0</td>
+<td>&plusmn;1.7</td>
+<td>20</td>
+<td>2.94</td>
+<td>0.28</td>    
+<td>0.25</td>
+<td>0.77</td>
+<th>7.4</th>
+<th>
+  8.1
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Dutch%20Dutch%208C/iir-autoeq.txt">(eq)</a>
+</th>
+<th>8.0</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="Dutch%20Dutch%208C/Misc/index_misc-napilopez.html">misc-napilopez</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;1.5</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Infinity-Prelude-MTS">
+	      <td>Infinity Prelude MTS</td>
+	      
+<td>
+  <a href="Infinity%20Prelude%20MTS/Infinity/index_vendor.html">vendor</a>
+</td>
+<td>26.0</td>
+<td>21.0</td>
+<td>&plusmn;1.8</td>
+<td>20</td>
+<td>1.48</td>
+<td>0.29</td>    
+<td>0.28</td>
+<td>0.85</td>
+<th>7.4</th>
+<th>
+  8.1
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Infinity%20Prelude%20MTS/iir-autoeq.txt">(eq)</a>
+</th>
+<th>8.1</th>
+
+            </tr>
+
+            <tr id="Revel-Ultima-Studio">
+	      <td>Revel Ultima Studio</td>
+	      
+<td>
+  <a href="Revel%20Ultima%20Studio/Revel/index_vendor.html">vendor</a>
+</td>
+<td>49.0</td>
+<td>36.0</td>
+<td>&plusmn;5.8</td>
+<td>23</td>
+<td>1.51</td>
+<td>0.3</td>    
+<td>0.22</td>
+<td>0.83</td>
+<th>7.3</th>
+<th>
+  7.6
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20Ultima%20Studio/iir-autoeq.txt">(eq)</a>
+</th>
+<th>8.2</th>
+
+            </tr>
+
+            <tr id="Infinity-Intermezzo-4-1t">
+	      <td>Infinity Intermezzo 4.1t</td>
+	      
+<td>
+  <a href="Infinity%20Intermezzo%204.1t/Infinity/index_vendor.html">vendor</a>
+</td>
+<td>23.0</td>
+<td></td>
+<td>&plusmn;1.5</td>
+<td>20</td>
+<td>0.9</td>
+<td>0.29</td>    
+<td>0.28</td>
+<td>0.74</td>
+<th>7.2</th>
+<th>
+  7.7
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Infinity%20Intermezzo%204.1t/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.8</th>
+
+            </tr>
+
+            <tr id="JBL-M2">
+	      <td>JBL M2</td>
+	      
+<td>
+  <a href="JBL%20M2/JBL/index_vendor.html">vendor</a>
+</td>
+<td>30.0</td>
+<td>24.0</td>
+<td>&plusmn;1.7</td>
+<td>27</td>
+<td>2.52</td>
+<td>0.23</td>    
+<td>0.17</td>
+<td>0.74</td>
+<th>7.2</th>
+<th>
+  7.8
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20M2/iir-autoeq.txt">(eq)</a>
+</th>
+<th>8.3</th>
+
+            </tr>
+
+            <tr id="GGNTKT-M1">
+	      <td>GGNTKT M1</td>
+	      
+<td>
+  <a href="GGNTKT%20M1/GGNTKT/index_vendor-v2-202009-monopole.html">vendor-v2-202009-monopole</a>
+</td>
+<td>33.0</td>
+<td>31.0</td>
+<td>&plusmn;1.9</td>
+<td>29</td>
+<td>0.86</td>
+<td>0.23</td>    
+<td>0.27</td>
+<td>0.9</td>
+<th>7.1</th>
+<th>
+  7.3
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/GGNTKT%20M1/iir-autoeq.txt">(eq)</a>
+</th>
+<th>8.4</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="GGNTKT%20M1/GGNTKT/index_vendor-v1-202008.html">vendor-v1-202008</a>
+</td>
+<td>49.0</td>
+<td>45.0</td>
+<td>&plusmn;1.3</td>
+<td>44</td>
+<td>0.59</td>
+<td>0.26</td>    
+<td>0.24</td>
+<td>0.71</td>
+<th>5.9</th>
+<th>
+</th>
+<th>8.0</th>
+
+            </tr>
+
+            <tr id="Revel-Ultima-Salon">
+	      <td>Revel Ultima Salon</td>
+	      
+<td>
+  <a href="Revel%20Ultima%20Salon/Revel/index_vendor.html">vendor</a>
+</td>
+<td>49.0</td>
+<td>33.0</td>
+<td>&plusmn;4.2</td>
+<td>22</td>
+<td>1.56</td>
+<td>0.33</td>    
+<td>0.23</td>
+<td>0.75</td>
+<th>7.1</th>
+<th>
+  7.2
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20Ultima%20Salon/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.9</th>
+
+            </tr>
+
+            <tr id="Genelec-8351B">
+	      <td>Genelec 8351B</td>
+	      
+<td>
+  <a href="Genelec%208351B/ASR/index_asr-vertical.html">asr-vertical</a>
+</td>
+<td>34.0</td>
+<td>31.0</td>
+<td>&plusmn;2.0</td>
+<td>29</td>
+<td>0.95</td>
+<td>0.32</td>    
+<td>0.24</td>
+<td>0.93</td>
+<th>7.0</th>
+<th>
+  7.5
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Genelec%208351B/iir-autoeq.txt">(eq)</a>
+</th>
+<th>8.3</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="Genelec%208351B/ASR/index_asr-horizontal.html">asr-horizontal</a>
+</td>
+<td>34.0</td>
+<td>31.0</td>
+<td>&plusmn;2.0</td>
+<td>29</td>
+<td>0.89</td>
+<td>0.32</td>    
+<td>0.22</td>
+<td>0.94</td>
+<th>7.1</th>
+<th>
+</th>
+<th>8.4</th>
+
+            </tr>
+
+            <tr id="Genelec-8341A">
+	      <td>Genelec 8341A</td>
+	      
+<td>
+  <a href="Genelec%208341A/ASR/index_asr-vertical.html">asr-vertical</a>
+</td>
+<td>44.0</td>
+<td>39.0</td>
+<td>&plusmn;1.4</td>
+<td>35</td>
+<td>0.86</td>
+<td>0.29</td>    
+<td>0.21</td>
+<td>0.95</td>
+<th>6.8</th>
+<th>
+  7.5
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Genelec%208341A/iir-autoeq.txt">(eq)</a>
+</th>
+<th>8.5</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="Genelec%208341A/ASR/index_asr-horizontal.html">asr-horizontal</a>
+</td>
+<td>44.0</td>
+<td>39.0</td>
+<td>&plusmn;1.4</td>
+<td>35</td>
+<td>0.83</td>
+<td>0.29</td>    
+<td>0.21</td>
+<td>0.95</td>
+<th>6.8</th>
+<th>
+</th>
+<th>8.5</th>
+
+            </tr>
+
+            <tr id="Genelec-1032A">
+	      <td>Genelec 1032A</td>
+	      
+<td>
+  <a href="Genelec%201032A/Misc/index_misc-tomvg.html">misc-tomvg</a>
+</td>
+<td>35.0</td>
+<td>33.0</td>
+<td>&plusmn;2.1</td>
+<td>32</td>
+<td>2.01</td>
+<td>0.29</td>    
+<td>0.23</td>
+<td>0.82</td>
+<th>6.7</th>
+<th>
+  7.3
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Genelec%201032A/iir-autoeq.txt">(eq)</a>
+</th>
+<th>8.2</th>
+
+            </tr>
+
+            <tr id="Neumann-KH-120A">
+	      <td>Neumann KH 120A</td>
+	      
+<td>
+  <a href="Neumann%20KH%20120A/Neumann/index_vendor.html">vendor</a>
+</td>
+<td>45.0</td>
+<td>42.0</td>
+<td>&plusmn;1.1</td>
+<td>42</td>
+<td>0.66</td>
+<td>0.16</td>    
+<td>0.18</td>
+<td>0.86</td>
+<th>6.7</th>
+<th>
+  7.2
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Neumann%20KH%20120A/iir-autoeq.txt">(eq)</a>
+</th>
+<th>8.7</th>
+
+            </tr>
+
+            <tr id="JBL-4367">
+	      <td>JBL 4367</td>
+	      
+<td>
+  <a href="JBL%204367/JBL/index_vendor.html">vendor</a>
+</td>
+<td>38.0</td>
+<td>32.0</td>
+<td>&plusmn;1.1</td>
+<td>34</td>
+<td>2.53</td>
+<td>0.28</td>    
+<td>0.27</td>
+<td>0.88</td>
+<th>6.6</th>
+<th>
+  6.9
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%204367/iir-autoeq.txt">(eq)</a>
+</th>
+<th>8.2</th>
+
+            </tr>
+
+            <tr id="JBL-LSR6332">
+	      <td>JBL LSR6332</td>
+	      
+<td>
+  <a href="JBL%20LSR6332/JBL/index_vendor.html">vendor</a>
+</td>
+<td>53.0</td>
+<td>42.0</td>
+<td>&plusmn;0.9</td>
+<td>39</td>
+<td>1.42</td>
+<td>0.2</td>    
+<td>0.24</td>
+<td>0.86</td>
+<th>6.6</th>
+<th>
+  6.9
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20LSR6332/iir-autoeq.txt">(eq)</a>
+</th>
+<th>8.5</th>
+
+            </tr>
+
+            <tr id="Revel-F328be">
+	      <td>Revel F328be</td>
+	      
+<td>
+  <a href="Revel%20F328be/ASR/index_asr-v2-20210415.html">asr-v2-20210415</a>
+</td>
+<td>63.0</td>
+<td>45.0</td>
+<td>&plusmn;3.3</td>
+<td>29</td>
+<td>1.86</td>
+<td>0.44</td>    
+<td>0.29</td>
+<td>0.93</td>
+<th>6.6</th>
+<th>
+  7.0
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20F328be/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.9</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="Revel%20F328be/ASR/index_asr-v1-20201110.html">asr-v1-20201110</a>
+</td>
+<td>69.0</td>
+<td>54.0</td>
+<td>&plusmn;3.3</td>
+<td>48</td>
+<td>1.47</td>
+<td>0.44</td>    
+<td>0.29</td>
+<td>0.87</td>
+<th>5.5</th>
+<th>
+</th>
+<th>7.7</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="Revel%20F328be/Revel/index_vendor.html">vendor</a>
+</td>
+<td>55.0</td>
+<td>36.0</td>
+<td>&plusmn;2.4</td>
+<td>24</td>
+<td>2.13</td>
+<td>0.23</td>    
+<td>0.19</td>
+<td>0.89</td>
+<th>7.6</th>
+<th>
+</th>
+<th>8.6</th>
+
+            </tr>
+
+            <tr id="JBL-LSR6328P">
+	      <td>JBL LSR6328P</td>
+	      
+<td>
+  <a href="JBL%20LSR6328P/Misc/index_misc-speakerdata2034.html">misc-speakerdata2034</a>
+</td>
+<td>47.0</td>
+<td>42.0</td>
+<td>&plusmn;0.9</td>
+<td>41</td>
+<td>0.79</td>
+<td>0.21</td>    
+<td>0.27</td>
+<td>0.92</td>
+<th>6.5</th>
+<th>
+  7.0
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20LSR6328P/iir-autoeq.txt">(eq)</a>
+</th>
+<th>8.5</th>
+
+            </tr>
+
+            <tr id="KEF-R3">
+	      <td>KEF R3</td>
+	      
+<td>
+  <a href="KEF%20R3/ASR/index_asr.html">asr</a>
+</td>
+<td>67.0</td>
+<td>40.0</td>
+<td>&plusmn;1.7</td>
+<td>35</td>
+<td>0.77</td>
+<td>0.34</td>    
+<td>0.25</td>
+<td>0.91</td>
+<th>6.5</th>
+<th>
+  7.2
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/KEF%20R3/iir-autoeq.txt">(eq)</a>
+</th>
+<th>8.2</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="KEF%20R3/ErinsAudioCorner/index_eac.html">eac</a>
+</td>
+<td>75.0</td>
+<td>47.0</td>
+<td>&plusmn;2.0</td>
+<td>36</td>
+<td>0.82</td>
+<td>0.28</td>    
+<td>0.21</td>
+<td>0.86</td>
+<th>6.6</th>
+<th>
+</th>
+<th>8.3</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="KEF%20R3/KEF/index_vendor.html">vendor</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;1.2</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Revel-Ultima2-Studio2">
+	      <td>Revel Ultima2 Studio2</td>
+	      
+<td>
+  <a href="Revel%20Ultima2%20Studio2/Revel/index_vendor.html">vendor</a>
+</td>
+<td>54.0</td>
+<td>33.0</td>
+<td>&plusmn;2.1</td>
+<td>24</td>
+<td>1.16</td>
+<td>0.34</td>    
+<td>0.22</td>
+<td>0.59</td>
+<th>6.5</th>
+<th>
+  5.8
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20Ultima2%20Studio2/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.5</th>
+
+            </tr>
+
+            <tr id="Revel-F206">
+	      <td>Revel F206</td>
+	      
+<td>
+  <a href="Revel%20F206/Revel/index_vendor.html">vendor</a>
+</td>
+<td>48.0</td>
+<td>36.0</td>
+<td>&plusmn;2.5</td>
+<td>36</td>
+<td>1.6</td>
+<td>0.4</td>    
+<td>0.18</td>
+<td>0.85</td>
+<th>6.4</th>
+<th>
+  6.8
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20F206/iir-autoeq.txt">(eq)</a>
+</th>
+<th>8.1</th>
+
+            </tr>
+
+            <tr id="Revel-Ultima2-Salon2">
+	      <td>Revel Ultima2 Salon2</td>
+	      
+<td>
+  <a href="Revel%20Ultima2%20Salon2/Revel/index_harman-v2-2017.html">harman-v2-2017</a>
+</td>
+<td>52.0</td>
+<td>27.0</td>
+<td>&plusmn;2.5</td>
+<td>23</td>
+<td>1.53</td>
+<td>0.5</td>    
+<td>0.32</td>
+<td>0.81</td>
+<th>6.4</th>
+<th>
+  7.5
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20Ultima2%20Salon2/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.4</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="Revel%20Ultima2%20Salon2/Revel/index_harman-v1-2007.html">harman-v1-2007</a>
+</td>
+<td>29.0</td>
+<td>24.0</td>
+<td>&plusmn;1.9</td>
+<td>21</td>
+<td>1.88</td>
+<td>0.42</td>    
+<td>0.28</td>
+<td>0.77</td>
+<th>6.9</th>
+<th>
+</th>
+<th>7.6</th>
+
+            </tr>
+
+            <tr id="Genelec-8030C">
+	      <td>Genelec 8030C</td>
+	      
+<td>
+  <a href="Genelec%208030C/ASR/index_asr.html">asr</a>
+</td>
+<td>54.0</td>
+<td>48.0</td>
+<td>&plusmn;1.8</td>
+<td>46</td>
+<td>0.74</td>
+<td>0.23</td>    
+<td>0.24</td>
+<td>0.9</td>
+<th>6.3</th>
+<th>
+  6.9
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Genelec%208030C/iir-autoeq.txt">(eq)</a>
+</th>
+<th>8.5</th>
+
+            </tr>
+
+            <tr id="Genelec-8050B">
+	      <td>Genelec 8050B</td>
+	      
+<td>
+  <a href="Genelec%208050B/ASR/index_asr.html">asr</a>
+</td>
+<td>34.0</td>
+<td>31.0</td>
+<td>&plusmn;2.6</td>
+<td>27</td>
+<td>0.84</td>
+<td>0.41</td>    
+<td>0.31</td>
+<td>0.75</td>
+<th>6.3</th>
+<th>
+  7.5
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Genelec%208050B/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.5</th>
+
+            </tr>
+
+            <tr id="Infinity-Primus-360">
+	      <td>Infinity Primus 360</td>
+	      
+<td>
+  <a href="Infinity%20Primus%20360/Infinity/index_vendor.html">vendor</a>
+</td>
+<td>51.0</td>
+<td>37.0</td>
+<td>&plusmn;1.9</td>
+<td>37</td>
+<td>1.25</td>
+<td>0.36</td>    
+<td>0.28</td>
+<td>0.89</td>
+<th>6.2</th>
+<th>
+  6.8
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Infinity%20Primus%20360/iir-autoeq.txt">(eq)</a>
+</th>
+<th>8.0</th>
+
+            </tr>
+
+            <tr id="JBL-LSR708i">
+	      <td>JBL LSR708i</td>
+	      
+<td>
+  <a href="JBL%20LSR708i/Misc/index_misc-speakerdata2034.html">misc-speakerdata2034</a>
+</td>
+<td>41.0</td>
+<td>38.0</td>
+<td>&plusmn;2.5</td>
+<td>37</td>
+<td>1.26</td>
+<td>0.31</td>    
+<td>0.29</td>
+<td>0.82</td>
+<th>6.2</th>
+<th>
+  7.0
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20LSR708i/iir-autoeq.txt">(eq)</a>
+</th>
+<th>8.0</th>
+
+            </tr>
+
+            <tr id="Neumann-KH-80">
+	      <td>Neumann KH 80</td>
+	      
+<td>
+  <a href="Neumann%20KH%2080/ASR/index_asr-v3-20200711.html">asr-v3-20200711</a>
+</td>
+<td>56.0</td>
+<td>51.0</td>
+<td>&plusmn;1.4</td>
+<td>48</td>
+<td>0.53</td>
+<td>0.25</td>    
+<td>0.23</td>
+<td>0.89</td>
+<th>6.2</th>
+<th>
+  6.7
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Neumann%20KH%2080/iir-autoeq.txt">(eq)</a>
+</th>
+<th>8.4</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="Neumann%20KH%2080/ASR/index_asr-v2-20200208.html">asr-v2-20200208</a>
+</td>
+<td>59.0</td>
+<td>53.0</td>
+<td>&plusmn;2.0</td>
+<td>52</td>
+<td>0.32</td>
+<td>0.33</td>    
+<td>0.31</td>
+<td>0.81</td>
+<th>5.4</th>
+<th>
+</th>
+<th>7.8</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="Neumann%20KH%2080/Misc/index_misc-napilopez.html">misc-napilopez</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;1.3</td>
+<td>161</td>
+<td>0.85</td>
+<td>0.29</td>    
+<td>0.26</td>
+<td>0.85</td>
+<th>3.6</th>
+<th>
+</th>
+<th>8.1</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="Neumann%20KH%2080/Neumann/index_vendor.html">vendor</a>
+</td>
+<td>56.0</td>
+<td>51.0</td>
+<td>&plusmn;1.0</td>
+<td>51</td>
+<td>0.61</td>
+<td>0.17</td>    
+<td>0.17</td>
+<td>0.93</td>
+<th>6.5</th>
+<th>
+</th>
+<th>8.9</th>
+
+            </tr>
+
+            <tr id="Neumann-KH-310A">
+	      <td>Neumann KH 310A</td>
+	      
+<td>
+  <a href="Neumann%20KH%20310A/ASR/index_asr.html">asr</a>
+</td>
+<td>34.0</td>
+<td>31.0</td>
+<td>&plusmn;2.2</td>
+<td>30</td>
+<td>0.96</td>
+<td>0.37</td>    
+<td>0.33</td>
+<td>0.79</td>
+<th>6.2</th>
+<th>
+  7.3
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Neumann%20KH%20310A/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.6</th>
+
+            </tr>
+
+            <tr id="Revel-F228Be">
+	      <td>Revel F228Be</td>
+	      
+<td>
+  <a href="Revel%20F228Be/Revel/index_vendor.html">vendor</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;1.9</td>
+<td>46</td>
+<td>1.36</td>
+<td>0.26</td>    
+<td>0.22</td>
+<td>0.85</td>
+<th>6.2</th>
+<th>
+  6.6
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20F228Be/iir-autoeq.txt">(eq)</a>
+</th>
+<th>8.4</th>
+
+            </tr>
+
+            <tr id="Revel-C426Be">
+	      <td>Revel C426Be</td>
+	      
+<td>
+  <a href="Revel%20C426Be/Revel/index_vendor.html">vendor</a>
+</td>
+<td>56.0</td>
+<td>48.0</td>
+<td>&plusmn;3.1</td>
+<td>36</td>
+<td>2.19</td>
+<td>0.37</td>    
+<td>0.27</td>
+<td>0.83</td>
+<th>6.1</th>
+<th>
+  6.7
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20C426Be/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.9</th>
+
+            </tr>
+
+            <tr id="Revel-F208">
+	      <td>Revel F208</td>
+	      
+<td>
+  <a href="Revel%20F208/ASR/index_asr.html">asr</a>
+</td>
+<td>56.0</td>
+<td>44.0</td>
+<td>&plusmn;2.0</td>
+<td>43</td>
+<td>1.05</td>
+<td>0.33</td>    
+<td>0.26</td>
+<td>0.91</td>
+<th>6.1</th>
+<th>
+  6.8
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20F208/iir-autoeq.txt">(eq)</a>
+</th>
+<th>8.2</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="Revel%20F208/Revel/index_vendor.html">vendor</a>
+</td>
+<td>34.0</td>
+<td>27.0</td>
+<td>&plusmn;1.3</td>
+<td>26</td>
+<td>1.73</td>
+<td>0.19</td>    
+<td>0.17</td>
+<td>0.93</td>
+<th>7.7</th>
+<th>
+</th>
+<th>8.9</th>
+
+            </tr>
+
+            <tr id="Infinity-R263">
+	      <td>Infinity R263</td>
+	      
+<td>
+  <a href="Infinity%20R263/Infinity/index_vendor.html">vendor</a>
+</td>
+<td>50.0</td>
+<td>38.0</td>
+<td>&plusmn;2.3</td>
+<td>32</td>
+<td>1.23</td>
+<td>0.36</td>    
+<td>0.24</td>
+<td>0.65</td>
+<th>6.0</th>
+<th>
+  6.7
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Infinity%20R263/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.6</th>
+
+            </tr>
+
+            <tr id="JBL-LSR305">
+	      <td>JBL LSR305</td>
+	      
+<td>
+  <a href="JBL%20LSR305/Misc/index_misc-speakerdata2034.html">misc-speakerdata2034</a>
+</td>
+<td>51.0</td>
+<td>48.0</td>
+<td>&plusmn;1.3</td>
+<td>45</td>
+<td>0.74</td>
+<td>0.27</td>    
+<td>0.2</td>
+<td>0.76</td>
+<th>6.0</th>
+<th>
+  6.5
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20LSR305/iir-autoeq.txt">(eq)</a>
+</th>
+<th>8.2</th>
+
+            </tr>
+
+            <tr id="JBL-705i">
+	      <td>JBL 705i</td>
+	      
+<td>
+  <a href="JBL%20705i/JBL/index_vendor.html">vendor</a>
+</td>
+<td>45.0</td>
+<td>41.0</td>
+<td>&plusmn;4.1</td>
+<td>41</td>
+<td>0.75</td>
+<td>0.3</td>    
+<td>0.27</td>
+<td>0.8</td>
+<th>6.0</th>
+<th>
+  6.7
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20705i/iir-autoeq.txt">(eq)</a>
+</th>
+<th>8.0</th>
+
+            </tr>
+
+            <tr id="JBL-HDI-3800">
+	      <td>JBL HDI-3800</td>
+	      
+<td>
+  <a href="JBL%20HDI-3800/ErinsAudioCorner/index_eac-v2-20210416.html">eac-v2-20210416</a>
+</td>
+<td>42.0</td>
+<td>35.0</td>
+<td>&plusmn;3.0</td>
+<td>29</td>
+<td>1.41</td>
+<td>0.49</td>    
+<td>0.39</td>
+<td>0.86</td>
+<th>6.0</th>
+<th>
+  6.5
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20HDI-3800/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.3</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="JBL%20HDI-3800/ErinsAudioCorner/index_eac-v1-20210323.html">eac-v1-20210323</a>
+</td>
+<td>48.0</td>
+<td>42.0</td>
+<td>&plusmn;3.2</td>
+<td>41</td>
+<td>1.12</td>
+<td>0.51</td>    
+<td>0.42</td>
+<td>0.83</td>
+<th>5.1</th>
+<th>
+</th>
+<th>7.1</th>
+
+            </tr>
+
+            <tr id="JBL-Studio-Series-S26">
+	      <td>JBL Studio Series S26</td>
+	      
+<td>
+  <a href="JBL%20Studio%20Series%20S26/JBL/index_vendor.html">vendor</a>
+</td>
+<td>51.0</td>
+<td>42.0</td>
+<td>&plusmn;3.2</td>
+<td>42</td>
+<td>1.16</td>
+<td>0.31</td>    
+<td>0.29</td>
+<td>0.84</td>
+<th>6.0</th>
+<th>
+  6.5
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20Studio%20Series%20S26/iir-autoeq.txt">(eq)</a>
+</th>
+<th>8.0</th>
+
+            </tr>
+
+            <tr id="KEF-LS50-Meta">
+	      <td>KEF LS50 Meta</td>
+	      
+<td>
+  <a href="KEF%20LS50%20Meta/Misc/index_misc-napilopez.html">misc-napilopez</a>
+</td>
+<td>76.0</td>
+<td>51.0</td>
+<td>&plusmn;2.1</td>
+<td>47</td>
+<td>1.06</td>
+<td>0.28</td>    
+<td>0.23</td>
+<td>0.85</td>
+<th>6.0</th>
+<th>
+  6.7
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/KEF%20LS50%20Meta/iir-autoeq.txt">(eq)</a>
+</th>
+<th>8.3</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="KEF%20LS50%20Meta/Misc/index_misc-speakerdata2034.html">misc-speakerdata2034</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;3.3</td>
+<td>148</td>
+<td>1.48</td>
+<td>0.34</td>    
+<td>0.3</td>
+<td>0.88</td>
+<th>3.6</th>
+<th>
+</th>
+<th>8.0</th>
+
+            </tr>
+
+            <tr id="Revel-F226be">
+	      <td>Revel F226be</td>
+	      
+<td>
+  <a href="Revel%20F226be/ErinsAudioCorner/index_eac.html">eac</a>
+</td>
+<td>59.0</td>
+<td>47.0</td>
+<td>&plusmn;1.5</td>
+<td>43</td>
+<td>1.71</td>
+<td>0.27</td>    
+<td>0.22</td>
+<td>0.75</td>
+<th>6.0</th>
+<th>
+  6.8
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20F226be/iir-autoeq.txt">(eq)</a>
+</th>
+<th>8.1</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="Revel%20F226be/Revel/index_vendor.html">vendor</a>
+</td>
+<td>51.0</td>
+<td>36.0</td>
+<td>&plusmn;2.0</td>
+<td>35</td>
+<td>1.19</td>
+<td>0.24</td>    
+<td>0.19</td>
+<td>0.85</td>
+<th>6.8</th>
+<th>
+</th>
+<th>8.5</th>
+
+            </tr>
+
+            <tr id="Selah-Audio-Integrity-DIY">
+	      <td>Selah Audio Integrity DIY</td>
+	      
+<td>
+  <a href="Selah%20Audio%20Integrity%20DIY/ASR/index_asr.html">asr</a>
+</td>
+<td>42.0</td>
+<td>37.0</td>
+<td>&plusmn;2.9</td>
+<td>35</td>
+<td>0.9</td>
+<td>0.36</td>    
+<td>0.32</td>
+<td>0.77</td>
+<th>6.0</th>
+<th>
+  6.5
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Selah%20Audio%20Integrity%20DIY/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.6</th>
+
+            </tr>
+
+            <tr id="Revel-M126Be">
+	      <td>Revel M126Be</td>
+	      
+<td>
+  <a href="Revel%20M126Be/Revel/index_vendor.html">vendor</a>
+</td>
+<td>61.0</td>
+<td>54.0</td>
+<td>&plusmn;2.2</td>
+<td>47</td>
+<td>0.78</td>
+<td>0.34</td>    
+<td>0.23</td>
+<td>0.88</td>
+<th>5.9</th>
+<th>
+  6.4
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20M126Be/iir-autoeq.txt">(eq)</a>
+</th>
+<th>8.2</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="Revel%20M126Be/Misc/index_misc-audioholics.html">misc-audioholics</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;2.6</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Bowers---Wilkins-802N">
+	      <td>Bowers & Wilkins 802N</td>
+	      
+<td>
+  <a href="Bowers%20%26%20Wilkins%20802N/Bowers%20%26%20Wilkins/index_vendor.html">vendor</a>
+</td>
+<td>41.0</td>
+<td>31.0</td>
+<td>&plusmn;3.1</td>
+<td>31</td>
+<td>1.96</td>
+<td>0.3</td>    
+<td>0.36</td>
+<td>0.58</td>
+<th>5.8</th>
+<th>
+</th>
+<th>7.2</th>
+
+            </tr>
+
+            <tr id="Elac-Debut-Reference-DBR-62">
+	      <td>Elac Debut Reference DBR-62</td>
+	      
+<td>
+  <a href="Elac%20Debut%20Reference%20DBR-62/ASR/index_asr.html">asr</a>
+</td>
+<td>53.0</td>
+<td>44.0</td>
+<td>&plusmn;3.1</td>
+<td>43</td>
+<td>0.78</td>
+<td>0.38</td>    
+<td>0.31</td>
+<td>0.88</td>
+<th>5.8</th>
+<th>
+  6.8
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Elac%20Debut%20Reference%20DBR-62/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.9</th>
+
+            </tr>
+
+            <tr id="JBL-HDI-1600">
+	      <td>JBL HDI-1600</td>
+	      
+<td>
+  <a href="JBL%20HDI-1600/ASR/index_asr.html">asr</a>
+</td>
+<td>50.0</td>
+<td>41.0</td>
+<td>&plusmn;2.5</td>
+<td>38</td>
+<td>0.79</td>
+<td>0.39</td>    
+<td>0.37</td>
+<td>0.85</td>
+<th>5.8</th>
+<th>
+  6.8
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20HDI-1600/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.6</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="JBL%20HDI-1600/Misc/index_misc-napilopez.html">misc-napilopez</a>
+</td>
+<td>49.0</td>
+<td>42.0</td>
+<td>&plusmn;3.1</td>
+<td>39</td>
+<td>0.92</td>
+<td>0.36</td>    
+<td>0.35</td>
+<td>0.79</td>
+<th>5.7</th>
+<th>
+</th>
+<th>7.6</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="JBL%20HDI-1600/JBL/index_vendor.html">vendor</a>
+</td>
+<td>55.0</td>
+<td>45.0</td>
+<td>&plusmn;1.8</td>
+<td>37</td>
+<td>1.04</td>
+<td>0.23</td>    
+<td>0.29</td>
+<td>0.84</td>
+<th>6.4</th>
+<th>
+</th>
+<th>8.2</th>
+
+            </tr>
+
+            <tr id="Revel-M105">
+	      <td>Revel M105</td>
+	      
+<td>
+  <a href="Revel%20M105/ASR/index_asr.html">asr</a>
+</td>
+<td>60.0</td>
+<td>54.0</td>
+<td>&plusmn;2.3</td>
+<td>51</td>
+<td>0.61</td>
+<td>0.37</td>    
+<td>0.22</td>
+<td>0.9</td>
+<th>5.8</th>
+<th>
+  6.4
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20M105/iir-autoeq.txt">(eq)</a>
+</th>
+<th>8.2</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="Revel%20M105/Revel/index_vendor.html">vendor</a>
+</td>
+<td>58.0</td>
+<td>53.0</td>
+<td>&plusmn;1.7</td>
+<td>48</td>
+<td>0.7</td>
+<td>0.26</td>    
+<td>0.18</td>
+<td>0.88</td>
+<th>6.3</th>
+<th>
+</th>
+<th>8.5</th>
+
+            </tr>
+
+            <tr id="Revel-M106">
+	      <td>Revel M106</td>
+	      
+<td>
+  <a href="Revel%20M106/ASR/index_asr.html">asr</a>
+</td>
+<td>60.0</td>
+<td>51.0</td>
+<td>&plusmn;2.2</td>
+<td>46</td>
+<td>0.71</td>
+<td>0.39</td>    
+<td>0.28</td>
+<td>0.9</td>
+<th>5.8</th>
+<th>
+  6.5
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20M106/iir-autoeq.txt">(eq)</a>
+</th>
+<th>8.0</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="Revel%20M106/Revel/index_vendor.html">vendor</a>
+</td>
+<td>60.0</td>
+<td>53.0</td>
+<td>&plusmn;1.6</td>
+<td>47</td>
+<td>0.7</td>
+<td>0.29</td>    
+<td>0.28</td>
+<td>0.82</td>
+<th>5.8</th>
+<th>
+</th>
+<th>8.0</th>
+
+            </tr>
+
+            <tr id="Celuaris-Purify-SPK5-prototype">
+	      <td>Celuaris Purify SPK5 prototype</td>
+	      
+<td>
+  <a href="Celuaris%20Purify%20SPK5%20prototype/ASR/index_asr-v2-20210206.html">asr-v2-20210206</a>
+</td>
+<td>56.0</td>
+<td>32.0</td>
+<td>&plusmn;3.1</td>
+<td>29</td>
+<td>0.72</td>
+<td>0.58</td>    
+<td>0.4</td>
+<td>0.85</td>
+<th>5.7</th>
+<th>
+  7.0
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Celuaris%20Purify%20SPK5%20prototype/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.0</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="Celuaris%20Purify%20SPK5%20prototype/ASR/index_asr-v1-20201124.html">asr-v1-20201124</a>
+</td>
+<td>56.0</td>
+<td>45.0</td>
+<td>&plusmn;3.7</td>
+<td>45</td>
+<td>0.69</td>
+<td>0.56</td>    
+<td>0.39</td>
+<td>0.88</td>
+<th>5.0</th>
+<th>
+</th>
+<th>7.2</th>
+
+            </tr>
+
+            <tr id="Dynaudio-LYD-5">
+	      <td>Dynaudio LYD 5</td>
+	      
+<td>
+  <a href="Dynaudio%20LYD%205/ASR/index_asr.html">asr</a>
+</td>
+<td>69.0</td>
+<td>60.0</td>
+<td>&plusmn;2.0</td>
+<td>58</td>
+<td>0.51</td>
+<td>0.27</td>    
+<td>0.26</td>
+<td>0.9</td>
+<th>5.7</th>
+<th>
+  6.1
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Dynaudio%20LYD%205/iir-autoeq.txt">(eq)</a>
+</th>
+<th>8.3</th>
+
+            </tr>
+
+            <tr id="Hivi-3-1A-DIY">
+	      <td>Hivi 3.1A DIY</td>
+	      
+<td>
+  <a href="Hivi%203.1A%20DIY/ASR/index_asr.html">asr</a>
+</td>
+<td>54.0</td>
+<td>44.0</td>
+<td>&plusmn;2.6</td>
+<td>39</td>
+<td>0.76</td>
+<td>0.35</td>    
+<td>0.28</td>
+<td>0.69</td>
+<th>5.7</th>
+<th>
+  6.7
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Hivi%203.1A%20DIY/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.6</th>
+
+            </tr>
+
+            <tr id="JBL-308P-Mark-ii">
+	      <td>JBL 308P Mark ii</td>
+	      
+<td>
+  <a href="JBL%20308P%20Mark%20ii/ASR/index_asr.html">asr</a>
+</td>
+<td>41.0</td>
+<td>38.0</td>
+<td>&plusmn;2.2</td>
+<td>36</td>
+<td>0.95</td>
+<td>0.4</td>    
+<td>0.32</td>
+<td>0.71</td>
+<th>5.7</th>
+<th>
+  6.6
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20308P%20Mark%20ii/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.4</th>
+
+            </tr>
+
+            <tr id="KEF-Q350">
+	      <td>KEF Q350</td>
+	      
+<td>
+  <a href="KEF%20Q350/ASR/index_asr-vertical.html">asr-vertical</a>
+</td>
+<td>67.0</td>
+<td>41.0</td>
+<td>&plusmn;2.6</td>
+<td>38</td>
+<td>0.85</td>
+<td>0.47</td>    
+<td>0.36</td>
+<td>0.87</td>
+<th>5.7</th>
+<th>
+  6.9
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/KEF%20Q350/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.5</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="KEF%20Q350/ASR/index_asr-horizontal.html">asr-horizontal</a>
+</td>
+<td>67.0</td>
+<td>41.0</td>
+<td>&plusmn;2.6</td>
+<td>38</td>
+<td>0.85</td>
+<td>0.47</td>    
+<td>0.36</td>
+<td>0.88</td>
+<th>5.7</th>
+<th>
+</th>
+<th>7.5</th>
+
+            </tr>
+
+            <tr id="Revel-F35">
+	      <td>Revel F35</td>
+	      
+<td>
+  <a href="Revel%20F35/ASR/index_asr-v2-20210415.html">asr-v2-20210415</a>
+</td>
+<td>53.0</td>
+<td>42.0</td>
+<td>&plusmn;1.9</td>
+<td>39</td>
+<td>1.1</td>
+<td>0.42</td>    
+<td>0.33</td>
+<td>0.83</td>
+<th>5.7</th>
+<th>
+  6.5
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20F35/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.6</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="Revel%20F35/ASR/index_asr-v1-20200315.html">asr-v1-20200315</a>
+</td>
+<td>70.0</td>
+<td>59.0</td>
+<td>&plusmn;1.9</td>
+<td>56</td>
+<td>0.64</td>
+<td>0.43</td>    
+<td>0.33</td>
+<td>0.81</td>
+<th>4.9</th>
+<th>
+</th>
+<th>7.5</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="Revel%20F35/Revel/index_vendor.html">vendor</a>
+</td>
+<td>56.0</td>
+<td>46.0</td>
+<td>&plusmn;1.9</td>
+<td>44</td>
+<td>1.03</td>
+<td>0.3</td>    
+<td>0.24</td>
+<td>0.8</td>
+<th>6.0</th>
+<th>
+</th>
+<th>8.1</th>
+
+            </tr>
+
+            <tr id="Revel-F36">
+	      <td>Revel F36</td>
+	      
+<td>
+  <a href="Revel%20F36/Revel/index_vendor.html">vendor</a>
+</td>
+<td>54.0</td>
+<td>42.0</td>
+<td>&plusmn;1.9</td>
+<td>41</td>
+<td>1.42</td>
+<td>0.33</td>    
+<td>0.32</td>
+<td>0.75</td>
+<th>5.7</th>
+<th>
+  6.4
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20F36/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.6</th>
+
+            </tr>
+
+            <tr id="Revel-Ultima2-Gem2">
+	      <td>Revel Ultima2 Gem2</td>
+	      
+<td>
+  <a href="Revel%20Ultima2%20Gem2/Revel/index_vendor.html">vendor</a>
+</td>
+<td>76.0</td>
+<td>61.0</td>
+<td>&plusmn;1.2</td>
+<td>63</td>
+<td>1.26</td>
+<td>0.25</td>    
+<td>0.2</td>
+<td>0.86</td>
+<th>5.7</th>
+<th>
+  6.1
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20Ultima2%20Gem2/iir-autoeq.txt">(eq)</a>
+</th>
+<th>8.4</th>
+
+            </tr>
+
+            <tr id="SVS-Ultra-Bookshelf">
+	      <td>SVS Ultra Bookshelf</td>
+	      
+<td>
+  <a href="SVS%20Ultra%20Bookshelf/ASR/index_asr.html">asr</a>
+</td>
+<td>64.0</td>
+<td>53.0</td>
+<td>&plusmn;2.3</td>
+<td>51</td>
+<td>0.63</td>
+<td>0.39</td>    
+<td>0.24</td>
+<td>0.91</td>
+<th>5.7</th>
+<th>
+  6.1
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/SVS%20Ultra%20Bookshelf/iir-autoeq.txt">(eq)</a>
+</th>
+<th>8.1</th>
+
+            </tr>
+
+            <tr id="Buchardt-Audio-S400">
+	      <td>Buchardt Audio S400</td>
+	      
+<td>
+  <a href="Buchardt%20Audio%20S400/ASR/index_asr.html">asr</a>
+</td>
+<td>59.0</td>
+<td>47.0</td>
+<td>&plusmn;2.8</td>
+<td>43</td>
+<td>0.64</td>
+<td>0.4</td>    
+<td>0.32</td>
+<td>0.82</td>
+<th>5.6</th>
+<th>
+  6.4
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Buchardt%20Audio%20S400/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.6</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="Buchardt%20Audio%20S400/ErinsAudioCorner/index_eac.html">eac</a>
+</td>
+<td>60.0</td>
+<td>50.0</td>
+<td>&plusmn;2.3</td>
+<td>45</td>
+<td>1.04</td>
+<td>0.34</td>    
+<td>0.26</td>
+<td>0.89</td>
+<th>6.0</th>
+<th>
+</th>
+<th>8.1</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="Buchardt%20Audio%20S400/Misc/index_misc-napilopez.html">misc-napilopez</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;1.9</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="Buchardt%20Audio%20S400/Buchardt%20Audio/index_vendor.html">vendor</a>
+</td>
+<td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Elac-Uni-Fi-2-0-UB52">
+	      <td>Elac Uni-Fi 2.0 UB52</td>
+	      
+<td>
+  <a href="Elac%20Uni-Fi%202.0%20UB52/ASR/index_asr.html">asr</a>
+</td>
+<td>53.0</td>
+<td>41.0</td>
+<td>&plusmn;5.6</td>
+<td>41</td>
+<td>0.74</td>
+<td>0.45</td>    
+<td>0.3</td>
+<td>0.8</td>
+<th>5.6</th>
+<th>
+  6.5
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Elac%20Uni-Fi%202.0%20UB52/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.5</th>
+
+            </tr>
+
+            <tr id="Focal-Aria-906">
+	      <td>Focal Aria 906</td>
+	      
+<td>
+  <a href="Focal%20Aria%20906/ASR/index_asr.html">asr</a>
+</td>
+<td>59.0</td>
+<td>51.0</td>
+<td>&plusmn;2.9</td>
+<td>51</td>
+<td>0.94</td>
+<td>0.38</td>    
+<td>0.29</td>
+<td>0.89</td>
+<th>5.6</th>
+<th>
+  6.4
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Focal%20Aria%20906/iir-autoeq.txt">(eq)</a>
+</th>
+<th>8.0</th>
+
+            </tr>
+
+            <tr id="JBL-Synthesis-Array-800">
+	      <td>JBL Synthesis Array 800</td>
+	      
+<td>
+  <a href="JBL%20Synthesis%20Array%20800/Misc/index_misc-speakerdata2034.html">misc-speakerdata2034</a>
+</td>
+<td>60.0</td>
+<td>50.0</td>
+<td>&plusmn;3.6</td>
+<td>37</td>
+<td>1.27</td>
+<td>0.48</td>    
+<td>0.27</td>
+<td>0.74</td>
+<th>5.6</th>
+<th>
+  6.5
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20Synthesis%20Array%20800/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.4</th>
+
+            </tr>
+
+            <tr id="Klipsch-The-Fives">
+	      <td>Klipsch The Fives</td>
+	      
+<td>
+  <a href="Klipsch%20The%20Fives/ErinsAudioCorner/index_eac-v1-20210428.html">eac-v1-20210428</a>
+</td>
+<td>59.0</td>
+<td>51.0</td>
+<td>&plusmn;3.0</td>
+<td>48</td>
+<td>0.49</td>
+<td>0.29</td>    
+<td>0.26</td>
+<td>0.73</td>
+<th>5.6</th>
+<th>
+  6.7
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Klipsch%20The%20Fives/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.9</th>
+
+            </tr>
+
+            <tr id="Revel-C25">
+	      <td>Revel C25</td>
+	      
+<td>
+  <a href="Revel%20C25/Revel/index_vendor.html">vendor</a>
+</td>
+<td>93.0</td>
+<td>70.0</td>
+<td>&plusmn;2.9</td>
+<td>67</td>
+<td>0.89</td>
+<td>0.3</td>    
+<td>0.14</td>
+<td>0.83</td>
+<th>5.6</th>
+<th>
+  5.7
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20C25/iir-autoeq.txt">(eq)</a>
+</th>
+<th>8.5</th>
+
+            </tr>
+
+            <tr id="Revel-M16">
+	      <td>Revel M16</td>
+	      
+<td>
+  <a href="Revel%20M16/ASR/index_asr.html">asr</a>
+</td>
+<td>59.0</td>
+<td>49.0</td>
+<td>&plusmn;3.1</td>
+<td>45</td>
+<td>0.6</td>
+<td>0.43</td>    
+<td>0.33</td>
+<td>0.9</td>
+<th>5.6</th>
+<th>
+  6.4
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20M16/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.7</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="Revel%20M16/Revel/index_vendor.html">vendor</a>
+</td>
+<td>56.0</td>
+<td></td>
+<td>&plusmn;2.9</td>
+<td>55</td>
+<td>0.73</td>
+<td>0.39</td>    
+<td>0.27</td>
+<td>0.74</td>
+<th>5.1</th>
+<th>
+</th>
+<th>7.6</th>
+
+            </tr>
+
+            <tr id="Zaph-Audio-ZA5">
+	      <td>Zaph Audio ZA5</td>
+	      
+<td>
+  <a href="Zaph%20Audio%20ZA5/ASR/index_asr.html">asr</a>
+</td>
+<td>64.0</td>
+<td>44.0</td>
+<td>&plusmn;2.4</td>
+<td>43</td>
+<td>0.81</td>
+<td>0.41</td>    
+<td>0.31</td>
+<td>0.84</td>
+<th>5.6</th>
+<th>
+  6.6
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Zaph%20Audio%20ZA5/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.7</th>
+
+            </tr>
+
+            <tr id="Adam-S2V">
+	      <td>Adam S2V</td>
+	      
+<td>
+  <a href="Adam%20S2V/ASR/index_asr.html">asr</a>
+</td>
+<td>51.0</td>
+<td>44.0</td>
+<td>&plusmn;2.6</td>
+<td>43</td>
+<td>0.77</td>
+<td>0.34</td>    
+<td>0.29</td>
+<td>0.71</td>
+<th>5.5</th>
+<th>
+  6.8
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Adam%20S2V/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.6</th>
+
+            </tr>
+
+            <tr id="Genelec-G2">
+	      <td>Genelec G2</td>
+	      
+<td>
+  <a href="Genelec%20G2/Misc/index_misc-tomvg.html">misc-tomvg</a>
+</td>
+<td>54.0</td>
+<td>50.0</td>
+<td>&plusmn;2.5</td>
+<td>51</td>
+<td>1.45</td>
+<td>0.42</td>    
+<td>0.27</td>
+<td>0.87</td>
+<th>5.5</th>
+<th>
+  6.4
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Genelec%20G2/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.9</th>
+
+            </tr>
+
+            <tr id="Google-Nest-Audio">
+	      <td>Google Nest Audio</td>
+	      
+<td>
+  <a href="Google%20Nest%20Audio/Misc/index_misc-napilopez.html">misc-napilopez</a>
+</td>
+<td>48.0</td>
+<td>43.0</td>
+<td>&plusmn;6.8</td>
+<td>43</td>
+<td>0.56</td>
+<td>0.35</td>    
+<td>0.3</td>
+<td>0.71</td>
+<th>5.5</th>
+<th>
+  6.3
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Google%20Nest%20Audio/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.6</th>
+
+            </tr>
+
+            <tr id="JBL-Synthesis-SAM1HF---SAM2LF">
+	      <td>JBL Synthesis SAM1HF + SAM2LF</td>
+	      
+<td>
+  <a href="JBL%20Synthesis%20SAM1HF%20+%20SAM2LF/Misc/index_misc-speakerdata2034.html">misc-speakerdata2034</a>
+</td>
+<td>80.0</td>
+<td>66.0</td>
+<td>&plusmn;4.0</td>
+<td>64</td>
+<td>1.3</td>
+<td>0.32</td>    
+<td>0.26</td>
+<td>0.93</td>
+<th>5.5</th>
+<th>
+  5.6
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20Synthesis%20SAM1HF%20+%20SAM2LF/iir-autoeq.txt">(eq)</a>
+</th>
+<th>8.3</th>
+
+            </tr>
+
+            <tr id="Magico-A3">
+	      <td>Magico A3</td>
+	      
+<td>
+  <a href="Magico%20A3/Magico/index_vendor.html">vendor</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;3.0</td>
+<td>41</td>
+<td>1.42</td>
+<td>0.43</td>    
+<td>0.33</td>
+<td>0.8</td>
+<th>5.5</th>
+<th>
+  6.2
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Magico%20A3/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.5</th>
+
+            </tr>
+
+            <tr id="Revel-M22">
+	      <td>Revel M22</td>
+	      
+<td>
+  <a href="Revel%20M22/ASR/index_asr.html">asr</a>
+</td>
+<td>47.0</td>
+<td>41.0</td>
+<td>&plusmn;2.0</td>
+<td>38</td>
+<td>0.73</td>
+<td>0.35</td>    
+<td>0.34</td>
+<td>0.66</td>
+<th>5.5</th>
+<th>
+  7.0
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20M22/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.3</th>
+
+            </tr>
+
+            <tr id="Selah-Audio-Purezza">
+	      <td>Selah Audio Purezza</td>
+	      
+<td>
+  <a href="Selah%20Audio%20Purezza/ErinsAudioCorner/index_eac-original.html">eac-original</a>
+</td>
+<td>76.0</td>
+<td>45.0</td>
+<td>&plusmn;2.8</td>
+<td>42</td>
+<td>1.04</td>
+<td>0.33</td>    
+<td>0.26</td>
+<td>0.59</td>
+<th>5.5</th>
+<th>
+  6.1
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Selah%20Audio%20Purezza/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.5</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="Selah%20Audio%20Purezza/ErinsAudioCorner/index_eac-eq.html">eac-eq</a>
+</td>
+<td>44.0</td>
+<td>36.0</td>
+<td>&plusmn;2.1</td>
+<td>35</td>
+<td>1.03</td>
+<td>0.29</td>    
+<td>0.26</td>
+<td>0.94</td>
+<th>6.7</th>
+<th>
+</th>
+<th>8.4</th>
+
+            </tr>
+
+            <tr id="Ascend-Acoustics-Horizon-Center">
+	      <td>Ascend Acoustics Horizon Center</td>
+	      
+<td>
+  <a href="Ascend%20Acoustics%20Horizon%20Center/ASR/index_asr.html">asr</a>
+</td>
+<td>60.0</td>
+<td>48.0</td>
+<td>&plusmn;3.1</td>
+<td>46</td>
+<td>1.45</td>
+<td>0.44</td>    
+<td>0.36</td>
+<td>0.88</td>
+<th>5.4</th>
+<th>
+  6.3
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Ascend%20Acoustics%20Horizon%20Center/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.6</th>
+
+            </tr>
+
+            <tr id="GR-Research-X-LS-Encore-Kit">
+	      <td>GR Research X-LS Encore Kit</td>
+	      
+<td>
+  <a href="GR%20Research%20X-LS%20Encore%20Kit/ASR/index_asr.html">asr</a>
+</td>
+<td>60.0</td>
+<td>51.0</td>
+<td>&plusmn;2.3</td>
+<td>48</td>
+<td>0.63</td>
+<td>0.4</td>    
+<td>0.32</td>
+<td>0.84</td>
+<th>5.4</th>
+<th>
+  6.3
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/GR%20Research%20X-LS%20Encore%20Kit/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.7</th>
+
+            </tr>
+
+            <tr id="IK-Multimedia-iLoud-MTM">
+	      <td>IK Multimedia iLoud MTM</td>
+	      
+<td>
+  <a href="IK%20Multimedia%20iLoud%20MTM/ASR/index_asr.html">asr</a>
+</td>
+<td>51.0</td>
+<td>47.0</td>
+<td>&plusmn;2.4</td>
+<td>45</td>
+<td>0.32</td>
+<td>0.45</td>    
+<td>0.36</td>
+<td>0.88</td>
+<th>5.4</th>
+<th>
+  6.5
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/IK%20Multimedia%20iLoud%20MTM/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.5</th>
+
+            </tr>
+
+            <tr id="Jeff-Bagby-Mandolin-DIY">
+	      <td>Jeff Bagby Mandolin DIY</td>
+	      
+<td>
+  <a href="Jeff%20Bagby%20Mandolin%20DIY/ASR/index_asr.html">asr</a>
+</td>
+<td>53.0</td>
+<td>45.0</td>
+<td>&plusmn;2.4</td>
+<td>42</td>
+<td>0.65</td>
+<td>0.45</td>    
+<td>0.35</td>
+<td>0.8</td>
+<th>5.4</th>
+<th>
+  6.5
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Jeff%20Bagby%20Mandolin%20DIY/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.4</th>
+
+            </tr>
+
+            <tr id="JBL-Synthesis-SAM3HA">
+	      <td>JBL Synthesis SAM3HA</td>
+	      
+<td>
+  <a href="JBL%20Synthesis%20SAM3HA/Misc/index_misc-speakerdata2034.html">misc-speakerdata2034</a>
+</td>
+<td>63.0</td>
+<td>53.0</td>
+<td>&plusmn;3.1</td>
+<td>55</td>
+<td>2.0</td>
+<td>0.3</td>    
+<td>0.36</td>
+<td>0.86</td>
+<th>5.4</th>
+<th>
+  5.4
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20Synthesis%20SAM3HA/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.9</th>
+
+            </tr>
+
+            <tr id="JBL-Performance-PC600">
+	      <td>JBL Performance PC600</td>
+	      
+<td>
+  <a href="JBL%20Performance%20PC600/Misc/index_misc-speakerdata2034.html">misc-speakerdata2034</a>
+</td>
+<td>88.0</td>
+<td>70.0</td>
+<td>&plusmn;2.5</td>
+<td>63</td>
+<td>2.26</td>
+<td>0.37</td>    
+<td>0.22</td>
+<td>0.89</td>
+<th>5.4</th>
+<th>
+  5.3
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20Performance%20PC600/iir-autoeq.txt">(eq)</a>
+</th>
+<th>8.2</th>
+
+            </tr>
+
+            <tr id="JBL-Studio-530">
+	      <td>JBL Studio 530</td>
+	      
+<td>
+  <a href="JBL%20Studio%20530/ASR/index_asr.html">asr</a>
+</td>
+<td>70.0</td>
+<td>44.0</td>
+<td>&plusmn;2.8</td>
+<td>41</td>
+<td>0.59</td>
+<td>0.45</td>    
+<td>0.36</td>
+<td>0.81</td>
+<th>5.4</th>
+<th>
+  6.8
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20Studio%20530/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.4</th>
+
+            </tr>
+
+            <tr id="Kali-IN-5">
+	      <td>Kali IN-5</td>
+	      
+<td>
+  <a href="Kali%20IN-5/ErinsAudioCorner/index_eac.html">eac</a>
+</td>
+<td>44.0</td>
+<td>41.0</td>
+<td>&plusmn;3.5</td>
+<td>41</td>
+<td>0.94</td>
+<td>0.49</td>    
+<td>0.34</td>
+<td>0.79</td>
+<th>5.4</th>
+<th>
+  6.2
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Kali%20IN-5/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.3</th>
+
+            </tr>
+
+            <tr id="Infinity-R152">
+	      <td>Infinity R152</td>
+	      
+<td>
+  <a href="Infinity%20R152/Infinity/index_vendor.html">vendor</a>
+</td>
+<td>88.0</td>
+<td>60.0</td>
+<td>&plusmn;1.7</td>
+<td>52</td>
+<td>0.63</td>
+<td>0.35</td>    
+<td>0.27</td>
+<td>0.73</td>
+<th>5.3</th>
+<th>
+  6.2
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Infinity%20R152/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.7</th>
+
+            </tr>
+
+            <tr id="Infinity-RC252">
+	      <td>Infinity RC252</td>
+	      
+<td>
+  <a href="Infinity%20RC252/Infinity/index_vendor.html">vendor</a>
+</td>
+<td>86.0</td>
+<td>61.0</td>
+<td>&plusmn;2.1</td>
+<td>60</td>
+<td>1.28</td>
+<td>0.34</td>    
+<td>0.23</td>
+<td>0.81</td>
+<th>5.3</th>
+<th>
+  6.0
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Infinity%20RC252/iir-autoeq.txt">(eq)</a>
+</th>
+<th>8.0</th>
+
+            </tr>
+
+            <tr id="Infinity-Interlude-IL10">
+	      <td>Infinity Interlude IL10</td>
+	      
+<td>
+  <a href="Infinity%20Interlude%20IL10/ASR/index_asr.html">asr</a>
+</td>
+<td>60.0</td>
+<td>53.0</td>
+<td>&plusmn;3.2</td>
+<td>48</td>
+<td>0.59</td>
+<td>0.42</td>    
+<td>0.33</td>
+<td>0.82</td>
+<th>5.3</th>
+<th>
+  6.2
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Infinity%20Interlude%20IL10/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.5</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="Infinity%20Interlude%20IL10/Infinity/index_vendor.html">vendor</a>
+</td>
+<td>60.0</td>
+<td>55.0</td>
+<td>&plusmn;2.9</td>
+<td>48</td>
+<td>0.82</td>
+<td>0.35</td>    
+<td>0.31</td>
+<td>0.91</td>
+<th>5.7</th>
+<th>
+</th>
+<th>8.0</th>
+
+            </tr>
+
+            <tr id="Revel-Ultima2-Voice2">
+	      <td>Revel Ultima2 Voice2</td>
+	      
+<td>
+  <a href="Revel%20Ultima2%20Voice2/Revel/index_vendor.html">vendor</a>
+</td>
+<td>61.0</td>
+<td>43.0</td>
+<td>&plusmn;2.4</td>
+<td>51</td>
+<td>2.26</td>
+<td>0.54</td>    
+<td>0.21</td>
+<td>0.83</td>
+<th>5.3</th>
+<th>
+  5.8
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20Ultima2%20Voice2/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.6</th>
+
+            </tr>
+
+            <tr id="Dennis-Murphy-Affordable-Accuracy-Monitor">
+	      <td>Dennis Murphy Affordable Accuracy Monitor</td>
+	      
+<td>
+  <a href="Dennis%20Murphy%20Affordable%20Accuracy%20Monitor/ASR/index_asr.html">asr</a>
+</td>
+<td>69.0</td>
+<td>60.0</td>
+<td>&plusmn;2.2</td>
+<td>60</td>
+<td>0.35</td>
+<td>0.36</td>    
+<td>0.31</td>
+<td>0.85</td>
+<th>5.2</th>
+<th>
+  6.1
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Dennis%20Murphy%20Affordable%20Accuracy%20Monitor/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.8</th>
+
+            </tr>
+
+            <tr id="Infinity-Entra-One">
+	      <td>Infinity Entra One</td>
+	      
+<td>
+  <a href="Infinity%20Entra%20One/Infinity/index_vendor.html">vendor</a>
+</td>
+<td>74.0</td>
+<td>58.0</td>
+<td>&plusmn;1.5</td>
+<td>52</td>
+<td>0.85</td>
+<td>0.34</td>    
+<td>0.31</td>
+<td>0.75</td>
+<th>5.2</th>
+<th>
+  6.1
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Infinity%20Entra%20One/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.6</th>
+
+            </tr>
+
+            <tr id="JBL-Arena-120">
+	      <td>JBL Arena 120</td>
+	      
+<td>
+  <a href="JBL%20Arena%20120/Misc/index_misc-speakerdata2034.html">misc-speakerdata2034</a>
+</td>
+<td>96.0</td>
+<td>65.0</td>
+<td>&plusmn;2.7</td>
+<td>63</td>
+<td>0.78</td>
+<td>0.29</td>    
+<td>0.24</td>
+<td>0.75</td>
+<th>5.2</th>
+<th>
+  5.9
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20Arena%20120/iir-autoeq.txt">(eq)</a>
+</th>
+<th>8.0</th>
+
+            </tr>
+
+            <tr id="Klipsch-Icon-KF-26">
+	      <td>Klipsch Icon KF-26</td>
+	      
+<td>
+  <a href="Klipsch%20Icon%20KF-26/Misc/index_misc-speakerdata2034.html">misc-speakerdata2034</a>
+</td>
+<td>149.0</td>
+<td>56.0</td>
+<td>&plusmn;5.9</td>
+<td>38</td>
+<td>2.19</td>
+<td>0.49</td>    
+<td>0.37</td>
+<td>0.73</td>
+<th>5.2</th>
+<th>
+  6.7
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Klipsch%20Icon%20KF-26/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.0</th>
+
+            </tr>
+
+            <tr id="Philharmonic-BMR">
+	      <td>Philharmonic BMR</td>
+	      
+<td>
+  <a href="Philharmonic%20BMR/ErinsAudioCorner/index_eac.html">eac</a>
+</td>
+<td>79.0</td>
+<td>50.0</td>
+<td>&plusmn;2.0</td>
+<td>46</td>
+<td>1.21</td>
+<td>0.33</td>    
+<td>0.27</td>
+<td>0.55</td>
+<th>5.1</th>
+<th>
+  6.7
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Philharmonic%20BMR/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.3</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="Philharmonic%20BMR/Misc/index_misc-audioholics.html">misc-audioholics</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;1.9</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Genelec-8010A">
+	      <td>Genelec 8010A</td>
+	      
+<td>
+  <a href="Genelec%208010A/ASR/index_asr.html">asr</a>
+</td>
+<td>75.0</td>
+<td>69.0</td>
+<td>&plusmn;2.3</td>
+<td>67</td>
+<td>0.17</td>
+<td>0.38</td>    
+<td>0.32</td>
+<td>0.94</td>
+<th>5.1</th>
+<th>
+  5.8
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Genelec%208010A/iir-autoeq.txt">(eq)</a>
+</th>
+<th>8.0</th>
+
+            </tr>
+
+            <tr id="Harbeth-Monitor-30-0">
+	      <td>Harbeth Monitor 30.0</td>
+	      
+<td>
+  <a href="Harbeth%20Monitor%2030.0/ASR/index_asr.html">asr</a>
+</td>
+<td>62.0</td>
+<td>53.0</td>
+<td>&plusmn;3.8</td>
+<td>52</td>
+<td>0.97</td>
+<td>0.45</td>    
+<td>0.41</td>
+<td>0.93</td>
+<th>5.1</th>
+<th>
+  6.2
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Harbeth%20Monitor%2030.0/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.5</th>
+
+            </tr>
+
+            <tr id="JBL-Synthesis-Array-1400">
+	      <td>JBL Synthesis Array 1400</td>
+	      
+<td>
+  <a href="JBL%20Synthesis%20Array%201400/Misc/index_misc-speakerdata2034.html">misc-speakerdata2034</a>
+</td>
+<td>43.0</td>
+<td>34.0</td>
+<td>&plusmn;6.3</td>
+<td>28</td>
+<td>1.48</td>
+<td>0.67</td>    
+<td>0.39</td>
+<td>0.63</td>
+<th>5.1</th>
+<th>
+  6.2
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20Synthesis%20Array%201400/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.3</th>
+
+            </tr>
+
+            <tr id="JBL-Synthesis-K2-S9800">
+	      <td>JBL Synthesis K2 S9800</td>
+	      
+<td>
+  <a href="JBL%20Synthesis%20K2%20S9800/Misc/index_misc-speakerdata2034.html">misc-speakerdata2034</a>
+</td>
+<td>55.0</td>
+<td>48.0</td>
+<td>&plusmn;4.4</td>
+<td>35</td>
+<td>2.1</td>
+<td>0.51</td>    
+<td>0.46</td>
+<td>0.77</td>
+<th>5.1</th>
+<th>
+  5.5
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20Synthesis%20K2%20S9800/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.8</th>
+
+            </tr>
+
+            <tr id="JBL-Synthesis-K2-S9900">
+	      <td>JBL Synthesis K2 S9900</td>
+	      
+<td>
+  <a href="JBL%20Synthesis%20K2%20S9900/Misc/index_misc-speakerdata2034.html">misc-speakerdata2034</a>
+</td>
+<td>56.0</td>
+<td>43.0</td>
+<td>&plusmn;1.9</td>
+<td>41</td>
+<td>1.9</td>
+<td>0.4</td>    
+<td>0.41</td>
+<td>0.69</td>
+<th>5.1</th>
+<th>
+  6.0
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20Synthesis%20K2%20S9900/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.1</th>
+
+            </tr>
+
+            <tr id="JBL-Stage-A130">
+	      <td>JBL Stage A130</td>
+	      
+<td>
+  <a href="JBL%20Stage%20A130/ASR/index_asr.html">asr</a>
+</td>
+<td>60.0</td>
+<td>54.0</td>
+<td>&plusmn;3.9</td>
+<td>51</td>
+<td>0.58</td>
+<td>0.36</td>    
+<td>0.3</td>
+<td>0.68</td>
+<th>5.1</th>
+<th>
+  6.2
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20Stage%20A130/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.5</th>
+
+            </tr>
+
+            <tr id="JBL-306P-Mark-ii">
+	      <td>JBL 306P Mark ii</td>
+	      
+<td>
+  <a href="JBL%20306P%20Mark%20ii/ASR/index_asr.html">asr</a>
+</td>
+<td>45.0</td>
+<td>41.0</td>
+<td>&plusmn;3.5</td>
+<td>38</td>
+<td>0.76</td>
+<td>0.52</td>    
+<td>0.37</td>
+<td>0.7</td>
+<th>5.1</th>
+<th>
+  6.8
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20306P%20Mark%20ii/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.9</th>
+
+            </tr>
+
+            <tr id="JBL-L82-Classic">
+	      <td>JBL L82 Classic</td>
+	      
+<td>
+  <a href="JBL%20L82%20Classic/Misc/index_misc-napilopez.html">misc-napilopez</a>
+</td>
+<td>52.0</td>
+<td>37.0</td>
+<td>&plusmn;3.4</td>
+<td>35</td>
+<td>1.59</td>
+<td>0.48</td>    
+<td>0.36</td>
+<td>0.57</td>
+<th>5.1</th>
+<th>
+  6.6
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20L82%20Classic/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.7</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="JBL%20L82%20Classic/JBL/index_vendor.html">vendor</a>
+</td>
+<td>42.0</td>
+<td>34.0</td>
+<td>&plusmn;3.7</td>
+<td>35</td>
+<td>1.47</td>
+<td>0.43</td>    
+<td>0.29</td>
+<td>0.53</td>
+<th>5.3</th>
+<th>
+</th>
+<th>7.0</th>
+
+            </tr>
+
+            <tr id="JTR-Noesis-212rt">
+	      <td>JTR Noesis 212rt</td>
+	      
+<td>
+  <a href="JTR%20Noesis%20212rt/Misc/index_misc-avnirvana.html">misc-avnirvana</a>
+</td>
+<td>62.0</td>
+<td></td>
+<td>&plusmn;2.8</td>
+<td>55</td>
+<td>2.96</td>
+<td>0.25</td>    
+<td>0.36</td>
+<td>0.69</td>
+<th>5.1</th>
+<th>
+  5.7
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JTR%20Noesis%20212rt/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.6</th>
+
+            </tr>
+
+            <tr id="Kali-IN-8">
+	      <td>Kali IN-8</td>
+	      
+<td>
+  <a href="Kali%20IN-8/ASR/index_asr.html">asr</a>
+</td>
+<td>40.0</td>
+<td>36.0</td>
+<td>&plusmn;7.9</td>
+<td>35</td>
+<td>0.84</td>
+<td>0.72</td>    
+<td>0.39</td>
+<td>0.89</td>
+<th>5.1</th>
+<th>
+  6.4
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Kali%20IN-8/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.8</th>
+
+            </tr>
+
+            <tr id="Kali-LP-6">
+	      <td>Kali LP-6</td>
+	      
+<td>
+  <a href="Kali%20LP-6/ASR/index_asr.html">asr</a>
+</td>
+<td>42.0</td>
+<td>40.0</td>
+<td>&plusmn;2.9</td>
+<td>39</td>
+<td>0.87</td>
+<td>0.51</td>    
+<td>0.38</td>
+<td>0.75</td>
+<th>5.1</th>
+<th>
+  6.8
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Kali%20LP-6/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.0</th>
+
+            </tr>
+
+            <tr id="KEF-Q100">
+	      <td>KEF Q100</td>
+	      
+<td>
+  <a href="KEF%20Q100/ASR/index_asr.html">asr</a>
+</td>
+<td>92.0</td>
+<td>48.0</td>
+<td>&plusmn;2.4</td>
+<td>47</td>
+<td>0.66</td>
+<td>0.49</td>    
+<td>0.3</td>
+<td>0.75</td>
+<th>5.1</th>
+<th>
+  6.4
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/KEF%20Q100/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.3</th>
+
+            </tr>
+
+            <tr id="Revel-W553L">
+	      <td>Revel W553L</td>
+	      
+<td>
+  <a href="Revel%20W553L/Revel/index_vendor.html">vendor</a>
+</td>
+<td>70.0</td>
+<td>52.0</td>
+<td>&plusmn;2.1</td>
+<td>49</td>
+<td>0.09</td>
+<td>0.42</td>    
+<td>0.39</td>
+<td>0.84</td>
+<th>5.1</th>
+<th>
+  6.0
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20W553L/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.4</th>
+
+            </tr>
+
+            <tr id="Elac-Debut-2-0-B6-2">
+	      <td>Elac Debut 2.0 B6.2</td>
+	      
+<td>
+  <a href="Elac%20Debut%202.0%20B6.2/ASR/index_asr.html">asr</a>
+</td>
+<td>60.0</td>
+<td>47.0</td>
+<td>&plusmn;3.4</td>
+<td>46</td>
+<td>0.94</td>
+<td>0.46</td>    
+<td>0.38</td>
+<td>0.78</td>
+<th>5.0</th>
+<th>
+  6.4
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Elac%20Debut%202.0%20B6.2/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.2</th>
+
+            </tr>
+
+            <tr id="Elac-BS-U5-Slim">
+	      <td>Elac BS U5 Slim</td>
+	      
+<td>
+  <a href="Elac%20BS%20U5%20Slim/ASR/index_asr.html">asr</a>
+</td>
+<td>59.0</td>
+<td>45.0</td>
+<td>&plusmn;5.1</td>
+<td>42</td>
+<td>0.71</td>
+<td>0.63</td>    
+<td>0.33</td>
+<td>0.82</td>
+<th>5.0</th>
+<th>
+  6.0
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Elac%20BS%20U5%20Slim/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.0</th>
+
+            </tr>
+
+            <tr id="JBL-708P">
+	      <td>JBL 708P</td>
+	      
+<td>
+  <a href="JBL%20708P/ASR/index_asr.html">asr</a>
+</td>
+<td>42.0</td>
+<td>38.0</td>
+<td>&plusmn;3.3</td>
+<td>38</td>
+<td>1.0</td>
+<td>0.47</td>    
+<td>0.43</td>
+<td>0.67</td>
+<th>5.0</th>
+<th>
+  6.7
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20708P/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.8</th>
+
+            </tr>
+
+            <tr id="JBL-305P-Mark-ii">
+	      <td>JBL 305P Mark ii</td>
+	      
+<td>
+  <a href="JBL%20305P%20Mark%20ii/ErinsAudioCorner/index_eac.html">eac</a>
+</td>
+<td>48.0</td>
+<td>47.0</td>
+<td>&plusmn;3.1</td>
+<td>43</td>
+<td>0.54</td>
+<td>0.37</td>    
+<td>0.29</td>
+<td>0.49</td>
+<th>5.0</th>
+<th>
+  6.4
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20305P%20Mark%20ii/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.1</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="JBL%20305P%20Mark%20ii/ASR/index_asr.html">asr</a>
+</td>
+<td>47.0</td>
+<td>44.0</td>
+<td>&plusmn;3.6</td>
+<td>41</td>
+<td>0.51</td>
+<td>0.42</td>    
+<td>0.37</td>
+<td>0.48</td>
+<th>4.7</th>
+<th>
+</th>
+<th>6.6</th>
+
+            </tr>
+
+            <tr id="Verdant-Audio-Bambusa-AL-1">
+	      <td>Verdant Audio Bambusa AL 1</td>
+	      
+<td>
+  <a href="Verdant%20Audio%20Bambusa%20AL%201/ASR/index_asr.html">asr</a>
+</td>
+<td>91.0</td>
+<td>47.0</td>
+<td>&plusmn;2.9</td>
+<td>41</td>
+<td>0.61</td>
+<td>0.48</td>    
+<td>0.29</td>
+<td>0.56</td>
+<th>5.0</th>
+<th>
+  7.0
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Verdant%20Audio%20Bambusa%20AL%201/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.9</th>
+
+            </tr>
+
+            <tr id="Audio-Engine-A5--Powered">
+	      <td>Audio Engine A5+ Powered</td>
+	      
+<td>
+  <a href="Audio%20Engine%20A5+%20Powered/ASR/index_asr.html">asr</a>
+</td>
+<td>64.0</td>
+<td>56.0</td>
+<td>&plusmn;2.5</td>
+<td>52</td>
+<td>0.47</td>
+<td>0.49</td>    
+<td>0.36</td>
+<td>0.82</td>
+<th>4.9</th>
+<th>
+  5.8
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Audio%20Engine%20A5+%20Powered/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.3</th>
+
+            </tr>
+
+            <tr id="Carmody-S2000-DIY-Speaker-Kit">
+	      <td>Carmody S2000 DIY Speaker Kit</td>
+	      
+<td>
+  <a href="Carmody%20S2000%20DIY%20Speaker%20Kit/ASR/index_asr.html">asr</a>
+</td>
+<td>60.0</td>
+<td>54.0</td>
+<td>&plusmn;4.4</td>
+<td>52</td>
+<td>0.35</td>
+<td>0.51</td>    
+<td>0.41</td>
+<td>0.89</td>
+<th>4.9</th>
+<th>
+  6.0
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Carmody%20S2000%20DIY%20Speaker%20Kit/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.3</th>
+
+            </tr>
+
+            <tr id="Infinity-R253">
+	      <td>Infinity R253</td>
+	      
+<td>
+  <a href="Infinity%20R253/ASR/index_asr-v2-20201202.html">asr-v2-20201202</a>
+</td>
+<td>69.0</td>
+<td>41.0</td>
+<td>&plusmn;4.0</td>
+<td>38</td>
+<td>1.05</td>
+<td>0.42</td>    
+<td>0.28</td>
+<td>0.4</td>
+<th>4.9</th>
+<th>
+  6.4
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Infinity%20R253/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.7</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="Infinity%20R253/ASR/index_asr-v1-20201126.html">asr-v1-20201126</a>
+</td>
+<td>79.0</td>
+<td>42.0</td>
+<td>&plusmn;7.0</td>
+<td>39</td>
+<td>1.09</td>
+<td>0.52</td>    
+<td>0.39</td>
+<td>0.01</td>
+<th>3.4</th>
+<th>
+</th>
+<th>5.2</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="Infinity%20R253/Infinity/index_vendor.html">vendor</a>
+</td>
+<td>57.0</td>
+<td>45.0</td>
+<td>&plusmn;2.0</td>
+<td>37</td>
+<td>1.45</td>
+<td>0.28</td>    
+<td>0.21</td>
+<td>0.57</td>
+<th>5.9</th>
+<th>
+</th>
+<th>7.7</th>
+
+            </tr>
+
+            <tr id="Infinity-R162">
+	      <td>Infinity R162</td>
+	      
+<td>
+  <a href="Infinity%20R162/ASR/index_asr.html">asr</a>
+</td>
+<td>67.0</td>
+<td>50.0</td>
+<td>&plusmn;2.3</td>
+<td>43</td>
+<td>0.6</td>
+<td>0.4</td>    
+<td>0.36</td>
+<td>0.58</td>
+<th>4.9</th>
+<th>
+  6.4
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Infinity%20R162/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.0</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="Infinity%20R162/Infinity/index_vendor.html">vendor</a>
+</td>
+<td>61.0</td>
+<td>53.0</td>
+<td>&plusmn;2.1</td>
+<td>44</td>
+<td>0.92</td>
+<td>0.4</td>    
+<td>0.33</td>
+<td>0.55</td>
+<th>4.8</th>
+<th>
+</th>
+<th>6.9</th>
+
+            </tr>
+
+            <tr id="JBL-Synthesis-K2-S5800">
+	      <td>JBL Synthesis K2 S5800</td>
+	      
+<td>
+  <a href="JBL%20Synthesis%20K2%20S5800/Misc/index_misc-speakerdata2034.html">misc-speakerdata2034</a>
+</td>
+<td>58.0</td>
+<td>49.0</td>
+<td>&plusmn;4.5</td>
+<td>41</td>
+<td>2.29</td>
+<td>0.57</td>    
+<td>0.37</td>
+<td>0.73</td>
+<th>4.9</th>
+<th>
+  5.8
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20Synthesis%20K2%20S5800/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.9</th>
+
+            </tr>
+
+            <tr id="JBL-Performance-PT800">
+	      <td>JBL Performance PT800</td>
+	      
+<td>
+  <a href="JBL%20Performance%20PT800/Misc/index_misc-speakerdata2034.html">misc-speakerdata2034</a>
+</td>
+<td>97.0</td>
+<td>80.0</td>
+<td>&plusmn;2.5</td>
+<td>82</td>
+<td>1.77</td>
+<td>0.35</td>    
+<td>0.22</td>
+<td>0.84</td>
+<th>4.9</th>
+<th>
+  5.3
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20Performance%20PT800/iir-autoeq.txt">(eq)</a>
+</th>
+<th>8.1</th>
+
+            </tr>
+
+            <tr id="JBL-HDI-3600">
+	      <td>JBL HDI-3600</td>
+	      
+<td>
+  <a href="JBL%20HDI-3600/ASR/index_asr.html">asr</a>
+</td>
+<td>62.0</td>
+<td>50.0</td>
+<td>&plusmn;4.5</td>
+<td>46</td>
+<td>0.93</td>
+<td>0.48</td>    
+<td>0.43</td>
+<td>0.82</td>
+<th>4.9</th>
+<th>
+  6.6
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20HDI-3600/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.1</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="JBL%20HDI-3600/JBL/index_vendor.html">vendor</a>
+</td>
+<td>48.0</td>
+<td>37.0</td>
+<td>&plusmn;2.3</td>
+<td>34</td>
+<td>1.72</td>
+<td>0.21</td>    
+<td>0.21</td>
+<td>0.78</td>
+<th>6.7</th>
+<th>
+</th>
+<th>8.4</th>
+
+            </tr>
+
+            <tr id="Monoprice-Monolith-K-BAS">
+	      <td>Monoprice Monolith K-BAS</td>
+	      
+<td>
+  <a href="Monoprice%20Monolith%20K-BAS/Misc/index_misc-audioholics.html">misc-audioholics</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;4.0</td>
+<td>71</td>
+<td>0.55</td>
+<td>0.42</td>    
+<td>0.26</td>
+<td>0.89</td>
+<th>4.9</th>
+<th>
+  5.3
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Monoprice%20Monolith%20K-BAS/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.9</th>
+
+            </tr>
+
+            <tr id="Pioneer-SP-BS22-LR">
+	      <td>Pioneer SP-BS22-LR</td>
+	      
+<td>
+  <a href="Pioneer%20SP-BS22-LR/ASR/index_asr.html">asr</a>
+</td>
+<td>62.0</td>
+<td>59.0</td>
+<td>&plusmn;3.5</td>
+<td>56</td>
+<td>0.42</td>
+<td>0.45</td>    
+<td>0.33</td>
+<td>0.82</td>
+<th>4.9</th>
+<th>
+  6.2
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Pioneer%20SP-BS22-LR/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.5</th>
+
+            </tr>
+
+            <tr id="Adam-T8V">
+	      <td>Adam T8V</td>
+	      
+<td>
+  <a href="Adam%20T8V/ASR/index_asr.html">asr</a>
+</td>
+<td>38.0</td>
+<td>35.0</td>
+<td>&plusmn;3.4</td>
+<td>33</td>
+<td>0.9</td>
+<td>0.51</td>    
+<td>0.5</td>
+<td>0.62</td>
+<th>4.8</th>
+<th>
+  6.8
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Adam%20T8V/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.3</th>
+
+            </tr>
+
+            <tr id="Bowers---Wilkins-803-D3">
+	      <td>Bowers & Wilkins 803 D3</td>
+	      
+<td>
+  <a href="Bowers%20%26%20Wilkins%20803%20D3/Bowers%20%26%20Wilkins/index_vendor.html">vendor</a>
+</td>
+<td>56.0</td>
+<td>45.0</td>
+<td>&plusmn;4.1</td>
+<td>40</td>
+<td>1.49</td>
+<td>0.38</td>    
+<td>0.27</td>
+<td>0.34</td>
+<th>4.8</th>
+<th>
+  6.5
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Bowers%20%26%20Wilkins%20803%20D3/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.7</th>
+
+            </tr>
+
+            <tr id="Dynaudio-Excite-X14">
+	      <td>Dynaudio Excite X14</td>
+	      
+<td>
+  <a href="Dynaudio%20Excite%20X14/ASR/index_asr.html">asr</a>
+</td>
+<td>64.0</td>
+<td>53.0</td>
+<td>&plusmn;2.9</td>
+<td>48</td>
+<td>0.53</td>
+<td>0.42</td>    
+<td>0.38</td>
+<td>0.68</td>
+<th>4.8</th>
+<th>
+  5.9
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Dynaudio%20Excite%20X14/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.1</th>
+
+            </tr>
+
+            <tr id="Emotiva-Airmotiv-6s">
+	      <td>Emotiva Airmotiv 6s</td>
+	      
+<td>
+  <a href="Emotiva%20Airmotiv%206s/ASR/index_asr.html">asr</a>
+</td>
+<td>49.0</td>
+<td>40.0</td>
+<td>&plusmn;3.2</td>
+<td>38</td>
+<td>0.4</td>
+<td>0.47</td>    
+<td>0.44</td>
+<td>0.6</td>
+<th>4.8</th>
+<th>
+  6.7
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Emotiva%20Airmotiv%206s/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.6</th>
+
+            </tr>
+
+            <tr id="JBL-Synthesis-4429">
+	      <td>JBL Synthesis 4429</td>
+	      
+<td>
+  <a href="JBL%20Synthesis%204429/Misc/index_misc-speakerdata2034.html">misc-speakerdata2034</a>
+</td>
+<td>43.0</td>
+<td>37.0</td>
+<td>&plusmn;9.5</td>
+<td>37</td>
+<td>1.82</td>
+<td>0.69</td>    
+<td>0.45</td>
+<td>0.86</td>
+<th>4.8</th>
+<th>
+  5.4
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20Synthesis%204429/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.6</th>
+
+            </tr>
+
+            <tr id="JBL-LS-80">
+	      <td>JBL LS 80</td>
+	      
+<td>
+  <a href="JBL%20LS%2080/Misc/index_misc-speakerdata2034.html">misc-speakerdata2034</a>
+</td>
+<td>64.0</td>
+<td>52.0</td>
+<td>&plusmn;5.6</td>
+<td>35</td>
+<td>1.43</td>
+<td>0.6</td>    
+<td>0.45</td>
+<td>0.68</td>
+<th>4.8</th>
+<th>
+  6.1
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20LS%2080/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.4</th>
+
+            </tr>
+
+            <tr id="Revel-C52">
+	      <td>Revel C52</td>
+	      
+<td>
+  <a href="Revel%20C52/ASR/index_asr.html">asr</a>
+</td>
+<td>72.0</td>
+<td>62.0</td>
+<td>&plusmn;3.1</td>
+<td>62</td>
+<td>1.43</td>
+<td>0.45</td>    
+<td>0.33</td>
+<td>0.83</td>
+<th>4.8</th>
+<th>
+  5.9
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20C52/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.5</th>
+
+            </tr>
+
+            <tr id="Apple-Homepod">
+	      <td>Apple Homepod</td>
+	      
+<td>
+  <a href="Apple%20Homepod/Apple/index_vendor.html">vendor</a>
+</td>
+<td>36.0</td>
+<td>35.0</td>
+<td>&plusmn;8.8</td>
+<td>32</td>
+<td>0.64</td>
+<td>0.62</td>    
+<td>0.48</td>
+<td>0.65</td>
+<th>4.7</th>
+<th>
+  4.4
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Apple%20Homepod/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.2</th>
+
+            </tr>
+
+            <tr id="Emotiva-Airmotiv-B1-">
+	      <td>Emotiva Airmotiv B1+</td>
+	      
+<td>
+  <a href="Emotiva%20Airmotiv%20B1+/ASR/index_asr.html">asr</a>
+</td>
+<td>69.0</td>
+<td>56.0</td>
+<td>&plusmn;2.8</td>
+<td>52</td>
+<td>0.5</td>
+<td>0.49</td>    
+<td>0.36</td>
+<td>0.74</td>
+<th>4.7</th>
+<th>
+  6.2
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Emotiva%20Airmotiv%20B1+/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.1</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="Emotiva%20Airmotiv%20B1+/Misc/index_misc-archimago.html">misc-archimago</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;2.6</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Infinity-RC263">
+	      <td>Infinity RC263</td>
+	      
+<td>
+  <a href="Infinity%20RC263/ASR/index_asr.html">asr</a>
+</td>
+<td>73.0</td>
+<td>62.0</td>
+<td>&plusmn;2.8</td>
+<td>61</td>
+<td>1.49</td>
+<td>0.45</td>    
+<td>0.34</td>
+<td>0.81</td>
+<th>4.7</th>
+<th>
+  5.8
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Infinity%20RC263/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.4</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="Infinity%20RC263/Infinity/index_vendor.html">vendor</a>
+</td>
+<td>70.0</td>
+<td>56.0</td>
+<td>&plusmn;2.0</td>
+<td>54</td>
+<td>1.67</td>
+<td>0.35</td>    
+<td>0.24</td>
+<td>0.76</td>
+<th>5.4</th>
+<th>
+</th>
+<th>7.8</th>
+
+            </tr>
+
+            <tr id="JBL-Synthesis-SK2-3300">
+	      <td>JBL Synthesis SK2-3300</td>
+	      
+<td>
+  <a href="JBL%20Synthesis%20SK2-3300/Misc/index_misc-speakerdata2034.html">misc-speakerdata2034</a>
+</td>
+<td>64.0</td>
+<td>56.0</td>
+<td>&plusmn;1.9</td>
+<td>54</td>
+<td>2.54</td>
+<td>0.33</td>    
+<td>0.42</td>
+<td>0.67</td>
+<th>4.7</th>
+<th>
+  5.4
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20Synthesis%20SK2-3300/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.1</th>
+
+            </tr>
+
+            <tr id="JBL-705P">
+	      <td>JBL 705P</td>
+	      
+<td>
+  <a href="JBL%20705P/ASR/index_asr.html">asr</a>
+</td>
+<td>45.0</td>
+<td>41.0</td>
+<td>&plusmn;7.8</td>
+<td>41</td>
+<td>0.61</td>
+<td>0.51</td>    
+<td>0.43</td>
+<td>0.67</td>
+<th>4.7</th>
+<th>
+  6.7
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20705P/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.7</th>
+
+            </tr>
+
+            <tr id="Revel-C208">
+	      <td>Revel C208</td>
+	      
+<td>
+  <a href="Revel%20C208/ASR/index_asr.html">asr</a>
+</td>
+<td>69.0</td>
+<td>54.0</td>
+<td>&plusmn;2.9</td>
+<td>55</td>
+<td>1.89</td>
+<td>0.57</td>    
+<td>0.35</td>
+<td>0.83</td>
+<th>4.7</th>
+<th>
+  5.6
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20C208/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.2</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="Revel%20C208/Revel/index_vendor.html">vendor</a>
+</td>
+<td>50.0</td>
+<td>39.0</td>
+<td>&plusmn;2.6</td>
+<td>44</td>
+<td>1.92</td>
+<td>0.39</td>    
+<td>0.22</td>
+<td>0.75</td>
+<th>5.7</th>
+<th>
+</th>
+<th>7.8</th>
+
+            </tr>
+
+            <tr id="ATC-SCM19-v1">
+	      <td>ATC SCM19 v1</td>
+	      
+<td>
+  <a href="ATC%20SCM19%20v1/ASR/index_asr.html">asr</a>
+</td>
+<td>91.0</td>
+<td>51.0</td>
+<td>&plusmn;3.5</td>
+<td>51</td>
+<td>1.06</td>
+<td>0.39</td>    
+<td>0.31</td>
+<td>0.5</td>
+<th>4.6</th>
+<th>
+  6.1
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/ATC%20SCM19%20v1/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.0</th>
+
+            </tr>
+
+            <tr id="Definitive-Technology-Demand-D11">
+	      <td>Definitive Technology Demand D11</td>
+	      
+<td>
+  <a href="Definitive%20Technology%20Demand%20D11/ASR/index_asr.html">asr</a>
+</td>
+<td>59.0</td>
+<td>51.0</td>
+<td>&plusmn;4.1</td>
+<td>48</td>
+<td>0.72</td>
+<td>0.47</td>    
+<td>0.45</td>
+<td>0.73</td>
+<th>4.6</th>
+<th>
+  6.5
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Definitive%20Technology%20Demand%20D11/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.9</th>
+
+            </tr>
+
+            <tr id="Dynaudio-Emit-M10">
+	      <td>Dynaudio Emit M10</td>
+	      
+<td>
+  <a href="Dynaudio%20Emit%20M10/ASR/index_asr.html">asr</a>
+</td>
+<td>59.0</td>
+<td>51.0</td>
+<td>&plusmn;2.5</td>
+<td>48</td>
+<td>0.57</td>
+<td>0.42</td>    
+<td>0.35</td>
+<td>0.57</td>
+<th>4.6</th>
+<th>
+  6.3
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Dynaudio%20Emit%20M10/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.9</th>
+
+            </tr>
+
+            <tr id="KEF-LS50">
+	      <td>KEF LS50</td>
+	      
+<td>
+  <a href="KEF%20LS50/ASR/index_asr-vertical.html">asr-vertical</a>
+</td>
+<td>80.0</td>
+<td>48.0</td>
+<td>&plusmn;4.0</td>
+<td>45</td>
+<td>0.6</td>
+<td>0.6</td>    
+<td>0.45</td>
+<td>0.81</td>
+<th>4.6</th>
+<th>
+  6.4
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/KEF%20LS50/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.7</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="KEF%20LS50/ASR/index_asr-horizontal.html">asr-horizontal</a>
+</td>
+<td>80.0</td>
+<td>48.0</td>
+<td>&plusmn;4.0</td>
+<td>45</td>
+<td>0.6</td>
+<td>0.6</td>    
+<td>0.41</td>
+<td>0.82</td>
+<th>4.7</th>
+<th>
+</th>
+<th>6.9</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="KEF%20LS50/Princeton/index_princeton.html">princeton</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;3.0</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="KEF%20LS50/Misc/index_misc-archimago.html">misc-archimago</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;2.8</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Neumi-BS5">
+	      <td>Neumi BS5</td>
+	      
+<td>
+  <a href="Neumi%20BS5/ErinsAudioCorner/index_eac.html">eac</a>
+</td>
+<td>64.0</td>
+<td>53.0</td>
+<td>&plusmn;5.8</td>
+<td>53</td>
+<td>1.08</td>
+<td>0.56</td>    
+<td>0.39</td>
+<td>0.82</td>
+<th>4.6</th>
+<th>
+  5.9
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Neumi%20BS5/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.0</th>
+
+            </tr>
+
+            <tr id="Paradigm-Prestige-15B">
+	      <td>Paradigm Prestige 15B</td>
+	      
+<td>
+  <a href="Paradigm%20Prestige%2015B/ASR/index_asr.html">asr</a>
+</td>
+<td>79.0</td>
+<td>53.0</td>
+<td>&plusmn;2.9</td>
+<td>48</td>
+<td>0.55</td>
+<td>0.37</td>    
+<td>0.3</td>
+<td>0.45</td>
+<th>4.6</th>
+<th>
+  6.5
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Paradigm%20Prestige%2015B/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.9</th>
+
+            </tr>
+
+            <tr id="Revel-C205">
+	      <td>Revel C205</td>
+	      
+<td>
+  <a href="Revel%20C205/Revel/index_vendor.html">vendor</a>
+</td>
+<td>90.0</td>
+<td>61.0</td>
+<td>&plusmn;1.8</td>
+<td>60</td>
+<td>1.58</td>
+<td>0.37</td>    
+<td>0.29</td>
+<td>0.61</td>
+<th>4.6</th>
+<th>
+  5.6
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20C205/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.3</th>
+
+            </tr>
+
+            <tr id="Sony-SS-CS5">
+	      <td>Sony SS-CS5</td>
+	      
+<td>
+  <a href="Sony%20SS-CS5/ASR/index_asr.html">asr</a>
+</td>
+<td>79.0</td>
+<td>64.0</td>
+<td>&plusmn;3.4</td>
+<td>60</td>
+<td>0.46</td>
+<td>0.5</td>    
+<td>0.34</td>
+<td>0.8</td>
+<th>4.6</th>
+<th>
+  6.0
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Sony%20SS-CS5/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.3</th>
+
+            </tr>
+
+            <tr id="Buchardt-Audio-A500">
+	      <td>Buchardt Audio A500</td>
+	      
+<td>
+  <a href="Buchardt%20Audio%20A500/Misc/index_misc-napilopez.html">misc-napilopez</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;1.9</td>
+<td>68</td>
+<td>1.48</td>
+<td>0.29</td>    
+<td>0.25</td>
+<td>0.53</td>
+<th>4.5</th>
+<th>
+  5.9
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Buchardt%20Audio%20A500/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.5</th>
+
+            </tr>
+
+            <tr id="JBL-Synthesis-SK2-1000">
+	      <td>JBL Synthesis SK2-1000</td>
+	      
+<td>
+  <a href="JBL%20Synthesis%20SK2-1000/Misc/index_misc-speakerdata2034.html">misc-speakerdata2034</a>
+</td>
+<td>70.0</td>
+<td>54.0</td>
+<td>&plusmn;5.0</td>
+<td>55</td>
+<td>2.47</td>
+<td>0.51</td>    
+<td>0.38</td>
+<td>0.75</td>
+<th>4.5</th>
+<th>
+  5.1
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20Synthesis%20SK2-1000/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.0</th>
+
+            </tr>
+
+            <tr id="JBL-4312SE">
+	      <td>JBL 4312SE</td>
+	      
+<td>
+  <a href="JBL%204312SE/JBL/index_vendor.html">vendor</a>
+</td>
+<td>50.0</td>
+<td>42.0</td>
+<td>&plusmn;2.7</td>
+<td>44</td>
+<td>1.96</td>
+<td>0.53</td>    
+<td>0.37</td>
+<td>0.55</td>
+<th>4.5</th>
+<th>
+  5.5
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%204312SE/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.5</th>
+
+            </tr>
+
+            <tr id="Martin-Logan-Vista">
+	      <td>Martin Logan Vista</td>
+	      
+<td>
+  <a href="Martin%20Logan%20Vista/Misc/index_misc-speakerdata2034.html">misc-speakerdata2034</a>
+</td>
+<td>149.0</td>
+<td>49.0</td>
+<td>&plusmn;6.7</td>
+<td>40</td>
+<td>1.1</td>
+<td>0.69</td>    
+<td>0.43</td>
+<td>0.74</td>
+<th>4.5</th>
+<th>
+  5.7
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Martin%20Logan%20Vista/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.4</th>
+
+            </tr>
+
+            <tr id="Paradigm-Persona-3F">
+	      <td>Paradigm Persona 3F</td>
+	      
+<td>
+  <a href="Paradigm%20Persona%203F/Paradigm/index_vendor.html">vendor</a>
+</td>
+<td>41.0</td>
+<td></td>
+<td>&plusmn;3.2</td>
+<td>40</td>
+<td>1.49</td>
+<td>0.42</td>    
+<td>0.32</td>
+<td>0.33</td>
+<th>4.5</th>
+<th>
+  6.4
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Paradigm%20Persona%203F/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.4</th>
+
+            </tr>
+
+            <tr id="Selah-Audio-RC3R">
+	      <td>Selah Audio RC3R</td>
+	      
+<td>
+  <a href="Selah%20Audio%20RC3R/ASR/index_asr.html">asr</a>
+</td>
+<td>83.0</td>
+<td>56.0</td>
+<td>&plusmn;3.2</td>
+<td>54</td>
+<td>0.45</td>
+<td>0.38</td>    
+<td>0.32</td>
+<td>0.52</td>
+<th>4.5</th>
+<th>
+  6.3
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Selah%20Audio%20RC3R/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.0</th>
+
+            </tr>
+
+            <tr id="Verdant-Audio-Bambusa-MG-1">
+	      <td>Verdant Audio Bambusa MG 1</td>
+	      
+<td>
+  <a href="Verdant%20Audio%20Bambusa%20MG%201/ASR/index_asr.html">asr</a>
+</td>
+<td>50.0</td>
+<td>41.0</td>
+<td>&plusmn;3.4</td>
+<td>38</td>
+<td>0.52</td>
+<td>0.36</td>    
+<td>0.31</td>
+<td>0.21</td>
+<th>4.5</th>
+<th>
+  7.1
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Verdant%20Audio%20Bambusa%20MG%201/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.4</th>
+
+            </tr>
+
+            <tr id="Bowers---Wilkins-805S">
+	      <td>Bowers & Wilkins 805S</td>
+	      
+<td>
+  <a href="Bowers%20%26%20Wilkins%20805S/ASR/index_asr.html">asr</a>
+</td>
+<td>45.0</td>
+<td>40.0</td>
+<td>&plusmn;4.5</td>
+<td>39</td>
+<td>0.86</td>
+<td>0.6</td>    
+<td>0.45</td>
+<td>0.62</td>
+<th>4.4</th>
+<th>
+  6.4
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Bowers%20%26%20Wilkins%20805S/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.3</th>
+
+            </tr>
+
+            <tr id="Micca-RB42">
+	      <td>Micca RB42</td>
+	      
+<td>
+  <a href="Micca%20RB42/ASR/index_asr.html">asr</a>
+</td>
+<td>94.0</td>
+<td>49.0</td>
+<td>&plusmn;2.8</td>
+<td>47</td>
+<td>0.32</td>
+<td>0.44</td>    
+<td>0.42</td>
+<td>0.58</td>
+<th>4.4</th>
+<th>
+  6.0
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Micca%20RB42/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.7</th>
+
+            </tr>
+
+            <tr id="NHT-C3">
+	      <td>NHT C3</td>
+	      
+<td>
+  <a href="NHT%20C3/ASR/index_asr.html">asr</a>
+</td>
+<td>60.0</td>
+<td>53.0</td>
+<td>&plusmn;2.7</td>
+<td>51</td>
+<td>0.74</td>
+<td>0.42</td>    
+<td>0.33</td>
+<td>0.46</td>
+<th>4.4</th>
+<th>
+  6.4
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/NHT%20C3/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.7</th>
+
+            </tr>
+
+            <tr id="Adam-T5V">
+	      <td>Adam T5V</td>
+	      
+<td>
+  <a href="Adam%20T5V/ASR/index_asr.html">asr</a>
+</td>
+<td>59.0</td>
+<td>51.0</td>
+<td>&plusmn;2.5</td>
+<td>48</td>
+<td>0.59</td>
+<td>0.44</td>    
+<td>0.41</td>
+<td>0.51</td>
+<th>4.3</th>
+<th>
+  6.8
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Adam%20T5V/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.6</th>
+
+            </tr>
+
+            <tr id="Polk-Audio-Signature-S15">
+	      <td>Polk Audio Signature S15</td>
+	      
+<td>
+  <a href="Polk%20Audio%20Signature%20S15/ASR/index_asr.html">asr</a>
+</td>
+<td>67.0</td>
+<td>59.0</td>
+<td>&plusmn;2.6</td>
+<td>55</td>
+<td>0.61</td>
+<td>0.43</td>    
+<td>0.35</td>
+<td>0.56</td>
+<th>4.3</th>
+<th>
+  6.1
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Polk%20Audio%20Signature%20S15/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.9</th>
+
+            </tr>
+
+            <tr id="Triangle-Borea-BR03">
+	      <td>Triangle Borea BR03</td>
+	      
+<td>
+  <a href="Triangle%20Borea%20BR03/ASR/index_asr.html">asr</a>
+</td>
+<td>56.0</td>
+<td>48.0</td>
+<td>&plusmn;2.9</td>
+<td>48</td>
+<td>0.87</td>
+<td>0.55</td>    
+<td>0.38</td>
+<td>0.6</td>
+<th>4.3</th>
+<th>
+  6.1
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Triangle%20Borea%20BR03/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.6</th>
+
+            </tr>
+
+            <tr id="Adam-A5X">
+	      <td>Adam A5X</td>
+	      
+<td>
+  <a href="Adam%20A5X/ASR/index_asr.html">asr</a>
+</td>
+<td>56.0</td>
+<td>51.0</td>
+<td>&plusmn;6.0</td>
+<td>51</td>
+<td>0.7</td>
+<td>0.59</td>    
+<td>0.45</td>
+<td>0.73</td>
+<th>4.2</th>
+<th>
+  6.0
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Adam%20A5X/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.6</th>
+
+            </tr>
+
+            <tr id="JBL-4349">
+	      <td>JBL 4349</td>
+	      
+<td>
+  <a href="JBL%204349/ASR/index_asr.html">asr</a>
+</td>
+<td>53.0</td>
+<td>37.0</td>
+<td>&plusmn;3.7</td>
+<td>35</td>
+<td>1.87</td>
+<td>0.51</td>    
+<td>0.51</td>
+<td>0.41</td>
+<th>4.2</th>
+<th>
+  6.4
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%204349/iir-autoeq.txt">(eq)</a>
+</th>
+<th>5.8</th>
+
+            </tr>
+
+            <tr id="Sonos-Move">
+	      <td>Sonos Move</td>
+	      
+<td>
+  <a href="Sonos%20Move/Misc/index_misc-napilopez.html">misc-napilopez</a>
+</td>
+<td>39.0</td>
+<td>38.0</td>
+<td>&plusmn;9.4</td>
+<td>37</td>
+<td>0.73</td>
+<td>0.81</td>    
+<td>0.46</td>
+<td>0.75</td>
+<th>4.2</th>
+<th>
+  3.6
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Sonos%20Move/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.0</th>
+
+            </tr>
+
+            <tr id="Ascend-Acoustics-Sierra-2">
+	      <td>Ascend Acoustics Sierra 2</td>
+	      
+<td>
+  <a href="Ascend%20Acoustics%20Sierra%202/ASR/index_asr.html">asr</a>
+</td>
+<td>92.0</td>
+<td>54.0</td>
+<td>&plusmn;3.0</td>
+<td>49</td>
+<td>0.51</td>
+<td>0.58</td>    
+<td>0.44</td>
+<td>0.64</td>
+<th>4.1</th>
+<th>
+  5.8
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Ascend%20Acoustics%20Sierra%202/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.4</th>
+
+            </tr>
+
+            <tr id="Klipsch-RP-600M">
+	      <td>Klipsch RP-600M</td>
+	      
+<td>
+  <a href="Klipsch%20RP-600M/ASR/index_asr.html">asr</a>
+</td>
+<td>70.0</td>
+<td>44.0</td>
+<td>&plusmn;5.1</td>
+<td>38</td>
+<td>0.79</td>
+<td>0.53</td>    
+<td>0.51</td>
+<td>0.47</td>
+<th>4.1</th>
+<th>
+  6.8
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Klipsch%20RP-600M/iir-autoeq.txt">(eq)</a>
+</th>
+<th>5.9</th>
+
+            </tr>
+
+            <tr id="Klipsch-Synergy-SB-3-Monitor">
+	      <td>Klipsch Synergy SB-3 Monitor</td>
+	      
+<td>
+  <a href="Klipsch%20Synergy%20SB-3%20Monitor/Klipsch/index_vendor.html">vendor</a>
+</td>
+<td>77.0</td>
+<td>66.0</td>
+<td>&plusmn;3.2</td>
+<td>59</td>
+<td>0.87</td>
+<td>0.56</td>    
+<td>0.46</td>
+<td>0.78</td>
+<th>4.1</th>
+<th>
+  5.2
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Klipsch%20Synergy%20SB-3%20Monitor/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.7</th>
+
+            </tr>
+
+            <tr id="Yamaha-HS7">
+	      <td>Yamaha HS7</td>
+	      
+<td>
+  <a href="Yamaha%20HS7/ASR/index_asr.html">asr</a>
+</td>
+<td>82.0</td>
+<td>41.0</td>
+<td>&plusmn;3.0</td>
+<td>39</td>
+<td>0.67</td>
+<td>0.59</td>    
+<td>0.38</td>
+<td>0.37</td>
+<th>4.1</th>
+<th>
+  6.4
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Yamaha%20HS7/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.0</th>
+
+            </tr>
+
+            <tr id="Elac-Adante-AS-61">
+	      <td>Elac Adante AS-61</td>
+	      
+<td>
+  <a href="Elac%20Adante%20AS-61/ASR/index_asr.html">asr</a>
+</td>
+<td>44.0</td>
+<td>41.0</td>
+<td>&plusmn;4.6</td>
+<td>41</td>
+<td>0.81</td>
+<td>0.66</td>    
+<td>0.51</td>
+<td>0.64</td>
+<th>4.0</th>
+<th>
+  5.7
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Elac%20Adante%20AS-61/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.0</th>
+
+            </tr>
+
+            <tr id="IK-Multimedia-iLoud-Micro-Monitor">
+	      <td>IK Multimedia iLoud Micro Monitor</td>
+	      
+<td>
+  <a href="IK%20Multimedia%20iLoud%20Micro%20Monitor/Misc/index_misc-napilopez.html">misc-napilopez</a>
+</td>
+<td>51.0</td>
+<td>49.0</td>
+<td>&plusmn;4.6</td>
+<td>49</td>
+<td>0.78</td>
+<td>0.61</td>    
+<td>0.54</td>
+<td>0.73</td>
+<th>4.0</th>
+<th>
+  5.9
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/IK%20Multimedia%20iLoud%20Micro%20Monitor/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.2</th>
+
+            </tr>
+
+            <tr id="Part-Express-DIY-C-Note">
+	      <td>Part Express DIY C-Note</td>
+	      
+<td>
+  <a href="Part%20Express%20DIY%20C-Note/ASR/index_asr.html">asr</a>
+</td>
+<td>120.0</td>
+<td>59.0</td>
+<td>&plusmn;3.4</td>
+<td>58</td>
+<td>0.7</td>
+<td>0.44</td>    
+<td>0.44</td>
+<td>0.59</td>
+<th>4.0</th>
+<th>
+  6.7
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Part%20Express%20DIY%20C-Note/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.6</th>
+
+            </tr>
+
+            <tr id="PSB-Alpha-P5">
+	      <td>PSB Alpha P5</td>
+	      
+<td>
+  <a href="PSB%20Alpha%20P5/ASR/index_asr.html">asr</a>
+</td>
+<td>56.0</td>
+<td>48.0</td>
+<td>&plusmn;3.9</td>
+<td>46</td>
+<td>0.55</td>
+<td>0.6</td>    
+<td>0.45</td>
+<td>0.58</td>
+<th>4.0</th>
+<th>
+  6.0
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/PSB%20Alpha%20P5/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.2</th>
+
+            </tr>
+
+            <tr id="Q-Acoustics-3020i">
+	      <td>Q Acoustics 3020i</td>
+	      
+<td>
+  <a href="Q%20Acoustics%203020i/ASR/index_asr.html">asr</a>
+</td>
+<td>79.0</td>
+<td>60.0</td>
+<td>&plusmn;3.2</td>
+<td>54</td>
+<td>0.55</td>
+<td>0.48</td>    
+<td>0.44</td>
+<td>0.58</td>
+<th>4.0</th>
+<th>
+  6.0
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Q%20Acoustics%203020i/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.5</th>
+
+            </tr>
+
+            <tr id="Vanatoo-Transparent-Zero">
+	      <td>Vanatoo Transparent Zero</td>
+	      
+<td>
+  <a href="Vanatoo%20Transparent%20Zero/ASR/index_asr.html">asr</a>
+</td>
+<td>85.0</td>
+<td>63.0</td>
+<td>&plusmn;2.6</td>
+<td>60</td>
+<td>0.38</td>
+<td>0.41</td>    
+<td>0.43</td>
+<td>0.53</td>
+<th>4.0</th>
+<th>
+  5.8
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Vanatoo%20Transparent%20Zero/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.6</th>
+
+            </tr>
+
+            <tr id="Ascend-Acoustics-CBM-170-SE">
+	      <td>Ascend Acoustics CBM-170 SE</td>
+	      
+<td>
+  <a href="Ascend%20Acoustics%20CBM-170%20SE/ASR/index_asr.html">asr</a>
+</td>
+<td>83.0</td>
+<td>64.0</td>
+<td>&plusmn;2.0</td>
+<td>62</td>
+<td>0.5</td>
+<td>0.38</td>    
+<td>0.36</td>
+<td>0.41</td>
+<th>3.9</th>
+<th>
+  5.3
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Ascend%20Acoustics%20CBM-170%20SE/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.6</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="Ascend%20Acoustics%20CBM-170%20SE/Princeton/index_princeton.html">princeton</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;2.9</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Focal-Chorus-OD-706-V">
+	      <td>Focal Chorus OD 706 V</td>
+	      
+<td>
+  <a href="Focal%20Chorus%20OD%20706%20V/ASR/index_asr.html">asr</a>
+</td>
+<td>79.0</td>
+<td>69.0</td>
+<td>&plusmn;4.5</td>
+<td>68</td>
+<td>0.76</td>
+<td>0.65</td>    
+<td>0.42</td>
+<td>0.86</td>
+<th>3.9</th>
+<th>
+  4.7
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Focal%20Chorus%20OD%20706%20V/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.8</th>
+
+            </tr>
+
+            <tr id="JBL-XPL90">
+	      <td>JBL XPL90</td>
+	      
+<td>
+  <a href="JBL%20XPL90/ASR/index_asr.html">asr</a>
+</td>
+<td>75.0</td>
+<td>59.0</td>
+<td>&plusmn;3.4</td>
+<td>55</td>
+<td>0.65</td>
+<td>0.54</td>    
+<td>0.49</td>
+<td>0.66</td>
+<th>3.9</th>
+<th>
+  6.5
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20XPL90/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.4</th>
+
+            </tr>
+
+            <tr id="Martin-Logan-Prodigy">
+	      <td>Martin Logan Prodigy</td>
+	      
+<td>
+  <a href="Martin%20Logan%20Prodigy/Misc/index_misc-speakerdata2034.html">misc-speakerdata2034</a>
+</td>
+<td>147.0</td>
+<td>33.0</td>
+<td>&plusmn;6.3</td>
+<td>30</td>
+<td>2.26</td>
+<td>0.94</td>    
+<td>0.63</td>
+<td>0.78</td>
+<th>3.9</th>
+<th>
+  4.8
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Martin%20Logan%20Prodigy/iir-autoeq.txt">(eq)</a>
+</th>
+<th>5.3</th>
+
+            </tr>
+
+            <tr id="Paradigm-Monitor-SE-Atom">
+	      <td>Paradigm Monitor SE Atom</td>
+	      
+<td>
+  <a href="Paradigm%20Monitor%20SE%20Atom/ASR/index_asr.html">asr</a>
+</td>
+<td>56.0</td>
+<td>53.0</td>
+<td>&plusmn;3.5</td>
+<td>48</td>
+<td>0.61</td>
+<td>0.49</td>    
+<td>0.33</td>
+<td>0.27</td>
+<th>3.9</th>
+<th>
+  6.1
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Paradigm%20Monitor%20SE%20Atom/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.1</th>
+
+            </tr>
+
+            <tr id="Salk-WoW1">
+	      <td>Salk WoW1</td>
+	      
+<td>
+  <a href="Salk%20WoW1/ASR/index_asr.html">asr</a>
+</td>
+<td>56.0</td>
+<td>45.0</td>
+<td>&plusmn;5.5</td>
+<td>45</td>
+<td>0.73</td>
+<td>0.44</td>    
+<td>0.39</td>
+<td>0.26</td>
+<th>3.9</th>
+<th>
+  6.7
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Salk%20WoW1/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.0</th>
+
+            </tr>
+
+            <tr id="Focal-Twin6-Be">
+	      <td>Focal Twin6 Be</td>
+	      
+<td>
+  <a href="Focal%20Twin6%20Be/ErinsAudioCorner/index_eac-horizontal.html">eac-horizontal</a>
+</td>
+<td>47.0</td>
+<td>42.0</td>
+<td>&plusmn;3.1</td>
+<td>41</td>
+<td>1.31</td>
+<td>0.47</td>    
+<td>0.51</td>
+<td>0.31</td>
+<th>3.8</th>
+<th>
+  6.0
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Focal%20Twin6%20Be/iir-autoeq.txt">(eq)</a>
+</th>
+<th>5.7</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="Focal%20Twin6%20Be/ErinsAudioCorner/index_eac-vertical.html">eac-vertical</a>
+</td>
+<td>47.0</td>
+<td>42.0</td>
+<td>&plusmn;3.1</td>
+<td>42</td>
+<td>1.37</td>
+<td>0.47</td>    
+<td>0.5</td>
+<td>0.3</td>
+<th>3.7</th>
+<th>
+</th>
+<th>5.7</th>
+
+            </tr>
+
+            <tr id="Pioneer-S-DF3-K">
+	      <td>Pioneer S-DF3-K</td>
+	      
+<td>
+  <a href="Pioneer%20S-DF3-K/Pioneer/index_vendor.html">vendor</a>
+</td>
+<td>150.0</td>
+<td>58.0</td>
+<td>&plusmn;3.7</td>
+<td>55</td>
+<td>1.07</td>
+<td>0.41</td>    
+<td>0.45</td>
+<td>0.43</td>
+<th>3.8</th>
+<th>
+  5.9
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Pioneer%20S-DF3-K/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.3</th>
+
+            </tr>
+
+            <tr id="Pioneer-SP-EBS73-LR">
+	      <td>Pioneer SP-EBS73-LR</td>
+	      
+<td>
+  <a href="Pioneer%20SP-EBS73-LR/ASR/index_asr.html">asr</a>
+</td>
+<td>59.0</td>
+<td>50.0</td>
+<td>&plusmn;5.5</td>
+<td>46</td>
+<td>0.73</td>
+<td>0.79</td>    
+<td>0.52</td>
+<td>0.79</td>
+<th>3.8</th>
+<th>
+  5.7
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Pioneer%20SP-EBS73-LR/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.0</th>
+
+            </tr>
+
+            <tr id="Dayton-Audio-MK402X">
+	      <td>Dayton Audio MK402X</td>
+	      
+<td>
+  <a href="Dayton%20Audio%20MK402X/ASR/index_asr.html">asr</a>
+</td>
+<td>60.0</td>
+<td>53.0</td>
+<td>&plusmn;4.3</td>
+<td>51</td>
+<td>0.26</td>
+<td>0.56</td>    
+<td>0.38</td>
+<td>0.41</td>
+<th>3.7</th>
+<th>
+  5.8
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Dayton%20Audio%20MK402X/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.1</th>
+
+            </tr>
+
+            <tr id="JBL-4319">
+	      <td>JBL 4319</td>
+	      
+<td>
+  <a href="JBL%204319/ASR/index_asr.html">asr</a>
+</td>
+<td>59.0</td>
+<td>47.0</td>
+<td>&plusmn;4.0</td>
+<td>43</td>
+<td>0.63</td>
+<td>0.54</td>    
+<td>0.36</td>
+<td>0.22</td>
+<th>3.7</th>
+<th>
+  6.6
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%204319/iir-autoeq.txt">(eq)</a>
+</th>
+<th>5.8</th>
+
+            </tr>
+
+            <tr id="KRK-Systems-RoKit-5-G4">
+	      <td>KRK Systems RoKit 5 G4</td>
+	      
+<td>
+  <a href="KRK%20Systems%20RoKit%205%20G4/ASR/index_asr.html">asr</a>
+</td>
+<td>54.0</td>
+<td>48.0</td>
+<td>&plusmn;3.9</td>
+<td>48</td>
+<td>0.64</td>
+<td>0.57</td>    
+<td>0.44</td>
+<td>0.42</td>
+<th>3.7</th>
+<th>
+  5.8
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/KRK%20Systems%20RoKit%205%20G4/iir-autoeq.txt">(eq)</a>
+</th>
+<th>5.9</th>
+
+            </tr>
+
+            <tr id="Presonus-Eris-E5-XT">
+	      <td>Presonus Eris E5 XT</td>
+	      
+<td>
+  <a href="Presonus%20Eris%20E5%20XT/ASR/index_asr.html">asr</a>
+</td>
+<td>56.0</td>
+<td>51.0</td>
+<td>&plusmn;3.2</td>
+<td>50</td>
+<td>0.76</td>
+<td>0.53</td>    
+<td>0.44</td>
+<td>0.43</td>
+<th>3.7</th>
+<th>
+  6.3
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Presonus%20Eris%20E5%20XT/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.0</th>
+
+            </tr>
+
+            <tr id="Wharfedale-Diamond-220">
+	      <td>Wharfedale Diamond 220</td>
+	      
+<td>
+  <a href="Wharfedale%20Diamond%20220/ASR/index_asr.html">asr</a>
+</td>
+<td>113.0</td>
+<td>82.0</td>
+<td>&plusmn;3.9</td>
+<td>79</td>
+<td>0.72</td>
+<td>0.44</td>    
+<td>0.44</td>
+<td>0.69</td>
+<th>3.7</th>
+<th>
+  5.0
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Wharfedale%20Diamond%20220/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.9</th>
+
+            </tr>
+
+            <tr id="JBL-HDI-4500">
+	      <td>JBL HDI-4500</td>
+	      
+<td>
+  <a href="JBL%20HDI-4500/ErinsAudioCorner/index_eac.html">eac</a>
+</td>
+<td>63.0</td>
+<td>48.0</td>
+<td>&plusmn;3.2</td>
+<td>43</td>
+<td>1.14</td>
+<td>0.57</td>    
+<td>0.47</td>
+<td>0.37</td>
+<th>3.6</th>
+<th>
+  6.0
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20HDI-4500/iir-autoeq.txt">(eq)</a>
+</th>
+<th>5.7</th>
+
+            </tr>
+
+            <tr id="NHT-SB2">
+	      <td>NHT SB2</td>
+	      
+<td>
+  <a href="NHT%20SB2/ASR/index_asr.html">asr</a>
+</td>
+<td>60.0</td>
+<td>51.0</td>
+<td>&plusmn;5.7</td>
+<td>50</td>
+<td>0.66</td>
+<td>0.66</td>    
+<td>0.51</td>
+<td>0.62</td>
+<th>3.6</th>
+<th>
+  6.1
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/NHT%20SB2/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.0</th>
+
+            </tr>
+
+            <tr id="Ascend-Acoustics-CMT-340">
+	      <td>Ascend Acoustics CMT-340</td>
+	      
+<td>
+  <a href="Ascend%20Acoustics%20CMT-340/ASR/index_asr.html">asr</a>
+</td>
+<td>83.0</td>
+<td>70.0</td>
+<td>&plusmn;3.7</td>
+<td>64</td>
+<td>0.9</td>
+<td>0.56</td>    
+<td>0.42</td>
+<td>0.56</td>
+<th>3.5</th>
+<th>
+  4.3
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Ascend%20Acoustics%20CMT-340/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.3</th>
+
+            </tr>
+
+            <tr id="Boston-Acoustics-A-25">
+	      <td>Boston Acoustics A 25</td>
+	      
+<td>
+  <a href="Boston%20Acoustics%20A%2025/ASR/index_asr.html">asr</a>
+</td>
+<td>79.0</td>
+<td>60.0</td>
+<td>&plusmn;3.3</td>
+<td>58</td>
+<td>0.33</td>
+<td>0.62</td>    
+<td>0.41</td>
+<td>0.49</td>
+<th>3.5</th>
+<th>
+  5.3
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Boston%20Acoustics%20A%2025/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.1</th>
+
+            </tr>
+
+            <tr id="Kanto-Yu">
+	      <td>Kanto Yu</td>
+	      
+<td>
+  <a href="Kanto%20Yu/ASR/index_asr.html">asr</a>
+</td>
+<td>82.0</td>
+<td>69.0</td>
+<td>&plusmn;3.1</td>
+<td>67</td>
+<td>0.29</td>
+<td>0.55</td>    
+<td>0.43</td>
+<td>0.56</td>
+<th>3.5</th>
+<th>
+  5.5
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Kanto%20Yu/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.3</th>
+
+            </tr>
+
+            <tr id="Fluance-HFS-Signature">
+	      <td>Fluance HFS Signature</td>
+	      
+<td>
+  <a href="Fluance%20HFS%20Signature/ASR/index_asr.html">asr</a>
+</td>
+<td>75.0</td>
+<td>56.0</td>
+<td>&plusmn;8.2</td>
+<td>55</td>
+<td>0.79</td>
+<td>0.65</td>    
+<td>0.54</td>
+<td>0.64</td>
+<th>3.4</th>
+<th>
+  4.4
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Fluance%20HFS%20Signature/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.0</th>
+
+            </tr>
+
+            <tr id="Fostex-PM03">
+	      <td>Fostex PM03</td>
+	      
+<td>
+  <a href="Fostex%20PM03/ASR/index_asr.html">asr</a>
+</td>
+<td>103.0</td>
+<td>85.0</td>
+<td>&plusmn;3.4</td>
+<td>87</td>
+<td>0.21</td>
+<td>0.52</td>    
+<td>0.36</td>
+<td>0.62</td>
+<th>3.4</th>
+<th>
+  4.3
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Fostex%20PM03/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.7</th>
+
+            </tr>
+
+            <tr id="NHT-Super-Zero-2-1">
+	      <td>NHT Super Zero 2.1</td>
+	      
+<td>
+  <a href="NHT%20Super%20Zero%202.1/ASR/index_asr.html">asr</a>
+</td>
+<td>98.0</td>
+<td>82.0</td>
+<td>&plusmn;3.3</td>
+<td>82</td>
+<td>0.57</td>
+<td>0.51</td>    
+<td>0.46</td>
+<td>0.71</td>
+<th>3.4</th>
+<th>
+  4.3
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/NHT%20Super%20Zero%202.1/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.7</th>
+
+            </tr>
+
+            <tr id="Polk-Audio-Rti-10">
+	      <td>Polk Audio Rti 10</td>
+	      
+<td>
+  <a href="Polk%20Audio%20Rti%2010/Misc/index_misc-speakerdata2034.html">misc-speakerdata2034</a>
+</td>
+<td>50.0</td>
+<td>33.0</td>
+<td>&plusmn;4.9</td>
+<td>31</td>
+<td>0.96</td>
+<td>0.63</td>    
+<td>0.53</td>
+<td>0.07</td>
+<th>3.3</th>
+<th>
+  5.7
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Polk%20Audio%20Rti%2010/iir-autoeq.txt">(eq)</a>
+</th>
+<th>4.7</th>
+
+            </tr>
+
+            <tr id="Sehlin-Helium-DIY">
+	      <td>Sehlin Helium DIY</td>
+	      
+<td>
+  <a href="Sehlin%20Helium%20DIY/ASR/index_asr.html">asr</a>
+</td>
+<td>75.0</td>
+<td>64.0</td>
+<td>&plusmn;5.2</td>
+<td>64</td>
+<td>0.42</td>
+<td>0.6</td>    
+<td>0.61</td>
+<td>0.73</td>
+<th>3.3</th>
+<th>
+  5.0
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Sehlin%20Helium%20DIY/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.1</th>
+
+            </tr>
+
+            <tr id="Bowers---Wilkins-607-S2-Anniversary-Edition">
+	      <td>Bowers & Wilkins 607 S2 Anniversary Edition</td>
+	      
+<td>
+  <a href="Bowers%20%26%20Wilkins%20607%20S2%20Anniversary%20Edition/ASR/index_asr.html">asr</a>
+</td>
+<td>64.0</td>
+<td>48.0</td>
+<td>&plusmn;4.8</td>
+<td>45</td>
+<td>0.48</td>
+<td>0.59</td>    
+<td>0.39</td>
+<td>0.11</td>
+<th>3.2</th>
+<th>
+  6.5
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Bowers%20%26%20Wilkins%20607%20S2%20Anniversary%20Edition/iir-autoeq.txt">(eq)</a>
+</th>
+<th>5.3</th>
+
+            </tr>
+
+            <tr id="Hsu-Research-CCB-8">
+	      <td>Hsu Research CCB-8</td>
+	      
+<td>
+  <a href="Hsu%20Research%20CCB-8/Misc/index_misc-audioholics.html">misc-audioholics</a>
+</td>
+<td>65.0</td>
+<td>51.0</td>
+<td>&plusmn;2.4</td>
+<td>50</td>
+<td>1.12</td>
+<td>0.71</td>    
+<td>0.63</td>
+<td>0.66</td>
+<th>3.2</th>
+<th>
+  5.4
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Hsu%20Research%20CCB-8/iir-autoeq.txt">(eq)</a>
+</th>
+<th>5.6</th>
+
+            </tr>
+
+            <tr id="JBL-Northridge-Series-N28">
+	      <td>JBL Northridge Series N28</td>
+	      
+<td>
+  <a href="JBL%20Northridge%20Series%20N28/JBL/index_vendor.html">vendor</a>
+</td>
+<td>55.0</td>
+<td>48.0</td>
+<td>&plusmn;5.2</td>
+<td>48</td>
+<td>1.47</td>
+<td>0.77</td>    
+<td>0.64</td>
+<td>0.69</td>
+<th>3.2</th>
+<th>
+  5.6
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20Northridge%20Series%20N28/iir-autoeq.txt">(eq)</a>
+</th>
+<th>5.4</th>
+
+            </tr>
+
+            <tr id="Monoprice-Monolith-Air-Motion-Cinema-5">
+	      <td>Monoprice Monolith Air Motion Cinema 5</td>
+	      
+<td>
+  <a href="Monoprice%20Monolith%20Air%20Motion%20Cinema%205/Misc/index_misc-audioholics.html">misc-audioholics</a>
+</td>
+<td>81.0</td>
+<td></td>
+<td>&plusmn;4.9</td>
+<td>70</td>
+<td>0.76</td>
+<td>0.61</td>    
+<td>0.53</td>
+<td>0.7</td>
+<th>3.2</th>
+<th>
+  5.2
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Monoprice%20Monolith%20Air%20Motion%20Cinema%205/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.2</th>
+
+            </tr>
+
+            <tr id="Polk-Audio-RT15i">
+	      <td>Polk Audio RT15i</td>
+	      
+<td>
+  <a href="Polk%20Audio%20RT15i/Polk%20Audio/index_vendor.html">vendor</a>
+</td>
+<td>79.0</td>
+<td>61.0</td>
+<td>&plusmn;6.8</td>
+<td>56</td>
+<td>0.55</td>
+<td>0.8</td>    
+<td>0.47</td>
+<td>0.62</td>
+<th>3.2</th>
+<th>
+  5.1
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Polk%20Audio%20RT15i/iir-autoeq.txt">(eq)</a>
+</th>
+<th>5.7</th>
+
+            </tr>
+
+            <tr id="Behringer-B2030p">
+	      <td>Behringer B2030p</td>
+	      
+<td>
+  <a href="Behringer%20B2030p/ASR/index_asr.html">asr</a>
+</td>
+<td>91.0</td>
+<td>72.0</td>
+<td>&plusmn;3.1</td>
+<td>71</td>
+<td>1.02</td>
+<td>0.59</td>    
+<td>0.46</td>
+<td>0.55</td>
+<th>3.1</th>
+<th>
+  5.1
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Behringer%20B2030p/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.1</th>
+
+            </tr>
+
+            <tr id="Yamaha-HS5">
+	      <td>Yamaha HS5</td>
+	      
+<td>
+  <a href="Yamaha%20HS5/ASR/index_asr.html">asr</a>
+</td>
+<td>144.0</td>
+<td>59.0</td>
+<td>&plusmn;4.3</td>
+<td>54</td>
+<td>0.39</td>
+<td>0.51</td>    
+<td>0.42</td>
+<td>0.17</td>
+<th>3.1</th>
+<th>
+  6.5
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Yamaha%20HS5/iir-autoeq.txt">(eq)</a>
+</th>
+<th>5.5</th>
+
+            </tr>
+
+            <tr id="Jamo-S807">
+	      <td>Jamo S807</td>
+	      
+<td>
+  <a href="Jamo%20S807/ErinsAudioCorner/index_eac.html">eac</a>
+</td>
+<td>54.0</td>
+<td>47.0</td>
+<td>&plusmn;5.6</td>
+<td>44</td>
+<td>0.93</td>
+<td>0.56</td>    
+<td>0.42</td>
+<td>0.02</td>
+<th>3.0</th>
+<th>
+  6.3
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Jamo%20S807/iir-autoeq.txt">(eq)</a>
+</th>
+<th>5.1</th>
+
+            </tr>
+
+            <tr id="JBL-Control-1-Pro">
+	      <td>JBL Control 1 Pro</td>
+	      
+<td>
+  <a href="JBL%20Control%201%20Pro/ASR/index_asr.html">asr</a>
+</td>
+<td>108.0</td>
+<td>88.0</td>
+<td>&plusmn;4.0</td>
+<td>87</td>
+<td>0.67</td>
+<td>0.48</td>    
+<td>0.41</td>
+<td>0.46</td>
+<th>3.0</th>
+<th>
+  4.7
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20Control%201%20Pro/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.3</th>
+
+            </tr>
+
+            <tr id="Triangle-Esprit-Antal-Ez">
+	      <td>Triangle Esprit Antal Ez</td>
+	      
+<td>
+  <a href="Triangle%20Esprit%20Antal%20Ez/ASR/index_asr.html">asr</a>
+</td>
+<td>69.0</td>
+<td>59.0</td>
+<td>&plusmn;3.6</td>
+<td>55</td>
+<td>1.01</td>
+<td>0.74</td>    
+<td>0.62</td>
+<td>0.66</td>
+<th>3.0</th>
+<th>
+  3.5
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Triangle%20Esprit%20Antal%20Ez/iir-autoeq.txt">(eq)</a>
+</th>
+<th>5.5</th>
+
+            </tr>
+
+            <tr id="Cambridge-Soundworks-Model-Six">
+	      <td>Cambridge Soundworks Model Six</td>
+	      
+<td>
+  <a href="Cambridge%20Soundworks%20Model%20Six/Cambridge%20Soundworks/index_vendor.html">vendor</a>
+</td>
+<td>89.0</td>
+<td>68.0</td>
+<td>&plusmn;4.5</td>
+<td>68</td>
+<td>1.44</td>
+<td>0.55</td>    
+<td>0.53</td>
+<td>0.46</td>
+<th>2.9</th>
+<th>
+  5.3
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Cambridge%20Soundworks%20Model%20Six/iir-autoeq.txt">(eq)</a>
+</th>
+<th>5.8</th>
+
+            </tr>
+
+            <tr id="Fluid-Audio-FX50">
+	      <td>Fluid Audio FX50</td>
+	      
+<td>
+  <a href="Fluid%20Audio%20FX50/ASR/index_asr.html">asr</a>
+</td>
+<td>59.0</td>
+<td>53.0</td>
+<td>&plusmn;6.5</td>
+<td>52</td>
+<td>0.68</td>
+<td>0.82</td>    
+<td>0.7</td>
+<td>0.76</td>
+<th>2.9</th>
+<th>
+  5.4
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Fluid%20Audio%20FX50/iir-autoeq.txt">(eq)</a>
+</th>
+<th>5.3</th>
+
+            </tr>
+
+            <tr id="Focal-Chora-806">
+	      <td>Focal Chora 806</td>
+	      
+<td>
+  <a href="Focal%20Chora%20806/Misc/index_misc-napilopez.html">misc-napilopez</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;3.4</td>
+<td>168</td>
+<td>1.32</td>
+<td>0.44</td>    
+<td>0.31</td>
+<td>0.78</td>
+<th>2.9</th>
+<th>
+  3.1
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Focal%20Chora%20806/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.5</th>
+
+            </tr>
+
+            <tr id="JBL-CBT-70J-1">
+	      <td>JBL CBT 70J-1</td>
+	      
+<td>
+  <a href="JBL%20CBT%2070J-1/ASR/index_asr.html">asr</a>
+</td>
+<td>120.0</td>
+<td>69.0</td>
+<td>&plusmn;4.2</td>
+<td>67</td>
+<td>1.13</td>
+<td>0.65</td>    
+<td>0.49</td>
+<td>0.51</td>
+<th>2.9</th>
+<th>
+  5.1
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20CBT%2070J-1/iir-autoeq.txt">(eq)</a>
+</th>
+<th>5.8</th>
+
+            </tr>
+
+            <tr id="Klipsch-R41M">
+	      <td>Klipsch R41M</td>
+	      
+<td>
+  <a href="Klipsch%20R41M/ASR/index_asr.html">asr</a>
+</td>
+<td>77.0</td>
+<td>72.0</td>
+<td>&plusmn;4.3</td>
+<td>69</td>
+<td>0.36</td>
+<td>0.64</td>    
+<td>0.47</td>
+<td>0.51</td>
+<th>2.9</th>
+<th>
+  5.4
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Klipsch%20R41M/iir-autoeq.txt">(eq)</a>
+</th>
+<th>5.9</th>
+
+            </tr>
+
+            <tr id="Ascend-Acoustics-Sierra-2EX">
+	      <td>Ascend Acoustics Sierra-2EX</td>
+	      
+<td>
+  <a href="Ascend%20Acoustics%20Sierra-2EX/Misc/index_misc-speakerdata2034.html">misc-speakerdata2034</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;1.2</td>
+<td>185</td>
+<td>2.03</td>
+<td>0.27</td>    
+<td>0.32</td>
+<td>0.63</td>
+<th>2.8</th>
+<th>
+  3.8
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Ascend%20Acoustics%20Sierra-2EX/iir-autoeq.txt">(eq)</a>
+</th>
+<th>7.5</th>
+
+            </tr>
+
+            <tr id="Definitive-Technology-ProMonitor-1000">
+	      <td>Definitive Technology ProMonitor 1000</td>
+	      
+<td>
+  <a href="Definitive%20Technology%20ProMonitor%201000/ASR/index_asr.html">asr</a>
+</td>
+<td>113.0</td>
+<td>88.0</td>
+<td>&plusmn;4.0</td>
+<td>84</td>
+<td>0.43</td>
+<td>0.56</td>    
+<td>0.4</td>
+<td>0.46</td>
+<th>2.8</th>
+<th>
+  4.4
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Definitive%20Technology%20ProMonitor%201000/iir-autoeq.txt">(eq)</a>
+</th>
+<th>6.1</th>
+
+            </tr>
+
+            <tr id="KRK-Systems-Classic-5">
+	      <td>KRK Systems Classic 5</td>
+	      
+<td>
+  <a href="KRK%20Systems%20Classic%205/ASR/index_asr.html">asr</a>
+</td>
+<td>59.0</td>
+<td>54.0</td>
+<td>&plusmn;7.0</td>
+<td>54</td>
+<td>0.7</td>
+<td>0.57</td>    
+<td>0.51</td>
+<td>0.21</td>
+<th>2.8</th>
+<th>
+  5.9
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/KRK%20Systems%20Classic%205/iir-autoeq.txt">(eq)</a>
+</th>
+<th>5.2</th>
+
+            </tr>
+
+            <tr id="Pioneer-SP-EC73">
+	      <td>Pioneer SP-EC73</td>
+	      
+<td>
+  <a href="Pioneer%20SP-EC73/ASR/index_asr.html">asr</a>
+</td>
+<td>64.0</td>
+<td>59.0</td>
+<td>&plusmn;5.3</td>
+<td>58</td>
+<td>0.94</td>
+<td>0.85</td>    
+<td>0.46</td>
+<td>0.45</td>
+<th>2.6</th>
+<th>
+  4.9
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Pioneer%20SP-EC73/iir-autoeq.txt">(eq)</a>
+</th>
+<th>5.2</th>
+
+            </tr>
+
+            <tr id="PMC-Twenty-21">
+	      <td>PMC Twenty 21</td>
+	      
+<td>
+  <a href="PMC%20Twenty%2021/ASR/index_asr.html">asr</a>
+</td>
+<td>69.0</td>
+<td>60.0</td>
+<td>&plusmn;4.0</td>
+<td>60</td>
+<td>0.6</td>
+<td>0.61</td>    
+<td>0.46</td>
+<td>0.13</td>
+<th>2.4</th>
+<th>
+  4.3
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/PMC%20Twenty%2021/iir-autoeq.txt">(eq)</a>
+</th>
+<th>5.1</th>
+
+            </tr>
+
+            <tr id="Mackie-CR3-X">
+	      <td>Mackie CR3-X</td>
+	      
+<td>
+  <a href="Mackie%20CR3-X/ErinsAudioCorner/index_eac.html">eac</a>
+</td>
+<td>72.0</td>
+<td>67.0</td>
+<td>&plusmn;5.5</td>
+<td>67</td>
+<td>0.27</td>
+<td>0.66</td>    
+<td>0.44</td>
+<td>0.21</td>
+<th>2.3</th>
+<th>
+  4.7
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Mackie%20CR3-X/iir-autoeq.txt">(eq)</a>
+</th>
+<th>5.2</th>
+
+            </tr>
+
+            <tr id="Neumi-BS5P">
+	      <td>Neumi BS5P</td>
+	      
+<td>
+  <a href="Neumi%20BS5P/ErinsAudioCorner/index_eac.html">eac</a>
+</td>
+<td>53.0</td>
+<td>44.0</td>
+<td>&plusmn;13.4</td>
+<td>43</td>
+<td>0.7</td>
+<td>0.89</td>    
+<td>0.53</td>
+<td>0.22</td>
+<th>2.3</th>
+<th>
+  4.8
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Neumi%20BS5P/iir-autoeq.txt">(eq)</a>
+</th>
+<th>4.4</th>
+
+            </tr>
+
+            <tr id="Revel-M55XC">
+	      <td>Revel M55XC</td>
+	      
+<td>
+  <a href="Revel%20M55XC/ASR/index_asr.html">asr</a>
+</td>
+<td>108.0</td>
+<td>91.0</td>
+<td>&plusmn;4.4</td>
+<td>90</td>
+<td>0.66</td>
+<td>0.45</td>    
+<td>0.41</td>
+<td>0.12</td>
+<th>2.2</th>
+<th>
+  5.2
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20M55XC/iir-autoeq.txt">(eq)</a>
+</th>
+<th>5.6</th>
+
+            </tr>
+
+            <tr id="Bowers---Wilkins-WM7-5">
+	      <td>Bowers & Wilkins WM7.5</td>
+	      
+<td>
+  <a href="Bowers%20%26%20Wilkins%20WM7.5/Misc/index_misc-speakerdata2034.html">misc-speakerdata2034</a>
+</td>
+<td>70.0</td>
+<td>66.0</td>
+<td>&plusmn;10.1</td>
+<td>62</td>
+<td>0.39</td>
+<td>0.76</td>    
+<td>0.56</td>
+<td>0.31</td>
+<th>2.1</th>
+<th>
+  3.7
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Bowers%20%26%20Wilkins%20WM7.5/iir-autoeq.txt">(eq)</a>
+</th>
+<th>4.8</th>
+
+            </tr>
+
+            <tr id="RSL-Outsider-II">
+	      <td>RSL Outsider II</td>
+	      
+<td>
+  <a href="RSL%20Outsider%20II/ASR/index_asr.html">asr</a>
+</td>
+<td>88.0</td>
+<td>75.0</td>
+<td>&plusmn;4.5</td>
+<td>74</td>
+<td>0.87</td>
+<td>0.59</td>    
+<td>0.39</td>
+<td>0.06</td>
+<th>2.1</th>
+<th>
+  4.6
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/RSL%20Outsider%20II/iir-autoeq.txt">(eq)</a>
+</th>
+<th>5.2</th>
+
+            </tr>
+
+            <tr id="Micca-MB42X-Mark-III">
+	      <td>Micca MB42X Mark III</td>
+	      
+<td>
+  <a href="Micca%20MB42X%20Mark%20III/ErinsAudioCorner/index_eac.html">eac</a>
+</td>
+<td>101.0</td>
+<td>80.0</td>
+<td>&plusmn;5.5</td>
+<td>79</td>
+<td>0.64</td>
+<td>0.54</td>    
+<td>0.38</td>
+<td>0.0</td>
+<th>2.0</th>
+<th>
+  5.4
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Micca%20MB42X%20Mark%20III/iir-autoeq.txt">(eq)</a>
+</th>
+<th>5.2</th>
+
+            </tr>
+
+            <tr id="Bose-901-Series-V">
+	      <td>Bose 901 Series V</td>
+	      
+<td>
+  <a href="Bose%20901%20Series%20V/ErinsAudioCorner/index_eac-noeq.html">eac-noeq</a>
+</td>
+<td>51.0</td>
+<td>41.0</td>
+<td>&plusmn;15.4</td>
+<td>35</td>
+<td>2.84</td>
+<td>1.44</td>    
+<td>0.77</td>
+<td>0.75</td>
+<th>1.9</th>
+<th>
+</th>
+<th>3.6</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="Bose%20901%20Series%20V/ErinsAudioCorner/index_eac-eq-neutral.html">eac-eq-neutral</a>
+</td>
+<td>39.0</td>
+<td>34.0</td>
+<td>&plusmn;10.4</td>
+<td>31</td>
+<td>2.84</td>
+<td>1.43</td>    
+<td>0.6</td>
+<td>0.01</td>
+<th>0.9</th>
+<th>
+</th>
+<th>2.4</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="Bose%20901%20Series%20V/ErinsAudioCorner/index_eac-eq-v3.html">eac-eq-v3</a>
+</td>
+<td>34.0</td>
+<td>31.0</td>
+<td>&plusmn;9.1</td>
+<td>29</td>
+<td>2.84</td>
+<td>1.44</td>    
+<td>0.6</td>
+<td>0.77</td>
+<th>2.8</th>
+<th>
+</th>
+<th>4.1</th>
+
+            </tr>
+
+            <tr id="Edifier-R1280T">
+	      <td>Edifier R1280T</td>
+	      
+<td>
+  <a href="Edifier%20R1280T/ASR/index_asr.html">asr</a>
+</td>
+<td>60.0</td>
+<td>56.0</td>
+<td>&plusmn;5.5</td>
+<td>55</td>
+<td>0.56</td>
+<td>0.8</td>    
+<td>0.58</td>
+<td>0.19</td>
+<th>1.9</th>
+<th>
+  5.8
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Edifier%20R1280T/iir-autoeq.txt">(eq)</a>
+</th>
+<th>4.4</th>
+
+            </tr>
+
+            <tr id="Bose-301-Series-IV">
+	      <td>Bose 301 Series IV</td>
+	      
+<td>
+  <a href="Bose%20301%20Series%20IV/Bose/index_vendor.html">vendor</a>
+</td>
+<td>51.0</td>
+<td>41.0</td>
+<td>&plusmn;18.5</td>
+<td>43</td>
+<td>1.02</td>
+<td>1.29</td>    
+<td>0.46</td>
+<td>0.35</td>
+<th>1.8</th>
+<th>
+  2.0
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Bose%20301%20Series%20IV/iir-autoeq.txt">(eq)</a>
+</th>
+<th>3.9</th>
+
+            </tr>
+
+            <tr id="Diapason-Emera">
+	      <td>Diapason Emera</td>
+	      
+<td>
+  <a href="Diapason%20Emera/ASR/index_asr.html">asr</a>
+</td>
+<td>120.0</td>
+<td>85.0</td>
+<td>&plusmn;8.4</td>
+<td>84</td>
+<td>0.62</td>
+<td>0.76</td>    
+<td>0.37</td>
+<td>0.17</td>
+<th>1.8</th>
+<th>
+  4.0
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Diapason%20Emera/iir-autoeq.txt">(eq)</a>
+</th>
+<th>5.1</th>
+
+            </tr>
+
+            <tr id="JBL-104">
+	      <td>JBL 104</td>
+	      
+<td>
+  <a href="JBL%20104/ASR/index_asr.html">asr</a>
+</td>
+<td>67.0</td>
+<td>60.0</td>
+<td>&plusmn;12.1</td>
+<td>60</td>
+<td>0.18</td>
+<td>0.92</td>    
+<td>0.52</td>
+<td>0.27</td>
+<th>1.8</th>
+<th>
+  4.8
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20104/iir-autoeq.txt">(eq)</a>
+</th>
+<th>4.4</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="JBL%20104/Misc/index_misc-napilopez.html">misc-napilopez</a>
+</td>
+<td>73.0</td>
+<td>67.0</td>
+<td>&plusmn;4.9</td>
+<td>63</td>
+<td>0.71</td>
+<td>0.78</td>    
+<td>0.49</td>
+<td>0.52</td>
+<th>2.7</th>
+<th>
+</th>
+<th>5.5</th>
+
+            </tr>
+
+            <tr id="Ocean-Way-HR5">
+	      <td>Ocean Way HR5</td>
+	      
+<td>
+  <a href="Ocean%20Way%20HR5/ASR/index_asr.html">asr</a>
+</td>
+<td>48.0</td>
+<td>44.0</td>
+<td>&plusmn;6.9</td>
+<td>42</td>
+<td>0.95</td>
+<td>0.94</td>    
+<td>0.85</td>
+<td>0.44</td>
+<th>1.8</th>
+<th>
+  4.5
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Ocean%20Way%20HR5/iir-autoeq.txt">(eq)</a>
+</th>
+<th>3.9</th>
+
+            </tr>
+
+            <tr id="Tannoy-Revolution-XT6">
+	      <td>Tannoy Revolution XT6</td>
+	      
+<td>
+  <a href="Tannoy%20Revolution%20XT6/ASR/index_asr.html">asr</a>
+</td>
+<td>72.0</td>
+<td>56.0</td>
+<td>&plusmn;4.1</td>
+<td>54</td>
+<td>0.83</td>
+<td>0.67</td>    
+<td>0.72</td>
+<td>0.19</td>
+<th>1.8</th>
+<th>
+  5.6
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Tannoy%20Revolution%20XT6/iir-autoeq.txt">(eq)</a>
+</th>
+<th>4.3</th>
+
+            </tr>
+
+            <tr id="Yamaha-NS-A638">
+	      <td>Yamaha NS-A638</td>
+	      
+<td>
+  <a href="Yamaha%20NS-A638/Yamaha/index_vendor.html">vendor</a>
+</td>
+<td>150.0</td>
+<td>90.0</td>
+<td>&plusmn;5.8</td>
+<td>83</td>
+<td>1.6</td>
+<td>0.82</td>    
+<td>0.56</td>
+<td>0.49</td>
+<th>1.8</th>
+<th>
+  4.9
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Yamaha%20NS-A638/iir-autoeq.txt">(eq)</a>
+</th>
+<th>5.1</th>
+
+            </tr>
+
+            <tr id="Dayton-Audio-B652-AIR">
+	      <td>Dayton Audio B652-AIR</td>
+	      
+<td>
+  <a href="Dayton%20Audio%20B652-AIR/ASR/index_asr.html">asr</a>
+</td>
+<td>89.0</td>
+<td>74.0</td>
+<td>&plusmn;7.3</td>
+<td>73</td>
+<td>0.44</td>
+<td>0.89</td>    
+<td>0.66</td>
+<td>0.51</td>
+<th>1.6</th>
+<th>
+  4.3
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Dayton%20Audio%20B652-AIR/iir-autoeq.txt">(eq)</a>
+</th>
+<th>4.7</th>
+
+            </tr>
+
+            <tr id="Tannoy-System-600">
+	      <td>Tannoy System 600</td>
+	      
+<td>
+  <a href="Tannoy%20System%20600/ASR/index_asr.html">asr</a>
+</td>
+<td>105.0</td>
+<td>70.0</td>
+<td>&plusmn;8.0</td>
+<td>69</td>
+<td>0.93</td>
+<td>0.87</td>    
+<td>0.73</td>
+<td>0.54</td>
+<th>1.6</th>
+<th>
+  4.8
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Tannoy%20System%20600/iir-autoeq.txt">(eq)</a>
+</th>
+<th>4.6</th>
+
+            </tr>
+
+            <tr id="Yamaha-NS-6490">
+	      <td>Yamaha NS-6490</td>
+	      
+<td>
+  <a href="Yamaha%20NS-6490/ASR/index_asr.html">asr</a>
+</td>
+<td>148.0</td>
+<td>69.0</td>
+<td>&plusmn;6.2</td>
+<td>64</td>
+<td>1.33</td>
+<td>0.75</td>    
+<td>0.67</td>
+<td>0.25</td>
+<th>1.6</th>
+<th>
+  5.5
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Yamaha%20NS-6490/iir-autoeq.txt">(eq)</a>
+</th>
+<th>4.4</th>
+
+            </tr>
+
+            <tr id="BIC-America-Venturi-DV62si">
+	      <td>BIC America Venturi DV62si</td>
+	      
+<td>
+  <a href="BIC%20America%20Venturi%20DV62si/ASR/index_asr.html">asr</a>
+</td>
+<td>79.0</td>
+<td>69.0</td>
+<td>&plusmn;5.3</td>
+<td>67</td>
+<td>0.6</td>
+<td>0.8</td>    
+<td>0.47</td>
+<td>0.04</td>
+<th>1.5</th>
+<th>
+  5.1
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/BIC%20America%20Venturi%20DV62si/iir-autoeq.txt">(eq)</a>
+</th>
+<th>4.4</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="BIC%20America%20Venturi%20DV62si/BIC%20America/index_vendor.html">vendor</a>
+</td>
+<td>79.0</td>
+<td>67.0</td>
+<td>&plusmn;6.2</td>
+<td>61</td>
+<td>0.73</td>
+<td>1.02</td>    
+<td>0.59</td>
+<td>0.01</td>
+<th>0.7</th>
+<th>
+</th>
+<th>3.4</th>
+
+            </tr>
+
+            <tr id="MartinLogan-Motion-4i">
+	      <td>MartinLogan Motion 4i</td>
+	      
+<td>
+  <a href="MartinLogan%20Motion%204i/ASR/index_asr.html">asr</a>
+</td>
+<td>148.0</td>
+<td>108.0</td>
+<td>&plusmn;6.5</td>
+<td>98</td>
+<td>0.23</td>
+<td>0.55</td>    
+<td>0.45</td>
+<td>0.05</td>
+<th>1.5</th>
+<th>
+  4.5
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/MartinLogan%20Motion%204i/iir-autoeq.txt">(eq)</a>
+</th>
+<th>5.1</th>
+
+            </tr>
+
+            <tr id="Presonus-Eris-E3-5">
+	      <td>Presonus Eris E3.5</td>
+	      
+<td>
+  <a href="Presonus%20Eris%20E3.5/ErinsAudioCorner/index_eac.html">eac</a>
+</td>
+<td>80.0</td>
+<td>70.0</td>
+<td>&plusmn;6.5</td>
+<td>66</td>
+<td>0.24</td>
+<td>0.73</td>    
+<td>0.55</td>
+<td>0.05</td>
+<th>1.5</th>
+<th>
+  5.1
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Presonus%20Eris%20E3.5/iir-autoeq.txt">(eq)</a>
+</th>
+<th>4.3</th>
+
+            </tr>
+
+            <tr id="Ascend-Acoustics-Luna-Duo">
+	      <td>Ascend Acoustics Luna Duo</td>
+	      
+<td>
+  <a href="Ascend%20Acoustics%20Luna%20Duo/ASR/index_asr.html">asr</a>
+</td>
+<td>85.0</td>
+<td>64.0</td>
+<td>&plusmn;4.3</td>
+<td>64</td>
+<td>0.83</td>
+<td>0.91</td>    
+<td>0.81</td>
+<td>0.45</td>
+<th>1.2</th>
+<th>
+  4.5
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Ascend%20Acoustics%20Luna%20Duo/iir-autoeq.txt">(eq)</a>
+</th>
+<th>4.0</th>
+
+            </tr>
+
+            <tr id="OSD-Audio-AP650">
+	      <td>OSD Audio AP650</td>
+	      
+<td>
+  <a href="OSD%20Audio%20AP650/ASR/index_asr.html">asr</a>
+</td>
+<td>91.0</td>
+<td>75.0</td>
+<td>&plusmn;8.9</td>
+<td>77</td>
+<td>0.55</td>
+<td>0.9</td>    
+<td>0.48</td>
+<td>0.08</td>
+<th>1.1</th>
+<th>
+  3.8
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/OSD%20Audio%20AP650/iir-autoeq.txt">(eq)</a>
+</th>
+<th>4.2</th>
+
+            </tr>
+
+            <tr id="Ascend-Acoustics-Luna-Mini-Monitor">
+	      <td>Ascend Acoustics Luna Mini-Monitor</td>
+	      
+<td>
+  <a href="Ascend%20Acoustics%20Luna%20Mini-Monitor/ASR/index_asr.html">asr</a>
+</td>
+<td>95.0</td>
+<td>72.0</td>
+<td>&plusmn;5.7</td>
+<td>71</td>
+<td>0.59</td>
+<td>0.86</td>    
+<td>0.62</td>
+<td>0.15</td>
+<th>1.0</th>
+<th>
+  4.5
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Ascend%20Acoustics%20Luna%20Mini-Monitor/iir-autoeq.txt">(eq)</a>
+</th>
+<th>4.0</th>
+
+            </tr>
+
+            <tr id="Klipsch-Heresy-IV">
+	      <td>Klipsch Heresy IV</td>
+	      
+<td>
+  <a href="Klipsch%20Heresy%20IV/ErinsAudioCorner/index_eac-v1-20201105.html">eac-v1-20201105</a>
+</td>
+<td>75.0</td>
+<td>61.0</td>
+<td>&plusmn;4.3</td>
+<td>59</td>
+<td>1.91</td>
+<td>0.85</td>    
+<td>0.74</td>
+<td>0.11</td>
+<th>1.0</th>
+<th>
+  4.7
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Klipsch%20Heresy%20IV/iir-autoeq.txt">(eq)</a>
+</th>
+<th>3.6</th>
+
+            </tr>
+
+            <tr id="Paradigm-Cinema-100">
+	      <td>Paradigm Cinema 100</td>
+	      
+<td>
+  <a href="Paradigm%20Cinema%20100/ASR/index_asr.html">asr</a>
+</td>
+<td>139.0</td>
+<td>113.0</td>
+<td>&plusmn;8.4</td>
+<td>112</td>
+<td>0.5</td>
+<td>0.58</td>    
+<td>0.48</td>
+<td>0.01</td>
+<th>1.0</th>
+<th>
+  2.9
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Paradigm%20Cinema%20100/iir-autoeq.txt">(eq)</a>
+</th>
+<th>4.8</th>
+
+            </tr>
+
+            <tr id="Polk-Audio-Atrium-4">
+	      <td>Polk Audio Atrium 4</td>
+	      
+<td>
+  <a href="Polk%20Audio%20Atrium%204/ASR/index_asr.html">asr</a>
+</td>
+<td>113.0</td>
+<td>95.0</td>
+<td>&plusmn;5.5</td>
+<td>98</td>
+<td>0.35</td>
+<td>0.74</td>    
+<td>0.53</td>
+<td>0.12</td>
+<th>1.0</th>
+<th>
+  3.8
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Polk%20Audio%20Atrium%204/iir-autoeq.txt">(eq)</a>
+</th>
+<th>4.5</th>
+
+            </tr>
+
+            <tr id="Canton-Plus-GLX-3">
+	      <td>Canton Plus GLX.3</td>
+	      
+<td>
+  <a href="Canton%20Plus%20GLX.3/ASR/index_asr.html">asr</a>
+</td>
+<td>113.0</td>
+<td>95.0</td>
+<td>&plusmn;5.1</td>
+<td>95</td>
+<td>0.54</td>
+<td>0.83</td>    
+<td>0.53</td>
+<td>0.16</td>
+<th>0.9</th>
+<th>
+  3.5
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Canton%20Plus%20GLX.3/iir-autoeq.txt">(eq)</a>
+</th>
+<th>4.4</th>
+
+            </tr>
+
+            <tr id="Polk-Audio-T15">
+	      <td>Polk Audio T15</td>
+	      
+<td>
+  <a href="Polk%20Audio%20T15/ASR/index_asr.html">asr</a>
+</td>
+<td>83.0</td>
+<td>70.0</td>
+<td>&plusmn;12.2</td>
+<td>71</td>
+<td>0.55</td>
+<td>1.14</td>    
+<td>0.73</td>
+<td>0.32</td>
+<th>0.4</th>
+<th>
+  4.9
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Polk%20Audio%20T15/iir-autoeq.txt">(eq)</a>
+</th>
+<th>3.4</th>
+
+            </tr>
+
+            <tr id="KLH-911B">
+	      <td>KLH 911B</td>
+	      
+<td>
+  <a href="KLH%20911B/KLH/index_vendor.html">vendor</a>
+</td>
+<td>134.0</td>
+<td>109.0</td>
+<td>&plusmn;8.5</td>
+<td>109</td>
+<td>0.68</td>
+<td>0.76</td>    
+<td>0.59</td>
+<td>0.02</td>
+<th>0.3</th>
+<th>
+  3.9
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/KLH%20911B/iir-autoeq.txt">(eq)</a>
+</th>
+<th>4.1</th>
+
+            </tr>
+
+            <tr id="Infinity-RS152">
+	      <td>Infinity RS152</td>
+	      
+<td>
+  <a href="Infinity%20RS152/ASR/index_asr.html">asr</a>
+</td>
+<td>125.0</td>
+<td>56.0</td>
+<td>&plusmn;13.4</td>
+<td>54</td>
+<td>0.94</td>
+<td>1.04</td>    
+<td>0.96</td>
+<td>0.11</td>
+<th>-0.0</th>
+<th>
+  3.2
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Infinity%20RS152/iir-autoeq.txt">(eq)</a>
+</th>
+<th>2.5</th>
+
+            </tr>
+
+            <tr id="Canon-S-50">
+	      <td>Canon S-50</td>
+	      
+<td>
+  <a href="Canon%20S-50/ASR/index_asr.html">asr</a>
+</td>
+<td>64.0</td>
+<td>59.0</td>
+<td>&plusmn;7.8</td>
+<td>55</td>
+<td>0.38</td>
+<td>1.42</td>    
+<td>1.02</td>
+<td>0.54</td>
+<th>-0.2</th>
+<th>
+  4.0
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Canon%20S-50/iir-autoeq.txt">(eq)</a>
+</th>
+<th>2.4</th>
+
+            </tr>
+
+            <tr id="Magnepan-LRS">
+	      <td>Magnepan LRS</td>
+	      
+<td>
+  <a href="Magnepan%20LRS/ASR/index_asr.html">asr</a>
+</td>
+<td>148.0</td>
+<td>72.0</td>
+<td>&plusmn;5.8</td>
+<td>241</td>
+<td>4.69</td>
+<td>0.73</td>    
+<td>0.43</td>
+<td>0.14</td>
+<th>-0.4</th>
+<th>
+  0.1
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Magnepan%20LRS/iir-autoeq.txt">(eq)</a>
+</th>
+<th>4.9</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="Magnepan%20LRS/Misc/index_misc-audioxpress.html">misc-audioxpress</a>
+</td>
+<td>79.0</td>
+<td>50.0</td>
+<td>&plusmn;8.4</td>
+<td>49</td>
+<td>4.34</td>
+<td>0.66</td>    
+<td>0.52</td>
+<td>0.65</td>
+<th>3.7</th>
+<th>
+</th>
+<th>6.0</th>
+
+            </tr>
+
+            <tr id="Realistic-MC-1000">
+	      <td>Realistic MC-1000</td>
+	      
+<td>
+  <a href="Realistic%20MC-1000/ASR/index_asr.html">asr</a>
+</td>
+<td>121.0</td>
+<td>109.0</td>
+<td>&plusmn;8.7</td>
+<td>109</td>
+<td>1.28</td>
+<td>1.12</td>    
+<td>0.96</td>
+<td>0.54</td>
+<th>-0.5</th>
+<th>
+  1.8
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Realistic%20MC-1000/iir-autoeq.txt">(eq)</a>
+</th>
+<th>3.3</th>
+
+            </tr>
+
+            <tr id="Bose-141">
+	      <td>Bose 141</td>
+	      
+<td>
+  <a href="Bose%20141/Bose/index_vendor.html">vendor</a>
+</td>
+<td>88.0</td>
+<td>74.0</td>
+<td>&plusmn;8.3</td>
+<td>74</td>
+<td>0.73</td>
+<td>1.19</td>    
+<td>0.91</td>
+<td>0.21</td>
+<th>-0.6</th>
+<th>
+</th>
+<th>2.5</th>
+
+            </tr>
+
+            <tr id="Adam-T7V">
+	      <td>Adam T7V</td>
+	      
+<td>
+  <a href="Adam%20T7V/Misc/index_misc-audioholics.html">misc-audioholics</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;2.6</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Amphion-Argon1">
+	      <td>Amphion Argon1</td>
+	      
+<td>
+  <a href="Amphion%20Argon1/Misc/index_misc-napilopez.html">misc-napilopez</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;2.9</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Audio-Engine-A2">
+	      <td>Audio Engine A2</td>
+	      
+<td>
+  <a href="Audio%20Engine%20A2/Misc/index_misc-archimago.html">misc-archimago</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;4.4</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Avantgarde-Acoustic-Solo">
+	      <td>Avantgarde Acoustic Solo</td>
+	      
+<td>
+  <a href="Avantgarde%20Acoustic%20Solo/Princeton/index_princeton.html">princeton</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;11.2</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Buchardt-Audio-S300">
+	      <td>Buchardt Audio S300</td>
+	      
+<td>
+  <a href="Buchardt%20Audio%20S300/Misc/index_misc-speakerdata2034.html">misc-speakerdata2034</a>
+</td>
+<td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="CommonSense-Audio-5-6">
+	      <td>CommonSense Audio 5.6</td>
+	      
+<td>
+  <a href="CommonSense%20Audio%205.6/Princeton/index_princeton.html">princeton</a>
+</td>
+<td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Dayton-Audio-MK402">
+	      <td>Dayton Audio MK402</td>
+	      
+<td>
+  <a href="Dayton%20Audio%20MK402/Misc/index_misc-audioholics.html">misc-audioholics</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;5.6</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Dayton-Audio-MK442">
+	      <td>Dayton Audio MK442</td>
+	      
+<td>
+  <a href="Dayton%20Audio%20MK442/Misc/index_misc-audioholics.html">misc-audioholics</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;3.9</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Dayton-Audio-C452-AIR">
+	      <td>Dayton Audio C452-AIR</td>
+	      
+<td>
+  <a href="Dayton%20Audio%20C452-AIR/Misc/index_misc-audioholics.html">misc-audioholics</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;3.7</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Dayton-Audio-B452-AIR">
+	      <td>Dayton Audio B452-AIR</td>
+	      
+<td>
+  <a href="Dayton%20Audio%20B452-AIR/Misc/index_misc-audioholics.html">misc-audioholics</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;4.1</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Definitive-Technology-D9">
+	      <td>Definitive Technology D9</td>
+	      
+<td>
+  <a href="Definitive%20Technology%20D9/Misc/index_misc-napilopez.html">misc-napilopez</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;2.8</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Devialet-Phantom-Reactor-900">
+	      <td>Devialet Phantom Reactor 900</td>
+	      
+<td>
+  <a href="Devialet%20Phantom%20Reactor%20900/Misc/index_misc-napilopez.html">misc-napilopez</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;2.3</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Dynaudio-Xeo-3">
+	      <td>Dynaudio Xeo 3</td>
+	      
+<td>
+  <a href="Dynaudio%20Xeo%203/Princeton/index_princeton.html">princeton</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;9.8</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Edifier-S2000-Mk-III">
+	      <td>Edifier S2000 Mk III</td>
+	      
+<td>
+  <a href="Edifier%20S2000%20Mk%20III/Misc/index_misc-archimago.html">misc-archimago</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;5.1</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Elac-Debut-2-0-A4-2">
+	      <td>Elac Debut 2.0 A4.2</td>
+	      
+<td>
+  <a href="Elac%20Debut%202.0%20A4.2/Misc/index_misc-archimago.html">misc-archimago</a>
+</td>
+<td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Essence-Electrostatic-Model-1600">
+	      <td>Essence Electrostatic Model 1600</td>
+	      
+<td>
+  <a href="Essence%20Electrostatic%20Model%201600/Princeton/index_princeton.html">princeton</a>
+</td>
+<td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Fisher-STE-720">
+	      <td>Fisher STE-720</td>
+	      
+<td>
+  <a href="Fisher%20STE-720/Princeton/index_princeton.html">princeton</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;9.2</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Fluance-Ai60">
+	      <td>Fluance Ai60</td>
+	      
+<td>
+  <a href="Fluance%20Ai60/Misc/index_misc-napilopez.html">misc-napilopez</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;3.5</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Fluance-Reference-XL8S">
+	      <td>Fluance Reference XL8S</td>
+	      
+<td>
+  <a href="Fluance%20Reference%20XL8S/Misc/index_misc-archimago.html">misc-archimago</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;7.9</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Gainphile-R16">
+	      <td>Gainphile R16</td>
+	      
+<td>
+  <a href="Gainphile%20R16/Princeton/index_princeton.html">princeton</a>
+</td>
+<td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="GedLee-Nathan">
+	      <td>GedLee Nathan</td>
+	      
+<td>
+  <a href="GedLee%20Nathan/Princeton/index_princeton.html">princeton</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;4.5</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Genelec-8030A">
+	      <td>Genelec 8030A</td>
+	      
+<td>
+  <a href="Genelec%208030A/Princeton/index_princeton.html">princeton</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;1.5</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Genelec-8351A">
+	      <td>Genelec 8351A</td>
+	      
+<td>
+  <a href="Genelec%208351A/Princeton/index_princeton.html">princeton</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;2.5</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Gradient-Helsinki-1-5">
+	      <td>Gradient Helsinki 1.5</td>
+	      
+<td>
+  <a href="Gradient%20Helsinki%201.5/Princeton/index_princeton.html">princeton</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;2.6</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="iKey-Audio-M-808V2">
+	      <td>iKey-Audio M-808V2</td>
+	      
+<td>
+  <a href="iKey-Audio%20M-808V2/Princeton/index_princeton.html">princeton</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;4.0</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="JansZen-Loudspeaker-zA1-1">
+	      <td>JansZen Loudspeaker zA1.1</td>
+	      
+<td>
+  <a href="JansZen%20Loudspeaker%20zA1.1/Princeton/index_princeton.html">princeton</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;3.9</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="JansZen-Loudspeaker-zA2-1">
+	      <td>JansZen Loudspeaker zA2.1</td>
+	      
+<td>
+  <a href="JansZen%20Loudspeaker%20zA2.1/Princeton/index_princeton.html">princeton</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;11.1</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="JBL-LSR308">
+	      <td>JBL LSR308</td>
+	      
+<td>
+  <a href="JBL%20LSR308/JBL/index_vendor.html">vendor</a>
+</td>
+<td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="JBL-100-Classic">
+	      <td>JBL 100 Classic</td>
+	      
+<td>
+  <a href="JBL%20100%20Classic/Misc/index_misc-audioholics.html">misc-audioholics</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;3.1</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="JBL-PRX635">
+	      <td>JBL PRX635</td>
+	      
+<td>
+  <a href="JBL%20PRX635/Princeton/index_princeton.html">princeton</a>
+</td>
+<td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Kali-LP-8">
+	      <td>Kali LP-8</td>
+	      
+<td>
+  <a href="Kali%20LP-8/Misc/index_misc-audioholics.html">misc-audioholics</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;3.2</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="KEF-R2c">
+	      <td>KEF R2c</td>
+	      
+<td>
+  <a href="KEF%20R2c/Misc/index_misc-speakerdata2034.html">misc-speakerdata2034</a>
+</td>
+<td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="KEF-R5">
+	      <td>KEF R5</td>
+	      
+<td>
+  <a href="KEF%20R5/Misc/index_misc-speakerdata2034.html">misc-speakerdata2034</a>
+</td>
+<td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="KEF-R7">
+	      <td>KEF R7</td>
+	      
+<td>
+  <a href="KEF%20R7/Misc/index_misc-speakerdata2034.html">misc-speakerdata2034</a>
+</td>
+<td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="KEF-R11">
+	      <td>KEF R11</td>
+	      
+<td>
+  <a href="KEF%20R11/Misc/index_misc-speakerdata2034.html">misc-speakerdata2034</a>
+</td>
+<td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="King-s-Audio-KingSound-KS-3001">
+	      <td>King's Audio KingSound KS 3001</td>
+	      
+<td>
+  <a href="King's%20Audio%20KingSound%20KS%203001/Princeton/index_princeton.html">princeton</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;8.7</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="KRK-Systems-RoKit-6-G2">
+	      <td>KRK Systems RoKit 6 G2</td>
+	      
+<td>
+  <a href="KRK%20Systems%20RoKit%206%20G2/Princeton/index_princeton.html">princeton</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;4.3</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Manger-Sidekick">
+	      <td>Manger Sidekick</td>
+	      
+<td>
+  <a href="Manger%20Sidekick/Princeton/index_princeton.html">princeton</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;5.8</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Martin-Logan-Motion-35XTi">
+	      <td>Martin Logan Motion 35XTi</td>
+	      
+<td>
+  <a href="Martin%20Logan%20Motion%2035XTi/Misc/index_misc-audioholics.html">misc-audioholics</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;3.3</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Monoprice-MP-T65RT">
+	      <td>Monoprice MP-T65RT</td>
+	      
+<td>
+  <a href="Monoprice%20MP-T65RT/Misc/index_misc-audioholics.html">misc-audioholics</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;5.4</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Monoprice-Monolith-THX-365T">
+	      <td>Monoprice Monolith THX-365T</td>
+	      
+<td>
+  <a href="Monoprice%20Monolith%20THX-365T/Misc/index_misc-audioholics.html">misc-audioholics</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;2.7</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Monoprice-Monolith-THX-365C">
+	      <td>Monoprice Monolith THX-365C</td>
+	      
+<td>
+  <a href="Monoprice%20Monolith%20THX-365C/Misc/index_misc-audioholics.html">misc-audioholics</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;3.0</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Monoprice-MP-65RT">
+	      <td>Monoprice MP-65RT</td>
+	      
+<td>
+  <a href="Monoprice%20MP-65RT/Misc/index_misc-audioholics.html">misc-audioholics</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;5.8</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="NHT-Pro-M-00">
+	      <td>NHT Pro M-00</td>
+	      
+<td>
+  <a href="NHT%20Pro%20M-00/ASR/index_asr.html">asr</a>
+</td>
+<td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Outlaw-Audio-BLSv2">
+	      <td>Outlaw Audio BLSv2</td>
+	      
+<td>
+  <a href="Outlaw%20Audio%20BLSv2/Misc/index_misc-audioholics.html">misc-audioholics</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;2.5</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Outlaw-Audio-LCRv2">
+	      <td>Outlaw Audio LCRv2</td>
+	      
+<td>
+  <a href="Outlaw%20Audio%20LCRv2/Misc/index_misc-audioholics-vertical.html">misc-audioholics-vertical</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;3.2</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="Outlaw%20Audio%20LCRv2/Misc/index_misc-audioholics-horizontal.html">misc-audioholics-horizontal</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;2.6</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Polk-Audio-Legend-L200">
+	      <td>Polk Audio Legend L200</td>
+	      
+<td>
+  <a href="Polk%20Audio%20Legend%20L200/Misc/index_misc-napilopez.html">misc-napilopez</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;1.9</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="Polk%20Audio%20Legend%20L200/Misc/index_misc-audioholics.html">misc-audioholics</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;2.0</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Polk-Audio-Legend-L800">
+	      <td>Polk Audio Legend L800</td>
+	      
+<td>
+  <a href="Polk%20Audio%20Legend%20L800/Misc/index_misc-audioholics.html">misc-audioholics</a>
+</td>
+<td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Polk-Audio-5JR">
+	      <td>Polk Audio 5JR</td>
+	      
+<td>
+  <a href="Polk%20Audio%205JR/Princeton/index_princeton.html">princeton</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;6.0</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Presonus-Eris-E8-XT">
+	      <td>Presonus Eris E8 XT</td>
+	      
+<td>
+  <a href="Presonus%20Eris%20E8%20XT/Misc/index_misc-audioholics.html">misc-audioholics</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;1.9</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Q-Acoustics-3030i">
+	      <td>Q Acoustics 3030i</td>
+	      
+<td>
+  <a href="Q%20Acoustics%203030i/Misc/index_misc-napilopez.html">misc-napilopez</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;2.5</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Quad-Electroacoustics-ESL-57">
+	      <td>Quad Electroacoustics ESL-57</td>
+	      
+<td>
+  <a href="Quad%20Electroacoustics%20ESL-57/Princeton/index_princeton.html">princeton</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;5.6</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="RBH-Sound-R-515">
+	      <td>RBH Sound R-515</td>
+	      
+<td>
+  <a href="RBH%20Sound%20R-515/Misc/index_misc-audioholics.html">misc-audioholics</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;5.9</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="RBH-Sound-SV-61R">
+	      <td>RBH Sound SV-61R</td>
+	      
+<td>
+  <a href="RBH%20Sound%20SV-61R/Misc/index_misc-audioholics.html">misc-audioholics</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;2.7</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="RBH-Sound-PM-8">
+	      <td>RBH Sound PM-8</td>
+	      
+<td>
+  <a href="RBH%20Sound%20PM-8/Misc/index_misc-audioholics.html">misc-audioholics</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;2.6</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="RBH-Sound-R-5">
+	      <td>RBH Sound R-5</td>
+	      
+<td>
+  <a href="RBH%20Sound%20R-5/Misc/index_misc-audioholics.html">misc-audioholics</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;4.3</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Realistic-Tandy-Minimus-7">
+	      <td>Realistic Tandy Minimus 7</td>
+	      
+<td>
+  <a href="Realistic%20Tandy%20Minimus%207/Misc/index_misc-archimago.html">misc-archimago</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;4.5</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="RSL-CG5">
+	      <td>RSL CG5</td>
+	      
+<td>
+  <a href="RSL%20CG5/Misc/index_misc-audioholics.html">misc-audioholics</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;4.1</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="RSL-CG25">
+	      <td>RSL CG25</td>
+	      
+<td>
+  <a href="RSL%20CG25/Misc/index_misc-audioholics.html">misc-audioholics</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;4.5</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Sanders-Sound-Systems-Model-11">
+	      <td>Sanders Sound Systems Model 11</td>
+	      
+<td>
+  <a href="Sanders%20Sound%20Systems%20Model%2011/Princeton/index_princeton-factory.html">princeton-factory</a>
+</td>
+<td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="Sanders%20Sound%20Systems%20Model%2011/Princeton/index_princeton-with-anechoic-foam.html">princeton-with-anechoic-foam</a>
+</td>
+<td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="Sanders%20Sound%20Systems%20Model%2011/Princeton/index_princeton-with-backwave-absorber.html">princeton-with-backwave-absorber</a>
+</td>
+<td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Sonus-Faber-Sonetto-II">
+	      <td>Sonus Faber Sonetto II</td>
+	      
+<td>
+  <a href="Sonus%20Faber%20Sonetto%20II/Misc/index_misc-napilopez.html">misc-napilopez</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;5.1</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Spendor-Audio-Systems-SA1">
+	      <td>Spendor Audio Systems SA1</td>
+	      
+<td>
+  <a href="Spendor%20Audio%20Systems%20SA1/Princeton/index_princeton.html">princeton</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;3.6</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="Spendor%20Audio%20Systems%20SA1/Misc/index_misc-archimago.html">misc-archimago</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;2.8</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Tannoy-Definition-DC6i">
+	      <td>Tannoy Definition DC6i</td>
+	      
+<td>
+  <a href="Tannoy%20Definition%20DC6i/Princeton/index_princeton.html">princeton</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;5.5</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Tannoy-Reveal-501a">
+	      <td>Tannoy Reveal 501a</td>
+	      
+<td>
+  <a href="Tannoy%20Reveal%20501a/Misc/index_misc-archimago.html">misc-archimago</a>
+</td>
+<td></td>
+<td></td>
+<td>&plusmn;6.6</td>
+<td></td><td></td><td></td><td></td><th></th>
+<th></th><th></th><th></th>
+
+            </tr>
+
+            <tr id="Speakercraft-AIM8-One">
+	      <td>Speakercraft AIM8 One</td>
+	      
+<td>
+  <a href="Speakercraft%20AIM8%20One/Misc/index_misc-speakerdata2034.html">misc-speakerdata2034</a>
+</td>
+<td>59.0</td>
+<td>44.0</td>
+<td>&plusmn;14.1</td>
+<td>43</td>
+<td>0.42</td>
+<td>1.34</td>    
+<td>1.35</td>
+<td>0.04</td>
+<th>-1.6</th>
+<th>
+  5.2
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Speakercraft%20AIM8%20One/iir-autoeq.txt">(eq)</a>
+</th>
+<th>0.4</th>
+
+            </tr>
+    </table>
+  </div>
+</div>
+
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>Spinorama</strong> by <a href="https://github.com/pierreaubert">Pierre Aubert</a>.
+      The <a href="https://github.com/pierreaubert/spinorama">source code</a> is licensed under GPL. <br>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
+
+
+

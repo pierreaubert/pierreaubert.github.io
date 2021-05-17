@@ -1,0 +1,6 @@
+venv
+*_large.png
+*~
+*#
+.DS_Store
+

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>A collection of loudspeakers measurements</title>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@5.2.1/dist/fuse.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css" integrity="sha256-O8SsQwDg1R10WnKJNyYgd9J3rlom+YSVcGbEF5RmfFk=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css" integrity="sha256-0fuNgzfNIlaClbDtmYyFxY8LTNCDrwsNshywr4AALy0=" crossorigin="anonymous">
+
+  <script src="https://pierreaubert.github.io/spinorama/assets/search.js"></script>
+  <script src="https://pierreaubert.github.io/spinorama/assets/bulma.js"></script> 
+  <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://pierreaubert.github.io/spinorama/assets/spinorama.css" />
+  <link rel="icon" type="image/png" href="https://pierreaubert.github.io/spinorama/assets/favicon-16x16.png" sizes="16x16" />
+
+      <script src="https://pierreaubert.github.io/spinorama/assets/zip.min.js"></script> 
+  <script src="https://pierreaubert.github.io/spinorama/assets/downloadzip.js"></script> 
+  <script src="https://pierreaubert.github.io/spinorama/assets/graph.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.19.1/build/vega.min.js" integrity="sha256-Vxb/KfYgO7QxLQ0lxJZXp4l4Bteqb/h2xKNcXUATo54=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.8/build/vega-lite.min.js" integrity="sha256-PNBC7gvpPY3H7JLnL4DQyK94U3fQ5khIkjIi+fEdVA0=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.15.1/build/vega-embed.min.js" integrity="sha256-jh8y6xR1MbFZrrqorptR4//Fqgf2R5gPY7IySDMLxTE=" crossorigin="anonymous"></script>
+
+  </head>
+<body>
+
+
+
+
+<nav class="navbar is-transparent">
+  <div class="navbar-brand">
+    <a class="navbar-item title" href="https://pierreaubert.github.io/spinorama">Spinorama</a>
+    <div class="navbar-burger" data-target="navbarMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <div id="navbarMenu" class="navbar-menu">
+    <div class="navbar-end">
+      <a class="navbar-item" href="https://pierreaubert.github.io/spinorama/index.html">Search</a>
+      <a class="navbar-item" href="https://pierreaubert.github.io/spinorama/eqs.html">EQs</a>
+      <a class="navbar-item" href="https://pierreaubert.github.io/spinorama/compare.html">Compare</a>
+      <a class="navbar-item" href="https://pierreaubert.github.io/spinorama/scores.html">Scores</a>
+      <a class="navbar-item" href="https://pierreaubert.github.io/spinorama/statistics.html">Statistics</a>
+      <a class="navbar-item" href="https://pierreaubert.github.io/spinorama/help.html">Help</a>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+<section class="hero is-dark">
+  <div class="container">
+    <p class="title">JBL M2 measurements provided by
+      <img align="center" src="https://pierreaubert.github.io/spinorama/logos/jbl.jpg" alt="JBL">
+    </p>
+  </div>
+</section>
+
+<div class="container">
+  <div class="tabs is-large is-centered" id="nav">
+    <ul>
+      <li data-target="pane-1" id="1" class="is-active">
+        <a>
+          <span class="icon is-small"><i class="fb fa-mobile"></i></span>
+          <span>Mobile View</span>
+        </a>
+      </li>
+      <li data-target="pane-2" id="2">
+        <a>
+          <span class="icon is-small"><i class="fb fa-laptop"></i></span>
+          <span>1 Pager</span>
+        </a>
+      </li>
+      <li data-target="pane-3" id="3">
+        <a>
+          <span class="icon is-small"><i class="fb fa-desktop"></i></span>
+          <span>With EQ</span>
+        </a>
+      </li>
+      <li data-target="pane-4" id="4">
+        <a>
+          <span class="icon is-small"><i class="fb fa-desktop"></i></span>
+          <span>Ref. v.s. EQ</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="tab-content">
+
+
+
+
+
+<article class="message is-info">
+  <div class="message-header">
+    <p>
+      JBL M2
+      is a active floorstanders speaker
+
+          that cost around 20000CHF
+          for a pair
+.
+    </p>
+  </div>
+  <div class="message-body">
+    <div class="content">
+      <ul>
+
+<li>
+  <b>-3dB</b> (resp. -6db) point v.s. reference is
+  at <b>30.0Hz</b>
+  (resp. 24.0Hz).
+</li>
+<li>
+      Reference level is normalised to -0.0dB
+      computed over the frequency range [300Hz,
+      10000Hz].
+</li>
+<li>
+      Frequency deviation is <b>1.7dB</b> over the same frequency range.
+</li>
+      <li>Preference Score is <b>7.2</b>
+      and would be <b>8.3</b> with a
+        perfect subwoofer.
+      </li>
+      <li>
+        Score
+        compononent details: NBD: ON 0.23,
+        LW 0.14, SP
+        0.21, PIR
+        0.17; SM:
+        SP0.84,
+        PIR0.74; LFQ 2.52, LFX 27Hz
+      </li>
+
+      </ul>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- Mobile view: sequential-->
+<div class="tab-pane is-active" id="pane-1">
+  <ul>
+    <li>
+      <div>
+	<a href="vendor/CEA2034.html"><img class="graph" src="vendor/CEA2034.jpg"/></a>
+      </div>
+    </li>
+    <li>CEA2034</li>
+    <li>
+      <div>
+	<a href="vendor/On%20Axis.html"><img class="graph" src="vendor/On%20Axis.jpg"/></a>
+      </div>
+    </li>
+    <li>On Axis</li>
+    <li>
+      <div>
+	<a href="vendor/Estimated%20In-Room%20Response.html"><img class="graph" src="vendor/Estimated%20In-Room%20Response.jpg"/></a>
+      </div>
+    </li>
+    <li>Estimated In-Room Response</li>
+  </ul>
+</div>
+<!-- Laptop view: 2 cols-->
+<div class="tab-pane display:none" id="pane-2">
+  <div id="vis2"></div>
+  <figure class="image">
+    <img class="graph" src="vendor/2cols.jpg" alt="all graphs"/>
+  </figure>
+</div>
+<!-- EQ view: sequential-->
+<div class="tab-pane" id="pane-3">
+  <ul>
+    <li>
+      <div>
+	<a href="vendor_eq/CEA2034.html"><img class="graph" src="vendor_eq/CEA2034.jpg"/></a>
+      </div>
+    </li>
+    <li>CEA2034</li>
+    <li>
+      <div>
+	<a href="vendor_eq/On%20Axis.html"><img class="graph" src="vendor_eq/On%20Axis.jpg"/></a>
+      </div>
+    </li>
+    <li>On Axis</li>
+    <li>
+      <div>
+	<a href="vendor_eq/Estimated%20In-Room%20Response.html"><img class="graph" src="vendor_eq/Estimated%20In-Room%20Response.jpg"/></a>
+      </div>
+    </li>
+    <li>Estimated In-Room Response</li>
+  </ul>
+</div>
+<!-- Desktop view: Ref vs. EQ views-->
+<div class="tab-pane display:none" id="pane-4">
+  <div id="vis4"></div>
+  <table>
+  <tr>
+    <td><img class="graph" src="vendor/CEA2034.jpg"/></td>
+    <td><img class="graph" src="vendor_eq/CEA2034.jpg"/></td>
+  </tr>
+  <tr>
+    <td><img class="graph" src="vendor/On%20Axis.jpg"/></td>
+    <td><img class="graph" src="vendor_eq/On%20Axis.jpg"/></td>
+  </tr>
+  <tr>
+    <td><img class="graph" src="vendor/Estimated%20In-Room%20Response.jpg"/></td>
+    <td><img class="graph" src="vendor_eq/Estimated%20In-Room%20Response.jpg"/></td>
+  </tr>
+  </table>
+</div>
+
+</div>
+</div>
+<script src="https://pierreaubert.github.io/spinorama/assets/tabs.js"></script>
+
+
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>Spinorama</strong> by <a href="https://github.com/pierreaubert">Pierre Aubert</a>.
+      The <a href="https://github.com/pierreaubert/spinorama">source code</a> is licensed under GPL. <br>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
+

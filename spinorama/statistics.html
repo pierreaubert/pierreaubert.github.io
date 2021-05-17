@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>A collection of loudspeakers measurements</title>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@5.2.1/dist/fuse.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css" integrity="sha256-O8SsQwDg1R10WnKJNyYgd9J3rlom+YSVcGbEF5RmfFk=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css" integrity="sha256-0fuNgzfNIlaClbDtmYyFxY8LTNCDrwsNshywr4AALy0=" crossorigin="anonymous">
+
+  <script src="https://pierreaubert.github.io/spinorama/assets/search.js"></script>
+  <script src="https://pierreaubert.github.io/spinorama/assets/bulma.js"></script> 
+  <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://pierreaubert.github.io/spinorama/assets/spinorama.css" />
+  <link rel="icon" type="image/png" href="https://pierreaubert.github.io/spinorama/assets/favicon-16x16.png" sizes="16x16" />
+
+      <script src="https://pierreaubert.github.io/spinorama/assets/zip.min.js"></script> 
+  <script src="https://pierreaubert.github.io/spinorama/assets/downloadzip.js"></script> 
+  <script src="https://pierreaubert.github.io/spinorama/assets/graph.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.19.1/build/vega.min.js" integrity="sha256-Vxb/KfYgO7QxLQ0lxJZXp4l4Bteqb/h2xKNcXUATo54=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.8/build/vega-lite.min.js" integrity="sha256-PNBC7gvpPY3H7JLnL4DQyK94U3fQ5khIkjIi+fEdVA0=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.15.1/build/vega-embed.min.js" integrity="sha256-jh8y6xR1MbFZrrqorptR4//Fqgf2R5gPY7IySDMLxTE=" crossorigin="anonymous"></script>
+
+  </head>
+<body>
+
+
+
+
+<nav class="navbar is-transparent">
+  <div class="navbar-brand">
+    <a class="navbar-item title" href="https://pierreaubert.github.io/spinorama">Spinorama</a>
+    <div class="navbar-burger" data-target="navbarMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <div id="navbarMenu" class="navbar-menu">
+    <div class="navbar-end">
+      <a class="navbar-item" href="https://pierreaubert.github.io/spinorama/index.html">Search</a>
+      <a class="navbar-item" href="https://pierreaubert.github.io/spinorama/eqs.html">EQs</a>
+      <a class="navbar-item" href="https://pierreaubert.github.io/spinorama/compare.html">Compare</a>
+      <a class="navbar-item" href="https://pierreaubert.github.io/spinorama/scores.html">Scores</a>
+      <a class="navbar-item" href="https://pierreaubert.github.io/spinorama/statistics.html">Statistics</a>
+      <a class="navbar-item" href="https://pierreaubert.github.io/spinorama/help.html">Help</a>
+    </div>
+  </div>
+</nav>
+
+
+
+<div class="section">
+  <div class="content">
+    <h1>Distribution of scores v.s. speakers</h1>
+  </div>
+  <div class="box">
+    <div id="visDistributionScore"></div>
+    <script>
+      const specDS = downloadZip("stats/distribution_score.json.zip").then( function(specDS) { displayStats(JSON.parse(specDS), '#visDistributionScore'); });
+    </script>
+  </div>
+  <div class="content">
+    <h1>Distribution of scores v.s. speakers if we also have a perfect subwoofer</h1>
+  </div>
+  <div id="visDistributionScoreWsub"></div>
+  <div class="box">
+    <script>
+    const specDSW = downloadZip("stats/distribution_score_wsub.json.zip").then( function(specDSW) { displayStats(JSON.parse(specDSW), '#visDistributionScoreWsub'); });
+    </script>
+  </div>
+</div>
+
+<div class="section">
+  <div class="content">
+    <h1>Score per speaker.</h1>
+    <ul>
+      <li>Orange points are as measured, Blue points are with an extra EQ</li>
+      <li>You can over a point to get more information.</li>
+    </ul>
+  </div>
+  <div class="box">
+    <div id="visSpreadScore"></div>
+    <script>
+      const specSC = downloadZip("stats/spread_score.json.zip").then( function(specSC) { displayStats(JSON.parse(specSC), '#visSpreadScore'); });
+    </script>
+  </div>
+  <div class="content">
+    <h1>Score per speaker with an extra perfect subwoofer.</h1>
+    <ul>
+      <li>Orange points are as measured, Blue points are with an extra EQ</li>
+      <li>You can over a point to get more information.</li>
+    </ul>
+  </div>
+  <div class="box">
+    <div id="visSpreadScoreWsub"></div>
+    <script>
+      const specSCW = downloadZip("stats/spread_score_wsub.json.zip").then( function(specSCW) { displayStats(JSON.parse(specSCW), '#visSpreadScoreWsub'); });
+    </script>
+  </div>
+</div>
+
+<div class="section">
+  <div class="content">
+    <h1>How does the score correlate with one of the parameter that
+      define the score?</h1>
+  </div>
+</div>
+
+<div class="section">
+  <div class="content">
+    <h2>Correlation with LFX</h2>
+    aka Low  Frequency Extension
+  </div>
+  <div class="box">
+    <div id="visDistributionLfxHz"></div>
+    <script>
+      const specLfxHz = downloadZip("stats/distribution_lfx_hz.json.zip").then( function(specLfxHz) { displayStats(JSON.parse(specLfxHz), '#visDistributionLfxHz'); });
+    </script>
+  </div>
+  <div class="content">
+    <h2>Correlation with NBD ON</h2>
+    aka Narrow Bandwidth Deviation for On Axis frequency response
+  </div>
+  <div class="box">
+    <div id="visDistributionNbdOn"></div>
+    <script>
+      const specNbdOn = downloadZip("stats/distribution_nbd_on.json.zip").then( function(specNbdOn) { displayStats(JSON.parse(specNbdOn), '#visDistributionNbdOn'); });
+    </script>
+  </div>
+  <div class="content">
+    <h2>Correlation with NBD PIR</h2>
+    aka Narrow Bandwidth Deviation for  Predicted In Room frequency response
+  </div>
+  <div class="box">
+    <div id="visDistributionNbdPir"></div>
+    <script>
+      const specNbdPir = downloadZip("stats/distribution_nbd_pir.json.zip").then( function(specNbdPir) { displayStats(JSON.parse(specNbdPir), '#visDistributionNbdPir'); });
+    </script>
+  </div>
+  <div class="content">
+    <h2>Correlation with SM PIR</h2>
+    aka Predicted In Room frequency response
+  </div>
+  <div class="box">
+    <div id="visDistributionSmPir"></div>
+    <script>
+      const specSmPir = downloadZip("stats/distribution_sm_pir.json.zip").then( function(specSmPir) { displayStats(JSON.parse(specSmPir), '#visDistributionSmPir'); });
+    </script>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>Spinorama</strong> by <a href="https://github.com/pierreaubert">Pierre Aubert</a>.
+      The <a href="https://github.com/pierreaubert/spinorama">source code</a> is licensed under GPL. <br>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
+

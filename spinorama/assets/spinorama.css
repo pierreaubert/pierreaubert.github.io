@@ -1,0 +1,27 @@
+.tabs {
+    margin-bottom: -1px !important;
+}
+
+.tab-content {
+    top: 120px;
+    left: 0px
+    width: 100%;
+}
+
+.tab-pane {
+    display: none;
+    width: 100%;
+    position: absolute;
+}
+
+.tab-pane.is-active {
+    display: block;
+}
+
+.is-active {
+    display: initial;
+}
+
+.graph {
+    width: 100%;
+}
