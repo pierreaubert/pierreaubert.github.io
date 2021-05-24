@@ -55,30 +55,39 @@
 
 <div class="section">
   <div class="table-container">
-    <table class="table is-striped">
+    <table class="table is-bordered is-hoverable">
       <thead>
 	<tr>
 	  <th>Speaker</th>
 	  <th>Origin</th>
-	  <th colspan="3" class="has-text-right">Standard Measurements</th>
+	  <th colspan="7" class="has-text-right">Standard Measurements</th>
 	  <th colspan="6" class="has-text-right">Preference Scores from Harman</th>
-	  <th colspan="2" class="has-text-right">Scores (modified)</th>
+	  <th colspan="3" class="has-text-right">Scores (modified)</th>
 	</tr>
 	<tr>
 	  <th></th>
 	  <th></th>
 
 	  <th>
-	    <abbr title="Low Freq -3dB">-3dB (Hz)</abbr>
-	    <span class="has-tooltip-info has-tooltip-multiline" data-tooltip="-3dB w.r.t reference (mean over freq between 400Hz and 10kHz)">(def)</span>
+	    <abbr title="Low Freq -3dB  w.r.t reference (mean over freq between 400Hz and 10kHz)">-3dB (Hz)</abbr>
 	  </th>
 	  <th>
-	    <abbr title="Low Freq -6dB">-6dB (Hz)</abbr>
-	    <span class="has-tooltip-info has-tooltip-multiline" data-tooltip="-6dB w.r.t reference (mean over freq between 400Hz and 10kHz)">(def)</span>
+	    <abbr title="Low Freq -6dB w.r.t reference (mean over freq between 400Hz and 10kHz)">-6dB (Hz)</abbr>
 	  </th>
 	  <th>
-	    <abbr title="Deviation (dB)">Dev (dB)</abbr>
-	    <span class="has-tooltip-info has-tooltip-multiline" data-tooltip="+/- w.r.t reference (mean over freq between 400Hz and 10kHz)">(def)</span>
+	    <abbr title="Deviation (dB) +/- w.r.t reference (mean over freq between 400Hz and 10kHz)">Dev (dB)</abbr>
+	  </th>
+	  <th>
+	    <abbr title="Directivity angle -6dB Horizontal">Dir H-</abbr>
+	  </th>
+	  <th>
+	    <abbr title="Directivity angle +6dB Horizontal">Dir H+</abbr>
+	  </th>
+	  <th>
+	    <abbr title="Directivity angle -6dB Vertical">Dir V-</abbr>
+	  </th>
+	  <th>
+	    <abbr title="Directivity angle +6dB Vertical">Dir V+</abbr>
 	  </th>
 
 	  <th>
@@ -97,17 +106,18 @@
 	    <abbr title="Smoothness In Room">SM PIR</abbr>
 	  </th>
 	  <th>
-	    <abbr title="Preference Score">Score</abbr>
-	    <span class="has-tooltip-info has-tooltip-multiline" data-tooltip="Preference Score as defined by Harmann. See reference papers in help section">(def)</span>
+	    <abbr title="Preference Score as defined by Harmann. See reference papers in help section">Score</abbr>
 	  </th>
 	  
 	  <th>
-	    <abbr title="Preference Score with EQ">Score w/EQ</abbr>
-	    <span class="has-tooltip-info has-tooltip-multiline" data-tooltip="Preference Score with a simple parametric EQ">(def)</span>
+	    <abbr title="Preference Score with a perfect subwoofer">Score w/Sub</abbr>
 	  </th>
 	  <th>
-	    <abbr title="Preference Score with Subwoofer">Score w/Sub</abbr>
-	    <span class="has-tooltip-info has-tooltip-multiline" data-tooltip="Preference Score with a subwoofer">(def)</span>
+	    <abbr title="Preference Score with a simple parametric EQ">Score w/EQ</abbr>
+	  </th>
+	  <th>
+	    <abbr title="Preference Score with a simple parametric EQ
+	    and a perfect subwoofer">Score w/EQ+Sub</abbr>
 	  </th>
 	</tr>
       </thead>
@@ -121,18 +131,25 @@
 <td></td>
 <td></td>
 <td>&plusmn;1.9</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>20</td>
 <td>1.95</td>
 <td>0.24</td>    
 <td>0.19</td>
 <td>0.94</td>
 <th>8.1</th>
+<th>8.7</th>
 <th>
   8.2
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Infinity%20IL60/iir-autoeq.txt">(eq)</a>
 </th>
-<th>8.7</th>
+<th>
+  8.9
+</th>
 
             </tr>
 
@@ -145,18 +162,25 @@
 <td>30.0</td>
 <td>27.0</td>
 <td>&plusmn;3.6</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>23</td>
 <td>1.91</td>
 <td>0.34</td>    
 <td>0.22</td>
 <td>0.99</td>
 <th>7.6</th>
+<th>8.5</th>
 <th>
   7.9
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/KEF%20Reference%205/iir-autoeq.txt">(eq)</a>
 </th>
-<th>8.5</th>
+<th>
+  8.8
+</th>
 
             </tr>
 
@@ -169,18 +193,25 @@
 <td>28.0</td>
 <td>24.0</td>
 <td>&plusmn;0.8</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>23</td>
 <td>1.02</td>
 <td>0.21</td>    
 <td>0.22</td>
 <td>0.88</td>
 <th>7.6</th>
+<th>8.5</th>
 <th>
   8.1
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Mesanovic%20RTM10/iir-autoeq.txt">(eq)</a>
 </th>
-<th>8.5</th>
+<th>
+  8.9
+</th>
 
             </tr>
 
@@ -193,18 +224,25 @@
 <td>22.0</td>
 <td>21.0</td>
 <td>&plusmn;1.7</td>
+<td>-57.0</td>
+<td>59.0</td>
+<td>-62.0</td>
+<td>50.0</td>
 <td>20</td>
 <td>2.94</td>
 <td>0.28</td>    
 <td>0.25</td>
 <td>0.77</td>
 <th>7.4</th>
+<th>8.0</th>
 <th>
   8.1
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Dutch%20Dutch%208C/iir-autoeq.txt">(eq)</a>
 </th>
-<th>8.0</th>
+<th>
+  8.7
+</th>
 
             </tr>
 
@@ -217,8 +255,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;1.5</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -231,18 +273,25 @@
 <td>26.0</td>
 <td>21.0</td>
 <td>&plusmn;1.8</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>20</td>
 <td>1.48</td>
 <td>0.29</td>    
 <td>0.28</td>
 <td>0.85</td>
 <th>7.4</th>
+<th>8.1</th>
 <th>
   8.1
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Infinity%20Prelude%20MTS/iir-autoeq.txt">(eq)</a>
 </th>
-<th>8.1</th>
+<th>
+  8.8
+</th>
 
             </tr>
 
@@ -255,18 +304,25 @@
 <td>49.0</td>
 <td>36.0</td>
 <td>&plusmn;5.8</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>23</td>
 <td>1.51</td>
 <td>0.3</td>    
 <td>0.22</td>
 <td>0.83</td>
 <th>7.3</th>
+<th>8.2</th>
 <th>
   7.6
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20Ultima%20Studio/iir-autoeq.txt">(eq)</a>
 </th>
-<th>8.2</th>
+<th>
+  8.5
+</th>
 
             </tr>
 
@@ -279,18 +335,25 @@
 <td>23.0</td>
 <td></td>
 <td>&plusmn;1.5</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>20</td>
 <td>0.9</td>
 <td>0.29</td>    
 <td>0.28</td>
 <td>0.74</td>
 <th>7.2</th>
+<th>7.8</th>
 <th>
   7.7
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Infinity%20Intermezzo%204.1t/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.8</th>
+<th>
+  8.3
+</th>
 
             </tr>
 
@@ -303,18 +366,25 @@
 <td>30.0</td>
 <td>24.0</td>
 <td>&plusmn;1.7</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>27</td>
 <td>2.52</td>
 <td>0.23</td>    
 <td>0.17</td>
 <td>0.74</td>
 <th>7.2</th>
+<th>8.3</th>
 <th>
   7.8
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20M2/iir-autoeq.txt">(eq)</a>
 </th>
-<th>8.3</th>
+<th>
+  8.8
+</th>
 
             </tr>
 
@@ -327,18 +397,25 @@
 <td>33.0</td>
 <td>31.0</td>
 <td>&plusmn;1.9</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>29</td>
 <td>0.86</td>
 <td>0.23</td>    
 <td>0.27</td>
 <td>0.9</td>
 <th>7.1</th>
+<th>8.4</th>
 <th>
   7.3
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/GGNTKT%20M1/iir-autoeq.txt">(eq)</a>
 </th>
-<th>8.4</th>
+<th>
+  8.7
+</th>
 
             </tr>
 
@@ -351,15 +428,21 @@
 <td>49.0</td>
 <td>45.0</td>
 <td>&plusmn;1.3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>44</td>
 <td>0.59</td>
 <td>0.26</td>    
 <td>0.24</td>
 <td>0.71</td>
 <th>5.9</th>
+<th>8.0</th>
 <th>
 </th>
-<th>8.0</th>
+<th>
+</th>
 
             </tr>
 
@@ -372,18 +455,25 @@
 <td>49.0</td>
 <td>33.0</td>
 <td>&plusmn;4.2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>22</td>
 <td>1.56</td>
 <td>0.33</td>    
 <td>0.23</td>
 <td>0.75</td>
 <th>7.1</th>
+<th>7.9</th>
 <th>
   7.2
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20Ultima%20Salon/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.9</th>
+<th>
+  8.0
+</th>
 
             </tr>
 
@@ -396,18 +486,25 @@
 <td>34.0</td>
 <td>31.0</td>
 <td>&plusmn;2.0</td>
+<td>-57.0</td>
+<td>54.0</td>
+<td>-55.0</td>
+<td>57.0</td>
 <td>29</td>
 <td>0.95</td>
 <td>0.32</td>    
 <td>0.24</td>
 <td>0.93</td>
 <th>7.0</th>
+<th>8.3</th>
 <th>
   7.5
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Genelec%208351B/iir-autoeq.txt">(eq)</a>
 </th>
-<th>8.3</th>
+<th>
+  8.8
+</th>
 
             </tr>
 
@@ -420,15 +517,21 @@
 <td>34.0</td>
 <td>31.0</td>
 <td>&plusmn;2.0</td>
+<td>-55.0</td>
+<td>57.0</td>
+<td>-57.0</td>
+<td>54.0</td>
 <td>29</td>
 <td>0.89</td>
 <td>0.32</td>    
 <td>0.22</td>
 <td>0.94</td>
 <th>7.1</th>
+<th>8.4</th>
 <th>
 </th>
-<th>8.4</th>
+<th>
+</th>
 
             </tr>
 
@@ -441,18 +544,25 @@
 <td>35.0</td>
 <td>33.0</td>
 <td>&plusmn;2.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>33</td>
 <td>2.23</td>
 <td>0.24</td>    
 <td>0.2</td>
 <td>0.83</td>
 <th>6.9</th>
+<th>8.4</th>
 <th>
   7.3
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Genelec%201032A/iir-autoeq.txt">(eq)</a>
 </th>
-<th>8.4</th>
+<th>
+  8.8
+</th>
 
             </tr>
 
@@ -465,18 +575,25 @@
 <td>44.0</td>
 <td>39.0</td>
 <td>&plusmn;1.4</td>
+<td>-59.0</td>
+<td>63.0</td>
+<td>-61.0</td>
+<td>60.0</td>
 <td>35</td>
 <td>0.86</td>
 <td>0.29</td>    
 <td>0.21</td>
 <td>0.95</td>
 <th>6.8</th>
+<th>8.5</th>
 <th>
   7.5
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Genelec%208341A/iir-autoeq.txt">(eq)</a>
 </th>
-<th>8.5</th>
+<th>
+  9.2
+</th>
 
             </tr>
 
@@ -489,15 +606,21 @@
 <td>44.0</td>
 <td>39.0</td>
 <td>&plusmn;1.4</td>
+<td>-61.0</td>
+<td>60.0</td>
+<td>-59.0</td>
+<td>63.0</td>
 <td>35</td>
 <td>0.83</td>
 <td>0.29</td>    
 <td>0.21</td>
 <td>0.95</td>
 <th>6.8</th>
+<th>8.5</th>
 <th>
 </th>
-<th>8.5</th>
+<th>
+</th>
 
             </tr>
 
@@ -510,15 +633,21 @@
 <td>39.0</td>
 <td>37.0</td>
 <td>&plusmn;1.9</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>37</td>
 <td>1.16</td>
 <td>0.27</td>    
 <td>0.26</td>
 <td>0.87</td>
 <th>6.5</th>
+<th>8.2</th>
 <th>
 </th>
-<th>8.2</th>
+<th>
+</th>
 
             </tr>
 
@@ -531,18 +660,25 @@
 <td>45.0</td>
 <td>42.0</td>
 <td>&plusmn;1.1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>42</td>
 <td>0.66</td>
 <td>0.16</td>    
 <td>0.18</td>
 <td>0.86</td>
 <th>6.7</th>
+<th>8.7</th>
 <th>
   7.2
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Neumann%20KH%20120A/iir-autoeq.txt">(eq)</a>
 </th>
-<th>8.7</th>
+<th>
+  9.1
+</th>
 
             </tr>
 
@@ -555,18 +691,25 @@
 <td>44.0</td>
 <td>29.0</td>
 <td>&plusmn;2.4</td>
+<td>-63.0</td>
+<td>71.0</td>
+<td>-47.0</td>
+<td>50.0</td>
 <td>26</td>
 <td>1.04</td>
 <td>0.43</td>    
 <td>0.32</td>
 <td>0.92</td>
 <th>6.7</th>
+<th>7.8</th>
 <th>
   7.2
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20F208/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.8</th>
+<th>
+  8.4
+</th>
 
             </tr>
 
@@ -579,15 +722,21 @@
 <td>56.0</td>
 <td>44.0</td>
 <td>&plusmn;2.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.0</td>
 <td>43</td>
 <td>1.05</td>
 <td>0.33</td>    
 <td>0.26</td>
 <td>0.91</td>
 <th>6.1</th>
+<th>8.2</th>
 <th>
 </th>
-<th>8.2</th>
+<th>
+</th>
 
             </tr>
 
@@ -600,15 +749,21 @@
 <td>34.0</td>
 <td>27.0</td>
 <td>&plusmn;1.3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>26</td>
 <td>1.73</td>
 <td>0.19</td>    
 <td>0.17</td>
 <td>0.93</td>
 <th>7.7</th>
+<th>8.9</th>
 <th>
 </th>
-<th>8.9</th>
+<th>
+</th>
 
             </tr>
 
@@ -621,18 +776,25 @@
 <td>38.0</td>
 <td>32.0</td>
 <td>&plusmn;1.1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>34</td>
 <td>2.53</td>
 <td>0.28</td>    
 <td>0.27</td>
 <td>0.88</td>
 <th>6.6</th>
+<th>8.2</th>
 <th>
   6.9
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%204367/iir-autoeq.txt">(eq)</a>
 </th>
-<th>8.2</th>
+<th>
+  8.5
+</th>
 
             </tr>
 
@@ -645,18 +807,25 @@
 <td>53.0</td>
 <td>42.0</td>
 <td>&plusmn;0.9</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>39</td>
 <td>1.42</td>
 <td>0.2</td>    
 <td>0.24</td>
 <td>0.86</td>
 <th>6.6</th>
+<th>8.5</th>
 <th>
   6.9
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20LSR6332/iir-autoeq.txt">(eq)</a>
 </th>
-<th>8.5</th>
+<th>
+  8.8
+</th>
 
             </tr>
 
@@ -669,18 +838,25 @@
 <td>63.0</td>
 <td>45.0</td>
 <td>&plusmn;3.3</td>
+<td>-73.0</td>
+<td>78.0</td>
+<td>-63.0</td>
+<td>58.0</td>
 <td>29</td>
 <td>1.86</td>
 <td>0.44</td>    
 <td>0.29</td>
 <td>0.93</td>
 <th>6.6</th>
+<th>7.9</th>
 <th>
   7.0
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20F328be/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.9</th>
+<th>
+  8.4
+</th>
 
             </tr>
 
@@ -693,15 +869,21 @@
 <td>69.0</td>
 <td>54.0</td>
 <td>&plusmn;3.3</td>
+<td>-73.0</td>
+<td>78.0</td>
+<td>-63.0</td>
+<td>58.0</td>
 <td>48</td>
 <td>1.47</td>
 <td>0.44</td>    
 <td>0.29</td>
 <td>0.87</td>
 <th>5.5</th>
+<th>7.7</th>
 <th>
 </th>
-<th>7.7</th>
+<th>
+</th>
 
             </tr>
 
@@ -714,15 +896,21 @@
 <td>55.0</td>
 <td>36.0</td>
 <td>&plusmn;2.4</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>24</td>
 <td>2.13</td>
 <td>0.23</td>    
 <td>0.19</td>
 <td>0.89</td>
 <th>7.6</th>
+<th>8.6</th>
 <th>
 </th>
-<th>8.6</th>
+<th>
+</th>
 
             </tr>
 
@@ -735,18 +923,25 @@
 <td>47.0</td>
 <td>42.0</td>
 <td>&plusmn;0.9</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>41</td>
 <td>0.79</td>
 <td>0.21</td>    
 <td>0.27</td>
 <td>0.92</td>
 <th>6.5</th>
+<th>8.5</th>
 <th>
   7.0
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20LSR6328P/iir-autoeq.txt">(eq)</a>
 </th>
-<th>8.5</th>
+<th>
+  8.9
+</th>
 
             </tr>
 
@@ -759,18 +954,25 @@
 <td>67.0</td>
 <td>40.0</td>
 <td>&plusmn;1.7</td>
+<td>-50.0</td>
+<td>60.0</td>
+<td>-53.0</td>
+<td>50.0</td>
 <td>35</td>
 <td>0.77</td>
 <td>0.34</td>    
 <td>0.25</td>
 <td>0.91</td>
 <th>6.5</th>
+<th>8.2</th>
 <th>
   7.2
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/KEF%20R3/iir-autoeq.txt">(eq)</a>
 </th>
-<th>8.2</th>
+<th>
+  8.9
+</th>
 
             </tr>
 
@@ -783,15 +985,21 @@
 <td>75.0</td>
 <td>47.0</td>
 <td>&plusmn;2.0</td>
+<td>-53.0</td>
+<td>53.0</td>
+<td>-52.0</td>
+<td>47.0</td>
 <td>36</td>
 <td>0.82</td>
 <td>0.28</td>    
 <td>0.21</td>
 <td>0.86</td>
 <th>6.6</th>
+<th>8.3</th>
 <th>
 </th>
-<th>8.3</th>
+<th>
+</th>
 
             </tr>
 
@@ -804,8 +1012,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;1.2</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -818,18 +1030,25 @@
 <td>54.0</td>
 <td>33.0</td>
 <td>&plusmn;2.1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>24</td>
 <td>1.16</td>
 <td>0.34</td>    
 <td>0.22</td>
 <td>0.59</td>
 <th>6.5</th>
+<th>7.5</th>
 <th>
   5.8
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20Ultima2%20Studio2/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.5</th>
+<th>
+  6.9
+</th>
 
             </tr>
 
@@ -842,18 +1061,25 @@
 <td>48.0</td>
 <td>36.0</td>
 <td>&plusmn;2.5</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>36</td>
 <td>1.6</td>
 <td>0.4</td>    
 <td>0.18</td>
 <td>0.85</td>
 <th>6.4</th>
+<th>8.1</th>
 <th>
   6.8
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20F206/iir-autoeq.txt">(eq)</a>
 </th>
-<th>8.1</th>
+<th>
+  8.5
+</th>
 
             </tr>
 
@@ -866,18 +1092,25 @@
 <td>52.0</td>
 <td>27.0</td>
 <td>&plusmn;2.5</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>23</td>
 <td>1.53</td>
 <td>0.5</td>    
 <td>0.32</td>
 <td>0.81</td>
 <th>6.4</th>
+<th>7.4</th>
 <th>
   7.5
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20Ultima2%20Salon2/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.4</th>
+<th>
+  8.5
+</th>
 
             </tr>
 
@@ -890,15 +1123,21 @@
 <td>29.0</td>
 <td>24.0</td>
 <td>&plusmn;1.9</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>21</td>
 <td>1.88</td>
 <td>0.42</td>    
 <td>0.28</td>
 <td>0.77</td>
 <th>6.9</th>
+<th>7.6</th>
 <th>
 </th>
-<th>7.6</th>
+<th>
+</th>
 
             </tr>
 
@@ -911,18 +1150,25 @@
 <td>54.0</td>
 <td>48.0</td>
 <td>&plusmn;1.8</td>
+<td>-65.0</td>
+<td>64.0</td>
+<td>-57.0</td>
+<td>60.0</td>
 <td>46</td>
 <td>0.74</td>
 <td>0.23</td>    
 <td>0.24</td>
 <td>0.9</td>
 <th>6.3</th>
+<th>8.5</th>
 <th>
   6.9
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Genelec%208030C/iir-autoeq.txt">(eq)</a>
 </th>
-<th>8.5</th>
+<th>
+  9.1
+</th>
 
             </tr>
 
@@ -935,18 +1181,25 @@
 <td>34.0</td>
 <td>31.0</td>
 <td>&plusmn;2.6</td>
+<td>-52.0</td>
+<td>69.0</td>
+<td>-48.0</td>
+<td>57.0</td>
 <td>27</td>
 <td>0.84</td>
 <td>0.41</td>    
 <td>0.31</td>
 <td>0.75</td>
 <th>6.3</th>
+<th>7.5</th>
 <th>
   7.5
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Genelec%208050B/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.5</th>
+<th>
+  8.8
+</th>
 
             </tr>
 
@@ -959,18 +1212,25 @@
 <td>54.0</td>
 <td>39.0</td>
 <td>&plusmn;2.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>37</td>
 <td>0.78</td>
 <td>0.31</td>    
 <td>0.32</td>
 <td>0.93</td>
 <th>6.3</th>
+<th>8.1</th>
 <th>
   6.9
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Perlisten%20s7t/iir-autoeq.txt">(eq)</a>
 </th>
-<th>8.1</th>
+<th>
+  8.5
+</th>
 
             </tr>
 
@@ -983,18 +1243,25 @@
 <td>48.0</td>
 <td>42.0</td>
 <td>&plusmn;3.2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>42</td>
 <td>1.12</td>
 <td>0.28</td>    
 <td>0.26</td>
 <td>0.89</td>
 <th>6.3</th>
+<th>8.3</th>
 <th>
   6.6
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Polk%20Audio%20R200/iir-autoeq.txt">(eq)</a>
 </th>
-<th>8.3</th>
+<th>
+  8.6
+</th>
 
             </tr>
 
@@ -1007,18 +1274,25 @@
 <td>51.0</td>
 <td>37.0</td>
 <td>&plusmn;1.9</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>37</td>
 <td>1.25</td>
 <td>0.36</td>    
 <td>0.28</td>
 <td>0.89</td>
 <th>6.2</th>
+<th>8.0</th>
 <th>
   6.8
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Infinity%20Primus%20360/iir-autoeq.txt">(eq)</a>
 </th>
-<th>8.0</th>
+<th>
+  8.5
+</th>
 
             </tr>
 
@@ -1031,18 +1305,25 @@
 <td>41.0</td>
 <td>38.0</td>
 <td>&plusmn;2.5</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>37</td>
 <td>1.26</td>
 <td>0.31</td>    
 <td>0.29</td>
 <td>0.82</td>
 <th>6.2</th>
+<th>8.0</th>
 <th>
   7.0
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20LSR708i/iir-autoeq.txt">(eq)</a>
 </th>
-<th>8.0</th>
+<th>
+  8.7
+</th>
 
             </tr>
 
@@ -1055,18 +1336,25 @@
 <td>56.0</td>
 <td>51.0</td>
 <td>&plusmn;1.4</td>
+<td>-56.0</td>
+<td>55.0</td>
+<td>-45.0</td>
+<td>40.0</td>
 <td>48</td>
 <td>0.53</td>
 <td>0.25</td>    
 <td>0.23</td>
 <td>0.89</td>
 <th>6.2</th>
+<th>8.4</th>
 <th>
   6.7
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Neumann%20KH%2080/iir-autoeq.txt">(eq)</a>
 </th>
-<th>8.4</th>
+<th>
+  9.1
+</th>
 
             </tr>
 
@@ -1079,15 +1367,21 @@
 <td>59.0</td>
 <td>53.0</td>
 <td>&plusmn;2.0</td>
+<td>-57.0</td>
+<td>62.0</td>
+<td>-44.0</td>
+<td>48.0</td>
 <td>52</td>
 <td>0.32</td>
 <td>0.33</td>    
 <td>0.31</td>
 <td>0.81</td>
 <th>5.4</th>
+<th>7.8</th>
 <th>
 </th>
-<th>7.8</th>
+<th>
+</th>
 
             </tr>
 
@@ -1100,15 +1394,21 @@
 <td></td>
 <td></td>
 <td>&plusmn;1.3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>161</td>
 <td>0.85</td>
 <td>0.29</td>    
 <td>0.26</td>
 <td>0.85</td>
 <th>3.6</th>
+<th>8.1</th>
 <th>
 </th>
-<th>8.1</th>
+<th>
+</th>
 
             </tr>
 
@@ -1121,15 +1421,21 @@
 <td>56.0</td>
 <td>51.0</td>
 <td>&plusmn;1.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>51</td>
 <td>0.61</td>
 <td>0.17</td>    
 <td>0.17</td>
 <td>0.93</td>
 <th>6.5</th>
+<th>8.9</th>
 <th>
 </th>
-<th>8.9</th>
+<th>
+</th>
 
             </tr>
 
@@ -1142,18 +1448,25 @@
 <td>34.0</td>
 <td>31.0</td>
 <td>&plusmn;2.2</td>
+<td>-50.0</td>
+<td>62.0</td>
+<td>-38.0</td>
+<td>39.0</td>
 <td>30</td>
 <td>0.96</td>
 <td>0.37</td>    
 <td>0.33</td>
 <td>0.79</td>
 <th>6.2</th>
+<th>7.6</th>
 <th>
   7.3
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Neumann%20KH%20310A/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.6</th>
+<th>
+  8.7
+</th>
 
             </tr>
 
@@ -1161,23 +1474,57 @@
 	      <td>Revel F228Be</td>
 	      
 <td>
+  <a href="Revel%20F228Be/ASR/index_asr.html">asr</a>
+</td>
+<td>53.0</td>
+<td>35.0</td>
+<td>&plusmn;2.4</td>
+<td>-74.0</td>
+<td>75.0</td>
+<td>-66.0</td>
+<td>54.0</td>
+<td>30</td>
+<td>1.65</td>
+<td>0.47</td>    
+<td>0.32</td>
+<td>0.87</td>
+<th>6.2</th>
+<th>7.6</th>
+<th>
+  6.7
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20F228Be/iir-autoeq.txt">(eq)</a>
+</th>
+<th>
+  8.2
+</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
   <a href="Revel%20F228Be/Revel/index_vendor.html">vendor</a>
 </td>
 <td></td>
 <td></td>
 <td>&plusmn;1.9</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>46</td>
 <td>1.36</td>
 <td>0.26</td>    
 <td>0.22</td>
 <td>0.85</td>
 <th>6.2</th>
-<th>
-  6.6
-  &nbsp;
-  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20F228Be/iir-autoeq.txt">(eq)</a>
-</th>
 <th>8.4</th>
+<th>
+</th>
+<th>
+</th>
 
             </tr>
 
@@ -1190,18 +1537,25 @@
 <td>56.0</td>
 <td>48.0</td>
 <td>&plusmn;3.1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>36</td>
 <td>2.19</td>
 <td>0.37</td>    
 <td>0.27</td>
 <td>0.83</td>
 <th>6.1</th>
+<th>7.9</th>
 <th>
   6.7
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20C426Be/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.9</th>
+<th>
+  8.4
+</th>
 
             </tr>
 
@@ -1214,18 +1568,25 @@
 <td>32.0</td>
 <td>28.0</td>
 <td>&plusmn;3.1</td>
+<td>-69.0</td>
+<td>72.0</td>
+<td>-49.0</td>
+<td>69.0</td>
 <td>26</td>
 <td>0.79</td>
 <td>0.4</td>    
 <td>0.43</td>
 <td>0.74</td>
 <th>6.0</th>
+<th>7.1</th>
 <th>
   7.5
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Barefoot%20Footprint%2001/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.1</th>
+<th>
+  8.5
+</th>
 
             </tr>
 
@@ -1238,18 +1599,25 @@
 <td>50.0</td>
 <td>38.0</td>
 <td>&plusmn;2.3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>32</td>
 <td>1.23</td>
 <td>0.36</td>    
 <td>0.24</td>
 <td>0.65</td>
 <th>6.0</th>
+<th>7.6</th>
 <th>
   6.7
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Infinity%20R263/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.6</th>
+<th>
+  8.2
+</th>
 
             </tr>
 
@@ -1262,18 +1630,25 @@
 <td>51.0</td>
 <td>48.0</td>
 <td>&plusmn;1.3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>45</td>
 <td>0.74</td>
 <td>0.27</td>    
 <td>0.2</td>
 <td>0.76</td>
 <th>6.0</th>
+<th>8.2</th>
 <th>
   6.5
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20LSR305/iir-autoeq.txt">(eq)</a>
 </th>
-<th>8.2</th>
+<th>
+  8.6
+</th>
 
             </tr>
 
@@ -1286,18 +1661,25 @@
 <td>45.0</td>
 <td>41.0</td>
 <td>&plusmn;4.1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>41</td>
 <td>0.75</td>
 <td>0.3</td>    
 <td>0.27</td>
 <td>0.8</td>
 <th>6.0</th>
+<th>8.0</th>
 <th>
   6.7
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20705i/iir-autoeq.txt">(eq)</a>
 </th>
-<th>8.0</th>
+<th>
+  8.7
+</th>
 
             </tr>
 
@@ -1310,18 +1692,25 @@
 <td>42.0</td>
 <td>35.0</td>
 <td>&plusmn;3.0</td>
+<td>-57.0</td>
+<td>59.0</td>
+<td>-56.0</td>
+<td>59.0</td>
 <td>29</td>
 <td>1.41</td>
 <td>0.49</td>    
 <td>0.39</td>
 <td>0.86</td>
 <th>6.0</th>
+<th>7.3</th>
 <th>
   6.5
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20HDI-3800/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.3</th>
+<th>
+  7.9
+</th>
 
             </tr>
 
@@ -1334,15 +1723,21 @@
 <td>48.0</td>
 <td>42.0</td>
 <td>&plusmn;3.2</td>
+<td>-57.0</td>
+<td>59.0</td>
+<td>-57.0</td>
+<td>59.0</td>
 <td>41</td>
 <td>1.12</td>
 <td>0.51</td>    
 <td>0.42</td>
 <td>0.83</td>
 <th>5.1</th>
+<th>7.1</th>
 <th>
 </th>
-<th>7.1</th>
+<th>
+</th>
 
             </tr>
 
@@ -1355,18 +1750,25 @@
 <td>51.0</td>
 <td>42.0</td>
 <td>&plusmn;3.2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>42</td>
 <td>1.16</td>
 <td>0.31</td>    
 <td>0.29</td>
 <td>0.84</td>
 <th>6.0</th>
+<th>8.0</th>
 <th>
   6.5
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20Studio%20Series%20S26/iir-autoeq.txt">(eq)</a>
 </th>
-<th>8.0</th>
+<th>
+  8.6
+</th>
 
             </tr>
 
@@ -1379,18 +1781,25 @@
 <td>76.0</td>
 <td>51.0</td>
 <td>&plusmn;2.1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>47</td>
 <td>1.06</td>
 <td>0.28</td>    
 <td>0.23</td>
 <td>0.85</td>
 <th>6.0</th>
+<th>8.3</th>
 <th>
   6.7
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/KEF%20LS50%20Meta/iir-autoeq.txt">(eq)</a>
 </th>
-<th>8.3</th>
+<th>
+  8.8
+</th>
 
             </tr>
 
@@ -1403,15 +1812,21 @@
 <td></td>
 <td></td>
 <td>&plusmn;3.3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>148</td>
 <td>1.48</td>
 <td>0.34</td>    
 <td>0.3</td>
 <td>0.88</td>
 <th>3.6</th>
+<th>8.0</th>
 <th>
 </th>
-<th>8.0</th>
+<th>
+</th>
 
             </tr>
 
@@ -1424,18 +1839,25 @@
 <td>59.0</td>
 <td>47.0</td>
 <td>&plusmn;1.5</td>
+<td>-122.0</td>
+<td>122.0</td>
+<td>-92.0</td>
+<td>89.0</td>
 <td>43</td>
 <td>1.71</td>
 <td>0.27</td>    
 <td>0.22</td>
 <td>0.75</td>
 <th>6.0</th>
+<th>8.1</th>
 <th>
   6.8
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20F226be/iir-autoeq.txt">(eq)</a>
 </th>
-<th>8.1</th>
+<th>
+  8.9
+</th>
 
             </tr>
 
@@ -1448,15 +1870,21 @@
 <td>51.0</td>
 <td>36.0</td>
 <td>&plusmn;2.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>35</td>
 <td>1.19</td>
 <td>0.24</td>    
 <td>0.19</td>
 <td>0.85</td>
 <th>6.8</th>
+<th>8.5</th>
 <th>
 </th>
-<th>8.5</th>
+<th>
+</th>
 
             </tr>
 
@@ -1469,18 +1897,25 @@
 <td>42.0</td>
 <td>37.0</td>
 <td>&plusmn;2.9</td>
+<td>-82.0</td>
+<td>86.0</td>
+<td>-69.0</td>
+<td>61.0</td>
 <td>35</td>
 <td>0.9</td>
 <td>0.36</td>    
 <td>0.32</td>
 <td>0.77</td>
 <th>6.0</th>
+<th>7.6</th>
 <th>
   6.5
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Selah%20Audio%20Integrity%20DIY/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.6</th>
+<th>
+  8.2
+</th>
 
             </tr>
 
@@ -1493,18 +1928,25 @@
 <td>61.0</td>
 <td>54.0</td>
 <td>&plusmn;2.2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>47</td>
 <td>0.78</td>
 <td>0.34</td>    
 <td>0.23</td>
 <td>0.88</td>
 <th>5.9</th>
+<th>8.2</th>
 <th>
   6.4
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20M126Be/iir-autoeq.txt">(eq)</a>
 </th>
-<th>8.2</th>
+<th>
+  8.5
+</th>
 
             </tr>
 
@@ -1517,8 +1959,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;2.6</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -1531,15 +1977,21 @@
 <td>41.0</td>
 <td>31.0</td>
 <td>&plusmn;3.1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>31</td>
 <td>1.96</td>
 <td>0.3</td>    
 <td>0.36</td>
 <td>0.58</td>
 <th>5.8</th>
+<th>7.2</th>
 <th>
 </th>
-<th>7.2</th>
+<th>
+</th>
 
             </tr>
 
@@ -1552,18 +2004,25 @@
 <td>53.0</td>
 <td>44.0</td>
 <td>&plusmn;3.1</td>
+<td>-38.0</td>
+<td>52.0</td>
+<td>-34.0</td>
+<td>32.0</td>
 <td>43</td>
 <td>0.78</td>
 <td>0.38</td>    
 <td>0.31</td>
 <td>0.88</td>
 <th>5.8</th>
+<th>7.9</th>
 <th>
   6.8
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Elac%20Debut%20Reference%20DBR-62/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.9</th>
+<th>
+  8.8
+</th>
 
             </tr>
 
@@ -1576,18 +2035,25 @@
 <td>50.0</td>
 <td>41.0</td>
 <td>&plusmn;2.5</td>
+<td>-58.0</td>
+<td>63.0</td>
+<td>-42.0</td>
+<td>47.0</td>
 <td>38</td>
 <td>0.79</td>
 <td>0.39</td>    
 <td>0.37</td>
 <td>0.85</td>
 <th>5.8</th>
+<th>7.6</th>
 <th>
   6.8
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20HDI-1600/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.6</th>
+<th>
+  8.6
+</th>
 
             </tr>
 
@@ -1600,15 +2066,21 @@
 <td>49.0</td>
 <td>42.0</td>
 <td>&plusmn;3.1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>39</td>
 <td>0.92</td>
 <td>0.36</td>    
 <td>0.35</td>
 <td>0.79</td>
 <th>5.7</th>
+<th>7.6</th>
 <th>
 </th>
-<th>7.6</th>
+<th>
+</th>
 
             </tr>
 
@@ -1621,15 +2093,21 @@
 <td>55.0</td>
 <td>45.0</td>
 <td>&plusmn;1.8</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>37</td>
 <td>1.04</td>
 <td>0.23</td>    
 <td>0.29</td>
 <td>0.84</td>
 <th>6.4</th>
+<th>8.2</th>
 <th>
 </th>
-<th>8.2</th>
+<th>
+</th>
 
             </tr>
 
@@ -1642,18 +2120,25 @@
 <td>60.0</td>
 <td>54.0</td>
 <td>&plusmn;2.3</td>
+<td>-69.0</td>
+<td>69.0</td>
+<td>-63.0</td>
+<td>50.0</td>
 <td>51</td>
 <td>0.61</td>
 <td>0.37</td>    
 <td>0.22</td>
 <td>0.9</td>
 <th>5.8</th>
+<th>8.2</th>
 <th>
   6.4
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20M105/iir-autoeq.txt">(eq)</a>
 </th>
-<th>8.2</th>
+<th>
+  8.7
+</th>
 
             </tr>
 
@@ -1666,15 +2151,21 @@
 <td>58.0</td>
 <td>53.0</td>
 <td>&plusmn;1.7</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>48</td>
 <td>0.7</td>
 <td>0.26</td>    
 <td>0.18</td>
 <td>0.88</td>
 <th>6.3</th>
+<th>8.5</th>
 <th>
 </th>
-<th>8.5</th>
+<th>
+</th>
 
             </tr>
 
@@ -1687,18 +2178,25 @@
 <td>60.0</td>
 <td>51.0</td>
 <td>&plusmn;2.2</td>
+<td>-66.0</td>
+<td>73.0</td>
+<td>-65.0</td>
+<td>50.0</td>
 <td>46</td>
 <td>0.71</td>
 <td>0.39</td>    
 <td>0.28</td>
 <td>0.9</td>
 <th>5.8</th>
+<th>8.0</th>
 <th>
   6.5
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20M106/iir-autoeq.txt">(eq)</a>
 </th>
-<th>8.0</th>
+<th>
+  8.6
+</th>
 
             </tr>
 
@@ -1711,15 +2209,21 @@
 <td>60.0</td>
 <td>53.0</td>
 <td>&plusmn;1.6</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>47</td>
 <td>0.7</td>
 <td>0.29</td>    
 <td>0.28</td>
 <td>0.82</td>
 <th>5.8</th>
+<th>8.0</th>
 <th>
 </th>
-<th>8.0</th>
+<th>
+</th>
 
             </tr>
 
@@ -1732,18 +2236,25 @@
 <td>56.0</td>
 <td>32.0</td>
 <td>&plusmn;3.1</td>
+<td>-67.0</td>
+<td>70.0</td>
+<td>-40.0</td>
+<td>42.0</td>
 <td>29</td>
 <td>0.72</td>
 <td>0.58</td>    
 <td>0.4</td>
 <td>0.85</td>
 <th>5.7</th>
+<th>7.0</th>
 <th>
   7.0
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Celuaris%20Purify%20SPK5%20prototype/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.0</th>
+<th>
+  8.3
+</th>
 
             </tr>
 
@@ -1756,15 +2267,21 @@
 <td>56.0</td>
 <td>45.0</td>
 <td>&plusmn;3.7</td>
+<td>-67.0</td>
+<td>69.0</td>
+<td>-39.0</td>
+<td>43.0</td>
 <td>45</td>
 <td>0.69</td>
 <td>0.56</td>    
 <td>0.39</td>
 <td>0.88</td>
 <th>5.0</th>
+<th>7.2</th>
 <th>
 </th>
-<th>7.2</th>
+<th>
+</th>
 
             </tr>
 
@@ -1777,18 +2294,25 @@
 <td>69.0</td>
 <td>60.0</td>
 <td>&plusmn;2.0</td>
+<td>-65.0</td>
+<td>68.0</td>
+<td>-61.0</td>
+<td>49.0</td>
 <td>58</td>
 <td>0.51</td>
 <td>0.27</td>    
 <td>0.26</td>
 <td>0.9</td>
 <th>5.7</th>
+<th>8.3</th>
 <th>
   6.1
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Dynaudio%20LYD%205/iir-autoeq.txt">(eq)</a>
 </th>
-<th>8.3</th>
+<th>
+  8.6
+</th>
 
             </tr>
 
@@ -1801,18 +2325,25 @@
 <td>54.0</td>
 <td>44.0</td>
 <td>&plusmn;2.6</td>
+<td>-71.0</td>
+<td>74.0</td>
+<td>-38.0</td>
+<td>29.0</td>
 <td>39</td>
 <td>0.76</td>
 <td>0.35</td>    
 <td>0.28</td>
 <td>0.69</td>
 <th>5.7</th>
+<th>7.6</th>
 <th>
   6.7
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Hivi%203.1A%20DIY/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.6</th>
+<th>
+  8.4
+</th>
 
             </tr>
 
@@ -1825,18 +2356,25 @@
 <td>41.0</td>
 <td>38.0</td>
 <td>&plusmn;2.2</td>
+<td>-63.0</td>
+<td>67.0</td>
+<td>-50.0</td>
+<td>49.0</td>
 <td>36</td>
 <td>0.95</td>
 <td>0.4</td>    
 <td>0.32</td>
 <td>0.71</td>
 <th>5.7</th>
+<th>7.4</th>
 <th>
   6.6
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20308P%20Mark%20ii/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.4</th>
+<th>
+  8.4
+</th>
 
             </tr>
 
@@ -1849,18 +2387,25 @@
 <td>67.0</td>
 <td>41.0</td>
 <td>&plusmn;2.6</td>
+<td>-53.0</td>
+<td>59.0</td>
+<td>-60.0</td>
+<td>59.0</td>
 <td>38</td>
 <td>0.85</td>
 <td>0.47</td>    
 <td>0.36</td>
 <td>0.87</td>
 <th>5.7</th>
+<th>7.5</th>
 <th>
   6.9
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/KEF%20Q350/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.5</th>
+<th>
+  8.7
+</th>
 
             </tr>
 
@@ -1873,15 +2418,21 @@
 <td>67.0</td>
 <td>41.0</td>
 <td>&plusmn;2.6</td>
+<td>-60.0</td>
+<td>59.0</td>
+<td>-53.0</td>
+<td>59.0</td>
 <td>38</td>
 <td>0.85</td>
 <td>0.47</td>    
 <td>0.36</td>
 <td>0.88</td>
 <th>5.7</th>
+<th>7.5</th>
 <th>
 </th>
-<th>7.5</th>
+<th>
+</th>
 
             </tr>
 
@@ -1894,18 +2445,25 @@
 <td>53.0</td>
 <td>42.0</td>
 <td>&plusmn;1.9</td>
+<td>-65.0</td>
+<td>75.0</td>
+<td>-51.0</td>
+<td>63.0</td>
 <td>39</td>
 <td>1.1</td>
 <td>0.42</td>    
 <td>0.33</td>
 <td>0.83</td>
 <th>5.7</th>
+<th>7.6</th>
 <th>
   6.5
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20F35/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.6</th>
+<th>
+  8.3
+</th>
 
             </tr>
 
@@ -1918,15 +2476,21 @@
 <td>70.0</td>
 <td>59.0</td>
 <td>&plusmn;1.9</td>
+<td>-65.0</td>
+<td>75.0</td>
+<td>-51.0</td>
+<td>63.0</td>
 <td>56</td>
 <td>0.64</td>
 <td>0.43</td>    
 <td>0.33</td>
 <td>0.81</td>
 <th>4.9</th>
+<th>7.5</th>
 <th>
 </th>
-<th>7.5</th>
+<th>
+</th>
 
             </tr>
 
@@ -1939,15 +2503,21 @@
 <td>56.0</td>
 <td>46.0</td>
 <td>&plusmn;1.9</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>44</td>
 <td>1.03</td>
 <td>0.3</td>    
 <td>0.24</td>
 <td>0.8</td>
 <th>6.0</th>
+<th>8.1</th>
 <th>
 </th>
-<th>8.1</th>
+<th>
+</th>
 
             </tr>
 
@@ -1960,18 +2530,25 @@
 <td>54.0</td>
 <td>42.0</td>
 <td>&plusmn;1.9</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>41</td>
 <td>1.42</td>
 <td>0.33</td>    
 <td>0.32</td>
 <td>0.75</td>
 <th>5.7</th>
+<th>7.6</th>
 <th>
   6.4
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20F36/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.6</th>
+<th>
+  8.3
+</th>
 
             </tr>
 
@@ -1984,18 +2561,25 @@
 <td>76.0</td>
 <td>61.0</td>
 <td>&plusmn;1.2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>63</td>
 <td>1.26</td>
 <td>0.25</td>    
 <td>0.2</td>
 <td>0.86</td>
 <th>5.7</th>
+<th>8.4</th>
 <th>
   6.1
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20Ultima2%20Gem2/iir-autoeq.txt">(eq)</a>
 </th>
-<th>8.4</th>
+<th>
+  8.8
+</th>
 
             </tr>
 
@@ -2008,18 +2592,25 @@
 <td>64.0</td>
 <td>53.0</td>
 <td>&plusmn;2.3</td>
+<td>-75.0</td>
+<td>79.0</td>
+<td>-69.0</td>
+<td>58.0</td>
 <td>51</td>
 <td>0.63</td>
 <td>0.39</td>    
 <td>0.24</td>
 <td>0.91</td>
 <th>5.7</th>
+<th>8.1</th>
 <th>
   6.1
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/SVS%20Ultra%20Bookshelf/iir-autoeq.txt">(eq)</a>
 </th>
-<th>8.1</th>
+<th>
+  8.4
+</th>
 
             </tr>
 
@@ -2032,18 +2623,25 @@
 <td>59.0</td>
 <td>47.0</td>
 <td>&plusmn;2.8</td>
+<td>-56.0</td>
+<td>62.0</td>
+<td>-51.0</td>
+<td>50.0</td>
 <td>43</td>
 <td>0.64</td>
 <td>0.4</td>    
 <td>0.32</td>
 <td>0.82</td>
 <th>5.6</th>
+<th>7.6</th>
 <th>
   6.4
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Buchardt%20Audio%20S400/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.6</th>
+<th>
+  8.6
+</th>
 
             </tr>
 
@@ -2056,15 +2654,21 @@
 <td>60.0</td>
 <td>50.0</td>
 <td>&plusmn;2.3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>45</td>
 <td>1.04</td>
 <td>0.34</td>    
 <td>0.26</td>
 <td>0.89</td>
 <th>6.0</th>
+<th>8.1</th>
 <th>
 </th>
-<th>8.1</th>
+<th>
+</th>
 
             </tr>
 
@@ -2077,8 +2681,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;1.9</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -2088,9 +2696,15 @@
 <td>
   <a href="Buchardt%20Audio%20S400/Buchardt%20Audio/index_vendor.html">vendor</a>
 </td>
-<td></td><td></td><td></td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -2103,18 +2717,25 @@
 <td>53.0</td>
 <td>41.0</td>
 <td>&plusmn;5.6</td>
+<td>-64.0</td>
+<td>71.0</td>
+<td>-62.0</td>
+<td>61.0</td>
 <td>41</td>
 <td>0.74</td>
 <td>0.45</td>    
 <td>0.3</td>
 <td>0.8</td>
 <th>5.6</th>
+<th>7.5</th>
 <th>
   6.5
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Elac%20Uni-Fi%202.0%20UB52/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.5</th>
+<th>
+  8.5
+</th>
 
             </tr>
 
@@ -2127,18 +2748,25 @@
 <td>59.0</td>
 <td>51.0</td>
 <td>&plusmn;2.9</td>
+<td>-75.0</td>
+<td>82.0</td>
+<td>-58.0</td>
+<td>70.0</td>
 <td>51</td>
 <td>0.94</td>
 <td>0.38</td>    
 <td>0.29</td>
 <td>0.89</td>
 <th>5.6</th>
+<th>8.0</th>
 <th>
   6.4
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Focal%20Aria%20906/iir-autoeq.txt">(eq)</a>
 </th>
-<th>8.0</th>
+<th>
+  8.8
+</th>
 
             </tr>
 
@@ -2151,18 +2779,25 @@
 <td>60.0</td>
 <td>50.0</td>
 <td>&plusmn;3.6</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>37</td>
 <td>1.27</td>
 <td>0.48</td>    
 <td>0.27</td>
 <td>0.74</td>
 <th>5.6</th>
+<th>7.4</th>
 <th>
   6.5
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20Synthesis%20Array%20800/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.4</th>
+<th>
+  8.2
+</th>
 
             </tr>
 
@@ -2175,18 +2810,25 @@
 <td>59.0</td>
 <td>51.0</td>
 <td>&plusmn;3.0</td>
+<td>-45.0</td>
+<td>45.0</td>
+<td>-27.0</td>
+<td>36.0</td>
 <td>48</td>
 <td>0.49</td>
 <td>0.29</td>    
 <td>0.26</td>
 <td>0.73</td>
 <th>5.6</th>
+<th>7.9</th>
 <th>
   6.7
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Klipsch%20The%20Fives/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.9</th>
+<th>
+  8.9
+</th>
 
             </tr>
 
@@ -2199,18 +2841,25 @@
 <td>93.0</td>
 <td>70.0</td>
 <td>&plusmn;2.9</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>67</td>
 <td>0.89</td>
 <td>0.3</td>    
 <td>0.14</td>
 <td>0.83</td>
 <th>5.6</th>
+<th>8.5</th>
 <th>
   5.7
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20C25/iir-autoeq.txt">(eq)</a>
 </th>
-<th>8.5</th>
+<th>
+  8.6
+</th>
 
             </tr>
 
@@ -2223,18 +2872,25 @@
 <td>59.0</td>
 <td>49.0</td>
 <td>&plusmn;3.1</td>
+<td>-62.0</td>
+<td>71.0</td>
+<td>-59.0</td>
+<td>59.0</td>
 <td>45</td>
 <td>0.6</td>
 <td>0.43</td>    
 <td>0.33</td>
 <td>0.9</td>
 <th>5.6</th>
+<th>7.7</th>
 <th>
   6.4
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20M16/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.7</th>
+<th>
+  8.5
+</th>
 
             </tr>
 
@@ -2247,15 +2903,21 @@
 <td>56.0</td>
 <td></td>
 <td>&plusmn;2.9</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>55</td>
 <td>0.73</td>
 <td>0.39</td>    
 <td>0.27</td>
 <td>0.74</td>
 <th>5.1</th>
+<th>7.6</th>
 <th>
 </th>
-<th>7.6</th>
+<th>
+</th>
 
             </tr>
 
@@ -2268,18 +2930,25 @@
 <td>64.0</td>
 <td>44.0</td>
 <td>&plusmn;2.4</td>
+<td>-49.0</td>
+<td>60.0</td>
+<td>-41.0</td>
+<td>49.0</td>
 <td>43</td>
 <td>0.81</td>
 <td>0.41</td>    
 <td>0.31</td>
 <td>0.84</td>
 <th>5.6</th>
+<th>7.7</th>
 <th>
   6.6
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Zaph%20Audio%20ZA5/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.7</th>
+<th>
+  8.7
+</th>
 
             </tr>
 
@@ -2292,18 +2961,25 @@
 <td>51.0</td>
 <td>44.0</td>
 <td>&plusmn;2.6</td>
+<td>-61.0</td>
+<td>69.0</td>
+<td>-46.0</td>
+<td>49.0</td>
 <td>43</td>
 <td>0.77</td>
 <td>0.34</td>    
 <td>0.29</td>
 <td>0.71</td>
 <th>5.5</th>
+<th>7.6</th>
 <th>
   6.8
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Adam%20S2V/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.6</th>
+<th>
+  8.8
+</th>
 
             </tr>
 
@@ -2316,18 +2992,25 @@
 <td>54.0</td>
 <td>50.0</td>
 <td>&plusmn;2.5</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>51</td>
 <td>1.45</td>
 <td>0.42</td>    
 <td>0.27</td>
 <td>0.87</td>
 <th>5.5</th>
+<th>7.9</th>
 <th>
   6.4
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Genelec%20G2/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.9</th>
+<th>
+  8.7
+</th>
 
             </tr>
 
@@ -2340,18 +3023,25 @@
 <td>48.0</td>
 <td>43.0</td>
 <td>&plusmn;6.8</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>43</td>
 <td>0.56</td>
 <td>0.35</td>    
 <td>0.3</td>
 <td>0.71</td>
 <th>5.5</th>
+<th>7.6</th>
 <th>
   6.3
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Google%20Nest%20Audio/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.6</th>
+<th>
+  8.3
+</th>
 
             </tr>
 
@@ -2364,18 +3054,25 @@
 <td>80.0</td>
 <td>66.0</td>
 <td>&plusmn;4.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>64</td>
 <td>1.3</td>
 <td>0.32</td>    
 <td>0.26</td>
 <td>0.93</td>
 <th>5.5</th>
+<th>8.3</th>
 <th>
   5.6
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20Synthesis%20SAM1HF%20+%20SAM2LF/iir-autoeq.txt">(eq)</a>
 </th>
-<th>8.3</th>
+<th>
+  8.4
+</th>
 
             </tr>
 
@@ -2388,18 +3085,25 @@
 <td></td>
 <td></td>
 <td>&plusmn;3.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>41</td>
 <td>1.42</td>
 <td>0.43</td>    
 <td>0.33</td>
 <td>0.8</td>
 <th>5.5</th>
+<th>7.5</th>
 <th>
   6.2
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Magico%20A3/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.5</th>
+<th>
+  8.2
+</th>
 
             </tr>
 
@@ -2412,18 +3116,25 @@
 <td>47.0</td>
 <td>41.0</td>
 <td>&plusmn;2.0</td>
+<td>-71.0</td>
+<td>77.0</td>
+<td>-50.0</td>
+<td>54.0</td>
 <td>38</td>
 <td>0.73</td>
 <td>0.35</td>    
 <td>0.34</td>
 <td>0.66</td>
 <th>5.5</th>
+<th>7.3</th>
 <th>
   7.0
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20M22/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.3</th>
+<th>
+  8.8
+</th>
 
             </tr>
 
@@ -2436,18 +3147,25 @@
 <td>76.0</td>
 <td>45.0</td>
 <td>&plusmn;2.8</td>
+<td>-161.0</td>
+<td>161.0</td>
+<td>-96.0</td>
+<td>179.0</td>
 <td>42</td>
 <td>1.04</td>
 <td>0.33</td>    
 <td>0.26</td>
 <td>0.59</td>
 <th>5.5</th>
+<th>7.5</th>
 <th>
   6.1
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Selah%20Audio%20Purezza/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.5</th>
+<th>
+  8.1
+</th>
 
             </tr>
 
@@ -2460,15 +3178,21 @@
 <td>44.0</td>
 <td>36.0</td>
 <td>&plusmn;2.1</td>
+<td>-161.0</td>
+<td>161.0</td>
+<td>-96.0</td>
+<td>179.0</td>
 <td>35</td>
 <td>1.03</td>
 <td>0.29</td>    
 <td>0.26</td>
 <td>0.94</td>
 <th>6.7</th>
+<th>8.4</th>
 <th>
 </th>
-<th>8.4</th>
+<th>
+</th>
 
             </tr>
 
@@ -2481,18 +3205,25 @@
 <td>60.0</td>
 <td>48.0</td>
 <td>&plusmn;3.1</td>
+<td>-78.0</td>
+<td>81.0</td>
+<td>-26.0</td>
+<td>19.0</td>
 <td>46</td>
 <td>1.45</td>
 <td>0.44</td>    
 <td>0.36</td>
 <td>0.88</td>
 <th>5.4</th>
+<th>7.6</th>
 <th>
   6.3
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Ascend%20Acoustics%20Horizon%20Center/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.6</th>
+<th>
+  8.5
+</th>
 
             </tr>
 
@@ -2505,18 +3236,25 @@
 <td>60.0</td>
 <td>51.0</td>
 <td>&plusmn;2.3</td>
+<td>-67.0</td>
+<td>77.0</td>
+<td>-40.0</td>
+<td>54.0</td>
 <td>48</td>
 <td>0.63</td>
 <td>0.4</td>    
 <td>0.32</td>
 <td>0.84</td>
 <th>5.4</th>
+<th>7.7</th>
 <th>
   6.3
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/GR%20Research%20X-LS%20Encore%20Kit/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.7</th>
+<th>
+  8.5
+</th>
 
             </tr>
 
@@ -2529,18 +3267,25 @@
 <td>51.0</td>
 <td>47.0</td>
 <td>&plusmn;2.4</td>
+<td>-63.0</td>
+<td>69.0</td>
+<td>-37.0</td>
+<td>29.0</td>
 <td>45</td>
 <td>0.32</td>
 <td>0.45</td>    
 <td>0.36</td>
 <td>0.88</td>
 <th>5.4</th>
+<th>7.5</th>
 <th>
   6.5
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/IK%20Multimedia%20iLoud%20MTM/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.5</th>
+<th>
+  8.6
+</th>
 
             </tr>
 
@@ -2553,18 +3298,25 @@
 <td>53.0</td>
 <td>45.0</td>
 <td>&plusmn;2.4</td>
+<td>-49.0</td>
+<td>54.0</td>
+<td>-44.0</td>
+<td>43.0</td>
 <td>42</td>
 <td>0.65</td>
 <td>0.45</td>    
 <td>0.35</td>
 <td>0.8</td>
 <th>5.4</th>
+<th>7.4</th>
 <th>
   6.5
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Jeff%20Bagby%20Mandolin%20DIY/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.4</th>
+<th>
+  8.3
+</th>
 
             </tr>
 
@@ -2577,18 +3329,25 @@
 <td>63.0</td>
 <td>53.0</td>
 <td>&plusmn;3.1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>55</td>
 <td>2.0</td>
 <td>0.3</td>    
 <td>0.36</td>
 <td>0.86</td>
 <th>5.4</th>
+<th>7.9</th>
 <th>
   5.4
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20Synthesis%20SAM3HA/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.9</th>
+<th>
+  8.2
+</th>
 
             </tr>
 
@@ -2601,18 +3360,25 @@
 <td>88.0</td>
 <td>70.0</td>
 <td>&plusmn;2.5</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>63</td>
 <td>2.26</td>
 <td>0.37</td>    
 <td>0.22</td>
 <td>0.89</td>
 <th>5.4</th>
+<th>8.2</th>
 <th>
   5.3
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20Performance%20PC600/iir-autoeq.txt">(eq)</a>
 </th>
-<th>8.2</th>
+<th>
+  8.2
+</th>
 
             </tr>
 
@@ -2625,18 +3391,25 @@
 <td>70.0</td>
 <td>44.0</td>
 <td>&plusmn;2.8</td>
+<td>-55.0</td>
+<td>58.0</td>
+<td>-46.0</td>
+<td>50.0</td>
 <td>41</td>
 <td>0.59</td>
 <td>0.45</td>    
 <td>0.36</td>
 <td>0.81</td>
 <th>5.4</th>
+<th>7.4</th>
 <th>
   6.8
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20Studio%20530/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.4</th>
+<th>
+  8.6
+</th>
 
             </tr>
 
@@ -2649,18 +3422,25 @@
 <td>44.0</td>
 <td>41.0</td>
 <td>&plusmn;3.5</td>
+<td>-63.0</td>
+<td>61.0</td>
+<td>-57.0</td>
+<td>58.0</td>
 <td>41</td>
 <td>0.94</td>
 <td>0.49</td>    
 <td>0.34</td>
 <td>0.79</td>
 <th>5.4</th>
+<th>7.3</th>
 <th>
   6.2
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Kali%20IN-5/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.3</th>
+<th>
+  8.1
+</th>
 
             </tr>
 
@@ -2673,18 +3453,25 @@
 <td>88.0</td>
 <td>60.0</td>
 <td>&plusmn;1.7</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>52</td>
 <td>0.63</td>
 <td>0.35</td>    
 <td>0.27</td>
 <td>0.73</td>
 <th>5.3</th>
+<th>7.7</th>
 <th>
   6.2
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Infinity%20R152/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.7</th>
+<th>
+  8.5
+</th>
 
             </tr>
 
@@ -2697,18 +3484,25 @@
 <td>86.0</td>
 <td>61.0</td>
 <td>&plusmn;2.1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>60</td>
 <td>1.28</td>
 <td>0.34</td>    
 <td>0.23</td>
 <td>0.81</td>
 <th>5.3</th>
+<th>8.0</th>
 <th>
   6.0
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Infinity%20RC252/iir-autoeq.txt">(eq)</a>
 </th>
-<th>8.0</th>
+<th>
+  8.5
+</th>
 
             </tr>
 
@@ -2721,18 +3515,25 @@
 <td>60.0</td>
 <td>53.0</td>
 <td>&plusmn;3.2</td>
+<td>-53.0</td>
+<td>63.0</td>
+<td>-62.0</td>
+<td>48.0</td>
 <td>48</td>
 <td>0.59</td>
 <td>0.42</td>    
 <td>0.33</td>
 <td>0.82</td>
 <th>5.3</th>
+<th>7.5</th>
 <th>
   6.2
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Infinity%20Interlude%20IL10/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.5</th>
+<th>
+  8.5
+</th>
 
             </tr>
 
@@ -2745,15 +3546,21 @@
 <td>60.0</td>
 <td>55.0</td>
 <td>&plusmn;2.9</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>48</td>
 <td>0.82</td>
 <td>0.35</td>    
 <td>0.31</td>
 <td>0.91</td>
 <th>5.7</th>
+<th>8.0</th>
 <th>
 </th>
-<th>8.0</th>
+<th>
+</th>
 
             </tr>
 
@@ -2766,18 +3573,25 @@
 <td>61.0</td>
 <td>43.0</td>
 <td>&plusmn;2.4</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>51</td>
 <td>2.26</td>
 <td>0.54</td>    
 <td>0.21</td>
 <td>0.83</td>
 <th>5.3</th>
+<th>7.6</th>
 <th>
   5.8
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20Ultima2%20Voice2/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.6</th>
+<th>
+  8.1
+</th>
 
             </tr>
 
@@ -2790,18 +3604,25 @@
 <td>69.0</td>
 <td>60.0</td>
 <td>&plusmn;2.2</td>
+<td>-68.0</td>
+<td>75.0</td>
+<td>-66.0</td>
+<td>56.0</td>
 <td>60</td>
 <td>0.35</td>
 <td>0.36</td>    
 <td>0.31</td>
 <td>0.85</td>
 <th>5.2</th>
+<th>7.8</th>
 <th>
   6.1
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Dennis%20Murphy%20Affordable%20Accuracy%20Monitor/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.8</th>
+<th>
+  8.7
+</th>
 
             </tr>
 
@@ -2814,18 +3635,25 @@
 <td>74.0</td>
 <td>58.0</td>
 <td>&plusmn;1.5</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>52</td>
 <td>0.85</td>
 <td>0.34</td>    
 <td>0.31</td>
 <td>0.75</td>
 <th>5.2</th>
+<th>7.6</th>
 <th>
   6.1
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Infinity%20Entra%20One/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.6</th>
+<th>
+  8.5
+</th>
 
             </tr>
 
@@ -2838,18 +3666,25 @@
 <td>96.0</td>
 <td>65.0</td>
 <td>&plusmn;2.7</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>63</td>
 <td>0.78</td>
 <td>0.29</td>    
 <td>0.24</td>
 <td>0.75</td>
 <th>5.2</th>
+<th>8.0</th>
 <th>
   5.9
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20Arena%20120/iir-autoeq.txt">(eq)</a>
 </th>
-<th>8.0</th>
+<th>
+  8.7
+</th>
 
             </tr>
 
@@ -2862,18 +3697,25 @@
 <td>149.0</td>
 <td>56.0</td>
 <td>&plusmn;5.9</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>38</td>
 <td>2.19</td>
 <td>0.49</td>    
 <td>0.37</td>
 <td>0.73</td>
 <th>5.2</th>
+<th>7.0</th>
 <th>
   6.7
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Klipsch%20Icon%20KF-26/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.0</th>
+<th>
+  8.3
+</th>
 
             </tr>
 
@@ -2886,18 +3728,25 @@
 <td>79.0</td>
 <td>50.0</td>
 <td>&plusmn;2.0</td>
+<td>-129.0</td>
+<td>129.0</td>
+<td>-78.0</td>
+<td>137.0</td>
 <td>46</td>
 <td>1.21</td>
 <td>0.33</td>    
 <td>0.27</td>
 <td>0.55</td>
 <th>5.1</th>
+<th>7.3</th>
 <th>
   6.7
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Philharmonic%20BMR/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.3</th>
+<th>
+  8.5
+</th>
 
             </tr>
 
@@ -2910,8 +3759,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;1.9</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -2924,18 +3777,25 @@
 <td>75.0</td>
 <td>69.0</td>
 <td>&plusmn;2.3</td>
+<td>-68.0</td>
+<td>71.0</td>
+<td>-48.0</td>
+<td>48.0</td>
 <td>67</td>
 <td>0.17</td>
 <td>0.38</td>    
 <td>0.32</td>
 <td>0.94</td>
 <th>5.1</th>
+<th>8.0</th>
 <th>
   5.8
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Genelec%208010A/iir-autoeq.txt">(eq)</a>
 </th>
-<th>8.0</th>
+<th>
+  8.7
+</th>
 
             </tr>
 
@@ -2948,18 +3808,25 @@
 <td>62.0</td>
 <td>53.0</td>
 <td>&plusmn;3.8</td>
+<td>-53.0</td>
+<td>62.0</td>
+<td>-62.0</td>
+<td>56.0</td>
 <td>52</td>
 <td>0.97</td>
 <td>0.45</td>    
 <td>0.41</td>
 <td>0.93</td>
 <th>5.1</th>
+<th>7.5</th>
 <th>
   6.2
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Harbeth%20Monitor%2030.0/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.5</th>
+<th>
+  8.8
+</th>
 
             </tr>
 
@@ -2972,18 +3839,25 @@
 <td>43.0</td>
 <td>34.0</td>
 <td>&plusmn;6.3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>28</td>
 <td>1.48</td>
 <td>0.67</td>    
 <td>0.39</td>
 <td>0.63</td>
 <th>5.1</th>
+<th>6.3</th>
 <th>
   6.2
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20Synthesis%20Array%201400/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.3</th>
+<th>
+  7.4
+</th>
 
             </tr>
 
@@ -2996,18 +3870,25 @@
 <td>55.0</td>
 <td>48.0</td>
 <td>&plusmn;4.4</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>35</td>
 <td>2.1</td>
 <td>0.51</td>    
 <td>0.46</td>
 <td>0.77</td>
 <th>5.1</th>
+<th>6.8</th>
 <th>
   5.5
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20Synthesis%20K2%20S9800/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.8</th>
+<th>
+  7.7
+</th>
 
             </tr>
 
@@ -3020,18 +3901,25 @@
 <td>56.0</td>
 <td>43.0</td>
 <td>&plusmn;1.9</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>41</td>
 <td>1.9</td>
 <td>0.4</td>    
 <td>0.41</td>
 <td>0.69</td>
 <th>5.1</th>
+<th>7.1</th>
 <th>
   6.0
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20Synthesis%20K2%20S9900/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.1</th>
+<th>
+  8.1
+</th>
 
             </tr>
 
@@ -3044,18 +3932,25 @@
 <td>60.0</td>
 <td>54.0</td>
 <td>&plusmn;3.9</td>
+<td>-62.0</td>
+<td>67.0</td>
+<td>-24.0</td>
+<td>52.0</td>
 <td>51</td>
 <td>0.58</td>
 <td>0.36</td>    
 <td>0.3</td>
 <td>0.68</td>
 <th>5.1</th>
+<th>7.5</th>
 <th>
   6.2
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20Stage%20A130/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.5</th>
+<th>
+  8.5
+</th>
 
             </tr>
 
@@ -3068,18 +3963,25 @@
 <td>45.0</td>
 <td>41.0</td>
 <td>&plusmn;3.5</td>
+<td>-65.0</td>
+<td>71.0</td>
+<td>-49.0</td>
+<td>50.0</td>
 <td>38</td>
 <td>0.76</td>
 <td>0.52</td>    
 <td>0.37</td>
 <td>0.7</td>
 <th>5.1</th>
+<th>6.9</th>
 <th>
   6.8
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20306P%20Mark%20ii/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.9</th>
+<th>
+  8.6
+</th>
 
             </tr>
 
@@ -3092,18 +3994,25 @@
 <td>52.0</td>
 <td>37.0</td>
 <td>&plusmn;3.4</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>35</td>
 <td>1.59</td>
 <td>0.48</td>    
 <td>0.36</td>
 <td>0.57</td>
 <th>5.1</th>
+<th>6.7</th>
 <th>
   6.6
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20L82%20Classic/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.7</th>
+<th>
+  8.1
+</th>
 
             </tr>
 
@@ -3116,15 +4025,21 @@
 <td>42.0</td>
 <td>34.0</td>
 <td>&plusmn;3.7</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>35</td>
 <td>1.47</td>
 <td>0.43</td>    
 <td>0.29</td>
 <td>0.53</td>
 <th>5.3</th>
+<th>7.0</th>
 <th>
 </th>
-<th>7.0</th>
+<th>
+</th>
 
             </tr>
 
@@ -3137,18 +4052,25 @@
 <td>62.0</td>
 <td></td>
 <td>&plusmn;2.8</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>55</td>
 <td>2.96</td>
 <td>0.25</td>    
 <td>0.36</td>
 <td>0.69</td>
 <th>5.1</th>
+<th>7.6</th>
 <th>
   5.7
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JTR%20Noesis%20212rt/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.6</th>
+<th>
+  8.3
+</th>
 
             </tr>
 
@@ -3161,18 +4083,25 @@
 <td>40.0</td>
 <td>36.0</td>
 <td>&plusmn;7.9</td>
+<td>-67.0</td>
+<td>70.0</td>
+<td>-61.0</td>
+<td>62.0</td>
 <td>35</td>
 <td>0.84</td>
 <td>0.72</td>    
 <td>0.39</td>
 <td>0.89</td>
 <th>5.1</th>
+<th>6.8</th>
 <th>
   6.4
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Kali%20IN-8/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.8</th>
+<th>
+  8.1
+</th>
 
             </tr>
 
@@ -3185,18 +4114,25 @@
 <td>42.0</td>
 <td>40.0</td>
 <td>&plusmn;2.9</td>
+<td>-62.0</td>
+<td>67.0</td>
+<td>-44.0</td>
+<td>48.0</td>
 <td>39</td>
 <td>0.87</td>
 <td>0.51</td>    
 <td>0.38</td>
 <td>0.75</td>
 <th>5.1</th>
+<th>7.0</th>
 <th>
   6.8
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Kali%20LP-6/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.0</th>
+<th>
+  8.7
+</th>
 
             </tr>
 
@@ -3209,18 +4145,25 @@
 <td>92.0</td>
 <td>48.0</td>
 <td>&plusmn;2.4</td>
+<td>-51.0</td>
+<td>60.0</td>
+<td>-52.0</td>
+<td>58.0</td>
 <td>47</td>
 <td>0.66</td>
 <td>0.49</td>    
 <td>0.3</td>
 <td>0.75</td>
 <th>5.1</th>
+<th>7.3</th>
 <th>
   6.4
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/KEF%20Q100/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.3</th>
+<th>
+  8.5
+</th>
 
             </tr>
 
@@ -3233,18 +4176,25 @@
 <td>70.0</td>
 <td>52.0</td>
 <td>&plusmn;2.1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>49</td>
 <td>0.09</td>
 <td>0.42</td>    
 <td>0.39</td>
 <td>0.84</td>
 <th>5.1</th>
+<th>7.4</th>
 <th>
   6.0
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20W553L/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.4</th>
+<th>
+  8.3
+</th>
 
             </tr>
 
@@ -3257,18 +4207,25 @@
 <td>60.0</td>
 <td>47.0</td>
 <td>&plusmn;3.4</td>
+<td>-61.0</td>
+<td>66.0</td>
+<td>-51.0</td>
+<td>29.0</td>
 <td>46</td>
 <td>0.94</td>
 <td>0.46</td>    
 <td>0.38</td>
 <td>0.78</td>
 <th>5.0</th>
+<th>7.2</th>
 <th>
   6.4
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Elac%20Debut%202.0%20B6.2/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.2</th>
+<th>
+  8.6
+</th>
 
             </tr>
 
@@ -3281,42 +4238,25 @@
 <td>59.0</td>
 <td>45.0</td>
 <td>&plusmn;5.1</td>
+<td>-63.0</td>
+<td>67.0</td>
+<td>-62.0</td>
+<td>56.0</td>
 <td>42</td>
 <td>0.71</td>
 <td>0.63</td>    
 <td>0.33</td>
 <td>0.82</td>
 <th>5.0</th>
+<th>7.0</th>
 <th>
   6.0
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Elac%20BS%20U5%20Slim/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.0</th>
-
-            </tr>
-
-            <tr id="JBL-708P">
-	      <td>JBL 708P</td>
-	      
-<td>
-  <a href="JBL%20708P/ASR/index_asr.html">asr</a>
-</td>
-<td>42.0</td>
-<td>38.0</td>
-<td>&plusmn;3.3</td>
-<td>38</td>
-<td>1.0</td>
-<td>0.47</td>    
-<td>0.43</td>
-<td>0.67</td>
-<th>5.0</th>
 <th>
-  6.7
-  &nbsp;
-  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20708P/iir-autoeq.txt">(eq)</a>
+  8.0
 </th>
-<th>6.8</th>
 
             </tr>
 
@@ -3329,18 +4269,25 @@
 <td>48.0</td>
 <td>47.0</td>
 <td>&plusmn;3.1</td>
+<td>-61.0</td>
+<td>65.0</td>
+<td>-42.0</td>
+<td>37.0</td>
 <td>43</td>
 <td>0.54</td>
 <td>0.37</td>    
 <td>0.29</td>
 <td>0.49</td>
 <th>5.0</th>
+<th>7.1</th>
 <th>
   6.4
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20305P%20Mark%20ii/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.1</th>
+<th>
+  8.5
+</th>
 
             </tr>
 
@@ -3353,15 +4300,21 @@
 <td>47.0</td>
 <td>44.0</td>
 <td>&plusmn;3.6</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.0</td>
 <td>41</td>
 <td>0.51</td>
 <td>0.42</td>    
 <td>0.37</td>
 <td>0.48</td>
 <th>4.7</th>
+<th>6.6</th>
 <th>
 </th>
-<th>6.6</th>
+<th>
+</th>
 
             </tr>
 
@@ -3374,18 +4327,25 @@
 <td>91.0</td>
 <td>47.0</td>
 <td>&plusmn;2.9</td>
+<td>-43.0</td>
+<td>51.0</td>
+<td>-27.0</td>
+<td>31.0</td>
 <td>41</td>
 <td>0.61</td>
 <td>0.48</td>    
 <td>0.29</td>
 <td>0.56</td>
 <th>5.0</th>
+<th>6.9</th>
 <th>
   7.0
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Verdant%20Audio%20Bambusa%20AL%201/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.9</th>
+<th>
+  8.8
+</th>
 
             </tr>
 
@@ -3398,18 +4358,25 @@
 <td>64.0</td>
 <td>56.0</td>
 <td>&plusmn;2.5</td>
+<td>-64.0</td>
+<td>75.0</td>
+<td>-28.0</td>
+<td>52.0</td>
 <td>52</td>
 <td>0.47</td>
 <td>0.49</td>    
 <td>0.36</td>
 <td>0.82</td>
 <th>4.9</th>
+<th>7.3</th>
 <th>
   5.8
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Audio%20Engine%20A5+%20Powered/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.3</th>
+<th>
+  8.1
+</th>
 
             </tr>
 
@@ -3422,18 +4389,25 @@
 <td>60.0</td>
 <td>54.0</td>
 <td>&plusmn;4.4</td>
+<td>-70.0</td>
+<td>76.0</td>
+<td>-37.0</td>
+<td>24.0</td>
 <td>52</td>
 <td>0.35</td>
 <td>0.51</td>    
 <td>0.41</td>
 <td>0.89</td>
 <th>4.9</th>
+<th>7.3</th>
 <th>
   6.0
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Carmody%20S2000%20DIY%20Speaker%20Kit/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.3</th>
+<th>
+  8.5
+</th>
 
             </tr>
 
@@ -3446,18 +4420,25 @@
 <td>69.0</td>
 <td>41.0</td>
 <td>&plusmn;4.0</td>
+<td>-67.0</td>
+<td>73.0</td>
+<td>-65.0</td>
+<td>56.0</td>
 <td>38</td>
 <td>1.05</td>
 <td>0.42</td>    
 <td>0.28</td>
 <td>0.4</td>
 <th>4.9</th>
+<th>6.7</th>
 <th>
   6.4
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Infinity%20R253/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.7</th>
+<th>
+  8.3
+</th>
 
             </tr>
 
@@ -3470,15 +4451,21 @@
 <td>79.0</td>
 <td>42.0</td>
 <td>&plusmn;7.0</td>
+<td>-64.0</td>
+<td>72.0</td>
+<td>-50.0</td>
+<td>50.0</td>
 <td>39</td>
 <td>1.09</td>
 <td>0.52</td>    
 <td>0.39</td>
 <td>0.01</td>
 <th>3.4</th>
+<th>5.2</th>
 <th>
 </th>
-<th>5.2</th>
+<th>
+</th>
 
             </tr>
 
@@ -3491,15 +4478,21 @@
 <td>57.0</td>
 <td>45.0</td>
 <td>&plusmn;2.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>37</td>
 <td>1.45</td>
 <td>0.28</td>    
 <td>0.21</td>
 <td>0.57</td>
 <th>5.9</th>
+<th>7.7</th>
 <th>
 </th>
-<th>7.7</th>
+<th>
+</th>
 
             </tr>
 
@@ -3512,18 +4505,25 @@
 <td>67.0</td>
 <td>50.0</td>
 <td>&plusmn;2.3</td>
+<td>-64.0</td>
+<td>65.0</td>
+<td>-51.0</td>
+<td>55.0</td>
 <td>43</td>
 <td>0.6</td>
 <td>0.4</td>    
 <td>0.36</td>
 <td>0.58</td>
 <th>4.9</th>
+<th>7.0</th>
 <th>
   6.4
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Infinity%20R162/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.0</th>
+<th>
+  8.4
+</th>
 
             </tr>
 
@@ -3536,15 +4536,21 @@
 <td>61.0</td>
 <td>53.0</td>
 <td>&plusmn;2.1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>44</td>
 <td>0.92</td>
 <td>0.4</td>    
 <td>0.33</td>
 <td>0.55</td>
 <th>4.8</th>
+<th>6.9</th>
 <th>
 </th>
-<th>6.9</th>
+<th>
+</th>
 
             </tr>
 
@@ -3557,18 +4563,25 @@
 <td>58.0</td>
 <td>49.0</td>
 <td>&plusmn;4.5</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>41</td>
 <td>2.29</td>
 <td>0.57</td>    
 <td>0.37</td>
 <td>0.73</td>
 <th>4.9</th>
+<th>6.9</th>
 <th>
   5.8
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20Synthesis%20K2%20S5800/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.9</th>
+<th>
+  7.8
+</th>
 
             </tr>
 
@@ -3581,18 +4594,83 @@
 <td>97.0</td>
 <td>80.0</td>
 <td>&plusmn;2.5</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>82</td>
 <td>1.77</td>
 <td>0.35</td>    
 <td>0.22</td>
 <td>0.84</td>
 <th>4.9</th>
+<th>8.1</th>
 <th>
   5.3
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20Performance%20PT800/iir-autoeq.txt">(eq)</a>
 </th>
-<th>8.1</th>
+<th>
+  8.5
+</th>
+
+            </tr>
+
+            <tr id="JBL-708P">
+	      <td>JBL 708P</td>
+	      
+<td>
+  <a href="JBL%20708P/ErinsAudioCorner/index_eac.html">eac</a>
+</td>
+<td>42.0</td>
+<td>38.0</td>
+<td>&plusmn;2.7</td>
+<td>-58.0</td>
+<td>58.0</td>
+<td>-41.0</td>
+<td>48.0</td>
+<td>38</td>
+<td>1.08</td>
+<td>0.42</td>    
+<td>0.39</td>
+<td>0.53</td>
+<th>4.9</th>
+<th>6.7</th>
+<th>
+  5.8
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20708P/iir-autoeq.txt">(eq)</a>
+</th>
+<th>
+  7.6
+</th>
+
+            </tr>
+
+            <tr>
+	      <td></td>
+	      
+<td>
+  <a href="JBL%20708P/ASR/index_asr.html">asr</a>
+</td>
+<td>42.0</td>
+<td>38.0</td>
+<td>&plusmn;3.3</td>
+<td>-53.0</td>
+<td>64.0</td>
+<td>-46.0</td>
+<td>48.0</td>
+<td>38</td>
+<td>1.0</td>
+<td>0.47</td>    
+<td>0.43</td>
+<td>0.67</td>
+<th>5.0</th>
+<th>6.8</th>
+<th>
+</th>
+<th>
+</th>
 
             </tr>
 
@@ -3605,18 +4683,25 @@
 <td>62.0</td>
 <td>50.0</td>
 <td>&plusmn;4.5</td>
+<td>-58.0</td>
+<td>64.0</td>
+<td>-43.0</td>
+<td>52.0</td>
 <td>46</td>
 <td>0.93</td>
 <td>0.48</td>    
 <td>0.43</td>
 <td>0.82</td>
 <th>4.9</th>
+<th>7.1</th>
 <th>
   6.6
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20HDI-3600/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.1</th>
+<th>
+  8.6
+</th>
 
             </tr>
 
@@ -3629,15 +4714,21 @@
 <td>48.0</td>
 <td>37.0</td>
 <td>&plusmn;2.3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>34</td>
 <td>1.72</td>
 <td>0.21</td>    
 <td>0.21</td>
 <td>0.78</td>
 <th>6.7</th>
+<th>8.4</th>
 <th>
 </th>
-<th>8.4</th>
+<th>
+</th>
 
             </tr>
 
@@ -3650,18 +4741,25 @@
 <td></td>
 <td></td>
 <td>&plusmn;4.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>71</td>
 <td>0.55</td>
 <td>0.42</td>    
 <td>0.26</td>
 <td>0.89</td>
 <th>4.9</th>
+<th>7.9</th>
 <th>
   5.3
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Monoprice%20Monolith%20K-BAS/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.9</th>
+<th>
+  8.3
+</th>
 
             </tr>
 
@@ -3674,18 +4772,25 @@
 <td>62.0</td>
 <td>59.0</td>
 <td>&plusmn;3.5</td>
+<td>-73.0</td>
+<td>73.0</td>
+<td>-70.0</td>
+<td>74.0</td>
 <td>56</td>
 <td>0.42</td>
 <td>0.45</td>    
 <td>0.33</td>
 <td>0.82</td>
 <th>4.9</th>
+<th>7.5</th>
 <th>
   6.2
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Pioneer%20SP-BS22-LR/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.5</th>
+<th>
+  8.6
+</th>
 
             </tr>
 
@@ -3698,18 +4803,25 @@
 <td>38.0</td>
 <td>35.0</td>
 <td>&plusmn;3.4</td>
+<td>-53.0</td>
+<td>55.0</td>
+<td>-38.0</td>
+<td>46.0</td>
 <td>33</td>
 <td>0.9</td>
 <td>0.51</td>    
 <td>0.5</td>
 <td>0.62</td>
 <th>4.8</th>
+<th>6.3</th>
 <th>
   6.8
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Adam%20T8V/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.3</th>
+<th>
+  8.3
+</th>
 
             </tr>
 
@@ -3722,18 +4834,25 @@
 <td>56.0</td>
 <td>45.0</td>
 <td>&plusmn;4.1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>40</td>
 <td>1.49</td>
 <td>0.38</td>    
 <td>0.27</td>
 <td>0.34</td>
 <th>4.8</th>
+<th>6.7</th>
 <th>
   6.5
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Bowers%20%26%20Wilkins%20803%20D3/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.7</th>
+<th>
+  8.4
+</th>
 
             </tr>
 
@@ -3746,18 +4865,25 @@
 <td>64.0</td>
 <td>53.0</td>
 <td>&plusmn;2.9</td>
+<td>-73.0</td>
+<td>81.0</td>
+<td>-56.0</td>
+<td>37.0</td>
 <td>48</td>
 <td>0.53</td>
 <td>0.42</td>    
 <td>0.38</td>
 <td>0.68</td>
 <th>4.8</th>
+<th>7.1</th>
 <th>
   5.9
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Dynaudio%20Excite%20X14/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.1</th>
+<th>
+  8.1
+</th>
 
             </tr>
 
@@ -3770,18 +4896,25 @@
 <td>49.0</td>
 <td>40.0</td>
 <td>&plusmn;3.2</td>
+<td>-75.0</td>
+<td>75.0</td>
+<td>-41.0</td>
+<td>42.0</td>
 <td>38</td>
 <td>0.4</td>
 <td>0.47</td>    
 <td>0.44</td>
 <td>0.6</td>
 <th>4.8</th>
+<th>6.6</th>
 <th>
   6.7
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Emotiva%20Airmotiv%206s/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.6</th>
+<th>
+  8.4
+</th>
 
             </tr>
 
@@ -3794,18 +4927,25 @@
 <td>43.0</td>
 <td>37.0</td>
 <td>&plusmn;9.5</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>37</td>
 <td>1.82</td>
 <td>0.69</td>    
 <td>0.45</td>
 <td>0.86</td>
 <th>4.8</th>
+<th>6.6</th>
 <th>
   5.4
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20Synthesis%204429/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.6</th>
+<th>
+  7.2
+</th>
 
             </tr>
 
@@ -3818,18 +4958,25 @@
 <td>64.0</td>
 <td>52.0</td>
 <td>&plusmn;5.6</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>35</td>
 <td>1.43</td>
 <td>0.6</td>    
 <td>0.45</td>
 <td>0.68</td>
 <th>4.8</th>
+<th>6.4</th>
 <th>
   6.1
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20LS%2080/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.4</th>
+<th>
+  7.8
+</th>
 
             </tr>
 
@@ -3842,18 +4989,25 @@
 <td>72.0</td>
 <td>62.0</td>
 <td>&plusmn;3.1</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.0</td>
 <td>62</td>
 <td>1.43</td>
 <td>0.45</td>    
 <td>0.33</td>
 <td>0.83</td>
 <th>4.8</th>
+<th>7.5</th>
 <th>
   5.9
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20C52/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.5</th>
+<th>
+  8.5
+</th>
 
             </tr>
 
@@ -3861,23 +5015,30 @@
 	      <td>Apple Homepod</td>
 	      
 <td>
-  <a href="Apple%20Homepod/Apple/index_vendor.html">vendor</a>
+  <a href="Apple%20Homepod/Misc/index_misc-sausalitoaudio.html">misc-sausalitoaudio</a>
 </td>
 <td>36.0</td>
 <td>35.0</td>
 <td>&plusmn;8.8</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>32</td>
 <td>0.64</td>
 <td>0.62</td>    
 <td>0.48</td>
 <td>0.65</td>
 <th>4.7</th>
+<th>6.2</th>
 <th>
   4.4
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Apple%20Homepod/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.2</th>
+<th>
+  6.1
+</th>
 
             </tr>
 
@@ -3890,18 +5051,25 @@
 <td>69.0</td>
 <td>56.0</td>
 <td>&plusmn;2.8</td>
+<td>-68.0</td>
+<td>75.0</td>
+<td>-49.0</td>
+<td>49.0</td>
 <td>52</td>
 <td>0.5</td>
 <td>0.49</td>    
 <td>0.36</td>
 <td>0.74</td>
 <th>4.7</th>
+<th>7.1</th>
 <th>
   6.2
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Emotiva%20Airmotiv%20B1+/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.1</th>
+<th>
+  8.5
+</th>
 
             </tr>
 
@@ -3914,8 +5082,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;2.6</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -3928,18 +5100,25 @@
 <td>73.0</td>
 <td>62.0</td>
 <td>&plusmn;2.8</td>
+<td>-61.0</td>
+<td>71.0</td>
+<td>-48.0</td>
+<td>51.0</td>
 <td>61</td>
 <td>1.49</td>
 <td>0.45</td>    
 <td>0.34</td>
 <td>0.81</td>
 <th>4.7</th>
+<th>7.4</th>
 <th>
   5.8
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Infinity%20RC263/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.4</th>
+<th>
+  8.6
+</th>
 
             </tr>
 
@@ -3952,15 +5131,21 @@
 <td>70.0</td>
 <td>56.0</td>
 <td>&plusmn;2.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>54</td>
 <td>1.67</td>
 <td>0.35</td>    
 <td>0.24</td>
 <td>0.76</td>
 <th>5.4</th>
+<th>7.8</th>
 <th>
 </th>
-<th>7.8</th>
+<th>
+</th>
 
             </tr>
 
@@ -3973,18 +5158,25 @@
 <td>64.0</td>
 <td>56.0</td>
 <td>&plusmn;1.9</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>54</td>
 <td>2.54</td>
 <td>0.33</td>    
 <td>0.42</td>
 <td>0.67</td>
 <th>4.7</th>
+<th>7.1</th>
 <th>
   5.4
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20Synthesis%20SK2-3300/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.1</th>
+<th>
+  7.9
+</th>
 
             </tr>
 
@@ -3997,18 +5189,25 @@
 <td>45.0</td>
 <td>41.0</td>
 <td>&plusmn;7.8</td>
+<td>-62.0</td>
+<td>74.0</td>
+<td>-46.0</td>
+<td>57.0</td>
 <td>41</td>
 <td>0.61</td>
 <td>0.51</td>    
 <td>0.43</td>
 <td>0.67</td>
 <th>4.7</th>
+<th>6.7</th>
 <th>
   6.7
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20705P/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.7</th>
+<th>
+  8.6
+</th>
 
             </tr>
 
@@ -4021,18 +5220,25 @@
 <td>47.0</td>
 <td>38.0</td>
 <td>&plusmn;2.9</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>38</td>
 <td>1.48</td>
 <td>0.47</td>    
 <td>0.54</td>
 <td>0.68</td>
 <th>4.7</th>
+<th>6.5</th>
 <th>
   6.3
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%204309/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.5</th>
+<th>
+  8.0
+</th>
 
             </tr>
 
@@ -4045,18 +5251,25 @@
 <td>69.0</td>
 <td>54.0</td>
 <td>&plusmn;2.9</td>
+<td>-84.0</td>
+<td>85.0</td>
+<td>-62.0</td>
+<td>57.0</td>
 <td>55</td>
 <td>1.89</td>
 <td>0.57</td>    
 <td>0.35</td>
 <td>0.83</td>
 <th>4.7</th>
+<th>7.2</th>
 <th>
   5.6
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20C208/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.2</th>
+<th>
+  8.1
+</th>
 
             </tr>
 
@@ -4069,15 +5282,21 @@
 <td>50.0</td>
 <td>39.0</td>
 <td>&plusmn;2.6</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>44</td>
 <td>1.92</td>
 <td>0.39</td>    
 <td>0.22</td>
 <td>0.75</td>
 <th>5.7</th>
+<th>7.8</th>
 <th>
 </th>
-<th>7.8</th>
+<th>
+</th>
 
             </tr>
 
@@ -4090,18 +5309,25 @@
 <td>91.0</td>
 <td>51.0</td>
 <td>&plusmn;3.5</td>
+<td>-66.0</td>
+<td>70.0</td>
+<td>-61.0</td>
+<td>51.0</td>
 <td>51</td>
 <td>1.06</td>
 <td>0.39</td>    
 <td>0.31</td>
 <td>0.5</td>
 <th>4.6</th>
+<th>7.0</th>
 <th>
   6.1
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/ATC%20SCM19%20v1/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.0</th>
+<th>
+  8.2
+</th>
 
             </tr>
 
@@ -4114,18 +5340,25 @@
 <td>59.0</td>
 <td>51.0</td>
 <td>&plusmn;4.1</td>
+<td>-65.0</td>
+<td>66.0</td>
+<td>-57.0</td>
+<td>51.0</td>
 <td>48</td>
 <td>0.72</td>
 <td>0.47</td>    
 <td>0.45</td>
 <td>0.73</td>
 <th>4.6</th>
+<th>6.9</th>
 <th>
   6.5
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Definitive%20Technology%20Demand%20D11/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.9</th>
+<th>
+  8.7
+</th>
 
             </tr>
 
@@ -4138,18 +5371,25 @@
 <td>59.0</td>
 <td>51.0</td>
 <td>&plusmn;2.5</td>
+<td>-69.0</td>
+<td>81.0</td>
+<td>-65.0</td>
+<td>50.0</td>
 <td>48</td>
 <td>0.57</td>
 <td>0.42</td>    
 <td>0.35</td>
 <td>0.57</td>
 <th>4.6</th>
+<th>6.9</th>
 <th>
   6.3
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Dynaudio%20Emit%20M10/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.9</th>
+<th>
+  8.5
+</th>
 
             </tr>
 
@@ -4162,18 +5402,25 @@
 <td>80.0</td>
 <td>48.0</td>
 <td>&plusmn;4.0</td>
+<td>-60.0</td>
+<td>64.0</td>
+<td>-60.0</td>
+<td>61.0</td>
 <td>45</td>
 <td>0.6</td>
 <td>0.6</td>    
 <td>0.45</td>
 <td>0.81</td>
 <th>4.6</th>
+<th>6.7</th>
 <th>
   6.4
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/KEF%20LS50/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.7</th>
+<th>
+  8.5
+</th>
 
             </tr>
 
@@ -4186,15 +5433,21 @@
 <td>80.0</td>
 <td>48.0</td>
 <td>&plusmn;4.0</td>
+<td>-60.0</td>
+<td>61.0</td>
+<td>-60.0</td>
+<td>64.0</td>
 <td>45</td>
 <td>0.6</td>
 <td>0.6</td>    
 <td>0.41</td>
 <td>0.82</td>
 <th>4.7</th>
+<th>6.9</th>
 <th>
 </th>
-<th>6.9</th>
+<th>
+</th>
 
             </tr>
 
@@ -4207,8 +5460,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;3.0</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td>-76.0</td>
+<td>76.0</td>
+<td>-78.0</td>
+<td>84.0</td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -4221,8 +5478,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;2.8</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -4235,18 +5496,25 @@
 <td>64.0</td>
 <td>53.0</td>
 <td>&plusmn;5.8</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>53</td>
 <td>1.08</td>
 <td>0.56</td>    
 <td>0.39</td>
 <td>0.82</td>
 <th>4.6</th>
+<th>7.0</th>
 <th>
   5.9
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Neumi%20BS5/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.0</th>
+<th>
+  8.3
+</th>
 
             </tr>
 
@@ -4259,18 +5527,25 @@
 <td>79.0</td>
 <td>53.0</td>
 <td>&plusmn;2.9</td>
+<td>-60.0</td>
+<td>64.0</td>
+<td>-52.0</td>
+<td>47.0</td>
 <td>48</td>
 <td>0.55</td>
 <td>0.37</td>    
 <td>0.3</td>
 <td>0.45</td>
 <th>4.6</th>
+<th>6.9</th>
 <th>
   6.5
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Paradigm%20Prestige%2015B/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.9</th>
+<th>
+  8.7
+</th>
 
             </tr>
 
@@ -4283,18 +5558,25 @@
 <td>90.0</td>
 <td>61.0</td>
 <td>&plusmn;1.8</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>60</td>
 <td>1.58</td>
 <td>0.37</td>    
 <td>0.29</td>
 <td>0.61</td>
 <th>4.6</th>
+<th>7.3</th>
 <th>
   5.6
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20C205/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.3</th>
+<th>
+  8.3
+</th>
 
             </tr>
 
@@ -4307,18 +5589,25 @@
 <td>79.0</td>
 <td>64.0</td>
 <td>&plusmn;3.4</td>
+<td>-68.0</td>
+<td>67.0</td>
+<td>-58.0</td>
+<td>38.0</td>
 <td>60</td>
 <td>0.46</td>
 <td>0.5</td>    
 <td>0.34</td>
 <td>0.8</td>
 <th>4.6</th>
+<th>7.3</th>
 <th>
   6.0
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Sony%20SS-CS5/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.3</th>
+<th>
+  8.6
+</th>
 
             </tr>
 
@@ -4331,18 +5620,25 @@
 <td></td>
 <td></td>
 <td>&plusmn;1.9</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>68</td>
 <td>1.48</td>
 <td>0.29</td>    
 <td>0.25</td>
 <td>0.53</td>
 <th>4.5</th>
+<th>7.5</th>
 <th>
   5.9
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Buchardt%20Audio%20A500/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.5</th>
+<th>
+  8.8
+</th>
 
             </tr>
 
@@ -4355,18 +5651,25 @@
 <td>53.0</td>
 <td>46.0</td>
 <td>&plusmn;2.9</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>46</td>
 <td>1.62</td>
 <td>0.44</td>    
 <td>0.37</td>
 <td>0.54</td>
 <th>4.5</th>
+<th>6.7</th>
 <th>
   5.6
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Focal%20Solo6%20Be/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.7</th>
+<th>
+  7.9
+</th>
 
             </tr>
 
@@ -4379,18 +5682,25 @@
 <td>70.0</td>
 <td>54.0</td>
 <td>&plusmn;5.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>55</td>
 <td>2.47</td>
 <td>0.51</td>    
 <td>0.38</td>
 <td>0.75</td>
 <th>4.5</th>
+<th>7.0</th>
 <th>
   5.1
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20Synthesis%20SK2-1000/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.0</th>
+<th>
+  7.6
+</th>
 
             </tr>
 
@@ -4403,18 +5713,25 @@
 <td>50.0</td>
 <td>42.0</td>
 <td>&plusmn;2.7</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>44</td>
 <td>1.96</td>
 <td>0.53</td>    
 <td>0.37</td>
 <td>0.55</td>
 <th>4.5</th>
+<th>6.5</th>
 <th>
   5.5
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%204312SE/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.5</th>
+<th>
+  7.5
+</th>
 
             </tr>
 
@@ -4427,18 +5744,25 @@
 <td>149.0</td>
 <td>49.0</td>
 <td>&plusmn;6.7</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>40</td>
 <td>1.1</td>
 <td>0.69</td>    
 <td>0.43</td>
 <td>0.74</td>
 <th>4.5</th>
+<th>6.4</th>
 <th>
   5.7
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Martin%20Logan%20Vista/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.4</th>
+<th>
+  7.6
+</th>
 
             </tr>
 
@@ -4451,18 +5775,25 @@
 <td>41.0</td>
 <td></td>
 <td>&plusmn;3.2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>40</td>
 <td>1.49</td>
 <td>0.42</td>    
 <td>0.32</td>
 <td>0.33</td>
 <th>4.5</th>
+<th>6.4</th>
 <th>
   6.4
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Paradigm%20Persona%203F/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.4</th>
+<th>
+  8.4
+</th>
 
             </tr>
 
@@ -4475,18 +5806,25 @@
 <td>83.0</td>
 <td>56.0</td>
 <td>&plusmn;3.2</td>
+<td>-80.0</td>
+<td>79.0</td>
+<td>-27.0</td>
+<td>34.0</td>
 <td>54</td>
 <td>0.45</td>
 <td>0.38</td>    
 <td>0.32</td>
 <td>0.52</td>
 <th>4.5</th>
+<th>7.0</th>
 <th>
   6.3
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Selah%20Audio%20RC3R/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.0</th>
+<th>
+  8.6
+</th>
 
             </tr>
 
@@ -4499,18 +5837,25 @@
 <td>50.0</td>
 <td>41.0</td>
 <td>&plusmn;3.4</td>
+<td>-44.0</td>
+<td>57.0</td>
+<td>-38.0</td>
+<td>43.0</td>
 <td>38</td>
 <td>0.52</td>
 <td>0.36</td>    
 <td>0.31</td>
 <td>0.21</td>
 <th>4.5</th>
+<th>6.4</th>
 <th>
   7.1
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Verdant%20Audio%20Bambusa%20MG%201/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.4</th>
+<th>
+  8.6
+</th>
 
             </tr>
 
@@ -4523,18 +5868,25 @@
 <td>45.0</td>
 <td>40.0</td>
 <td>&plusmn;4.5</td>
+<td>-57.0</td>
+<td>56.0</td>
+<td>-62.0</td>
+<td>69.0</td>
 <td>39</td>
 <td>0.86</td>
 <td>0.6</td>    
 <td>0.45</td>
 <td>0.62</td>
 <th>4.4</th>
+<th>6.3</th>
 <th>
   6.4
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Bowers%20%26%20Wilkins%20805S/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.3</th>
+<th>
+  8.4
+</th>
 
             </tr>
 
@@ -4547,18 +5899,25 @@
 <td>94.0</td>
 <td>49.0</td>
 <td>&plusmn;2.8</td>
+<td>-82.0</td>
+<td>83.0</td>
+<td>-77.0</td>
+<td>47.0</td>
 <td>47</td>
 <td>0.32</td>
 <td>0.44</td>    
 <td>0.42</td>
 <td>0.58</td>
 <th>4.4</th>
+<th>6.7</th>
 <th>
   6.0
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Micca%20RB42/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.7</th>
+<th>
+  8.2
+</th>
 
             </tr>
 
@@ -4571,18 +5930,25 @@
 <td>60.0</td>
 <td>53.0</td>
 <td>&plusmn;2.7</td>
+<td>-69.0</td>
+<td>80.0</td>
+<td>-65.0</td>
+<td>50.0</td>
 <td>51</td>
 <td>0.74</td>
 <td>0.42</td>    
 <td>0.33</td>
 <td>0.46</td>
 <th>4.4</th>
+<th>6.7</th>
 <th>
   6.4
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/NHT%20C3/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.7</th>
+<th>
+  8.8
+</th>
 
             </tr>
 
@@ -4595,18 +5961,25 @@
 <td>59.0</td>
 <td>51.0</td>
 <td>&plusmn;2.5</td>
+<td>-58.0</td>
+<td>64.0</td>
+<td>-49.0</td>
+<td>46.0</td>
 <td>48</td>
 <td>0.59</td>
 <td>0.44</td>    
 <td>0.41</td>
 <td>0.51</td>
 <th>4.3</th>
+<th>6.6</th>
 <th>
   6.8
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Adam%20T5V/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.6</th>
+<th>
+  8.9
+</th>
 
             </tr>
 
@@ -4619,18 +5992,25 @@
 <td>67.0</td>
 <td>59.0</td>
 <td>&plusmn;2.6</td>
+<td>-68.0</td>
+<td>67.0</td>
+<td>-39.0</td>
+<td>25.0</td>
 <td>55</td>
 <td>0.61</td>
 <td>0.43</td>    
 <td>0.35</td>
 <td>0.56</td>
 <th>4.3</th>
+<th>6.9</th>
 <th>
   6.1
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Polk%20Audio%20Signature%20S15/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.9</th>
+<th>
+  8.6
+</th>
 
             </tr>
 
@@ -4643,18 +6023,25 @@
 <td>56.0</td>
 <td>48.0</td>
 <td>&plusmn;2.9</td>
+<td>-64.0</td>
+<td>67.0</td>
+<td>-51.0</td>
+<td>48.0</td>
 <td>48</td>
 <td>0.87</td>
 <td>0.55</td>    
 <td>0.38</td>
 <td>0.6</td>
 <th>4.3</th>
+<th>6.6</th>
 <th>
   6.1
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Triangle%20Borea%20BR03/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.6</th>
+<th>
+  8.3
+</th>
 
             </tr>
 
@@ -4667,18 +6054,25 @@
 <td>56.0</td>
 <td>51.0</td>
 <td>&plusmn;6.0</td>
+<td>-70.0</td>
+<td>74.0</td>
+<td>-40.0</td>
+<td>44.0</td>
 <td>51</td>
 <td>0.7</td>
 <td>0.59</td>    
 <td>0.45</td>
 <td>0.73</td>
 <th>4.2</th>
+<th>6.6</th>
 <th>
   6.0
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Adam%20A5X/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.6</th>
+<th>
+  8.2
+</th>
 
             </tr>
 
@@ -4691,18 +6085,25 @@
 <td>53.0</td>
 <td>37.0</td>
 <td>&plusmn;3.7</td>
+<td>-47.0</td>
+<td>56.0</td>
+<td>-49.0</td>
+<td>46.0</td>
 <td>35</td>
 <td>1.87</td>
 <td>0.51</td>    
 <td>0.51</td>
 <td>0.41</td>
 <th>4.2</th>
+<th>5.8</th>
 <th>
   6.4
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%204349/iir-autoeq.txt">(eq)</a>
 </th>
-<th>5.8</th>
+<th>
+  7.9
+</th>
 
             </tr>
 
@@ -4715,18 +6116,25 @@
 <td>91.0</td>
 <td>69.0</td>
 <td>&plusmn;2.5</td>
+<td>-73.0</td>
+<td>72.0</td>
+<td>-49.0</td>
+<td>52.0</td>
 <td>68</td>
 <td>0.82</td>
 <td>0.32</td>    
 <td>0.3</td>
 <td>0.51</td>
 <th>4.2</th>
+<th>7.2</th>
 <th>
   5.9
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Neumi%20BS5P/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.2</th>
+<th>
+  8.6
+</th>
 
             </tr>
 
@@ -4739,15 +6147,21 @@
 <td>53.0</td>
 <td>44.0</td>
 <td>&plusmn;13.4</td>
+<td>-73.0</td>
+<td>78.0</td>
+<td>-71.0</td>
+<td>79.0</td>
 <td>43</td>
 <td>0.7</td>
 <td>0.89</td>    
 <td>0.53</td>
 <td>0.22</td>
 <th>2.3</th>
+<th>4.4</th>
 <th>
 </th>
-<th>4.4</th>
+<th>
+</th>
 
             </tr>
 
@@ -4760,18 +6174,25 @@
 <td>39.0</td>
 <td>38.0</td>
 <td>&plusmn;9.4</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>37</td>
 <td>0.73</td>
 <td>0.81</td>    
 <td>0.46</td>
 <td>0.75</td>
 <th>4.2</th>
+<th>6.0</th>
 <th>
   3.6
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Sonos%20Move/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.0</th>
+<th>
+  5.4
+</th>
 
             </tr>
 
@@ -4784,18 +6205,25 @@
 <td>92.0</td>
 <td>54.0</td>
 <td>&plusmn;3.0</td>
+<td>-81.0</td>
+<td>90.0</td>
+<td>-34.0</td>
+<td>39.0</td>
 <td>49</td>
 <td>0.51</td>
 <td>0.58</td>    
 <td>0.44</td>
 <td>0.64</td>
 <th>4.1</th>
+<th>6.4</th>
 <th>
   5.8
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Ascend%20Acoustics%20Sierra%202/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.4</th>
+<th>
+  8.0
+</th>
 
             </tr>
 
@@ -4808,18 +6236,25 @@
 <td>70.0</td>
 <td>44.0</td>
 <td>&plusmn;5.1</td>
+<td>-29.0</td>
+<td>52.0</td>
+<td>-38.0</td>
+<td>44.0</td>
 <td>38</td>
 <td>0.79</td>
 <td>0.53</td>    
 <td>0.51</td>
 <td>0.47</td>
 <th>4.1</th>
+<th>5.9</th>
 <th>
   6.8
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Klipsch%20RP-600M/iir-autoeq.txt">(eq)</a>
 </th>
-<th>5.9</th>
+<th>
+  8.6
+</th>
 
             </tr>
 
@@ -4832,18 +6267,25 @@
 <td>77.0</td>
 <td>66.0</td>
 <td>&plusmn;3.2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>59</td>
 <td>0.87</td>
 <td>0.56</td>    
 <td>0.46</td>
 <td>0.78</td>
 <th>4.1</th>
+<th>6.7</th>
 <th>
   5.2
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Klipsch%20Synergy%20SB-3%20Monitor/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.7</th>
+<th>
+  7.7
+</th>
 
             </tr>
 
@@ -4856,18 +6298,25 @@
 <td>82.0</td>
 <td>41.0</td>
 <td>&plusmn;3.0</td>
+<td>-71.0</td>
+<td>80.0</td>
+<td>-63.0</td>
+<td>58.0</td>
 <td>39</td>
 <td>0.67</td>
 <td>0.59</td>    
 <td>0.38</td>
 <td>0.37</td>
 <th>4.1</th>
+<th>6.0</th>
 <th>
   6.4
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Yamaha%20HS7/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.0</th>
+<th>
+  8.2
+</th>
 
             </tr>
 
@@ -4880,18 +6329,25 @@
 <td>44.0</td>
 <td>41.0</td>
 <td>&plusmn;4.6</td>
+<td>-64.0</td>
+<td>77.0</td>
+<td>-63.0</td>
+<td>68.0</td>
 <td>41</td>
 <td>0.81</td>
 <td>0.66</td>    
 <td>0.51</td>
 <td>0.64</td>
 <th>4.0</th>
+<th>6.0</th>
 <th>
   5.7
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Elac%20Adante%20AS-61/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.0</th>
+<th>
+  7.7
+</th>
 
             </tr>
 
@@ -4904,18 +6360,25 @@
 <td>51.0</td>
 <td>49.0</td>
 <td>&plusmn;4.6</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>49</td>
 <td>0.78</td>
 <td>0.61</td>    
 <td>0.54</td>
 <td>0.73</td>
 <th>4.0</th>
+<th>6.2</th>
 <th>
   5.9
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/IK%20Multimedia%20iLoud%20Micro%20Monitor/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.2</th>
+<th>
+  8.2
+</th>
 
             </tr>
 
@@ -4928,18 +6391,25 @@
 <td>120.0</td>
 <td>59.0</td>
 <td>&plusmn;3.4</td>
+<td>-47.0</td>
+<td>52.0</td>
+<td>-26.0</td>
+<td>45.0</td>
 <td>58</td>
 <td>0.7</td>
 <td>0.44</td>    
 <td>0.44</td>
 <td>0.59</td>
 <th>4.0</th>
+<th>6.6</th>
 <th>
   6.7
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Part%20Express%20DIY%20C-Note/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.6</th>
+<th>
+  8.4
+</th>
 
             </tr>
 
@@ -4952,18 +6422,25 @@
 <td>56.0</td>
 <td>48.0</td>
 <td>&plusmn;3.9</td>
+<td>-68.0</td>
+<td>70.0</td>
+<td>-57.0</td>
+<td>55.0</td>
 <td>46</td>
 <td>0.55</td>
 <td>0.6</td>    
 <td>0.45</td>
 <td>0.58</td>
 <th>4.0</th>
+<th>6.2</th>
 <th>
   6.0
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/PSB%20Alpha%20P5/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.2</th>
+<th>
+  8.0
+</th>
 
             </tr>
 
@@ -4976,18 +6453,25 @@
 <td>79.0</td>
 <td>60.0</td>
 <td>&plusmn;3.2</td>
+<td>-69.0</td>
+<td>73.0</td>
+<td>-41.0</td>
+<td>51.0</td>
 <td>54</td>
 <td>0.55</td>
 <td>0.48</td>    
 <td>0.44</td>
 <td>0.58</td>
 <th>4.0</th>
+<th>6.5</th>
 <th>
   6.0
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Q%20Acoustics%203020i/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.5</th>
+<th>
+  8.5
+</th>
 
             </tr>
 
@@ -5000,18 +6484,25 @@
 <td>85.0</td>
 <td>63.0</td>
 <td>&plusmn;2.6</td>
+<td>-64.0</td>
+<td>75.0</td>
+<td>-54.0</td>
+<td>41.0</td>
 <td>60</td>
 <td>0.38</td>
 <td>0.41</td>    
 <td>0.43</td>
 <td>0.53</td>
 <th>4.0</th>
+<th>6.6</th>
 <th>
   5.8
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Vanatoo%20Transparent%20Zero/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.6</th>
+<th>
+  8.4
+</th>
 
             </tr>
 
@@ -5024,18 +6515,25 @@
 <td>83.0</td>
 <td>64.0</td>
 <td>&plusmn;2.0</td>
+<td>-79.0</td>
+<td>88.0</td>
+<td>-42.0</td>
+<td>49.0</td>
 <td>62</td>
 <td>0.5</td>
 <td>0.38</td>    
 <td>0.36</td>
 <td>0.41</td>
 <th>3.9</th>
+<th>6.6</th>
 <th>
   5.3
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Ascend%20Acoustics%20CBM-170%20SE/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.6</th>
+<th>
+  8.0
+</th>
 
             </tr>
 
@@ -5048,8 +6546,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;2.9</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td>-74.0</td>
+<td>73.0</td>
+<td>-45.0</td>
+<td>37.0</td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -5062,18 +6564,25 @@
 <td>79.0</td>
 <td>69.0</td>
 <td>&plusmn;4.5</td>
+<td>-71.0</td>
+<td>73.0</td>
+<td>-57.0</td>
+<td>61.0</td>
 <td>68</td>
 <td>0.76</td>
 <td>0.65</td>    
 <td>0.42</td>
 <td>0.86</td>
 <th>3.9</th>
+<th>6.8</th>
 <th>
   4.7
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Focal%20Chorus%20OD%20706%20V/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.8</th>
+<th>
+  7.6
+</th>
 
             </tr>
 
@@ -5086,18 +6595,25 @@
 <td>75.0</td>
 <td>59.0</td>
 <td>&plusmn;3.4</td>
+<td>-55.0</td>
+<td>72.0</td>
+<td>-57.0</td>
+<td>58.0</td>
 <td>55</td>
 <td>0.65</td>
 <td>0.54</td>    
 <td>0.49</td>
 <td>0.66</td>
 <th>3.9</th>
+<th>6.4</th>
 <th>
   6.5
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20XPL90/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.4</th>
+<th>
+  8.9
+</th>
 
             </tr>
 
@@ -5110,18 +6626,25 @@
 <td>147.0</td>
 <td>33.0</td>
 <td>&plusmn;6.3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>30</td>
 <td>2.26</td>
 <td>0.94</td>    
 <td>0.63</td>
 <td>0.78</td>
 <th>3.9</th>
+<th>5.3</th>
 <th>
   4.8
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Martin%20Logan%20Prodigy/iir-autoeq.txt">(eq)</a>
 </th>
-<th>5.3</th>
+<th>
+  6.5
+</th>
 
             </tr>
 
@@ -5134,18 +6657,25 @@
 <td>56.0</td>
 <td>53.0</td>
 <td>&plusmn;3.5</td>
+<td>-64.0</td>
+<td>71.0</td>
+<td>-55.0</td>
+<td>48.0</td>
 <td>48</td>
 <td>0.61</td>
 <td>0.49</td>    
 <td>0.33</td>
 <td>0.27</td>
 <th>3.9</th>
+<th>6.1</th>
 <th>
   6.1
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Paradigm%20Monitor%20SE%20Atom/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.1</th>
+<th>
+  8.4
+</th>
 
             </tr>
 
@@ -5158,18 +6688,25 @@
 <td>56.0</td>
 <td>45.0</td>
 <td>&plusmn;5.5</td>
+<td>-83.0</td>
+<td>85.0</td>
+<td>-66.0</td>
+<td>45.0</td>
 <td>45</td>
 <td>0.73</td>
 <td>0.44</td>    
 <td>0.39</td>
 <td>0.26</td>
 <th>3.9</th>
+<th>6.0</th>
 <th>
   6.7
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Salk%20WoW1/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.0</th>
+<th>
+  8.8
+</th>
 
             </tr>
 
@@ -5182,18 +6719,25 @@
 <td>47.0</td>
 <td>42.0</td>
 <td>&plusmn;3.1</td>
+<td>-35.0</td>
+<td>71.0</td>
+<td>-71.0</td>
+<td>58.0</td>
 <td>41</td>
 <td>1.31</td>
 <td>0.47</td>    
 <td>0.51</td>
 <td>0.31</td>
 <th>3.8</th>
+<th>5.7</th>
 <th>
   6.0
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Focal%20Twin6%20Be/iir-autoeq.txt">(eq)</a>
 </th>
-<th>5.7</th>
+<th>
+  8.0
+</th>
 
             </tr>
 
@@ -5206,15 +6750,21 @@
 <td>47.0</td>
 <td>42.0</td>
 <td>&plusmn;3.1</td>
+<td>-71.0</td>
+<td>58.0</td>
+<td>-35.0</td>
+<td>71.0</td>
 <td>42</td>
 <td>1.37</td>
 <td>0.47</td>    
 <td>0.5</td>
 <td>0.3</td>
 <th>3.7</th>
+<th>5.7</th>
 <th>
 </th>
-<th>5.7</th>
+<th>
+</th>
 
             </tr>
 
@@ -5227,18 +6777,25 @@
 <td>150.0</td>
 <td>58.0</td>
 <td>&plusmn;3.7</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>55</td>
 <td>1.07</td>
 <td>0.41</td>    
 <td>0.45</td>
 <td>0.43</td>
 <th>3.8</th>
+<th>6.3</th>
 <th>
   5.9
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Pioneer%20S-DF3-K/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.3</th>
+<th>
+  8.3
+</th>
 
             </tr>
 
@@ -5251,18 +6808,25 @@
 <td>59.0</td>
 <td>50.0</td>
 <td>&plusmn;5.5</td>
+<td>-38.0</td>
+<td>37.0</td>
+<td>-38.0</td>
+<td>35.0</td>
 <td>46</td>
 <td>0.73</td>
 <td>0.79</td>    
 <td>0.52</td>
 <td>0.79</td>
 <th>3.8</th>
+<th>6.0</th>
 <th>
   5.7
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Pioneer%20SP-EBS73-LR/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.0</th>
+<th>
+  7.9
+</th>
 
             </tr>
 
@@ -5275,18 +6839,25 @@
 <td>60.0</td>
 <td>53.0</td>
 <td>&plusmn;4.3</td>
+<td>-71.0</td>
+<td>78.0</td>
+<td>-59.0</td>
+<td>62.0</td>
 <td>51</td>
 <td>0.26</td>
 <td>0.56</td>    
 <td>0.38</td>
 <td>0.41</td>
 <th>3.7</th>
+<th>6.1</th>
 <th>
   5.8
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Dayton%20Audio%20MK402X/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.1</th>
+<th>
+  8.1
+</th>
 
             </tr>
 
@@ -5299,18 +6870,25 @@
 <td>59.0</td>
 <td>47.0</td>
 <td>&plusmn;4.0</td>
+<td>-55.0</td>
+<td>65.0</td>
+<td>-30.0</td>
+<td>30.0</td>
 <td>43</td>
 <td>0.63</td>
 <td>0.54</td>    
 <td>0.36</td>
 <td>0.22</td>
 <th>3.7</th>
+<th>5.8</th>
 <th>
   6.6
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%204319/iir-autoeq.txt">(eq)</a>
 </th>
-<th>5.8</th>
+<th>
+  8.5
+</th>
 
             </tr>
 
@@ -5323,18 +6901,25 @@
 <td>54.0</td>
 <td>48.0</td>
 <td>&plusmn;3.9</td>
+<td>-72.0</td>
+<td>87.0</td>
+<td>-61.0</td>
+<td>60.0</td>
 <td>48</td>
 <td>0.64</td>
 <td>0.57</td>    
 <td>0.44</td>
 <td>0.42</td>
 <th>3.7</th>
+<th>5.9</th>
 <th>
   5.8
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/KRK%20Systems%20RoKit%205%20G4/iir-autoeq.txt">(eq)</a>
 </th>
-<th>5.9</th>
+<th>
+  8.0
+</th>
 
             </tr>
 
@@ -5347,18 +6932,25 @@
 <td>56.0</td>
 <td>51.0</td>
 <td>&plusmn;3.2</td>
+<td>-58.0</td>
+<td>64.0</td>
+<td>-33.0</td>
+<td>41.0</td>
 <td>50</td>
 <td>0.76</td>
 <td>0.53</td>    
 <td>0.44</td>
 <td>0.43</td>
 <th>3.7</th>
+<th>6.0</th>
 <th>
   6.3
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Presonus%20Eris%20E5%20XT/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.0</th>
+<th>
+  8.6
+</th>
 
             </tr>
 
@@ -5371,18 +6963,25 @@
 <td>113.0</td>
 <td>82.0</td>
 <td>&plusmn;3.9</td>
+<td>-58.0</td>
+<td>60.0</td>
+<td>-36.0</td>
+<td>50.0</td>
 <td>79</td>
 <td>0.72</td>
 <td>0.44</td>    
 <td>0.44</td>
 <td>0.69</td>
 <th>3.7</th>
+<th>6.9</th>
 <th>
   5.0
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Wharfedale%20Diamond%20220/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.9</th>
+<th>
+  8.1
+</th>
 
             </tr>
 
@@ -5395,18 +6994,25 @@
 <td>63.0</td>
 <td>48.0</td>
 <td>&plusmn;3.2</td>
+<td>-56.0</td>
+<td>51.0</td>
+<td>-53.0</td>
+<td>54.0</td>
 <td>43</td>
 <td>1.14</td>
 <td>0.57</td>    
 <td>0.47</td>
 <td>0.37</td>
 <th>3.6</th>
+<th>5.7</th>
 <th>
   6.0
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20HDI-4500/iir-autoeq.txt">(eq)</a>
 </th>
-<th>5.7</th>
+<th>
+  8.0
+</th>
 
             </tr>
 
@@ -5419,18 +7025,25 @@
 <td>60.0</td>
 <td>51.0</td>
 <td>&plusmn;5.7</td>
+<td>-72.0</td>
+<td>83.0</td>
+<td>-73.0</td>
+<td>61.0</td>
 <td>50</td>
 <td>0.66</td>
 <td>0.66</td>    
 <td>0.51</td>
 <td>0.62</td>
 <th>3.6</th>
+<th>6.0</th>
 <th>
   6.1
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/NHT%20SB2/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.0</th>
+<th>
+  8.4
+</th>
 
             </tr>
 
@@ -5443,18 +7056,25 @@
 <td>83.0</td>
 <td>70.0</td>
 <td>&plusmn;3.7</td>
+<td>-58.0</td>
+<td>23.0</td>
+<td>-76.0</td>
+<td>72.0</td>
 <td>64</td>
 <td>0.9</td>
 <td>0.56</td>    
 <td>0.42</td>
 <td>0.56</td>
 <th>3.5</th>
+<th>6.3</th>
 <th>
   4.3
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Ascend%20Acoustics%20CMT-340/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.3</th>
+<th>
+  7.2
+</th>
 
             </tr>
 
@@ -5467,18 +7087,25 @@
 <td>79.0</td>
 <td>60.0</td>
 <td>&plusmn;3.3</td>
+<td>-68.0</td>
+<td>76.0</td>
+<td>-50.0</td>
+<td>49.0</td>
 <td>58</td>
 <td>0.33</td>
 <td>0.62</td>    
 <td>0.41</td>
 <td>0.49</td>
 <th>3.5</th>
+<th>6.1</th>
 <th>
   5.3
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Boston%20Acoustics%20A%2025/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.1</th>
+<th>
+  7.8
+</th>
 
             </tr>
 
@@ -5491,18 +7118,25 @@
 <td>82.0</td>
 <td>69.0</td>
 <td>&plusmn;3.1</td>
+<td>-61.0</td>
+<td>64.0</td>
+<td>-39.0</td>
+<td>50.0</td>
 <td>67</td>
 <td>0.29</td>
 <td>0.55</td>    
 <td>0.43</td>
 <td>0.56</td>
 <th>3.5</th>
+<th>6.3</th>
 <th>
   5.5
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Kanto%20Yu/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.3</th>
+<th>
+  8.1
+</th>
 
             </tr>
 
@@ -5515,18 +7149,25 @@
 <td>75.0</td>
 <td>56.0</td>
 <td>&plusmn;8.2</td>
+<td>-75.0</td>
+<td>77.0</td>
+<td>-65.0</td>
+<td>58.0</td>
 <td>55</td>
 <td>0.79</td>
 <td>0.65</td>    
 <td>0.54</td>
 <td>0.64</td>
 <th>3.4</th>
+<th>6.0</th>
 <th>
   4.4
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Fluance%20HFS%20Signature/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.0</th>
+<th>
+  7.2
+</th>
 
             </tr>
 
@@ -5539,18 +7180,25 @@
 <td>103.0</td>
 <td>85.0</td>
 <td>&plusmn;3.4</td>
+<td>-68.0</td>
+<td>70.0</td>
+<td>-65.0</td>
+<td>52.0</td>
 <td>87</td>
 <td>0.21</td>
 <td>0.52</td>    
 <td>0.36</td>
 <td>0.62</td>
 <th>3.4</th>
+<th>6.7</th>
 <th>
   4.3
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Fostex%20PM03/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.7</th>
+<th>
+  7.7
+</th>
 
             </tr>
 
@@ -5563,18 +7211,25 @@
 <td>98.0</td>
 <td>82.0</td>
 <td>&plusmn;3.3</td>
+<td>-68.0</td>
+<td>71.0</td>
+<td>-70.0</td>
+<td>50.0</td>
 <td>82</td>
 <td>0.57</td>
 <td>0.51</td>    
 <td>0.46</td>
 <td>0.71</td>
 <th>3.4</th>
+<th>6.7</th>
 <th>
   4.3
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/NHT%20Super%20Zero%202.1/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.7</th>
+<th>
+  7.6
+</th>
 
             </tr>
 
@@ -5587,18 +7242,25 @@
 <td>50.0</td>
 <td>33.0</td>
 <td>&plusmn;4.9</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>31</td>
 <td>0.96</td>
 <td>0.63</td>    
 <td>0.53</td>
 <td>0.07</td>
 <th>3.3</th>
+<th>4.7</th>
 <th>
   5.7
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Polk%20Audio%20Rti%2010/iir-autoeq.txt">(eq)</a>
 </th>
-<th>4.7</th>
+<th>
+  7.0
+</th>
 
             </tr>
 
@@ -5611,18 +7273,25 @@
 <td>75.0</td>
 <td>64.0</td>
 <td>&plusmn;5.2</td>
+<td>-77.0</td>
+<td>66.0</td>
+<td>-68.0</td>
+<td>69.0</td>
 <td>64</td>
 <td>0.42</td>
 <td>0.6</td>    
 <td>0.61</td>
 <td>0.73</td>
 <th>3.3</th>
+<th>6.1</th>
 <th>
   5.0
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Sehlin%20Helium%20DIY/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.1</th>
+<th>
+  7.8
+</th>
 
             </tr>
 
@@ -5635,18 +7304,25 @@
 <td>64.0</td>
 <td>48.0</td>
 <td>&plusmn;4.8</td>
+<td>-66.0</td>
+<td>70.0</td>
+<td>-63.0</td>
+<td>28.0</td>
 <td>45</td>
 <td>0.48</td>
 <td>0.59</td>    
 <td>0.39</td>
 <td>0.11</td>
 <th>3.2</th>
+<th>5.3</th>
 <th>
   6.5
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Bowers%20%26%20Wilkins%20607%20S2%20Anniversary%20Edition/iir-autoeq.txt">(eq)</a>
 </th>
-<th>5.3</th>
+<th>
+  8.5
+</th>
 
             </tr>
 
@@ -5659,18 +7335,25 @@
 <td>65.0</td>
 <td>51.0</td>
 <td>&plusmn;2.4</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>50</td>
 <td>1.12</td>
 <td>0.71</td>    
 <td>0.63</td>
 <td>0.66</td>
 <th>3.2</th>
+<th>5.6</th>
 <th>
   5.4
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Hsu%20Research%20CCB-8/iir-autoeq.txt">(eq)</a>
 </th>
-<th>5.6</th>
+<th>
+  7.7
+</th>
 
             </tr>
 
@@ -5683,18 +7366,25 @@
 <td>55.0</td>
 <td>48.0</td>
 <td>&plusmn;5.2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>48</td>
 <td>1.47</td>
 <td>0.77</td>    
 <td>0.64</td>
 <td>0.69</td>
 <th>3.2</th>
+<th>5.4</th>
 <th>
   5.6
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20Northridge%20Series%20N28/iir-autoeq.txt">(eq)</a>
 </th>
-<th>5.4</th>
+<th>
+  7.9
+</th>
 
             </tr>
 
@@ -5707,18 +7397,25 @@
 <td>81.0</td>
 <td></td>
 <td>&plusmn;4.9</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>70</td>
 <td>0.76</td>
 <td>0.61</td>    
 <td>0.53</td>
 <td>0.7</td>
 <th>3.2</th>
+<th>6.2</th>
 <th>
   5.2
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Monoprice%20Monolith%20Air%20Motion%20Cinema%205/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.2</th>
+<th>
+  8.2
+</th>
 
             </tr>
 
@@ -5731,18 +7428,25 @@
 <td>79.0</td>
 <td>61.0</td>
 <td>&plusmn;6.8</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>56</td>
 <td>0.55</td>
 <td>0.8</td>    
 <td>0.47</td>
 <td>0.62</td>
 <th>3.2</th>
+<th>5.7</th>
 <th>
   5.1
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Polk%20Audio%20RT15i/iir-autoeq.txt">(eq)</a>
 </th>
-<th>5.7</th>
+<th>
+  7.6
+</th>
 
             </tr>
 
@@ -5755,18 +7459,25 @@
 <td>91.0</td>
 <td>72.0</td>
 <td>&plusmn;3.1</td>
+<td>-70.0</td>
+<td>70.0</td>
+<td>-66.0</td>
+<td>59.0</td>
 <td>71</td>
 <td>1.02</td>
 <td>0.59</td>    
 <td>0.46</td>
 <td>0.55</td>
 <th>3.1</th>
+<th>6.1</th>
 <th>
   5.1
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Behringer%20B2030p/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.1</th>
+<th>
+  8.0
+</th>
 
             </tr>
 
@@ -5779,18 +7490,25 @@
 <td>144.0</td>
 <td>59.0</td>
 <td>&plusmn;4.3</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.0</td>
 <td>54</td>
 <td>0.39</td>
 <td>0.51</td>    
 <td>0.42</td>
 <td>0.17</td>
 <th>3.1</th>
+<th>5.5</th>
 <th>
   6.5
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Yamaha%20HS5/iir-autoeq.txt">(eq)</a>
 </th>
-<th>5.5</th>
+<th>
+  8.7
+</th>
 
             </tr>
 
@@ -5803,18 +7521,25 @@
 <td>54.0</td>
 <td>47.0</td>
 <td>&plusmn;5.6</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>44</td>
 <td>0.93</td>
 <td>0.56</td>    
 <td>0.42</td>
 <td>0.02</td>
 <th>3.0</th>
+<th>5.1</th>
 <th>
   6.3
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Jamo%20S807/iir-autoeq.txt">(eq)</a>
 </th>
-<th>5.1</th>
+<th>
+  8.1
+</th>
 
             </tr>
 
@@ -5827,18 +7552,25 @@
 <td>108.0</td>
 <td>88.0</td>
 <td>&plusmn;4.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.0</td>
 <td>87</td>
 <td>0.67</td>
 <td>0.48</td>    
 <td>0.41</td>
 <td>0.46</td>
 <th>3.0</th>
+<th>6.3</th>
 <th>
   4.7
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20Control%201%20Pro/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.3</th>
+<th>
+  7.9
+</th>
 
             </tr>
 
@@ -5851,18 +7583,25 @@
 <td>69.0</td>
 <td>59.0</td>
 <td>&plusmn;3.6</td>
+<td>-48.0</td>
+<td>56.0</td>
+<td>-47.0</td>
+<td>49.0</td>
 <td>55</td>
 <td>1.01</td>
 <td>0.74</td>    
 <td>0.62</td>
 <td>0.66</td>
 <th>3.0</th>
+<th>5.5</th>
 <th>
   3.5
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Triangle%20Esprit%20Antal%20Ez/iir-autoeq.txt">(eq)</a>
 </th>
-<th>5.5</th>
+<th>
+  6.3
+</th>
 
             </tr>
 
@@ -5875,18 +7614,25 @@
 <td>89.0</td>
 <td>68.0</td>
 <td>&plusmn;4.5</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>68</td>
 <td>1.44</td>
 <td>0.55</td>    
 <td>0.53</td>
 <td>0.46</td>
 <th>2.9</th>
+<th>5.8</th>
 <th>
   5.3
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Cambridge%20Soundworks%20Model%20Six/iir-autoeq.txt">(eq)</a>
 </th>
-<th>5.8</th>
+<th>
+  7.9
+</th>
 
             </tr>
 
@@ -5899,18 +7645,25 @@
 <td>59.0</td>
 <td>53.0</td>
 <td>&plusmn;6.5</td>
+<td>-47.0</td>
+<td>58.0</td>
+<td>-49.0</td>
+<td>46.0</td>
 <td>52</td>
 <td>0.68</td>
 <td>0.82</td>    
 <td>0.7</td>
 <td>0.76</td>
 <th>2.9</th>
+<th>5.3</th>
 <th>
   5.4
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Fluid%20Audio%20FX50/iir-autoeq.txt">(eq)</a>
 </th>
-<th>5.3</th>
+<th>
+  7.8
+</th>
 
             </tr>
 
@@ -5923,18 +7676,25 @@
 <td></td>
 <td></td>
 <td>&plusmn;3.4</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>168</td>
 <td>1.32</td>
 <td>0.44</td>    
 <td>0.31</td>
 <td>0.78</td>
 <th>2.9</th>
+<th>7.5</th>
 <th>
   3.1
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Focal%20Chora%20806/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.5</th>
+<th>
+  7.7
+</th>
 
             </tr>
 
@@ -5947,18 +7707,25 @@
 <td>120.0</td>
 <td>69.0</td>
 <td>&plusmn;4.2</td>
+<td>-77.0</td>
+<td>81.0</td>
+<td>-17.0</td>
+<td>41.0</td>
 <td>67</td>
 <td>1.13</td>
 <td>0.65</td>    
 <td>0.49</td>
 <td>0.51</td>
 <th>2.9</th>
+<th>5.8</th>
 <th>
   5.1
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20CBT%2070J-1/iir-autoeq.txt">(eq)</a>
 </th>
-<th>5.8</th>
+<th>
+  7.7
+</th>
 
             </tr>
 
@@ -5971,18 +7738,25 @@
 <td>77.0</td>
 <td>72.0</td>
 <td>&plusmn;4.3</td>
+<td>-51.0</td>
+<td>59.0</td>
+<td>-47.0</td>
+<td>56.0</td>
 <td>69</td>
 <td>0.36</td>
 <td>0.64</td>    
 <td>0.47</td>
 <td>0.51</td>
 <th>2.9</th>
+<th>5.9</th>
 <th>
   5.4
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Klipsch%20R41M/iir-autoeq.txt">(eq)</a>
 </th>
-<th>5.9</th>
+<th>
+  8.4
+</th>
 
             </tr>
 
@@ -5990,23 +7764,30 @@
 	      <td>Ascend Acoustics Sierra-2EX</td>
 	      
 <td>
-  <a href="Ascend%20Acoustics%20Sierra-2EX/Misc/index_misc-speakerdata2034.html">misc-speakerdata2034</a>
+  <a href="Ascend%20Acoustics%20Sierra-2EX/Ascend%20Acoustics/index_vendor.html">vendor</a>
 </td>
 <td></td>
 <td></td>
 <td>&plusmn;1.2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>185</td>
 <td>2.03</td>
 <td>0.27</td>    
 <td>0.32</td>
 <td>0.63</td>
 <th>2.8</th>
+<th>7.5</th>
 <th>
   3.8
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Ascend%20Acoustics%20Sierra-2EX/iir-autoeq.txt">(eq)</a>
 </th>
-<th>7.5</th>
+<th>
+  8.6
+</th>
 
             </tr>
 
@@ -6019,18 +7800,25 @@
 <td>113.0</td>
 <td>88.0</td>
 <td>&plusmn;4.0</td>
+<td>-67.0</td>
+<td>70.0</td>
+<td>-59.0</td>
+<td>58.0</td>
 <td>84</td>
 <td>0.43</td>
 <td>0.56</td>    
 <td>0.4</td>
 <td>0.46</td>
 <th>2.8</th>
+<th>6.1</th>
 <th>
   4.4
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Definitive%20Technology%20ProMonitor%201000/iir-autoeq.txt">(eq)</a>
 </th>
-<th>6.1</th>
+<th>
+  7.6
+</th>
 
             </tr>
 
@@ -6043,18 +7831,56 @@
 <td>59.0</td>
 <td>54.0</td>
 <td>&plusmn;7.0</td>
+<td>-68.0</td>
+<td>72.0</td>
+<td>-50.0</td>
+<td>44.0</td>
 <td>54</td>
 <td>0.7</td>
 <td>0.57</td>    
 <td>0.51</td>
 <td>0.21</td>
 <th>2.8</th>
+<th>5.2</th>
 <th>
   5.9
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/KRK%20Systems%20Classic%205/iir-autoeq.txt">(eq)</a>
 </th>
-<th>5.2</th>
+<th>
+  8.4
+</th>
+
+            </tr>
+
+            <tr id="NHT-Pro-M-00">
+	      <td>NHT Pro M-00</td>
+	      
+<td>
+  <a href="NHT%20Pro%20M-00/ASR/index_asr.html">asr</a>
+</td>
+<td>86.0</td>
+<td>67.0</td>
+<td>&plusmn;3.5</td>
+<td>-72.0</td>
+<td>72.0</td>
+<td>-179.0</td>
+<td>179.0</td>
+<td>66</td>
+<td>0.23</td>
+<td>0.6</td>    
+<td>0.45</td>
+<td>0.32</td>
+<th>2.7</th>
+<th>5.6</th>
+<th>
+  5.5
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/NHT%20Pro%20M-00/iir-autoeq.txt">(eq)</a>
+</th>
+<th>
+  8.1
+</th>
 
             </tr>
 
@@ -6067,18 +7893,56 @@
 <td>64.0</td>
 <td>59.0</td>
 <td>&plusmn;5.3</td>
+<td>-49.0</td>
+<td>47.0</td>
+<td>-39.0</td>
+<td>29.0</td>
 <td>58</td>
 <td>0.94</td>
 <td>0.85</td>    
 <td>0.46</td>
 <td>0.45</td>
 <th>2.6</th>
+<th>5.2</th>
 <th>
   4.9
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Pioneer%20SP-EC73/iir-autoeq.txt">(eq)</a>
 </th>
-<th>5.2</th>
+<th>
+  7.4
+</th>
+
+            </tr>
+
+            <tr id="DIYSG-HTM-12v1">
+	      <td>DIYSG HTM-12v1</td>
+	      
+<td>
+  <a href="DIYSG%20HTM-12v1/ErinsAudioCorner/index_eac.html">eac</a>
+</td>
+<td>144.0</td>
+<td>63.0</td>
+<td>&plusmn;4.2</td>
+<td>-50.0</td>
+<td>50.0</td>
+<td>-30.0</td>
+<td>28.0</td>
+<td>62</td>
+<td>2.32</td>
+<td>0.62</td>    
+<td>0.6</td>
+<td>0.35</td>
+<th>2.4</th>
+<th>5.1</th>
+<th>
+  4.8
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/DIYSG%20HTM-12v1/iir-autoeq.txt">(eq)</a>
+</th>
+<th>
+  7.6
+</th>
 
             </tr>
 
@@ -6091,18 +7955,25 @@
 <td>69.0</td>
 <td>60.0</td>
 <td>&plusmn;4.0</td>
+<td>-71.0</td>
+<td>79.0</td>
+<td>-72.0</td>
+<td>44.0</td>
 <td>60</td>
 <td>0.6</td>
 <td>0.61</td>    
 <td>0.46</td>
 <td>0.13</td>
 <th>2.4</th>
+<th>5.1</th>
 <th>
   4.3
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/PMC%20Twenty%2021/iir-autoeq.txt">(eq)</a>
 </th>
-<th>5.1</th>
+<th>
+  7.0
+</th>
 
             </tr>
 
@@ -6115,18 +7986,25 @@
 <td>72.0</td>
 <td>67.0</td>
 <td>&plusmn;5.5</td>
+<td>-65.0</td>
+<td>62.0</td>
+<td>-64.0</td>
+<td>19.0</td>
 <td>67</td>
 <td>0.27</td>
 <td>0.66</td>    
 <td>0.44</td>
 <td>0.21</td>
 <th>2.3</th>
+<th>5.2</th>
 <th>
   4.7
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Mackie%20CR3-X/iir-autoeq.txt">(eq)</a>
 </th>
-<th>5.2</th>
+<th>
+  7.5
+</th>
 
             </tr>
 
@@ -6139,18 +8017,25 @@
 <td>108.0</td>
 <td>91.0</td>
 <td>&plusmn;4.4</td>
+<td>-63.0</td>
+<td>70.0</td>
+<td>-41.0</td>
+<td>46.0</td>
 <td>90</td>
 <td>0.66</td>
 <td>0.45</td>    
 <td>0.41</td>
 <td>0.12</td>
 <th>2.2</th>
+<th>5.6</th>
 <th>
   5.2
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Revel%20M55XC/iir-autoeq.txt">(eq)</a>
 </th>
-<th>5.6</th>
+<th>
+  8.3
+</th>
 
             </tr>
 
@@ -6163,18 +8048,25 @@
 <td>70.0</td>
 <td>66.0</td>
 <td>&plusmn;10.1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>62</td>
 <td>0.39</td>
 <td>0.76</td>    
 <td>0.56</td>
 <td>0.31</td>
 <th>2.1</th>
+<th>4.8</th>
 <th>
   3.7
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Bowers%20%26%20Wilkins%20WM7.5/iir-autoeq.txt">(eq)</a>
 </th>
-<th>4.8</th>
+<th>
+  6.5
+</th>
 
             </tr>
 
@@ -6187,18 +8079,25 @@
 <td>88.0</td>
 <td>75.0</td>
 <td>&plusmn;4.5</td>
+<td>-52.0</td>
+<td>70.0</td>
+<td>-56.0</td>
+<td>14.0</td>
 <td>74</td>
 <td>0.87</td>
 <td>0.59</td>    
 <td>0.39</td>
 <td>0.06</td>
 <th>2.1</th>
+<th>5.2</th>
 <th>
   4.6
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/RSL%20Outsider%20II/iir-autoeq.txt">(eq)</a>
 </th>
-<th>5.2</th>
+<th>
+  7.5
+</th>
 
             </tr>
 
@@ -6211,18 +8110,25 @@
 <td>101.0</td>
 <td>80.0</td>
 <td>&plusmn;5.5</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>79</td>
 <td>0.64</td>
 <td>0.54</td>    
 <td>0.38</td>
 <td>0.0</td>
 <th>2.0</th>
+<th>5.2</th>
 <th>
   5.4
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Micca%20MB42X%20Mark%20III/iir-autoeq.txt">(eq)</a>
 </th>
-<th>5.2</th>
+<th>
+  8.0
+</th>
 
             </tr>
 
@@ -6235,15 +8141,21 @@
 <td>51.0</td>
 <td>41.0</td>
 <td>&plusmn;15.4</td>
+<td>-41.0</td>
+<td>41.0</td>
+<td>-40.0</td>
+<td>40.0</td>
 <td>35</td>
 <td>2.84</td>
 <td>1.44</td>    
 <td>0.77</td>
 <td>0.75</td>
 <th>1.9</th>
+<th>3.6</th>
 <th>
 </th>
-<th>3.6</th>
+<th>
+</th>
 
             </tr>
 
@@ -6256,15 +8168,21 @@
 <td>39.0</td>
 <td>34.0</td>
 <td>&plusmn;10.4</td>
+<td>-41.0</td>
+<td>41.0</td>
+<td>-40.0</td>
+<td>40.0</td>
 <td>31</td>
 <td>2.84</td>
 <td>1.43</td>    
 <td>0.6</td>
 <td>0.01</td>
 <th>0.9</th>
+<th>2.4</th>
 <th>
 </th>
-<th>2.4</th>
+<th>
+</th>
 
             </tr>
 
@@ -6277,15 +8195,21 @@
 <td>34.0</td>
 <td>31.0</td>
 <td>&plusmn;9.1</td>
+<td>-41.0</td>
+<td>41.0</td>
+<td>-40.0</td>
+<td>40.0</td>
 <td>29</td>
 <td>2.84</td>
 <td>1.44</td>    
 <td>0.6</td>
 <td>0.77</td>
 <th>2.8</th>
+<th>4.1</th>
 <th>
 </th>
-<th>4.1</th>
+<th>
+</th>
 
             </tr>
 
@@ -6298,18 +8222,25 @@
 <td>60.0</td>
 <td>56.0</td>
 <td>&plusmn;5.5</td>
+<td>-72.0</td>
+<td>63.0</td>
+<td>-56.0</td>
+<td>60.0</td>
 <td>55</td>
 <td>0.56</td>
 <td>0.8</td>    
 <td>0.58</td>
 <td>0.19</td>
 <th>1.9</th>
+<th>4.4</th>
 <th>
   5.8
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Edifier%20R1280T/iir-autoeq.txt">(eq)</a>
 </th>
-<th>4.4</th>
+<th>
+  8.3
+</th>
 
             </tr>
 
@@ -6322,18 +8253,25 @@
 <td>51.0</td>
 <td>41.0</td>
 <td>&plusmn;18.5</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>43</td>
 <td>1.02</td>
 <td>1.29</td>    
 <td>0.46</td>
 <td>0.35</td>
 <th>1.8</th>
+<th>3.9</th>
 <th>
   2.0
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Bose%20301%20Series%20IV/iir-autoeq.txt">(eq)</a>
 </th>
-<th>3.9</th>
+<th>
+  4.1
+</th>
 
             </tr>
 
@@ -6346,18 +8284,25 @@
 <td>120.0</td>
 <td>85.0</td>
 <td>&plusmn;8.4</td>
+<td>-91.0</td>
+<td>97.0</td>
+<td>-94.0</td>
+<td>59.0</td>
 <td>84</td>
 <td>0.62</td>
 <td>0.76</td>    
 <td>0.37</td>
 <td>0.17</td>
 <th>1.8</th>
+<th>5.1</th>
 <th>
   4.0
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Diapason%20Emera/iir-autoeq.txt">(eq)</a>
 </th>
-<th>5.1</th>
+<th>
+  6.9
+</th>
 
             </tr>
 
@@ -6370,18 +8315,25 @@
 <td>67.0</td>
 <td>60.0</td>
 <td>&plusmn;12.1</td>
+<td>-86.0</td>
+<td>82.0</td>
+<td>-80.0</td>
+<td>71.0</td>
 <td>60</td>
 <td>0.18</td>
 <td>0.92</td>    
 <td>0.52</td>
 <td>0.27</td>
 <th>1.8</th>
+<th>4.4</th>
 <th>
   4.8
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/JBL%20104/iir-autoeq.txt">(eq)</a>
 </th>
-<th>4.4</th>
+<th>
+  7.4
+</th>
 
             </tr>
 
@@ -6394,15 +8346,21 @@
 <td>73.0</td>
 <td>67.0</td>
 <td>&plusmn;4.9</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>63</td>
 <td>0.71</td>
 <td>0.78</td>    
 <td>0.49</td>
 <td>0.52</td>
 <th>2.7</th>
+<th>5.5</th>
 <th>
 </th>
-<th>5.5</th>
+<th>
+</th>
 
             </tr>
 
@@ -6415,18 +8373,25 @@
 <td>48.0</td>
 <td>44.0</td>
 <td>&plusmn;6.9</td>
+<td>-64.0</td>
+<td>65.0</td>
+<td>-37.0</td>
+<td>28.0</td>
 <td>42</td>
 <td>0.95</td>
 <td>0.94</td>    
 <td>0.85</td>
 <td>0.44</td>
 <th>1.8</th>
+<th>3.9</th>
 <th>
   4.5
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Ocean%20Way%20HR5/iir-autoeq.txt">(eq)</a>
 </th>
-<th>3.9</th>
+<th>
+  6.5
+</th>
 
             </tr>
 
@@ -6439,18 +8404,25 @@
 <td>72.0</td>
 <td>56.0</td>
 <td>&plusmn;4.1</td>
+<td>-64.0</td>
+<td>61.0</td>
+<td>-60.0</td>
+<td>59.0</td>
 <td>54</td>
 <td>0.83</td>
 <td>0.67</td>    
 <td>0.72</td>
 <td>0.19</td>
 <th>1.8</th>
+<th>4.3</th>
 <th>
   5.6
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Tannoy%20Revolution%20XT6/iir-autoeq.txt">(eq)</a>
 </th>
-<th>4.3</th>
+<th>
+  7.9
+</th>
 
             </tr>
 
@@ -6463,18 +8435,25 @@
 <td>150.0</td>
 <td>90.0</td>
 <td>&plusmn;5.8</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>83</td>
 <td>1.6</td>
 <td>0.82</td>    
 <td>0.56</td>
 <td>0.49</td>
 <th>1.8</th>
+<th>5.1</th>
 <th>
   4.9
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Yamaha%20NS-A638/iir-autoeq.txt">(eq)</a>
 </th>
-<th>5.1</th>
+<th>
+  7.4
+</th>
 
             </tr>
 
@@ -6487,18 +8466,25 @@
 <td>89.0</td>
 <td>74.0</td>
 <td>&plusmn;7.3</td>
+<td>-37.0</td>
+<td>42.0</td>
+<td>-63.0</td>
+<td>71.0</td>
 <td>73</td>
 <td>0.44</td>
 <td>0.89</td>    
 <td>0.66</td>
 <td>0.51</td>
 <th>1.6</th>
+<th>4.7</th>
 <th>
   4.3
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Dayton%20Audio%20B652-AIR/iir-autoeq.txt">(eq)</a>
 </th>
-<th>4.7</th>
+<th>
+  7.2
+</th>
 
             </tr>
 
@@ -6511,18 +8497,25 @@
 <td>105.0</td>
 <td>70.0</td>
 <td>&plusmn;8.0</td>
+<td>-50.0</td>
+<td>59.0</td>
+<td>-53.0</td>
+<td>55.0</td>
 <td>69</td>
 <td>0.93</td>
 <td>0.87</td>    
 <td>0.73</td>
 <td>0.54</td>
 <th>1.6</th>
+<th>4.6</th>
 <th>
   4.8
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Tannoy%20System%20600/iir-autoeq.txt">(eq)</a>
 </th>
-<th>4.6</th>
+<th>
+  7.7
+</th>
 
             </tr>
 
@@ -6535,18 +8528,25 @@
 <td>148.0</td>
 <td>69.0</td>
 <td>&plusmn;6.2</td>
+<td>-36.0</td>
+<td>29.0</td>
+<td>-39.0</td>
+<td>41.0</td>
 <td>64</td>
 <td>1.33</td>
 <td>0.75</td>    
 <td>0.67</td>
 <td>0.25</td>
 <th>1.6</th>
+<th>4.4</th>
 <th>
   5.5
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Yamaha%20NS-6490/iir-autoeq.txt">(eq)</a>
 </th>
-<th>4.4</th>
+<th>
+  7.8
+</th>
 
             </tr>
 
@@ -6559,18 +8559,25 @@
 <td>79.0</td>
 <td>69.0</td>
 <td>&plusmn;5.3</td>
+<td>-35.0</td>
+<td>60.0</td>
+<td>-67.0</td>
+<td>59.0</td>
 <td>67</td>
 <td>0.6</td>
 <td>0.8</td>    
 <td>0.47</td>
 <td>0.04</td>
 <th>1.5</th>
+<th>4.4</th>
 <th>
   5.1
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/BIC%20America%20Venturi%20DV62si/iir-autoeq.txt">(eq)</a>
 </th>
-<th>4.4</th>
+<th>
+  7.7
+</th>
 
             </tr>
 
@@ -6583,15 +8590,21 @@
 <td>79.0</td>
 <td>67.0</td>
 <td>&plusmn;6.2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>61</td>
 <td>0.73</td>
 <td>1.02</td>    
 <td>0.59</td>
 <td>0.01</td>
 <th>0.7</th>
+<th>3.4</th>
 <th>
 </th>
-<th>3.4</th>
+<th>
+</th>
 
             </tr>
 
@@ -6604,18 +8617,25 @@
 <td>148.0</td>
 <td>108.0</td>
 <td>&plusmn;6.5</td>
+<td>-66.0</td>
+<td>73.0</td>
+<td>-60.0</td>
+<td>52.0</td>
 <td>98</td>
 <td>0.23</td>
 <td>0.55</td>    
 <td>0.45</td>
 <td>0.05</td>
 <th>1.5</th>
+<th>5.1</th>
 <th>
   4.5
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/MartinLogan%20Motion%204i/iir-autoeq.txt">(eq)</a>
 </th>
-<th>5.1</th>
+<th>
+  7.6
+</th>
 
             </tr>
 
@@ -6628,18 +8648,25 @@
 <td>80.0</td>
 <td>70.0</td>
 <td>&plusmn;6.5</td>
+<td>-66.0</td>
+<td>72.0</td>
+<td>-28.0</td>
+<td>51.0</td>
 <td>66</td>
 <td>0.24</td>
 <td>0.73</td>    
 <td>0.55</td>
 <td>0.05</td>
 <th>1.5</th>
+<th>4.3</th>
 <th>
   5.1
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Presonus%20Eris%20E3.5/iir-autoeq.txt">(eq)</a>
 </th>
-<th>4.3</th>
+<th>
+  7.5
+</th>
 
             </tr>
 
@@ -6652,18 +8679,25 @@
 <td>85.0</td>
 <td>64.0</td>
 <td>&plusmn;4.3</td>
+<td>-80.0</td>
+<td>83.0</td>
+<td>-14.0</td>
+<td>14.0</td>
 <td>64</td>
 <td>0.83</td>
 <td>0.91</td>    
 <td>0.81</td>
 <td>0.45</td>
 <th>1.2</th>
+<th>4.0</th>
 <th>
   4.5
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Ascend%20Acoustics%20Luna%20Duo/iir-autoeq.txt">(eq)</a>
 </th>
-<th>4.0</th>
+<th>
+  7.4
+</th>
 
             </tr>
 
@@ -6676,18 +8710,25 @@
 <td>91.0</td>
 <td>75.0</td>
 <td>&plusmn;8.9</td>
+<td>-73.0</td>
+<td>79.0</td>
+<td>-69.0</td>
+<td>46.0</td>
 <td>77</td>
 <td>0.55</td>
 <td>0.9</td>    
 <td>0.48</td>
 <td>0.08</td>
 <th>1.1</th>
+<th>4.2</th>
 <th>
   3.8
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/OSD%20Audio%20AP650/iir-autoeq.txt">(eq)</a>
 </th>
-<th>4.2</th>
+<th>
+  6.8
+</th>
 
             </tr>
 
@@ -6700,18 +8741,25 @@
 <td>95.0</td>
 <td>72.0</td>
 <td>&plusmn;5.7</td>
+<td>-79.0</td>
+<td>84.0</td>
+<td>-25.0</td>
+<td>28.0</td>
 <td>71</td>
 <td>0.59</td>
 <td>0.86</td>    
 <td>0.62</td>
 <td>0.15</td>
 <th>1.0</th>
+<th>4.0</th>
 <th>
   4.5
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Ascend%20Acoustics%20Luna%20Mini-Monitor/iir-autoeq.txt">(eq)</a>
 </th>
-<th>4.0</th>
+<th>
+  7.2
+</th>
 
             </tr>
 
@@ -6724,18 +8772,25 @@
 <td>75.0</td>
 <td>61.0</td>
 <td>&plusmn;4.3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>59</td>
 <td>1.91</td>
 <td>0.85</td>    
 <td>0.74</td>
 <td>0.11</td>
 <th>1.0</th>
+<th>3.6</th>
 <th>
   4.7
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Klipsch%20Heresy%20IV/iir-autoeq.txt">(eq)</a>
 </th>
-<th>3.6</th>
+<th>
+  7.1
+</th>
 
             </tr>
 
@@ -6748,18 +8803,25 @@
 <td>139.0</td>
 <td>113.0</td>
 <td>&plusmn;8.4</td>
+<td>-60.0</td>
+<td>64.0</td>
+<td>-52.0</td>
+<td>44.0</td>
 <td>112</td>
 <td>0.5</td>
 <td>0.58</td>    
 <td>0.48</td>
 <td>0.01</td>
 <th>1.0</th>
+<th>4.8</th>
 <th>
   2.9
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Paradigm%20Cinema%20100/iir-autoeq.txt">(eq)</a>
 </th>
-<th>4.8</th>
+<th>
+  6.7
+</th>
 
             </tr>
 
@@ -6772,18 +8834,25 @@
 <td>113.0</td>
 <td>95.0</td>
 <td>&plusmn;5.5</td>
+<td>-69.0</td>
+<td>88.0</td>
+<td>-41.0</td>
+<td>58.0</td>
 <td>98</td>
 <td>0.35</td>
 <td>0.74</td>    
 <td>0.53</td>
 <td>0.12</td>
 <th>1.0</th>
+<th>4.5</th>
 <th>
   3.8
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Polk%20Audio%20Atrium%204/iir-autoeq.txt">(eq)</a>
 </th>
-<th>4.5</th>
+<th>
+  7.1
+</th>
 
             </tr>
 
@@ -6796,18 +8865,25 @@
 <td>113.0</td>
 <td>95.0</td>
 <td>&plusmn;5.1</td>
+<td>-69.0</td>
+<td>74.0</td>
+<td>-41.0</td>
+<td>50.0</td>
 <td>95</td>
 <td>0.54</td>
 <td>0.83</td>    
 <td>0.53</td>
 <td>0.16</td>
 <th>0.9</th>
+<th>4.4</th>
 <th>
   3.5
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Canton%20Plus%20GLX.3/iir-autoeq.txt">(eq)</a>
 </th>
-<th>4.4</th>
+<th>
+  6.8
+</th>
 
             </tr>
 
@@ -6820,18 +8896,25 @@
 <td>83.0</td>
 <td>70.0</td>
 <td>&plusmn;12.2</td>
+<td>-87.0</td>
+<td>97.0</td>
+<td>-78.0</td>
+<td>58.0</td>
 <td>71</td>
 <td>0.55</td>
 <td>1.14</td>    
 <td>0.73</td>
 <td>0.32</td>
 <th>0.4</th>
+<th>3.4</th>
 <th>
   4.9
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Polk%20Audio%20T15/iir-autoeq.txt">(eq)</a>
 </th>
-<th>3.4</th>
+<th>
+  7.8
+</th>
 
             </tr>
 
@@ -6844,18 +8927,25 @@
 <td>134.0</td>
 <td>109.0</td>
 <td>&plusmn;8.5</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>109</td>
 <td>0.68</td>
 <td>0.76</td>    
 <td>0.59</td>
 <td>0.02</td>
 <th>0.3</th>
+<th>4.1</th>
 <th>
   3.9
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/KLH%20911B/iir-autoeq.txt">(eq)</a>
 </th>
-<th>4.1</th>
+<th>
+  7.4
+</th>
 
             </tr>
 
@@ -6868,18 +8958,25 @@
 <td>125.0</td>
 <td>56.0</td>
 <td>&plusmn;13.4</td>
+<td>-58.0</td>
+<td>111.0</td>
+<td>-79.0</td>
+<td>67.0</td>
 <td>54</td>
 <td>0.94</td>
 <td>1.04</td>    
 <td>0.96</td>
 <td>0.11</td>
 <th>-0.0</th>
+<th>2.5</th>
 <th>
   3.2
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Infinity%20RS152/iir-autoeq.txt">(eq)</a>
 </th>
-<th>2.5</th>
+<th>
+  5.6
+</th>
 
             </tr>
 
@@ -6892,18 +8989,25 @@
 <td>64.0</td>
 <td>59.0</td>
 <td>&plusmn;7.8</td>
+<td>-35.0</td>
+<td>69.0</td>
+<td>-40.0</td>
+<td>22.0</td>
 <td>55</td>
 <td>0.38</td>
 <td>1.42</td>    
 <td>1.02</td>
 <td>0.54</td>
 <th>-0.2</th>
+<th>2.4</th>
 <th>
   4.0
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Canon%20S-50/iir-autoeq.txt">(eq)</a>
 </th>
-<th>2.4</th>
+<th>
+  6.6
+</th>
 
             </tr>
 
@@ -6916,18 +9020,25 @@
 <td>148.0</td>
 <td>72.0</td>
 <td>&plusmn;5.8</td>
+<td>-51.0</td>
+<td>18.0</td>
+<td>-13.0</td>
+<td>6.0</td>
 <td>241</td>
 <td>4.69</td>
 <td>0.73</td>    
 <td>0.43</td>
 <td>0.14</td>
 <th>-0.4</th>
+<th>4.9</th>
 <th>
   0.1
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Magnepan%20LRS/iir-autoeq.txt">(eq)</a>
 </th>
-<th>4.9</th>
+<th>
+  5.5
+</th>
 
             </tr>
 
@@ -6940,15 +9051,21 @@
 <td>79.0</td>
 <td>50.0</td>
 <td>&plusmn;8.4</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>49</td>
 <td>4.34</td>
 <td>0.66</td>    
 <td>0.52</td>
 <td>0.65</td>
 <th>3.7</th>
+<th>6.0</th>
 <th>
 </th>
-<th>6.0</th>
+<th>
+</th>
 
             </tr>
 
@@ -6961,18 +9078,25 @@
 <td>121.0</td>
 <td>109.0</td>
 <td>&plusmn;8.7</td>
+<td>-45.0</td>
+<td>47.0</td>
+<td>-40.0</td>
+<td>95.0</td>
 <td>109</td>
 <td>1.28</td>
 <td>1.12</td>    
 <td>0.96</td>
 <td>0.54</td>
 <th>-0.5</th>
+<th>3.3</th>
 <th>
   1.8
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Realistic%20MC-1000/iir-autoeq.txt">(eq)</a>
 </th>
-<th>3.3</th>
+<th>
+  5.6
+</th>
 
             </tr>
 
@@ -6985,15 +9109,52 @@
 <td>88.0</td>
 <td>74.0</td>
 <td>&plusmn;8.3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>74</td>
 <td>0.73</td>
 <td>1.19</td>    
 <td>0.91</td>
 <td>0.21</td>
 <th>-0.6</th>
+<th>2.5</th>
 <th>
 </th>
-<th>2.5</th>
+<th>
+</th>
+
+            </tr>
+
+            <tr id="Donner-Dyna-3">
+	      <td>Donner Dyna 3</td>
+	      
+<td>
+  <a href="Donner%20Dyna%203/ErinsAudioCorner/index_eac.html">eac</a>
+</td>
+<td>85.0</td>
+<td>75.0</td>
+<td>&plusmn;9.1</td>
+<td>-69.0</td>
+<td>70.0</td>
+<td>-80.0</td>
+<td>87.0</td>
+<td>82</td>
+<td>1.01</td>
+<td>1.11</td>    
+<td>0.8</td>
+<td>0.08</td>
+<th>-0.6</th>
+<th>2.7</th>
+<th>
+  3.4
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Donner%20Dyna%203/iir-autoeq.txt">(eq)</a>
+</th>
+<th>
+  6.5
+</th>
 
             </tr>
 
@@ -7006,8 +9167,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;2.6</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7020,8 +9185,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;2.9</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7034,8 +9203,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;4.4</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7048,8 +9221,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;11.2</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td>-34.0</td>
+<td>34.0</td>
+<td>-34.0</td>
+<td>34.0</td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7059,9 +9236,15 @@
 <td>
   <a href="Buchardt%20Audio%20S300/Misc/index_misc-speakerdata2034.html">misc-speakerdata2034</a>
 </td>
-<td></td><td></td><td></td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7071,9 +9254,15 @@
 <td>
   <a href="CommonSense%20Audio%205.6/Princeton/index_princeton.html">princeton</a>
 </td>
-<td></td><td></td><td></td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7086,8 +9275,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;5.6</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7100,8 +9293,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;3.9</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7114,8 +9311,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;3.7</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7128,8 +9329,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;4.1</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7142,8 +9347,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;2.8</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7156,8 +9365,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;2.3</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7170,8 +9383,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;9.8</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td>-87.0</td>
+<td>85.0</td>
+<td>-65.0</td>
+<td>23.0</td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7184,8 +9401,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;5.1</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7195,9 +9416,15 @@
 <td>
   <a href="Elac%20Debut%202.0%20A4.2/Misc/index_misc-archimago.html">misc-archimago</a>
 </td>
-<td></td><td></td><td></td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7207,9 +9434,15 @@
 <td>
   <a href="Essence%20Electrostatic%20Model%201600/Princeton/index_princeton.html">princeton</a>
 </td>
-<td></td><td></td><td></td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7222,8 +9455,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;9.2</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td>-60.0</td>
+<td>60.0</td>
+<td>-70.0</td>
+<td>88.0</td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7236,8 +9473,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;3.5</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7250,8 +9491,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;7.9</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7261,9 +9506,15 @@
 <td>
   <a href="Gainphile%20R16/Princeton/index_princeton.html">princeton</a>
 </td>
-<td></td><td></td><td></td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7276,8 +9527,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;4.5</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td>-103.0</td>
+<td>103.0</td>
+<td>-138.0</td>
+<td>118.0</td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7290,8 +9545,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;1.5</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td>-132.0</td>
+<td>132.0</td>
+<td>-143.0</td>
+<td>129.0</td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7304,8 +9563,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;2.5</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td>-61.0</td>
+<td>61.0</td>
+<td>-66.0</td>
+<td>64.0</td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7318,8 +9581,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;2.6</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td>-70.0</td>
+<td>77.0</td>
+<td>-79.0</td>
+<td>15.0</td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7332,8 +9599,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;4.0</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td>-74.0</td>
+<td>74.0</td>
+<td>-45.0</td>
+<td>68.0</td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7346,8 +9617,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;3.9</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td>-53.0</td>
+<td>53.0</td>
+<td>-42.0</td>
+<td>47.0</td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7360,8 +9635,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;11.1</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td>-108.0</td>
+<td>108.0</td>
+<td>-32.0</td>
+<td>23.0</td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7371,9 +9650,15 @@
 <td>
   <a href="JBL%20LSR308/JBL/index_vendor.html">vendor</a>
 </td>
-<td></td><td></td><td></td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7386,8 +9671,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;3.1</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7397,9 +9686,15 @@
 <td>
   <a href="JBL%20PRX635/Princeton/index_princeton.html">princeton</a>
 </td>
-<td></td><td></td><td></td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7412,8 +9707,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;3.2</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7423,9 +9722,15 @@
 <td>
   <a href="KEF%20R2c/Misc/index_misc-speakerdata2034.html">misc-speakerdata2034</a>
 </td>
-<td></td><td></td><td></td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7435,9 +9740,15 @@
 <td>
   <a href="KEF%20R5/Misc/index_misc-speakerdata2034.html">misc-speakerdata2034</a>
 </td>
-<td></td><td></td><td></td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7447,9 +9758,15 @@
 <td>
   <a href="KEF%20R7/Misc/index_misc-speakerdata2034.html">misc-speakerdata2034</a>
 </td>
-<td></td><td></td><td></td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7459,9 +9776,15 @@
 <td>
   <a href="KEF%20R11/Misc/index_misc-speakerdata2034.html">misc-speakerdata2034</a>
 </td>
-<td></td><td></td><td></td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7474,8 +9797,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;8.7</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td>-51.0</td>
+<td>53.0</td>
+<td>-155.0</td>
+<td>160.0</td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7488,8 +9815,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;4.3</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td>-71.0</td>
+<td>71.0</td>
+<td>-37.0</td>
+<td>56.0</td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7502,8 +9833,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;5.8</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td>-156.0</td>
+<td>156.0</td>
+<td>-156.0</td>
+<td>156.0</td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7516,8 +9851,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;3.3</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7530,8 +9869,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;5.4</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7544,8 +9887,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;2.7</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7558,8 +9905,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;3.0</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7572,20 +9923,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;5.8</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
-
-            </tr>
-
-            <tr id="NHT-Pro-M-00">
-	      <td>NHT Pro M-00</td>
-	      
-<td>
-  <a href="NHT%20Pro%20M-00/ASR/index_asr.html">asr</a>
-</td>
-<td></td><td></td><td></td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7598,8 +9941,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;2.5</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7612,8 +9959,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;3.2</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7626,8 +9977,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;2.6</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7640,8 +9995,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;1.9</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7654,8 +10013,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;2.0</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7665,9 +10028,15 @@
 <td>
   <a href="Polk%20Audio%20Legend%20L800/Misc/index_misc-audioholics.html">misc-audioholics</a>
 </td>
-<td></td><td></td><td></td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7680,8 +10049,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;6.0</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td>-67.0</td>
+<td>67.0</td>
+<td>-83.0</td>
+<td>80.0</td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7694,8 +10067,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;1.9</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7708,8 +10085,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;2.5</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7722,8 +10103,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;5.6</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td>-78.0</td>
+<td>78.0</td>
+<td>-31.0</td>
+<td>33.0</td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7736,8 +10121,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;5.9</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7750,8 +10139,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;2.7</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7764,8 +10157,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;2.6</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7778,8 +10175,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;4.3</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7792,8 +10193,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;4.5</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7806,8 +10211,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;4.1</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7820,8 +10229,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;4.5</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7831,9 +10244,15 @@
 <td>
   <a href="Sanders%20Sound%20Systems%20Model%2011/Princeton/index_princeton-factory.html">princeton-factory</a>
 </td>
-<td></td><td></td><td></td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7843,9 +10262,15 @@
 <td>
   <a href="Sanders%20Sound%20Systems%20Model%2011/Princeton/index_princeton-with-anechoic-foam.html">princeton-with-anechoic-foam</a>
 </td>
-<td></td><td></td><td></td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7855,9 +10280,15 @@
 <td>
   <a href="Sanders%20Sound%20Systems%20Model%2011/Princeton/index_princeton-with-backwave-absorber.html">princeton-with-backwave-absorber</a>
 </td>
-<td></td><td></td><td></td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7870,8 +10301,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;5.1</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7884,8 +10319,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;3.6</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td>-133.0</td>
+<td>133.0</td>
+<td>-133.0</td>
+<td>151.0</td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7898,8 +10337,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;2.8</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7912,8 +10355,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;5.5</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td>-118.0</td>
+<td>118.0</td>
+<td>-126.0</td>
+<td>126.0</td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7926,8 +10373,12 @@
 <td></td>
 <td></td>
 <td>&plusmn;6.6</td>
-<td></td><td></td><td></td><td></td><th></th>
-<th></th><th></th><th></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td><td></td><td></td><td></td><td></td>
+<td></td><td></td><td></td><td></td>
 
             </tr>
 
@@ -7940,18 +10391,25 @@
 <td>59.0</td>
 <td>44.0</td>
 <td>&plusmn;14.1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td>43</td>
 <td>0.42</td>
 <td>1.34</td>    
 <td>1.35</td>
 <td>0.04</td>
 <th>-1.6</th>
+<th>0.4</th>
 <th>
   5.2
   &nbsp;
   <a href="https://raw.githubusercontent.com/pierreaubert/spinorama/develop/datas/eq/Speakercraft%20AIM8%20One/iir-autoeq.txt">(eq)</a>
 </th>
-<th>0.4</th>
+<th>
+  6.0
+</th>
 
             </tr>
     </table>
