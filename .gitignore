@@ -1,0 +1,10 @@
+venv
+*_large.png
+*~
+*#
+.DS_Store
+*.lock
+_site
+.sass-cache
+
+
