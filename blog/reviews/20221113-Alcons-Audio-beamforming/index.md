@@ -5,7 +5,7 @@ The RR12 is a point source array module. It can be used vertically or horizontal
 one of them only). One can do 135dB peak with a dispersion pattern of 30 horizontally and +20/-40 Vertically, -3dB is at 69Hz. The RR12 lunched
 in 2013 and still cost around 9k each for a new one. Below is a picture with 4 of them stacked together.
 
-![Alcons Audio RR12](https://pierreaubert.github.io/spinorama/pictures/Alcons%20Audio%20RR12.webp)
+![Alcons Audio RR12](https://www.spinorama.org/pictures/Alcons%20Audio%20RR12.webp)
 
 Here is the marketing blurb from Alcons Audio:
 
@@ -26,15 +26,15 @@ Tight-packing the RR12 in horizontal or vertical arrays for stacked or flown app
 ## 1x RR12
 
 Let's start with the standard spinorama or CEA2034 graph:
-![spinorama](https://pierreaubert.github.io/spinorama/speakers/Alcons%20Audio%20RR12/Alcons%20Audio/vendor-v1x/CEA2034.webp)
+![spinorama](https://www.spinorama.org/speakers/Alcons%20Audio%20RR12/Alcons%20Audio/vendor-v1x/CEA2034.webp)
 Don't stop to read right now, breath.
 
 That looks horribly bad, a very very bright speaker. If you look closely you will notice that DI is very flat and as a consequence EQ will work well.
 Also it is measured at 2m and you are very likely to be at least 10m away or more.
 
 Looking at horizontal and vertical patterns:
-![horizontal contour](https://pierreaubert.github.io/spinorama/speakers/Alcons%20Audio%20RR12/Alcons%20Audio/vendor-v1x/SPL%20Horizontal%20Contour.webp)
-![vertical contour](https://pierreaubert.github.io/spinorama/speakers/Alcons%20Audio%20RR12/Alcons%20Audio/vendor-v1x/SPL%20Vertical%20Contour.webp)
+![horizontal contour](https://www.spinorama.org/speakers/Alcons%20Audio%20RR12/Alcons%20Audio/vendor-v1x/SPL%20Horizontal%20Contour.webp)
+![vertical contour](https://www.spinorama.org/speakers/Alcons%20Audio%20RR12/Alcons%20Audio/vendor-v1x/SPL%20Vertical%20Contour.webp)
 we see that horizontal is around 30 if we are generous and on the vertical plane, it is 20/-40 but only above 1k Hz.
 
 So what can you do with a speaker with this kind of properties: you can stack them vertically or horizontally. 
@@ -42,41 +42,41 @@ So what can you do with a speaker with this kind of properties: you can stack th
 ## 3x RR12 in an horizontal array
 
 The spinorama gets better with still a large deep in the middle.
-![spinorama x3](https://pierreaubert.github.io/spinorama/speakers/Alcons%20Audio%20RR12/Alcons%20Audio/vendor-v3x/CEA2034.webp)
+![spinorama x3](https://www.spinorama.org/speakers/Alcons%20Audio%20RR12/Alcons%20Audio/vendor-v3x/CEA2034.webp)
 
 Note that the PIR (predicted in room response) is getting better too:
-![pir x3](https://pierreaubert.github.io/spinorama/speakers/Alcons%20Audio%20RR12/Alcons%20Audio/vendor-v3x/Estimated%20In-Room%20Response.webp)
+![pir x3](https://www.spinorama.org/speakers/Alcons%20Audio%20RR12/Alcons%20Audio/vendor-v3x/Estimated%20In-Room%20Response.webp)
 
 What is really interesting is the change in the horizontal and vertical contours: you see very clearly what people called beam forming. Remember the very high directionality in the horizontal plane? Now we have a coverage of +/-60.
-![horizontal x3](https://pierreaubert.github.io/spinorama/speakers/Alcons%20Audio%20RR12/Alcons%20Audio/vendor-v3x/SPL%20Horizontal%20Contour.webp)
-![horizontal x3](https://pierreaubert.github.io/spinorama/speakers/Alcons%20Audio%20RR12/Alcons%20Audio/vendor-v3x/SPL%20Vertical%20Contour.webp)
+![horizontal x3](https://www.spinorama.org/speakers/Alcons%20Audio%20RR12/Alcons%20Audio/vendor-v3x/SPL%20Horizontal%20Contour.webp)
+![horizontal x3](https://www.spinorama.org/speakers/Alcons%20Audio%20RR12/Alcons%20Audio/vendor-v3x/SPL%20Vertical%20Contour.webp)
 
 ## 6x RR12 in an horizontal array
 
 Let's go wild and put 6 RR12 in an array: the spinorama gets better with still a deep in the middle. On axis, listening window, early reflections and
 sound power curves are clustered together.
-![spinorama x3](https://pierreaubert.github.io/spinorama/speakers/Alcons%20Audio%20RR12/Alcons%20Audio/vendor-v6x/CEA2034.webp)
+![spinorama x3](https://www.spinorama.org/speakers/Alcons%20Audio%20RR12/Alcons%20Audio/vendor-v6x/CEA2034.webp)
 
 The on axis frequency response is mostly +/3 3dB without EQ:
-![onaxis 3x](https://pierreaubert.github.io/spinorama/speakers/Alcons%20Audio%20RR12/Alcons%20Audio/vendor-v6x/On%20Axis.webp)
+![onaxis 3x](https://www.spinorama.org/speakers/Alcons%20Audio%20RR12/Alcons%20Audio/vendor-v6x/On%20Axis.webp)
 
 The PIR (predicted in room response) is getting better too:
-![pir x3](https://pierreaubert.github.io/spinorama/speakers/Alcons%20Audio%20RR12/Alcons%20Audio/vendor-v6x/Estimated%20In-Room%20Response.webp)
+![pir x3](https://www.spinorama.org/speakers/Alcons%20Audio%20RR12/Alcons%20Audio/vendor-v6x/Estimated%20In-Room%20Response.webp)
 
 The horizontal and vertical contours shows an increase in coverage with a -100/+100 horizontal pattern:
-![horizontal x3](https://pierreaubert.github.io/spinorama/speakers/Alcons%20Audio%20RR12/Alcons%20Audio/vendor-v6x/SPL%20Horizontal%20Contour.webp)
-![horizontal x3](https://pierreaubert.github.io/spinorama/speakers/Alcons%20Audio%20RR12/Alcons%20Audio/vendor-v6x/SPL%20Vertical%20Contour.webp)
+![horizontal x3](https://www.spinorama.org/speakers/Alcons%20Audio%20RR12/Alcons%20Audio/vendor-v6x/SPL%20Horizontal%20Contour.webp)
+![horizontal x3](https://www.spinorama.org/speakers/Alcons%20Audio%20RR12/Alcons%20Audio/vendor-v6x/SPL%20Vertical%20Contour.webp)
 
 ## Let's add an EQ to the array
 
 With a classical IIR parametric EQ, the spinorama becomes excellent:
-![spinorama x6 eq](https://pierreaubert.github.io/spinorama/speakers/Alcons%20Audio%20RR12/Alcons%20Audio/vendor-v6x_eq/CEA2034.webp)
+![spinorama x6 eq](https://www.spinorama.org/speakers/Alcons%20Audio%20RR12/Alcons%20Audio/vendor-v6x_eq/CEA2034.webp)
 
 On axis is good:
-![onaxis x6 eq](https://pierreaubert.github.io/spinorama/speakers/Alcons%20Audio%20RR12/Alcons%20Audio/vendor-v6x_eq/On%20Axis.webp)
+![onaxis x6 eq](https://www.spinorama.org/speakers/Alcons%20Audio%20RR12/Alcons%20Audio/vendor-v6x_eq/On%20Axis.webp)
 
 As is the PIR:
-![pir x6 eq](https://pierreaubert.github.io/spinorama/speakers/Alcons%20Audio%20RR12/Alcons%20Audio/vendor-v6x_eq/Estimated%20In-Room%20Response.webp)
+![pir x6 eq](https://www.spinorama.org/speakers/Alcons%20Audio%20RR12/Alcons%20Audio/vendor-v6x_eq/Estimated%20In-Room%20Response.webp)
 
 Here is the EQ for reference, it will cost you 3dB.
 ```

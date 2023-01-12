@@ -34,24 +34,24 @@ Some data from JBL website:
 ### Out of the box
 
 Let's start with the standard graphs:
-![spinorama](https://pierreaubert.github.io/spinorama/speakers/JBL%20PRX908/JBL/vendor-pattern-105x60/CEA2034.jpg)
+![spinorama](https://www.spinorama.org/speakers/JBL%20PRX908/JBL/vendor-pattern-105x60/CEA2034.jpg)
 The directivity is not great (the green curve should be as linear as possible) but on axis and listening window are reasonably flat.
 
 We have -3dB point at 62Hz. Frequency deviation is +/2.4dB. Tonality score is 3.5 and would be 6.1 with a perfect subwoofer.
 If you add an EQ, the the score goes up to 4.4 and 7.0 with both EQ and subwoofer.
 
-![onaxis](https://pierreaubert.github.io/spinorama/speakers/JBL%20PRX908/JBL/vendor-pattern-105x60/On%20Axis.jpg)
+![onaxis](https://www.spinorama.org/speakers/JBL%20PRX908/JBL/vendor-pattern-105x60/On%20Axis.jpg)
 
 You can see that the speaker has been optimised to have a nice PIR (Predicted in room response):
-![pir](https://pierreaubert.github.io/spinorama/speakers/JBL%20PRX908/JBL/vendor-pattern-105x60/Estimated%20In-Room%20Response.jpg)
+![pir](https://www.spinorama.org/speakers/JBL%20PRX908/JBL/vendor-pattern-105x60/Estimated%20In-Room%20Response.jpg)
 
 We have a good horizontal pattern:
-![horizontal contour](https://pierreaubert.github.io/spinorama/speakers/JBL%20PRX908/JBL/vendor-pattern-105x60/SPL%20Horizontal%20Contour.jpg)
+![horizontal contour](https://www.spinorama.org/speakers/JBL%20PRX908/JBL/vendor-pattern-105x60/SPL%20Horizontal%20Contour.jpg)
 
 And we see the classical pinch of dipoles:
-![vertical contour](https://pierreaubert.github.io/spinorama/speakers/JBL%20PRX908/JBL/vendor-pattern-105x60/SPL%20Vertical%20Contour.jpg)
+![vertical contour](https://www.spinorama.org/speakers/JBL%20PRX908/JBL/vendor-pattern-105x60/SPL%20Vertical%20Contour.jpg)
 
-More graphs are [available](https://pierreaubert.github.io/spinorama/speakers/JBL%20PRX908/JBL/index_vendor-pattern-105x60.html).
+More graphs are [available](https://www.spinorama.org/speakers/JBL%20PRX908/JBL/index_vendor-pattern-105x60.html).
 
 ### With an EQ
 
@@ -77,10 +77,10 @@ Filter  9: ON PK Fc  7760 Hz Gain -2.57 dB Q 5.93
 
 ```
 
-![spinorama](https://pierreaubert.github.io/spinorama/speakers/JBL%20PRX908/JBL/vendor-pattern-105x60_eq/CEA2034.webp)
+![spinorama](https://www.spinorama.org/speakers/JBL%20PRX908/JBL/vendor-pattern-105x60_eq/CEA2034.webp)
 
 And you see that's the PIR is significantly flater:
-![pir](https://pierreaubert.github.io/spinorama/speakers/JBL%20PRX908/JBL/vendor-pattern-105x60_eq/Estimated%20In-Room%20Response.webp)
+![pir](https://www.spinorama.org/speakers/JBL%20PRX908/JBL/vendor-pattern-105x60_eq/Estimated%20In-Room%20Response.webp)
 
 A visual comparison:
 ![comparison](./pict/eq-PRX908.png)
@@ -90,24 +90,24 @@ A visual comparison:
 ### Out of the box
 
 Let's start with the standard graphs:
-![spinorama](https://pierreaubert.github.io/spinorama/speakers/JBL%20PRX912/JBL/vendor-pattern-90x50/CEA2034.jpg)
+![spinorama](https://www.spinorama.org/speakers/JBL%20PRX912/JBL/vendor-pattern-90x50/CEA2034.jpg)
 The directivity is not great (the green curve should be as linear as possible) but on axis and listening window are reasonably flat.
 
 We have -3dB point at 62Hz. Frequency deviation is +/3.2dB. Tonality score is 3.9 and would be 6.4 with a perfect subwoofer.
 If you add an EQ, the the score goes up to 4.7 and 7.2 with both EQ and subwoofer.
 
-![onaxis](https://pierreaubert.github.io/spinorama/speakers/JBL%20PRX912/JBL/vendor-pattern-90x50/On%20Axis.jpg)
+![onaxis](https://www.spinorama.org/speakers/JBL%20PRX912/JBL/vendor-pattern-90x50/On%20Axis.jpg)
 
 You can see that the speaker has been optimised to have a nice PIR (Predicted in room response):
-![pir](https://pierreaubert.github.io/spinorama/speakers/JBL%20PRX912/JBL/vendor-pattern-90x50/Estimated%20In-Room%20Response.jpg)
+![pir](https://www.spinorama.org/speakers/JBL%20PRX912/JBL/vendor-pattern-90x50/Estimated%20In-Room%20Response.jpg)
 
 We have a good horizontal pattern:
-![horizontal contour](https://pierreaubert.github.io/spinorama/speakers/JBL%20PRX912/JBL/vendor-pattern-90x50/SPL%20Horizontal%20Contour.jpg)
+![horizontal contour](https://www.spinorama.org/speakers/JBL%20PRX912/JBL/vendor-pattern-90x50/SPL%20Horizontal%20Contour.jpg)
 
 And we see the classical pinch of dipoles:
-![vertical contour](https://pierreaubert.github.io/spinorama/speakers/JBL%20PRX912/JBL/vendor-pattern-90x50/SPL%20Vertical%20Contour.jpg)
+![vertical contour](https://www.spinorama.org/speakers/JBL%20PRX912/JBL/vendor-pattern-90x50/SPL%20Vertical%20Contour.jpg)
 
-More graphs are [available](https://pierreaubert.github.io/spinorama/speakers/JBL%20PRX912/JBL/index_vendor-pattern-90x50.html).
+More graphs are [available](https://www.spinorama.org/speakers/JBL%20PRX912/JBL/index_vendor-pattern-90x50.html).
 
 ### With an EQ
 
@@ -133,10 +133,10 @@ Filter  9: ON PK Fc  3441 Hz Gain +1.38 dB Q 2.79
 
 ```
 
-![spinorama](https://pierreaubert.github.io/spinorama/speakers/JBL%20PRX912/JBL/vendor-pattern-90x50_eq/CEA2034.webp)
+![spinorama](https://www.spinorama.org/speakers/JBL%20PRX912/JBL/vendor-pattern-90x50_eq/CEA2034.webp)
 
 And you see that's the PIR is significantly flater:
-![pir](https://pierreaubert.github.io/spinorama/speakers/JBL%20PRX912/JBL/vendor-pattern-90x50_eq/Estimated%20In-Room%20Response.webp)
+![pir](https://www.spinorama.org/speakers/JBL%20PRX912/JBL/vendor-pattern-90x50_eq/Estimated%20In-Room%20Response.webp)
 
 
 A visual comparison:
@@ -147,7 +147,7 @@ A visual comparison:
 ### Out of the box
 
 Let's start with the standard graphs:
-![spinorama](https://pierreaubert.github.io/spinorama/speakers/JBL%20PRX915/JBL/vendor-pattern-90x50/CEA2034.jpg)
+![spinorama](https://www.spinorama.org/speakers/JBL%20PRX915/JBL/vendor-pattern-90x50/CEA2034.jpg)
 The directivity is better but on axis and listening window are less flat.
 
 We have -3dB point at 62Hz. Frequency deviation is +/3.8dB. Tonality score is 2.9 and would be 5.2 with a perfect subwoofer.
@@ -155,18 +155,18 @@ If you add an EQ, the the score goes up to 3.6 and 6.0 with both EQ and subwoofe
 
 This one is significantly less good than the other two.
 
-![onaxis](https://pierreaubert.github.io/spinorama/speakers/JBL%20PRX915/JBL/vendor-pattern-90x50/On%20Axis.jpg)
+![onaxis](https://www.spinorama.org/speakers/JBL%20PRX915/JBL/vendor-pattern-90x50/On%20Axis.jpg)
 
 You can see that the speaker has been optimised to have a nice PIR (Predicted in room response).
-![pir](https://pierreaubert.github.io/spinorama/speakers/JBL%20PRX915/JBL/vendor-pattern-90x50/Estimated%20In-Room%20Response.jpg)
+![pir](https://www.spinorama.org/speakers/JBL%20PRX915/JBL/vendor-pattern-90x50/Estimated%20In-Room%20Response.jpg)
 
 We have a good horizontal pattern:
-![horizontal contour](https://pierreaubert.github.io/spinorama/speakers/JBL%20PRX915/JBL/vendor-pattern-90x50/SPL%20Horizontal%20Contour.jpg)
+![horizontal contour](https://www.spinorama.org/speakers/JBL%20PRX915/JBL/vendor-pattern-90x50/SPL%20Horizontal%20Contour.jpg)
 
 And we see the classical pinch of dipoles but also the speaker is significantly more directional.
-![vertical contour](https://pierreaubert.github.io/spinorama/speakers/JBL%20PRX915/JBL/vendor-pattern-90x50/SPL%20Vertical%20Contour.jpg)
+![vertical contour](https://www.spinorama.org/speakers/JBL%20PRX915/JBL/vendor-pattern-90x50/SPL%20Vertical%20Contour.jpg)
 
-More graphs are [available](https://pierreaubert.github.io/spinorama/speakers/JBL%20PRX915/JBL/index_vendor-pattern-90x50.html).
+More graphs are [available](https://www.spinorama.org/speakers/JBL%20PRX915/JBL/index_vendor-pattern-90x50.html).
 
 ### With an EQ
 
@@ -192,10 +192,10 @@ Filter  9: ON PK Fc 10935 Hz Gain -4.11 dB Q 5.92
 
 ```
 
-![spinorama](https://pierreaubert.github.io/spinorama/speakers/JBL%20PRX915/JBL/vendor-pattern-90x50_eq/CEA2034.webp)
+![spinorama](https://www.spinorama.org/speakers/JBL%20PRX915/JBL/vendor-pattern-90x50_eq/CEA2034.webp)
 
 And you see that's the PIR is significantly flater:
-![pir](https://pierreaubert.github.io/spinorama/speakers/JBL%20PRX915/JBL/vendor-pattern-90x50_eq/Estimated%20In-Room%20Response.webp)
+![pir](https://www.spinorama.org/speakers/JBL%20PRX915/JBL/vendor-pattern-90x50_eq/Estimated%20In-Room%20Response.webp)
 
 A visual comparison:
 ![comparison](./pict/eq-PRX915.png)

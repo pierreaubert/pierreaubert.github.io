@@ -34,22 +34,22 @@ Note: the data provided by FBT is good but not great. They are smoother that wha
 ### Out of the box
 
 Let's start with the standard spinorama or CEA2034 graph:
-![spinorama](https://pierreaubert.github.io/spinorama/speakers/FBT%20Promaxx%20110A/FBT/vendor-pattern-90x60/CEA2034.webp)
+![spinorama](https://www.spinorama.org/speakers/FBT%20Promaxx%20110A/FBT/vendor-pattern-90x60/CEA2034.webp)
 The directivity is not great between 1k and 2k where it matters a lot (the green curve should be as linear as possible) but on axis and listening window are reasonably flat and they will be eq-ed. The frequency response falls quickly below 90-100Hz which confirms that you need a subwoofer.
 
 We have -3dB point at 88Hz. Frequency deviation is +/2.1dB. Many studio monitors are not doing as well. Tonality score is 3.5 and would be 6.3 with a perfect subwoofer. If you add an EQ (see below), the the score goes up to 4.9 and 7.7 with both EQ and subwoofer.
 
 You can see that the speaker has been optimised to have a nice listening windon and on axis more than the predicted in room response:
-![onaxis](https://pierreaubert.github.io/spinorama/speakers/FBT%20Promaxx%20110A/FBT/vendor-pattern-90x60/On%20Axis.webp)
-![pir](https://pierreaubert.github.io/spinorama/speakers/FBT%20Promaxx%20110A/FBT/vendor-pattern-90x60/Estimated%20In-Room%20Response.webp)
+![onaxis](https://www.spinorama.org/speakers/FBT%20Promaxx%20110A/FBT/vendor-pattern-90x60/On%20Axis.webp)
+![pir](https://www.spinorama.org/speakers/FBT%20Promaxx%20110A/FBT/vendor-pattern-90x60/Estimated%20In-Room%20Response.webp)
 
 We have a good horizontal pattern:
-![horizontal contour](https://pierreaubert.github.io/spinorama/speakers/FBT%20Promaxx%20110A/FBT/vendor-pattern-90x60/SPL%20Horizontal%20Contour.webp)
+![horizontal contour](https://www.spinorama.org/speakers/FBT%20Promaxx%20110A/FBT/vendor-pattern-90x60/SPL%20Horizontal%20Contour.webp)
 
 And we see the classical pinch of dipoles with a super narrow area around the crossover. Even if we are less sensitive to vertical issues than horizontal ones that's not ideal.
-![vertical contour](https://pierreaubert.github.io/spinorama/speakers/FBT%20Promaxx%20110A/FBT/vendor-pattern-90x60/SPL%20Vertical%20Contour.webp)
+![vertical contour](https://www.spinorama.org/speakers/FBT%20Promaxx%20110A/FBT/vendor-pattern-90x60/SPL%20Vertical%20Contour.webp)
 
-More graphs are [available](https://pierreaubert.github.io/spinorama/speakers/FBT%20Promaxx%20110A/FBT/index_vendor-pattern-90x60.html)
+More graphs are [available](https://www.spinorama.org/speakers/FBT%20Promaxx%20110A/FBT/index_vendor-pattern-90x60.html)
 
 ### With an EQ
 
@@ -76,7 +76,7 @@ Filter  9: ON PK Fc  3642 Hz Gain +1.01 dB Q 1.80
 ```
 
 And you see that's the PIR is significantly flater:
-![pir](https://pierreaubert.github.io/spinorama/speakers/FBT%20Promaxx%20110A/FBT/vendor-pattern-90x60_eq/Estimated%20In-Room%20Response.webp)
+![pir](https://www.spinorama.org/speakers/FBT%20Promaxx%20110A/FBT/vendor-pattern-90x60_eq/Estimated%20In-Room%20Response.webp)
 
 A visual side by side comparison:
 ![comparison](./pict/eq-110A.png)
@@ -87,23 +87,23 @@ A visual side by side comparison:
 ### Out of the box
 
 Let's start with the standard graphs:
-![spinorama](https://pierreaubert.github.io/spinorama/speakers/FBT%20Promaxx%20112A/FBT/vendor-pattern-90x60/CEA2034.webp)
+![spinorama](https://www.spinorama.org/speakers/FBT%20Promaxx%20112A/FBT/vendor-pattern-90x60/CEA2034.webp)
 The directivity is not great between 1k and 2k where it matters a lot (the green curve should be as linear as possible) but on axis and listening window are reasonably flat and they will be eq-ed.
 
 We have -3dB point at 82Hz. Frequency deviation is +/1.7dB which is very good. Tonality score is 4.9 and would be 7.7 with a perfect subwoofer.
 If you add an EQ, the the score goes up to 5.5 and 8.3 with both EQ and subwoofer.
 
 You can see that the speaker has been optimised to have a nice listening windon and on axis more than the predicted in room response:
-![onaxis](https://pierreaubert.github.io/spinorama/speakers/FBT%20Promaxx%20112A/FBT/vendor-pattern-90x60/On%20Axis.webp)
-![pir](https://pierreaubert.github.io/spinorama/speakers/FBT%20Promaxx%20112A/FBT/vendor-pattern-90x60/Estimated%20In-Room%20Response.webp)
+![onaxis](https://www.spinorama.org/speakers/FBT%20Promaxx%20112A/FBT/vendor-pattern-90x60/On%20Axis.webp)
+![pir](https://www.spinorama.org/speakers/FBT%20Promaxx%20112A/FBT/vendor-pattern-90x60/Estimated%20In-Room%20Response.webp)
 
 We have a good horizontal pattern:
-![horizontal contour](https://pierreaubert.github.io/spinorama/speakers/FBT%20Promaxx%20112A/FBT/vendor-pattern-90x60/SPL%20Horizontal%20Contour.webp)
+![horizontal contour](https://www.spinorama.org/speakers/FBT%20Promaxx%20112A/FBT/vendor-pattern-90x60/SPL%20Horizontal%20Contour.webp)
 
 And we see the classical pinch of dipoles with a super narrow area around the crossover. Even if we are less sensitive to vertical issues than horizontal ones that's not ideal.
-![vertical contour](https://pierreaubert.github.io/spinorama/speakers/FBT%20Promaxx%20112A/FBT/vendor-pattern-90x60/SPL%20Vertical%20Contour.webp)
+![vertical contour](https://www.spinorama.org/speakers/FBT%20Promaxx%20112A/FBT/vendor-pattern-90x60/SPL%20Vertical%20Contour.webp)
 
-More graphs are [available](https://pierreaubert.github.io/spinorama/speakers/FBT%20Promaxx%20112A/FBT/index_vendor-pattern-90x60.html)
+More graphs are [available](https://www.spinorama.org/speakers/FBT%20Promaxx%20112A/FBT/index_vendor-pattern-90x60.html)
 
 ### With an EQ
 
@@ -129,7 +129,7 @@ Filter  9: ON PK Fc  5586 Hz Gain -1.33 dB Q 5.57
 ```
 
 And you see that's the PIR is significantly flater:
-![pir](https://pierreaubert.github.io/spinorama/speakers/FBT%20Promaxx%20112A/FBT/vendor-pattern-90x60_eq/Estimated%20In-Room%20Response.webp)
+![pir](https://www.spinorama.org/speakers/FBT%20Promaxx%20112A/FBT/vendor-pattern-90x60_eq/Estimated%20In-Room%20Response.webp)
 
 A visual side by side comparison:
 ![comparison](./pict/eq-112A.png)
@@ -139,24 +139,24 @@ A visual side by side comparison:
 ### Out of the box
 
 Let's start with the standard graphs:
-![spinorama](https://pierreaubert.github.io/spinorama/speakers/FBT%20Promaxx%20114A/FBT/vendor-pattern-90x60/CEA2034.webp)
+![spinorama](https://www.spinorama.org/speakers/FBT%20Promaxx%20114A/FBT/vendor-pattern-90x60/CEA2034.webp)
 The directivity is not great between 1k and 2k where it matters a lot (the green curve should be as linear as possible) but on axis and listening window are reasonably flat and they will be eq-ed. It is better than the smaller speakers. On the other side, the listening window is slopping down a bit too much.
 
 We have -3dB point at 82Hz. Frequency deviation is +/2.6dB. Tonality score is 4.6 and would be 7.5 with a perfect subwoofer.
 If you add an EQ, the the score goes up to 5.4 and 8.3 with both EQ and subwoofer. 
 
 You can see that the speaker has been optimised to have a nice predicted in room response more than a good listening window and on axis.
-![onaxis](https://pierreaubert.github.io/spinorama/speakers/FBT%20Promaxx%20114A/FBT/vendor-pattern-90x60/On%20Axis.webp)
+![onaxis](https://www.spinorama.org/speakers/FBT%20Promaxx%20114A/FBT/vendor-pattern-90x60/On%20Axis.webp)
 Staying between +/- 1.5dB over 100Hz to 15kHz is excellent.
-![pir](https://pierreaubert.github.io/spinorama/speakers/FBT%20Promaxx%20114A/FBT/vendor-pattern-90x60/Estimated%20In-Room%20Response.webp)
+![pir](https://www.spinorama.org/speakers/FBT%20Promaxx%20114A/FBT/vendor-pattern-90x60/Estimated%20In-Room%20Response.webp)
 
 We have a good horizontal pattern:
-![horizontal contour](https://pierreaubert.github.io/spinorama/speakers/FBT%20Promaxx%20114A/FBT/vendor-pattern-90x60/SPL%20Horizontal%20Contour.webp)
+![horizontal contour](https://www.spinorama.org/speakers/FBT%20Promaxx%20114A/FBT/vendor-pattern-90x60/SPL%20Horizontal%20Contour.webp)
 
 And we see the classical pinch of dipoles with a super narrow area around the crossover. Even if we are less sensitive to vertical issues than horizontal ones that's not ideal.
-![vertical contour](https://pierreaubert.github.io/spinorama/speakers/FBT%20Promaxx%20114A/FBT/vendor-pattern-90x60/SPL%20Vertical%20Contour.webp)
+![vertical contour](https://www.spinorama.org/speakers/FBT%20Promaxx%20114A/FBT/vendor-pattern-90x60/SPL%20Vertical%20Contour.webp)
 
-More graphs are [available](https://pierreaubert.github.io/spinorama/speakers/FBT%20Promaxx%20114A/FBT/index_vendor-pattern-90x60.html)
+More graphs are [available](https://www.spinorama.org/speakers/FBT%20Promaxx%20114A/FBT/index_vendor-pattern-90x60.html)
 
 ### With an EQ
 
@@ -183,7 +183,7 @@ Filter  9: ON PK Fc  1342 Hz Gain +0.56 dB Q 5.56
 ```
 
 And you see that's the PIR is significantly flater:
-![pir](https://pierreaubert.github.io/spinorama/speakers/FBT%20Promaxx%20114A/FBT/vendor-pattern-90x60_eq/Estimated%20In-Room%20Response.webp)
+![pir](https://www.spinorama.org/speakers/FBT%20Promaxx%20114A/FBT/vendor-pattern-90x60_eq/Estimated%20In-Room%20Response.webp)
 
 A visual side by side comparison:
 ![comparison](./pict/eq-114A.png)
