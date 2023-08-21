@@ -49,6 +49,9 @@ Comsol or Mathematica are too expensive for my taste esp. with a lot of cores. I
 
 # AutoEQ project
 
+- (2023-08-01) Global optimiser is working significantly better than
+  the greedy optimiser. Score computations have been ported to Cython
+  for performance
 - (2022-12-29) Automatic way to guess smoothness of curves
 - (2022-05-26) Debug target again and try to decrease preamp changes.
 - (2022-05-05) Corrected the rear reflections which are incorrect in the standard
@@ -92,6 +95,28 @@ I devised a methodology to work like that and if it requires rigor it is working
 TODO
 
 # Logs
+
+## server board Asus WRX80 (2023-08)
+
+- Things were going well for 1 year and then a crash.
+- The second U2 controller is faulty. I moved the disks to another
+  controller from HP.
+- ZFS make it a mess to replace the disks; use zpool labelclear before
+  trying the replace.
+- MVNE
+  - For monitoring MVNE (temp included) use apt install nvme-cli which has a lot of features
+- NVIDIA
+  - Lost the driver from time to time.
+  - try: 
+     - sudo apt install linux-headers-$(uname -r)
+     - sudo apt install --reinstall nvidia-driver-535 
+     - sudo apt --fix-broken install
+     - reboot
+- SATA
+  - hddtemp does not exists ...
+  - use: sudo modprobe -v drivetemp
+  - then sensors (from lm-sensors) works.
+
 
 ## server board Asus WRX80 (2022-05-05)
 
