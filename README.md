@@ -26,6 +26,7 @@ Lab](https://www.princeton.edu/3D3A/), [Erin's audio corner]()https://www.erinsa
 
 # Reviews or data analysis
 
+- [Devialet Phantom I](/blog/reviews/20230910-Devialet-Phantom/index.html)
 - [Alcons Audio RR12 Line array](/blog/reviews/20221113-Alcons-Audio-beamforming/index.html)
 - [FBT Promaxx Serie](/blog/reviews/20221105-FBT-Promaxx/index.html)
 - [JBL PRX900 Serie](/blog/reviews/20221103-JBL-PRX900/index.html)
