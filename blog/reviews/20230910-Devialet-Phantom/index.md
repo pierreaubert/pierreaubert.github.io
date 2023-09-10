@@ -1,25 +1,26 @@
-# This is a analysis of the Devialet Phantom I
+# This is a analysis of the Devialet Phantom I & II measurements
 
 The Devialet Phantom are smallish speakers with excellent bass. 
 They are expensive but looks nice and I always liked the sound of
 them. 
 
-I ordered a pair a few years ago: the sound was great but I
-was struggling too much with the sofware parts and the box that is
-supposed to help to link a pair. The box often disconnected the
-speakers, the sofware was buggy. I hope they have fixed it. 
+I ordered a pair a few years ago (the large model in 2017): the sound
+was great but I was struggling too much with the sofware parts and the
+box that is supposed to help to link a pair. The box often
+disconnected the speakers, the sofware was buggy. I hope they have fixed it. 
 
-Latency is relatively high by default but they have a way to put it 
+Latency was relatively high by default but they had a way to put it 
 way down.
 
 At the end I returned them.
 
 Recently I noticed that Devialet released a set of measurements for
-both speaker.
+both speakers and wanted to look at them and compare with quasi
+anechoic [measurements](https://www.audiosciencereview.com/forum/index.php?threads/devialet-phantom-reactor-900-measurements-now-with-spinorama.9963/page-2#post-305596) done by [napilopez](https://www.audiosciencereview.com/forum/index.php?members/napilopez.3902/).
 
 I used the data to generate the spinorama and derive some information.
 
-Here is the marketing blurb from JBL:
+Here is the marketing blurb from Devialet for the Phantom I:
 
 
    > Phantom I 103 dB, the ultimate connected speaker with its
@@ -28,10 +29,27 @@ Here is the marketing blurb from JBL:
    > indecent power and ultra-deep bass. Sound in its purest and most
    > essential form. No apologies.
    
+and for the Phantom II:
+
+
+   > Ultra compact.
+   >   By stretching size and performance beyond reasonable limits,
+   >   Devialet engineers have brought to life Phantom II: the only
+   >   ultra-compact home sound system capable of delivering high
+   >   fidelity and physical impact, whatever the volume.
+   > 
+   > One implosive sound.
+   >   Unreasonably compact for a system this powerful, Phantom II
+   >   fits in almost anywhere. Made for compulsive listening
+   >   experiences, the easy-to-transport Phantom features every
+   >   available Devialet technology in under 3 liters. 
+   
 They definitively have great marketing, let's see if the measurements
 back it off.
 
-![picture of series](./pict/Devialet Phantom I.jpg)
+![Phantom I](./pict/Devialet Phantom I.jpg)
+![Phantom II](./pict/Devialet Phantom II.png)
+![Relative size](./pict/relative_size.png)
 
 ## Phantom I
 
@@ -53,7 +71,7 @@ answer this.
 ### Out of the box
 
 Let's start with the standard graphs:
-![spinorama](https://dev.spinorama.org/speakers/Devialet%20Phantom%20I/Devialet/vendor/CEA2034.html)
+![spinorama](https://www.spinorama.org/speakers/Devialet%20Phantom%20I/Devialet/vendor/CEA2034.html)
 Things are awesome below 2k Hz with a flat response and an incredible
 22Hz for -3dB point. Then we have a directivity error AND a a
 significant drop (3dB) on all curves that should be audible.
@@ -62,18 +80,18 @@ Looking at the dispersion, the normalized horizontals shows the same
 thing: excellent below 1kHz, great below 4k and then messy.
 
 We have a good horizontal and vertical patterns:
-![horizontal SPL normalized](https://dev.spinorama.org/speakers/Devialet%20Phantom%20I/Devialet/vendor/SPL%20Horizontal%20Normalized.html)
-![vertical SPL normalized](https://dev.spinorama.org/speakers/Devialet%20Phantom%20I/Devialet/vendor/SPL%20Horizontal%20Normalized.html)
+![horizontal SPL normalized](https://www.spinorama.org/speakers/Devialet%20Phantom%20I/Devialet/vendor/SPL%20Horizontal%20Normalized.html)
+![vertical SPL normalized](https://www.spinorama.org/speakers/Devialet%20Phantom%20I/Devialet/vendor/SPL%20Horizontal%20Normalized.html)
 
 The horizontal and vertical contours shows the beaming and the
 weakness where the directivity changes:
-![horizontal contour](https://dev.spinorama.org/speakers/Devialet%20Phantom%20I/Devialet/vendor/SPL%20Horizontal%20Contour.webp)
+![horizontal contour](https://www.spinorama.org/speakers/Devialet%20Phantom%20I/Devialet/vendor/SPL%20Horizontal%20Contour.webp)
 ![vertical
-contour](https://dev.spinorama.org/speakers/Devialet%20Phantom%20I/Devialet/vendor/SPL%20Vertical%20Contour.webp)
+contour](https://www.spinorama.org/speakers/Devialet%20Phantom%20I/Devialet/vendor/SPL%20Vertical%20Contour.webp)
 
 Due to the beaming you will need to have your listening position in a +/- 35 deg cone in order to have smooth treble.
 
-More graphs are [available](https://dev.spinorama.org/speakers/Devialet%20Phantom%20I/Devialet/index_vendor.html)
+More graphs are [available](https://www.spinorama.org/speakers/Devialet%20Phantom%20I/Devialet/index_vendor.html)
 
 ### With an EQ
 
@@ -84,7 +102,7 @@ EQ in the -3+3dB band. A consequence possible unwelcome is that now
 the PIR does not go down enough and the speaker may be brighter.
 The histograms show nice improvements on all curves.
 
-![EQ LW](./pict/filter_eq_lw.png)
+![EQ LW](/pict/filter_eq_lw.png)
 
 ```
 EQ for Devialet Phantom I computed from Vendors-Devialet data
@@ -105,7 +123,7 @@ Filter  7: ON PK Fc  3676 Hz Gain +3.76 dB Q 4.22
 
 ### Let's flatten the predicted in-room response / score:
 
-![EQ Score](./pict/filter_eq_score.png)
+![EQ Score](/pict/filter_eq_score.png)
 
 ```
 EQ for Devialet Phantom I computed from Vendors-Devialet data
@@ -124,16 +142,15 @@ Filter  6: ON PK Fc  3676 Hz Gain +2.09 dB Q 4.87
 Filter  7: ON PK Fc 12246 Hz Gain -1.62 dB Q 0.95
 ```
 
-### Side by side
+### EQ's side by side
 
 The 2 eqs are marginally different:
 
-![EQ Score](./pict/eq_compare.png)
+![EQ Score](/pict/eq_compare.png)
 
 and optimise the score significantly:
 
-
-![Radar](./pict/spider.png)
+![Radar](/pict/spider.png)
 
 ## Conclusion
 
