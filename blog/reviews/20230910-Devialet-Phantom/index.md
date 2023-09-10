@@ -1,4 +1,4 @@
-# This is a analysis of the Devialet Phantom I & II measurements
+# Analysis of the Devialet Phantom I & II measurements
 
 The Devialet Phantom are smallish speakers with excellent bass. 
 They are expensive but looks nice and I always liked the sound of
@@ -47,8 +47,7 @@ and for the Phantom II:
 They definitively have great marketing, let's see if the measurements
 back it off.
 
-![Phantom I](./pict/Devialet Phantom I.jpg)
-![Phantom II](./pict/Devialet Phantom II.png)
+Phantom I is the big brother:
 ![Relative size](./pict/relative_size.png)
 
 ## Phantom I
@@ -58,9 +57,9 @@ back it off.
 Harmann/ Olive scores:
 
 | Speaker |  Score | w/sub |
-| Phantom 1 reference | *5.7* | 6.3 |
-| Phantom 1 (eq lw)   | *6.2* | 7.0 |
-| Phantom 1 (eq score)| *6.8* | 7.6 |
+| Phantom I (reference) | *5.7* | 6.3 |
+| Phantom I (eq lw)   | *6.2* | 7.0 |
+| Phantom I (eq score)| *6.8* | 7.6 |
 
 This is good and at least part of the marketing is correct. For the
 maximum output, it is sold for 103dB (this model, they have more
@@ -70,18 +69,19 @@ answer this.
 
 ### Out of the box
 
-Let's start with the standard graphs:
-![spinorama](https://www.spinorama.org/speakers/Devialet%20Phantom%20I/Devialet/vendor/CEA2034.html)
-Things are awesome below 2k Hz with a flat response and an incredible
-22Hz for -3dB point. Then we have a directivity error AND a a
-significant drop (3dB) on all curves that should be audible.
+Let's start with the standard graph:
+![spinorama](https://www.spinorama.org/speakers/Devialet%20Phantom%20I/Devialet/vendor/CEA2034.jpg)
+
+Things are awesome below 2kHz with a flat response and an incredible 22Hz for -3dB point. Then we have a directivity error AND a significant drop (3dB) on all curves that should be audible.
+
+![On Axis](https://www.spinorama.org/speakers/Devialet%20Phantom%20I/Devialet/vendor/On%20Axis.jpg)
 
 Looking at the dispersion, the normalized horizontals shows the same
 thing: excellent below 1kHz, great below 4k and then messy.
 
-We have a good horizontal and vertical patterns:
-![horizontal SPL normalized](https://www.spinorama.org/speakers/Devialet%20Phantom%20I/Devialet/vendor/SPL%20Horizontal%20Normalized.html)
-![vertical SPL normalized](https://www.spinorama.org/speakers/Devialet%20Phantom%20I/Devialet/vendor/SPL%20Horizontal%20Normalized.html)
+We have a good horizontal and vertical patterns, the round head and the coaxial design are going good:
+![horizontal SPL normalized](https://www.spinorama.org/speakers/Devialet%20Phantom%20I/Devialet/vendor/SPL%20Horizontal%20Normalized.webp)
+![vertical SPL normalized](https://www.spinorama.org/speakers/Devialet%20Phantom%20I/Devialet/vendor/SPL%20Vertical%20Normalized.webp)
 
 The horizontal and vertical contours shows the beaming and the
 weakness where the directivity changes:
@@ -89,21 +89,23 @@ weakness where the directivity changes:
 ![vertical
 contour](https://www.spinorama.org/speakers/Devialet%20Phantom%20I/Devialet/vendor/SPL%20Vertical%20Contour.webp)
 
-Due to the beaming you will need to have your listening position in a +/- 35 deg cone in order to have smooth treble.
+Due to the beaming you will need to have your listening position in a &pm;35&deg; cone in order to have smooth treble.
 
-More graphs are [available](https://www.spinorama.org/speakers/Devialet%20Phantom%20I/Devialet/index_vendor.html)
+More graphs are [available](https://www.spinorama.org/speakers/Devialet%20Phantom%20I/Devialet/index_vendor.html) on [spinorama.org](https://www.spinorama.org).
 
 ### With an EQ
 
 ### Let's flatten the listening window first.
 
 As expected the first eq linearize the listening window which is post
-EQ in the -3+3dB band. A consequence possible unwelcome is that now
-the PIR does not go down enough and the speaker may be brighter.
+EQ in the &pm;3dB band. A possibly unwelcome is that now
+the PIR does not go down enough and the speaker may be bright.
+
 The histograms show nice improvements on all curves.
+Note that for each curve, we have two histograms: one is full range and the other focus on the midrange. To understand if the EQ is having a positive impact, look at the EQ (orange) bars, they must be higher than the blue (reference) ones.
+![EQ LW](./pict/filter_eq_lw.png)
 
-![EQ LW](/pict/filter_eq_lw.png)
-
+The following EQ will cost you 5dB of headroom:
 ```
 EQ for Devialet Phantom I computed from Vendors-Devialet data
 Preference Score 5.72 with EQ 6.18
@@ -123,7 +125,7 @@ Filter  7: ON PK Fc  3676 Hz Gain +3.76 dB Q 4.22
 
 ### Let's flatten the predicted in-room response / score:
 
-![EQ Score](/pict/filter_eq_score.png)
+![EQ Score](./pict/filter_eq_score.png)
 
 ```
 EQ for Devialet Phantom I computed from Vendors-Devialet data
@@ -144,17 +146,101 @@ Filter  7: ON PK Fc 12246 Hz Gain -1.62 dB Q 0.95
 
 ### EQ's side by side
 
-The 2 eqs are marginally different:
+The 2 EQs are marginally different: they are trying to flatten the LW. Since the speaker is beaming a lot above 8kHz, the optimizer tries to compensate and give away some flatness on the LW to optimize for a flat PIR.
 
-![EQ Score](/pict/eq_compare.png)
+![EQ Score](./pict/eq_compare.png)
 
-and optimise the score significantly:
+This EQ is able to optimise the score significantly:
 
-![Radar](/pict/spider.png)
+![Radar](./pict/spider.jpg)
+
+## Phantom II
+
+Let's now have a look at the smaller one.
+
+### Performance
+
+Harmann/ Olive scores:
+
+| Speaker |  Score | w/sub |
+| Phantom II (reference) | *7.5* | 8.1 |
+| Phantom II (eq)   | *7.3* | 8.3 |
+
+This is excellent! For the maximum output, it is sold for 95dB (this model, they have more
+powerful one) but they do not tell at which frequency and if that's
+peak or continuous. The data from the GLL file are not helping to
+answer this. That's not a lot and it means they are perfect for near field listening or maybe mid-field aka 1 meter to 2.5 meter.
+
+### Out of the box
+
+Let's start with the standard graph:
+![spinorama](https://www.spinorama.org/speakers/Devialet%20Phantom%20II/Devialet/vendor/CEA2034.jpg)
+
+Things are awesome below 1kHz with a flat response and then they is a small (2dB) deep that should be audible. Top end is bright. The On Axis is very good, good enough to be 
+a studio monitor with some light corrections.
+
+![On Axis](https://www.spinorama.org/speakers/Devialet%20Phantom%20II/Devialet/vendor/On%20Axis.jpg)
+
+Looking at the dispersion, the normalized horizontals shows the same
+thing: excellent below 1kHz, great below 4k and then messy.
+
+We have a good horizontal and vertical patterns, the round head and the coaxial design are going good:
+![horizontal SPL normalized](https://www.spinorama.org/speakers/Devialet%20Phantom%20II/Devialet/vendor/SPL%20Horizontal%20Normalized.webp)
+![vertical SPL normalized](https://www.spinorama.org/speakers/Devialet%20Phantom%20II/Devialet/vendor/SPL%20Vertical%20Normalized.webp)
+
+The horizontal and vertical contours shows the beaming and the
+weakness where the directivity changes:
+![horizontal contour](https://www.spinorama.org/speakers/Devialet%20Phantom%20I/Devialet/vendor/SPL%20Horizontal%20Contour.webp)
+![vertical
+contour](https://www.spinorama.org/speakers/Devialet%20Phantom%20II/Devialet/vendor/SPL%20Vertical%20Contour.webp)
+
+If you look closely at the contrours, it is possible that the measurements are swapped out. 
+
+Due to the beaming you will need to have your listening position in a &pm;35&deg; cone in order to have smooth treble.
+
+More graphs are [available](https://www.spinorama.org/speakers/Devialet%20Phantom%20II/Devialet/index_vendor.html) on [spinorama.org](https://www.spinorama.org).
+
+### With an EQ
+
+Since the Listening Window is already very good, let's focus on the Predicted In-Room Response:
+
+### Let's flatten the predicted in-room response / score:
+
+Now that's awesome:
+![EQ Score](./pict/filter_eq_score_II.png)
+
+```
+EQ for Devialet Phantom II computed from Vendors-Devialet data
+Preference Score 7.06 with EQ 7.35
+Generated from http://github.com/pierreaubert/spinorama/generate_peqs.py v0.24
+Dated: 2023-09-10-14:03:17
+
+Preamp: -2.5 dB
+  
+Filter  1: ON LS Fc    30 Hz Gain +2.87 dB Q 0.90
+Filter  2: ON PK Fc    62 Hz Gain -0.66 dB Q 3.73
+Filter  3: ON PK Fc    76 Hz Gain -1.28 dB Q 2.17
+Filter  4: ON PK Fc   342 Hz Gain -0.71 dB Q 0.41
+Filter  5: ON PK Fc  1220 Hz Gain +0.32 dB Q 4.56
+Filter  6: ON PK Fc  1594 Hz Gain +2.18 dB Q 2.37
+Filter  7: ON PK Fc  7669 Hz Gain +1.88 dB Q 0.37
+```
+
+### Comparison with quasi anechoid measurement
+
+As oftern very good concordance between the two:
+![comparison](./pict/reactor_vs_II.png)
+
+## Comparison between Phantom I and Phantom II
+
+Phantom II is significantly flatter than the I. They both relative minor issues in the 1kHz to 6kHz range. It is likely audible on the I and difficult to hear on the II.
+![comparison](./pict/I_vs_II.png)
 
 ## Conclusion
 
-The Phantom is a good speaker both objectively and subjectively with
-some deficiencies. I would recommend using a DSP with it.
+The Phantoms are good speakers both objectively and subjectively with
+some deficiencies. The Phantom I will impress you with its output and bass but you may complain about the top end. I would use a DSP to tame it. 
+
+The Phantom II looks awesome with and without EQ. It is limited in terms of output, it would be perfect on my desk :) It can compete with Genelec, Neumann or look alike. Price is not cheap but the look is very different and may be easier to integrate in modern design houses.
 
 
