@@ -1,22 +1,25 @@
 # Analysis of the Devialet Phantom I & II measurements
 
-The Devialet Phantom are smallish speakers with excellent bass. 
-They are expensive but looks nice and I always liked the sound of
-them. 
+The Devialet Phantom speakers are small but powerful, with a unique
+design and excellent bass. They are expensive, but their sound quality
+is top-notch. 
 
-I ordered a pair a few years ago (the large model in 2017): the sound
-was great but I was struggling too much with the sofware parts and the
-box that is supposed to help to link a pair. The box often
-disconnected the speakers, the sofware was buggy. I hope they have fixed it. 
+I ordered a pair of Phantom speakers a few years ago (the large model
+in 2017). The sound was amazing, but I had some problems with the
+software and the linking box. The box would often disconnect the
+speakers, and the software was buggy. I hope these issues have been
+fixed since then. 
 
-Latency was relatively high by default but they had a way to put it 
-way down.
-
-At the end I returned them.
+The latency was also relatively high by default, but there was a way
+to reduce it. Ultimately, I decided to return the speakers because of
+the software and connectivity issues.
 
 Recently I noticed that Devialet released a set of [measurements](https://www.afmg-support.eu/AFMGDownloads/Downloads.aspx?SWP=EASE5&FILE=Devialet.zip) for
 both speakers and wanted to look at them and compare with quasi
-anechoic [measurements](https://www.audiosciencereview.com/forum/index.php?threads/devialet-phantom-reactor-900-measurements-now-with-spinorama.9963/page-2#post-305596) done by [napilopez](https://www.audiosciencereview.com/forum/index.php?members/napilopez.3902/).
+anechoic
+[measurements](https://www.audiosciencereview.com/forum/index.php?threads/devialet-phantom-reactor-900-measurements-now-with-spinorama.9963/page-2#post-305596)
+done by
+[napilopez](https://www.audiosciencereview.com/forum/index.php?members/napilopez.3902/). 
 
 I used the data to generate the spinorama and derive some information.
 
@@ -63,11 +66,11 @@ Harmann/ Olive scores:
 
 This is good and at least part of the marketing is correct. For the
 maximum output, it is sold for 103dB (this model, they have more
-powerful one) but they do not tell at which frequency and if that's
-peak or continuous. The data from the GLL file are not helping to
-answer this.
+powerful ones) but they do not tell at which frequency and if that's
+peak or continuous, I would guess peak. The data from the GLL file are
+not helping to answer this.
 
-### Out of the box
+### Anechoic measurements
 
 Let's start with the standard graph:
 ![spinorama](https://www.spinorama.org/speakers/Devialet%20Phantom%20I/Devialet/vendor/CEA2034.jpg)
@@ -171,7 +174,7 @@ powerful one) but they do not tell at which frequency and if that's
 peak or continuous. The data from the GLL file are not helping to
 answer this. That's not a lot and it means they are perfect for near field listening or maybe mid-field aka 1 meter to 2.5 meter.
 
-### Out of the box
+### Anechoic measurements
 
 Let's start with the standard graph:
 ![spinorama](https://www.spinorama.org/speakers/Devialet%20Phantom%20II/Devialet/vendor/CEA2034.jpg)
@@ -228,12 +231,15 @@ Filter  7: ON PK Fc  7669 Hz Gain +1.88 dB Q 0.37
 
 ### Comparison with quasi anechoid measurement
 
-As oftern very good concordance between the two:
+As often, we see a very good concordance between the two methodologies:
 ![comparison](./pict/reactor_vs_II.png)
 
 ## Comparison between Phantom I and Phantom II
 
-Phantom II is significantly flatter than the I. They both relative minor issues in the 1kHz to 6kHz range. It is likely audible on the I and difficult to hear on the II.
+Phantom II is significantly flatter than the I. They both have
+relative minor issues in the 1kHz to 6kHz range. It is likely audible
+on the I and difficult to hear on the II. 
+
 ![comparison](./pict/I_vs_II.png)
 
 ## Conclusion
@@ -249,20 +255,23 @@ Harmann/ Olive scores:
 
 Max output is around 104dB for Phantom I and 95dB for Phantom II.
 
-The Phantoms are good speakers both objectively and subjectively with
-some deficiencies. The Phantom I will impress you with its output and
-bass but you may complain about the top end. I would use a DSP to tame
-it.
+The Devialet Phantom speakers are a mixed bag. Objectively, they are
+very good speakers, with impressive output and bass. However, some
+people may find the top end to be too harsh. A digital signal
+processor (DSP) can be used to tame the top end, but this is not
+ideal. 
 
 The Phantom II looks excellent without EQ and awesome with it. That's
-the same level of quality as a
-[KEF
-R5](https://www.spinorama.org/speakers/KEF%20R5%20Meta/KEF/index_vendor-v2.html)
-to give an idea. It is limited in terms of output but it would be
-perfect on a desk. It can compete with 
+the same level of quality as a 
+[KEF R5](https://www.spinorama.org/speakers/KEF%20R5%20Meta/KEF/index_vendor-v2.html). 
+
+It is limited in terms of output but it would be
+perfect for use on a desk. It can compete with high-end studio
+monitors like the
 [Genelec 8341](https://www.spinorama.org/speakers/Genelec%208341A/ASR/index_asr-vertical.html),
 [Neumann KH150](https://www.spinorama.org/speakers/Neumann%20KH%20150/ASR/index_asr.html)
-or look alike. Price is not cheap but the look is very different and
-may be easier to integrate in modern design houses. 
+or look alike. 
 
+The Phantom speakers are not cheap, but they are unique and stylish
+speakers that may be easier to integrate into modern design houses. 
 
