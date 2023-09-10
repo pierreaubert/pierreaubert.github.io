@@ -14,7 +14,7 @@ way down.
 
 At the end I returned them.
 
-Recently I noticed that Devialet released a set of measurements for
+Recently I noticed that Devialet released a set of [measurements](https://www.afmg-support.eu/AFMGDownloads/Downloads.aspx?SWP=EASE5&FILE=Devialet.zip) for
 both speakers and wanted to look at them and compare with quasi
 anechoic [measurements](https://www.audiosciencereview.com/forum/index.php?threads/devialet-phantom-reactor-900-measurements-now-with-spinorama.9963/page-2#post-305596) done by [napilopez](https://www.audiosciencereview.com/forum/index.php?members/napilopez.3902/).
 
@@ -163,8 +163,8 @@ Let's now have a look at the smaller one.
 Harmann/ Olive scores:
 
 | Speaker |  Score | w/sub |
-| Phantom II (reference) | *7.5* | 8.1 |
-| Phantom II (eq)   | *7.3* | 8.3 |
+| Phantom II (reference) | **7.0** | 8.1 |
+| Phantom II (eq)   | **7.3** | 8.3 |
 
 This is excellent! For the maximum output, it is sold for 95dB (this model, they have more
 powerful one) but they do not tell at which frequency and if that's
@@ -238,9 +238,31 @@ Phantom II is significantly flatter than the I. They both relative minor issues 
 
 ## Conclusion
 
-The Phantoms are good speakers both objectively and subjectively with
-some deficiencies. The Phantom I will impress you with its output and bass but you may complain about the top end. I would use a DSP to tame it. 
+Harmann/ Olive scores:
 
-The Phantom II looks awesome with and without EQ. It is limited in terms of output, it would be perfect on my desk :) It can compete with Genelec, Neumann or look alike. Price is not cheap but the look is very different and may be easier to integrate in modern design houses.
+| Speaker |  Score | w/sub |
+| Phantom I (reference) | **5.7** | 6.5 |
+| Phantom I (eq lw)   | **6.2** | 7.0 |
+| Phantom I (eq score)| **6.8** | 7.6 |
+| Phantom II (reference) | **7.0** | 8.1 |
+| Phantom II (eq)   | **7.3** | 8.3 |
+
+Max output is around 104dB for Phantom I and 95dB for Phantom II.
+
+The Phantoms are good speakers both objectively and subjectively with
+some deficiencies. The Phantom I will impress you with its output and
+bass but you may complain about the top end. I would use a DSP to tame
+it.
+
+The Phantom II looks excellent without EQ and awesome with it. That's
+the same level of quality as a
+[KEF
+R5](https://www.spinorama.org/speakers/KEF%20R5%20Meta/KEF/index_vendor-v2.html)
+to give an idea. It is limited in terms of output but it would be
+perfect on a desk. It can compete with 
+[Genelec 8341](https://www.spinorama.org/speakers/Genelec%208341A/ASR/index_asr-vertical.html),
+[Neumann KH150](https://www.spinorama.org/speakers/Neumann%20KH%20150/ASR/index_asr.html)
+or look alike. Price is not cheap but the look is very different and
+may be easier to integrate in modern design houses. 
 
 
