@@ -24,8 +24,9 @@ The website is generated from this
 [audiosciencereview.com](https://www.audiosciencereview.com/forum/index.php?forums/speaker-reviews-measurements-and-discussion.54/) aka *ASR*, [Princeton 3d3a
 Lab](https://www.princeton.edu/3D3A/), [Erin's audio corner]()https://www.erinsaudiocorner.com/ and some vendors (JBL, Genelec, Neumann, FBT, ...).
 
-# Reviews or data analysis
+# Reviews, data analysis, tutorial
 
+- [How to do speaker data plots the easy way](/blog/tutorial/easyplot/easyplot.md)
 - [Devialet Phantom I](/blog/reviews/20230910-Devialet-Phantom/index.html)
 - [Alcons Audio RR12 Line array](/blog/reviews/20221113-Alcons-Audio-beamforming/index.html)
 - [FBT Promaxx Serie](/blog/reviews/20221105-FBT-Promaxx/index.html)
