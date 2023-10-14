@@ -106,7 +106,9 @@ TODO
 - ZFS make it a mess to replace the disks; use zpool labelclear before
   trying the replace.
 - MVNE
-  - For monitoring MVNE (temp included) use apt install nvme-cli which has a lot of features
+  - For monitoring MVNE (temp included) use apt install nvme-cli which
+    has a lot of features
+  - Ex: nvme smart-log /dev/nvme5n1
 - NVIDIA
   - Lost the driver from time to time.
   - try: 
@@ -118,6 +120,7 @@ TODO
   - hddtemp does not exists ...
   - use: sudo modprobe -v drivetemp
   - then sensors (from lm-sensors) works.
+  - or: crazy (does a good job at id bad disks).
 
 
 ## server board Asus WRX80 (2022-05-05)
