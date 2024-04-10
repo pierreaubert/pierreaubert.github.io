@@ -1,5 +1,6 @@
-title: Spinorama
+title: Pierre's blog
+url: https://pierreaubert.github.io
 logo: /logo.jpg
-description: Spinorama is a collection of speaker measurements. You can also easily compare them, find similar speakers or find a EQ that will make them sound better.
+description: Some stuff mostly useful to me
 show_dowloads: false
 theme: jekyll-theme-minimal
