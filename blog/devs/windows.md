@@ -11,5 +11,5 @@
   - rsync -avh --progress --exclude=sources/install.wim /mnt/cdrom /mnt/usbkey
   - wimlib-imagex split /mnt/cdrom/sources/install.wim /mnt/usbkey/sources/install.swm 3800
   - eject done
-- BIOS : remove secure boot and put Other OS instead of Windows since the above is not UEFI compliant.  
+- BIOS : remove secure boot and put Other OS instead of Windows since the above is not UEFI compliant.
 
