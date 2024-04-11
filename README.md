@@ -21,7 +21,7 @@ specific recommendations but I would buy for myself:
 
 # Reviews, data analysis, tutorial
 
-- [How to do speaker data plots the easy way](/blog/tutorial/easyplot/easyplot.md)
+- [How to do speaker data plots the easy way](/blog/tutorial/easyplot/easyplot.md) [pdf with results](/blog/tutorial/easyplot/easyplot.pdf) 
 - [Devialet Phantom I](/blog/reviews/20230910-Devialet-Phantom/index.html)
 - [Alcons Audio RR12 Line array](/blog/reviews/20221113-Alcons-Audio-beamforming/index.html)
 - [FBT Promaxx Serie](/blog/reviews/20221105-FBT-Promaxx/index.html)
