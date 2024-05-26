@@ -38,6 +38,10 @@ specific recommendations but I would buy for myself:
 - [mac m1](/blog/hardware/mac_m1.md)
 - [owc mercury elite pro](/blog/hardware/owc_mercury_elite_pro.md)
 
+# SysAdmin
+
+- [Backup with Duplicity](/blob/sysadmin/backup.md)
+
 # Dev
 
 - [git tricks](/blog/dev/git.md)
