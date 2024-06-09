@@ -4,7 +4,7 @@ You are *probably* looking after the: [spinorama](https://www.spinorama.org/) ga
 
 It is a collection of loudspeakers measurements. They can
 help you to make an educated decision when you want to purchase a
-speaker. Price and quality are very loosely related. I do not have 
+speaker. Price and quality are very loosely related. I do not have
 specific recommendations but I would buy for myself:
 
 ### For a bookshelves or desk speaker:
@@ -21,7 +21,7 @@ specific recommendations but I would buy for myself:
 
 # Reviews, data analysis, tutorial
 
-- [How to do speaker data plots the easy way](/blog/tutorial/easyplot/easyplot.md) [pdf with results](/blog/tutorial/easyplot/easyplot.pdf) 
+- [How to do speaker data plots the easy way](/blog/tutorial/easyplot/easyplot.md) [pdf with results](/blog/tutorial/easyplot/easyplot.pdf)
 - [Devialet Phantom I](/blog/reviews/20230910-Devialet-Phantom/index.html)
 - [Alcons Audio RR12 Line array](/blog/reviews/20221113-Alcons-Audio-beamforming/index.html)
 - [FBT Promaxx Serie](/blog/reviews/20221105-FBT-Promaxx/index.html)
@@ -41,6 +41,7 @@ specific recommendations but I would buy for myself:
 # SysAdmin
 
 - [Backup with Duplicity](/blob/sysadmin/backup.md)
+- [Send email from the printer (Kyocera)](/blob/sysadmin/printer.md)
 
 # Dev
 
