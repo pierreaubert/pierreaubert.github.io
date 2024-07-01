@@ -64,19 +64,26 @@ sudo mount /dev/disk/by-uuid/e75f3131-eb50-466c-b9be-968abb6288ce /data/macTimeM
 snap install emacs --classic
 ```
 
-## backup recovery
-
-```
-sudo apt install duplicity
-```
-
 ## drivers
 
 NVME
 ```
 sudo apt install -y nvme-cli
 ```
-Nvidia 
+Currently returning only 5 disks (4 on broken pcie card, 2 out of main board)
+```
+> nvme list
+Node                  Generic               SN                   Model                                    Namespace  Usage                      Format           FW Rev  
+--------------------- --------------------- -------------------- ---------------------------------------- ---------- -------------------------- ---------------- --------
+/dev/nvme0n1          /dev/ng0n1            S64DNG0R404653E      Samsung SSD 980 500GB                    0x1        373.79  GB / 500.11  GB    512   B +  0 B   3B4QFXO7
+/dev/nvme1n1          /dev/ng1n1            S64DNF0R533844M      Samsung SSD 980 500GB                    0x1        196.75  GB / 500.11  GB    512   B +  0 B   3B4QFXO7
+/dev/nvme2n1          /dev/ng2n1            S64DNG0R404613K      Samsung SSD 980 500GB                    0x1        357.29  GB / 500.11  GB    512   B +  0 B   3B4QFXO7
+/dev/nvme3n1          /dev/ng3n1            S64DNG0R404659P      Samsung SSD 980 500GB                    0x1        373.79  GB / 500.11  GB    512   B +  0 B   3B4QFXO7
+/dev/nvme4n1          /dev/ng4n1            S64DNF0R533850A      Samsung SSD 980 500GB                    0x1        358.56  GB / 500.11  GB    512   B +  0 B   3B4QFXO7
+```
+Note that I do not have AER errors with the ASUS card out (new one inbound).
+
+Nvidia 4090
 ```
 VERSION=550
 sudo apt install -y linux-headers-$(uname -r)
@@ -89,6 +96,7 @@ candidates=$(ls -d /usr/src/nvidia-$VERSION.*)
 numbers=$(basename $candidates)
 sudo dkms install -m ${numbers/-/\/}
 ```
+Note decision not to add the AMD and the other NVIDIA for now. Possibly more the AMD to spin.
 
 Sensors
 ```
@@ -178,8 +186,55 @@ sudo systemctl status nvidia_gpu_exporter
 
 Check that the dashboard is green in Grafana.
 
+## backup recovery
 
+Nicely explained [here](backup.md)
+Passwords are in the usual vault.
 
+```
+cd /data/backup/hornBackup
+sudo mkdir restore
+sudo duplicity restore file:///data/backup/hornBackup/etc restore/
+```
+
+## printer
+
+```
+sudo apt install cups
+```
+
+## samba
+
+```
+sudo apt install samba samba-ad-dc
+```
+and restore configuration from backup
+```
+sudo cp /etc/samba/smb.conf /etc/samba/smb.conf.maint
+sudo cp /data/backup/hornBackup/restore/samba/smb.conf /etc/samba
+```
+Check with
+```
+sudo systemctl status smbd.service
+```
+
+## ftpd (via vsftpd)
+```
+sudo cp /data/backup/hornBackup/restore/vsftpd.conf /etc
+sudo systemctl restart vsftpd.service 
+```
+
+## ubuntu pro
+
+You can find your token on [ubuntu.com/pro](https://ubuntu.com/pro):
+```
+sudo pro attach <token>
+```
+
+## backup recovery
+
+Nicely explained [here](backup.md)
+Passwords are in the usual vault.
 
 
 

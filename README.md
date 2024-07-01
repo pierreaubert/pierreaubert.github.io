@@ -43,7 +43,7 @@ specific recommendations but I would buy for myself:
 
 - [Backup with Duplicity](/blog/sysadmin/backup.md)
 - [Systemd sheat](/blog/sysadmin/systemd.md)
-- [Ubuntu 24.04](/blog/sysadmin/ubuntu-24.04)
+- [Ubuntu 24.04](/blog/sysadmin/ubuntu-24.04.md)
 
 # Dev
 
