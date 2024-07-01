@@ -37,6 +37,7 @@ specific recommendations but I would buy for myself:
 - [asus wrx80 -- threadripper motherboard](/blog/hardware/asus_wrx80.md)
 - [mac m1](/blog/hardware/mac_m1.md)
 - [owc mercury elite pro](/blog/hardware/owc_mercury_elite_pro.md)
+- [samsung ssd m2 update](/blog/hardware/samsung_ssd_magician.md)
 
 # SysAdmin
 
