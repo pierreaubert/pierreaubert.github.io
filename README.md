@@ -41,7 +41,8 @@ specific recommendations but I would buy for myself:
 
 # SysAdmin
 
-- [Backup with Duplicity](/blob/sysadmin/backup.md)
+- [Backup with Duplicity](/blog/sysadmin/backup.md)
+- [Systemd sheat](/blog/sysadmin/systemd.md)
 
 # Dev
 
