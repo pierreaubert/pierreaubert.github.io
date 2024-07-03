@@ -17,7 +17,7 @@ specific recommendations but I would buy for myself:
 ### Floorstanders or large speaker:
 
 - In the US, I would likely buy a pair of Revel.
-- In Europe, I baught larger Genelec (8361).
+- In Europe, I baught a pair of Genelec 8361A.
 
 # Reviews, data analysis, tutorial
 
@@ -37,11 +37,14 @@ specific recommendations but I would buy for myself:
 - [asus wrx80 -- threadripper motherboard](/blog/hardware/asus_wrx80.md)
 - [mac m1](/blog/hardware/mac_m1.md)
 - [owc mercury elite pro](/blog/hardware/owc_mercury_elite_pro.md)
+- [samsung ssd m2 update](/blog/hardware/samsung_ssd_magician.md)
 
 # SysAdmin
 
-- [Backup with Duplicity](/blob/sysadmin/backup.md)
-- [Send email from the printer (Kyocera)](/blob/sysadmin/printer.md)
+- [Backup with Duplicity](/blog/sysadmin/backup.md)
+- [Systemd sheat](/blog/sysadmin/systemd.md)
+- [RAID with mdadm](/blog/sysadmin/mdadm.md)
+- [Ubuntu 24.04](/blog/sysadmin/ubuntu-24.04.md)
 
 # Dev
 

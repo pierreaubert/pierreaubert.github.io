@@ -19,10 +19,21 @@ For each machine, here web01 as an example:
 
 on the server
 ```
-adduser --home=/data/backup/web01Backup --disabled-login backup-web01
+addgroup --gid=1010 backup-web01
+addgroup --gid=1011 backup-web02
+addgroup --gid=1012 backup-spin
+adduser --uid=1008 --gid=1010 --home=/data/backup/web01Backup --disabled-login backup-web01
+adduser --uid=1009 --gid=1011 --home=/data/backup/web02Backup --disabled-login backup-web02
+adduser --uid=1010 --gid=1012 --home=/data/backup/spinBackup --disabled-login backup-spin
+```
+and for each user, change the pwd via the usual vault:
+```
 chpasswd
 backup-web01:YOURSTRONGFTPPWD
 ˆD
+```
+Setup dirs:
+```
 mkdir -p /data/backup/web01Backup
 chmod 500 /data/backup/web01Backup
 ```
@@ -65,4 +76,12 @@ crontab -e
 0 5 * * 1 cd /home/pierre && ./backup.sh
 ```
 
+
+## Restore
+
+```
+cd /data/backup/backupMachine
+mkdir restore-etc
+duplicity restore file:///data/backup/backupMachine/etc ./restore-etc
+```
 
