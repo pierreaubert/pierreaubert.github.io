@@ -5,8 +5,16 @@
 on the server:
 ```
 apt install vsftpd
+mkdir /etc/vsftpd_user_conf
 ```
-You need to ack a bit the configuration file for systemd:
+You need to ack a bit the configuration file for systemd: enable write and chroots.
+Get
+```
+/etc/vsftpd.conf
+/etc/vsftpd.chroot_list
+/etc/vsftpd_user_conf
+```
+from a backup.
 
 on the clients:
 ```
@@ -22,9 +30,9 @@ on the server
 addgroup --gid=1010 backup-web01
 addgroup --gid=1011 backup-web02
 addgroup --gid=1012 backup-spin
-adduser --uid=1008 --gid=1010 --home=/data/backup/web01Backup --disabled-login backup-web01
-adduser --uid=1009 --gid=1011 --home=/data/backup/web02Backup --disabled-login backup-web02
-adduser --uid=1010 --gid=1012 --home=/data/backup/spinBackup --disabled-login backup-spin
+adduser --uid=1008 --gid=1010 --home=/data/backup/web01Backup backup-web01
+adduser --uid=1009 --gid=1011 --home=/data/backup/web02Backup backup-web02
+adduser --uid=1010 --gid=1012 --home=/data/backup/spinBackup backup-spin
 ```
 and for each user, change the pwd via the usual vault:
 ```
@@ -55,8 +63,8 @@ and then add a script:
 ```
 #!/bin/sh
 
-export PASSPHRASE=YOURSTRONGBACKUPPWD
-export FTP_PASSWORD=YOURSTRONGFTPPWD
+export PASSPHRASE=YOUR_STRONG_BACKUP_PWD
+export FTP_PASSWORD=YOUR_STRONG_FTP_PWD
 duplicity /etc ftp://backup-web01@server/etc
 duplicity \
     --exclude /home/pierre/tmp \
