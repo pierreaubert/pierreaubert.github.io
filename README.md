@@ -45,6 +45,7 @@ specific recommendations but I would buy for myself:
 - [Systemd sheat](/blog/sysadmin/systemd.md)
 - [RAID with mdadm](/blog/sysadmin/mdadm.md)
 - [Ubuntu 24.04](/blog/sysadmin/ubuntu-24.04.md)
+- [ZFS and Postgresql](/blog/sysadmin/zfs.md)
 
 # Dev
 
