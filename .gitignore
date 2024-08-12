@@ -6,5 +6,7 @@ venv
 *.lock
 _site
 .sass-cache
+*.log
+
 
 

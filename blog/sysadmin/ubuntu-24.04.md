@@ -196,6 +196,14 @@ sudo apt install -y clang
 Note that npm, nvm, cargo, rustup are already in $HOME
 
 
+## sysadmin basics
+
+```
+sudo apt install -y glances
+sudo apt install -y syscomp
+```
+
+
 ## monitoring
 
 See [here](/blog/sysadmin/monitoring.md)

@@ -7,17 +7,18 @@ help you to make an educated decision when you want to purchase a
 speaker. Price and quality are very loosely related. I do not have
 specific recommendations but I would buy for myself:
 
-### For a bookshelves or desk speaker:
+## For a bookshelves or desk speaker:
 - [JBL 306P](https://pierreaubert.github.io/spinorama/JBL%20306P%20Mark%20ii/ASR/index_asr.html)
   for a cheap and good one.
 - [Kali IN-8](https://pierreaubert.github.io/spinorama/Kali%20IN-8/ASR/index_asr.html)
   with some more money.
 - For cost no object, I would go for [Genelec 8341](https://pierreaubert.github.io/spinorama/Genelec%208341A/ASR/index_asr.html)
 
-### Floorstanders or large speaker:
+## Floorstanders or large speaker:
 
 - In the US, I would likely buy a pair of Revel.
 - In Europe, I baught a pair of Genelec 8361A.
+
 
 # Reviews, data analysis, tutorial
 
@@ -27,10 +28,12 @@ specific recommendations but I would buy for myself:
 - [FBT Promaxx Serie](/blog/reviews/20221105-FBT-Promaxx/index.html)
 - [JBL PRX900 Serie](/blog/reviews/20221103-JBL-PRX900/index.html)
 
+
 # Software
 
 - [AutoEQ](/blog/software/autoeq.md)
 - [Shape Optimisation Speaker](/blog/software/shape_optimisation_speaker.md)
+
 
 # Hardware
 
@@ -39,6 +42,7 @@ specific recommendations but I would buy for myself:
 - [owc mercury elite pro](/blog/hardware/owc_mercury_elite_pro.md)
 - [samsung ssd m2 update](/blog/hardware/samsung_ssd_magician.md)
 
+
 # SysAdmin
 
 - [Backup with Duplicity](/blog/sysadmin/backup.md)
@@ -46,6 +50,9 @@ specific recommendations but I would buy for myself:
 - [RAID with mdadm](/blog/sysadmin/mdadm.md)
 - [Ubuntu 24.04](/blog/sysadmin/ubuntu-24.04.md)
 - [ZFS and Postgresql](/blog/sysadmin/zfs.md)
+- [Monitoring configuration](/blog/sysadmin/monitoring.md)
+- [ML configuration](/blog/sysadmin/ml.md)
+
 
 # Dev
 
