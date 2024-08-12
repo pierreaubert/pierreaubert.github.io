@@ -45,5 +45,12 @@ vmctl prometheus --prom-snapshot=/var/lib/prometheus/metrics2/snapshots/20240702
 ```
 cp ~pierre/scrapers/systemd/victoria-vmagent.service /etc/systemd/system
 sudo systemctl daemon-reload
-sudo systemctl enable --now victoria-vmagent.service 
+sudo systemctl enable --now victoria-vmagent.service
+```
+
+20240812: Daemon does not start, need to investigate, manuall started with:
+
+```
+cd /var/lib/victoria-metrics/vmagent
+nohup sudo -u _victoria-metrics /usr/bin/vmagent -promscrape.config=/etc/prometheus/prometheus.yml -remoteWrite.url=http://192.168.1.32:8428/api/v1/write -promscrape.config.strictParse=false &
 ```

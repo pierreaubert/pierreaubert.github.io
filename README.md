@@ -37,8 +37,9 @@ specific recommendations but I would buy for myself:
 
 # Hardware
 
+- [asus designare z390 -- intel motherboard](/blog/hardware/asus_designare_z390.md)
 - [asus wrx80 -- threadripper motherboard](/blog/hardware/asus_wrx80.md)
-- [mac m1](/blog/hardware/mac_m1.md)
+- [apple mac m1](/blog/hardware/mac_m1.md)
 - [owc mercury elite pro](/blog/hardware/owc_mercury_elite_pro.md)
 - [samsung ssd m2 update](/blog/hardware/samsung_ssd_magician.md)
 
@@ -46,12 +47,13 @@ specific recommendations but I would buy for myself:
 # SysAdmin
 
 - [Backup with Duplicity](/blog/sysadmin/backup.md)
-- [Systemd sheat](/blog/sysadmin/systemd.md)
+- [ML configuration](/blog/sysadmin/ml.md)
+- [Monitoring configuration](/blog/sysadmin/monitoring.md)
+- [NVME over TCP](/blog/sysadmin/nvme.md)
 - [RAID with mdadm](/blog/sysadmin/mdadm.md)
+- [Systemd sheat](/blog/sysadmin/systemd.md)
 - [Ubuntu 24.04](/blog/sysadmin/ubuntu-24.04.md)
 - [ZFS and Postgresql](/blog/sysadmin/zfs.md)
-- [Monitoring configuration](/blog/sysadmin/monitoring.md)
-- [ML configuration](/blog/sysadmin/ml.md)
 
 
 # Dev
