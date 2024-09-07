@@ -8,17 +8,27 @@ speaker. Price and quality are very loosely related. I do not have
 specific recommendations but I would buy for myself:
 
 ## For a bookshelves or desk speaker:
-- [JBL 306P](https://pierreaubert.github.io/spinorama/JBL%20306P%20Mark%20ii/ASR/index_asr.html)
+- [JBL 306P](https://www.spinorama.org/speakers/JBL%20306P%20Mark%20ii/ASR/index_asr.html)
   for a cheap and good one.
-- [Kali IN-8](https://pierreaubert.github.io/spinorama/Kali%20IN-8/ASR/index_asr.html)
+- [Kali IN-8](https://www.spinorama.org/speakers/Kali%20IN-8/ErinsAudioCorner/index_eac.html)
   with some more money.
-- For cost no object, I would go for [Genelec 8341](https://pierreaubert.github.io/spinorama/Genelec%208341A/ASR/index_asr.html)
+- For cost no object, I would go for [Genelec 8341](https://www.spinorama.org/speakers/Genelec%208341A/ASR/index_asr-vertical.html)
+
+Any bookshelves at the top of this [list](https://www.spinorama.org/?quality=high&page=1&shape=bookshelves&power=active&sort=score) is outstanding.
 
 ## Floorstanders or large speaker:
 
 - In the US, I would likely buy a pair of Revel.
 - In Europe, I baught a pair of Genelec 8361A.
 
+Any floorstanders at the top of this [list](https://www.spinorama.org/?quality=high&page=1&shape=floorstanders&sort=score) is outstanding.
+
+## Brands
+
+Some brands sell high quality speakers in a consistent manner: Gelenec, Kali, Neumann, KEF, Revel, Kii, Dutch &amp; Dutch, Ascend Acoustics, Buchardt Audio, etc
+New brands are also doing outstanding speakers: Mesanovic, March Audio, GGNTK, AsciLab, MoFi or SunAudio, etc
+
+Their is also a lot of crap out there, spend some time looking at [spinorama.org](https://spinorama.org) to get data and pointers to original reviews. It is worth having a look. Why buy a crappy one when you can have a better one for cheaper? There is enough choice among the good ones.
 
 # Reviews, data analysis, tutorial
 
@@ -47,9 +57,12 @@ specific recommendations but I would buy for myself:
 # SysAdmin
 
 - [Backup with Duplicity](/blog/sysadmin/backup.md)
+- [Bootable window usb key](/blog/sysadmin/windows.md)
 - [ML configuration](/blog/sysadmin/ml.md)
 - [Monitoring configuration](/blog/sysadmin/monitoring.md)
+- [Nginx configuration](/blog/sysadmin/nginx.md)
 - [NVME over TCP](/blog/sysadmin/nvme.md)
+- [Roon firewalling](/blog/sysadmin/roon.md)
 - [RAID with mdadm](/blog/sysadmin/mdadm.md)
 - [Systemd sheat](/blog/sysadmin/systemd.md)
 - [Ubuntu 24.04](/blog/sysadmin/ubuntu-24.04.md)
@@ -61,8 +74,6 @@ specific recommendations but I would buy for myself:
 - [git tricks](/blog/dev/git.md)
 - [markdown debugging](/blog/dev/markdown.md)
 - [ray](/blog/dev/ray.md)
-- [roon firewalling](/blog/dev/roon.md)
-- [how to create a bootable window usb key](/blog/dev/windows.md)
 
 
 

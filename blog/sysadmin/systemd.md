@@ -39,6 +39,22 @@ journalctl --catalog --pager-end --unit=x.service
 systemd-creds has-tpm2
 ```
 
+if library is not available:
+```
+sudo apt install tpm2-abrmd
+```
+
+You should see somthing like:
+```
+pierre@horn:~/src/pierreaubert.github.io$ sudo systemd-creds has-tpm2
+yes
++firmware
++driver
++system
++subsystem
++libraries
+```
+
 2. Store secret
 
 For service xyz, as root:
