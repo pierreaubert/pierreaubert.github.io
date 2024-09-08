@@ -64,7 +64,8 @@ Their is also a lot of crap out there, spend some time looking at [spinorama.org
 - [NVME over TCP](/blog/sysadmin/nvme.md)
 - [Roon firewalling](/blog/sysadmin/roon.md)
 - [RAID with mdadm](/blog/sysadmin/mdadm.md)
-- [Systemd sheat](/blog/sysadmin/systemd.md)
+- [Samba cheat sheat](/blog/sysadmin/samba.md)
+- [Systemd cheat sheat](/blog/sysadmin/systemd.md)
 - [Ubuntu 24.04](/blog/sysadmin/ubuntu-24.04.md)
 - [ZFS and Postgresql](/blog/sysadmin/zfs.md)
 
