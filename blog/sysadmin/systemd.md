@@ -78,3 +78,19 @@ and the usual
 systemctl daemon-reload
 systemctl restart xyz.service
 ```
+
+## User scripts
+
+Systemd also works for users, service files are in .config/systemd/user
+```
+systemctl --user daemon-reload
+systemctl --user enable xyz.service
+systemctl --user start xyz.service
+systemctl --user status xyz.service
+```
+does the trick, and the same for getting logs:
+```
+journalctl --user -u xyz.service
+```
+
+Some examples (Roon, Polkadot Node, Komga) are on [GH](https://github.com/pierreaubert/scripts). Neat!
