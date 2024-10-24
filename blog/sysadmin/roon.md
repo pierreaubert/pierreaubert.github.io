@@ -1,4 +1,10 @@
-## Roon is no fun (2020-12-21)
+# ==> [/](Blog) ==> SysAdmin ==> Roon
+
+## 2024
+
+Roon is started via systemdctl --user
+
+## 2020
 
 - Updated my roon core
 - Roon restarted nicely from backup
@@ -20,7 +26,7 @@
   -A ufw-user-input -m pkttype --pkt-type multicast -j ACCEPT
   -A ufw-user-input -m pkttype --pkt-type broadcast -j ACCEPT
   ```
-  
+
 
 
 

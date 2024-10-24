@@ -1,3 +1,5 @@
+# ==> [/](Blog) ==> Dev ==> Markdown
+
 # Markdown development (2020-12-26)
 
 Discovered grip server to preview markdown files

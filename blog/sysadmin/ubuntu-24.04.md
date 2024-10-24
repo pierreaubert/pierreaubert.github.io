@@ -1,4 +1,4 @@
-# Update to ubuntu-24.04 on Horn
+# ==> [/](Blog) ==> SysAdmin ==> Update to ubuntu-24.04 on Horn
 
 No fancy ansible this time, and there are too many differences to port from 20.04 and worst from 16.04.
 
@@ -35,7 +35,7 @@ sudo chown -R pierre:pierre /home/pierre
 
 ### zfs backup raid 5
 ```
-/dev/sdf1: LABEL="backup" UUID="16861585561829228413"  UUID_SUB="14268880325184798257" BLOCK_SIZE="4096" TYPE="zfs_member"PARTLABEL="zfs-a7e0df049fc33b6e" PARTUUID="7e34f609-b8ae-8a48-9e81-27987a126331" 
+/dev/sdf1: LABEL="backup" UUID="16861585561829228413"  UUID_SUB="14268880325184798257" BLOCK_SIZE="4096" TYPE="zfs_member"PARTLABEL="zfs-a7e0df049fc33b6e" PARTUUID="7e34f609-b8ae-8a48-9e81-27987a126331"
 /dev/sdb1: LABEL="backup" UUID="16861585561829228413" UUID_SUB="2049209993412583254" BLOCK_SIZE="4096" TYPE="zfs_member" PARTLABEL="zfs-c104d6967aedbb3d" PARTUUID="61f8a3ba-89c8-c244-8e87-8f74f6c2846b"
 /dev/sdd1: LABEL="backup" UUID="16861585561829228413" UUID_SUB="12784991472969228394" BLOCK_SIZE="4096" TYPE="zfs_member" PARTLABEL="zfs-01390afaa88f7b1b" PARTUUID="e7f0e5ed-ebef-7649-bf78-6b1cccb3f4a8"
 ```
@@ -97,7 +97,7 @@ Currently returning only 5 disks (4 on broken pcie card, 2 out of main board)
 ```
 nvme list
 
-Node                  Generic               SN                   Model                                    Namespace  Usage                      Format           FW Rev  
+Node                  Generic               SN                   Model                                    Namespace  Usage                      Format           FW Rev
 --------------------- --------------------- -------------------- ---------------------------------------- ---------- -------------------------- ---------------- --------
 /dev/nvme0n1          /dev/ng0n1            S5GXNX0W542096A      Samsung SSD 980 PRO 1TB                  0x1        123.99  GB /   1.00  TB    512   B +  0 B   5B2QGXA7
 /dev/nvme10n1         /dev/ng10n1           S64DNF0R533850A      Samsung SSD 980 500GB                    0x1        367.39  GB / 500.11  GB    512   B +  0 B   3B4QFXO7
@@ -132,7 +132,7 @@ Sensors
 ```
 sudo modprobe -v drivetemp
 sudo apt install -y lm-sensors
-sudo sensors-detect 
+sudo sensors-detect
 ```
 
 IPMI
@@ -149,7 +149,7 @@ sudo apt install -y vim jed
 
 ## network
 
-Edit /etc/netplan/50-cloud-init.yaml 
+Edit /etc/netplan/50-cloud-init.yaml
 ```
 network:
     ethernets:
@@ -188,7 +188,7 @@ ip a | grep 192
 
 ```
 sudo apt install -y git imagemagick keychain wget curl tmux mosh
-sudo apt install -y npm 
+sudo apt install -y npm
 sudo apt install -y python3-pip python3.12-venv
 sudo apt install -y golang-go
 sudo apt install -y clang
@@ -243,7 +243,7 @@ sudo systemctl status smbd.service
 ## ftpd (via vsftpd)
 ```
 sudo cp /data/backup/hornBackup/restore/vsftpd.conf /etc
-sudo systemctl restart vsftpd.service 
+sudo systemctl restart vsftpd.service
 ```
 
 ## ubuntu pro

@@ -1,4 +1,6 @@
-## server board Asus WRX80 (2023-08)
+# ==> [/](Blog) ==> Hardware ==> Asus WRX80
+
+## 2023
 
 - Things were going well for 1 year and then a crash.
 - The second U2 controller is faulty. I moved the disks to another
@@ -11,9 +13,9 @@
   - Ex: nvme smart-log /dev/nvme5n1
 - NVIDIA
   - Lost the driver from time to time.
-  - try: 
+  - try:
      - sudo apt install linux-headers-$(uname -r)
-     - sudo apt install --reinstall nvidia-driver-535 
+     - sudo apt install --reinstall nvidia-driver-535
      - sudo apt --fix-broken install
      - reboot
 - SATA
@@ -23,7 +25,7 @@
   - or: crazy (does a good job at id bad disks).
 
 
-## server board Asus WRX80 (2022-05-05)
+## 2022
 
 - Before upgrading BIOS
  - Put the CAP file from ASUS in /boot/efi/EFI/ASUS
@@ -32,7 +34,7 @@
   - 6th PCI is RAID and not 16x (that's the one with 4x NVNE)
 - ZFS is amazing! Lost 2 disks today luckily under guarantee.
 
-## server board Asus WRX80 (since 2021)
+## 2021
 
 - Finding a case
   - I have a BeQuiet 900 rev2 which claims to be able to host a E-ATX motherboard. That may be true but then you need to remove the hardrives ... The motherboard is 30cm x 33cm and the mini-SAS controller use another 8 cm.
@@ -69,7 +71,7 @@
   sensor thresh CHA_FAN3 lower 0 100 200
   sensor thresh CHA_FAN2 upper 2000 2200 2400
   sensor thresh CHA_FAN3 upper 2000 2200 2400
-  # disk fan 
+  # disk fan
   sensor thresh CHA_FAN4 lower 0 100 200
   sensor thresh CHA_FAN4 upper 2000 2200 2400
   # soc fan (build in the motherboard)

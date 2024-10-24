@@ -1,4 +1,6 @@
-## Installing ray on Big Sur on a ARM mac mini (2020-12-21)
+# ==> [/](Blog) ==> Dev ==> Ray
+
+# Installing ray on Big Sur on a ARM mac mini (2020-12-21)
 
 - Not fun
 - Redis need a patch or crash at the start

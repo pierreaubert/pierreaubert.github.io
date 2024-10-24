@@ -1,3 +1,5 @@
+# ==> [/](Blog) ==> Dev ==> Git
+
 ## Nice trick to cleanup a git repo and keeping only the last commit (2020-12-21)
 
 - See this

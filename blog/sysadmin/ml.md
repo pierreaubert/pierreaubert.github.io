@@ -1,4 +1,8 @@
-# NVIDIA GPU
+# ==> [/](Blog) ==> SysAdmin ==> ML/AI
+
+# Hardware
+
+## NVidia GPU
 
 When the driver does not load properly:
 ```
@@ -19,7 +23,7 @@ sudo dkms install -m ${numbers/-/\/}
 ```
 
 
-# AMD GPU
+## AMD GPU
 
 ## rocM setup
 

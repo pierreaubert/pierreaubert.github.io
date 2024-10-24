@@ -1,4 +1,4 @@
-# Asus Designare Z390
+# ==> [/](Blog) ==> Hardware ==> Asus Designare Z390
 
 ## Networking
 

@@ -1,4 +1,4 @@
-# Sending email from Kyocera printer
+# ==> [/](Blog) ==> SysAdmin ==> Kyocera printer
 
 ## Printer
 

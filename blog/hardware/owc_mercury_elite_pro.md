@@ -1,4 +1,5 @@
-# owc mercury elite pro
+# ==> [/](Blog) ==> Hardware ==> Owc mercury elite pro
+
 *last updated: 20240410*
 
 It is a storage enclosure for 2 disks from OWC. I have a old model
@@ -23,7 +24,7 @@ And to filter by id
 sudo lsusb -v -d 1e91:a3a8
 ```
 
-The enclosure requires *uas* module to be recognize. 
+The enclosure requires *uas* module to be recognize.
 This module requires usb_storage which is blacklisted
 on my distro (ubuntu 22.04).
 

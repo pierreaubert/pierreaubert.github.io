@@ -1,3 +1,5 @@
+# ==> [/](Blog) ==> SysAdmin ==> Windows
+
 ## How to make a bootable windows usb key (2020-12-21)
 
 - Partition a usb key with cfdisk or similar

@@ -1,4 +1,4 @@
-### nginx configuration
+# ==> [/](Blog) ==> SysAdmin ==> nginx configuration
 
 ## security
 
