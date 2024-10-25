@@ -1,4 +1,4 @@
-# ==> [/](Blog) ==> SysAdmin ==> Kyocera printer
+# [Blog](/) / SysAdmin / Kyocera printer
 
 ## Printer
 

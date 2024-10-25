@@ -1,4 +1,4 @@
-# ==> [/](Blog) ==> Hardware ==> Owc mercury elite pro
+# [Blog](/) / Hardware / Owc mercury elite pro
 
 *last updated: 20240410*
 

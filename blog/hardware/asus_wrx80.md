@@ -1,4 +1,4 @@
-# ==> [/](Blog) ==> Hardware ==> Asus WRX80
+# [Blog](/) / Hardware / Asus WRX80
 
 ## 2023
 

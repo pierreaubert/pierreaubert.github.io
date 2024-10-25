@@ -1,4 +1,4 @@
-# ==> [/](Blog) ==> Dev ==> Markdown
+# [Blog](/) / Dev / Markdown
 
 # Markdown development (2020-12-26)
 

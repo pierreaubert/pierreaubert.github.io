@@ -1,4 +1,4 @@
-# ==> [/](Blog) ==> Hardware ==> Mac Mini M1
+# [Blog](/) / Hardware / Mac Mini M1
 
 ## macOS 11.2 fix most of my issues but not all (2021-02-10)
  The mac mini is still slow and it make it impossible to use with Reaper and a few plugins. Logic is working better but still not great.

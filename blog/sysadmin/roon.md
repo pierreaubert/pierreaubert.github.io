@@ -1,4 +1,4 @@
-# ==> [/](Blog) ==> SysAdmin ==> Roon
+# [Blog](/) / SysAdmin / Roon
 
 ## 2024
 

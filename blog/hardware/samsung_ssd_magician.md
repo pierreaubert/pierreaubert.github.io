@@ -1,4 +1,4 @@
-# ==> [/](Blog) ==> Hardware ==> Samsung SSD
+# [Blog](/) / Hardware / Samsung SSD
 
 ## How to update the firmware on the Samsung SSD M2 ?
 

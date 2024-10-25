@@ -1,4 +1,4 @@
-# ==> [/](Blog) ==> Dev ==> Ray
+# [Blog](/) / Dev / Ray
 
 # Installing ray on Big Sur on a ARM mac mini (2020-12-21)
 

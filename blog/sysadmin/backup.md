@@ -1,4 +1,4 @@
-# ==> [/](Blog) ==> SysAdmin ==> Backup computers with Duplicity over FTP
+# [Blog](/) / SysAdmin / Backup computers with Duplicity over FTP
 
 ## Setup FTP
 

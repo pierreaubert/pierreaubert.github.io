@@ -1,4 +1,4 @@
-# ==> [/](Blog) ==> SysAdmin ==> SystemD
+# [Blog](/) / SysAdmin / SystemD
 
 ## Usefull commands
 

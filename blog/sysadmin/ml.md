@@ -1,4 +1,4 @@
-# ==> [/](Blog) ==> SysAdmin ==> ML/AI
+# [Blog](/) / SysAdmin / ML/AI
 
 # Hardware
 

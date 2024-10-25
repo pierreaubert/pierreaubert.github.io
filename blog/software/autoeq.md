@@ -1,4 +1,4 @@
-# ==> [/](Blog) ==> Software ==> AutoEQ project
+# [Blog](/) / Software / AutoEQ project
 
 - (2023-08-01) Global optimiser is working significantly better than
   the greedy optimiser. Score computations have been ported to Cython

@@ -1,4 +1,4 @@
-# ==> [/](Blog) ==> SysAdmin ==> NVME
+# [Blog](/) / SysAdmin / NVME
 
 ## block size
 

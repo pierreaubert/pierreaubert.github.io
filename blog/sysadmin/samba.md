@@ -1,4 +1,4 @@
-# ==> [/](Blog) ==> SysAdmin ==> Samba
+# [Blog](/) / SysAdmin / Samba
 
 Create a new Samba user with the command:
 ```

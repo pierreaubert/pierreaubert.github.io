@@ -1,4 +1,4 @@
-# ==> [/](Blog) ==> SysAdmin ==> ZFS
+# [Blog](/) / SysAdmin / ZFS
 
 ## Creating volumes
 

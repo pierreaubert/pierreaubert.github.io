@@ -1,4 +1,4 @@
-# ==> [/](Blog) ==> SysAdmin ==> Monitoring
+# [Blog](/) / SysAdmin / Monitoring
 
 Note that prometheus, grafana, mimir etc are running on the spin machine.
 ```

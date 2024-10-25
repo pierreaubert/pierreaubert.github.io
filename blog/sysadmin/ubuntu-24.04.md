@@ -1,4 +1,4 @@
-# ==> [/](Blog) ==> SysAdmin ==> Update to ubuntu-24.04 on Horn
+# [Blog](/) / SysAdmin / Update to ubuntu-24.04 on Horn
 
 No fancy ansible this time, and there are too many differences to port from 20.04 and worst from 16.04.
 

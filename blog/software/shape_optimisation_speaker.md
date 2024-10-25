@@ -1,4 +1,4 @@
-# ==> [/](Blog) ==> Software ==> Shape Optimisation project (for speakers)
+# [Blog](/) / Software / Shape Optimisation project (for speakers)
 
 I used to to some shape optimisation long time ago for my PhD. This [post](https://www.audiosciencereview.com/forum/index.php?threads/simulation-overview-loudspeakers-design-via-shape-and-topology-optimization.23453/) motivated me to go back to it.
 

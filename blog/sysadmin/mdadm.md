@@ -1,5 +1,5 @@
 
-# ==> [/](Blog) ==> SysAdmin ==> mdadm
+# [Blog](/) / SysAdmin / mdadm
 
 ## create volumes
 
