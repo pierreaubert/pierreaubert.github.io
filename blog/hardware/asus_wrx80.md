@@ -1,5 +1,25 @@
 # [Blog](/) / Hardware / Asus WRX80
 
+## 2025
+
+- more issues with the card which is slowly dying
+- fans setup
+  - get ip if ipmi via
+  ```
+  sudo ipmitool lan print
+  ```
+  - log in (with firefox if certificate is toasted) on `http://ip/login`
+  - current mapping
+    - cpu -> cooler
+    - opt -> vertical fan
+    - fan6 -> exhaust 
+    - fan5 -> racks of fan for GPU and CPU
+    - fan4 -> empty
+    - fan3 -> motherboard fan (dead?)
+    - fan2 -> 3x 4k (cpu cooling)
+    - fan1 -> 3x 2k (disks)
+
+
 ## 2023
 
 - Things were going well for 1 year and then a crash.
