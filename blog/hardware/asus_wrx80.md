@@ -2,6 +2,67 @@
 
 ## 2025
 
+### Mar
+
+- I build mdadm array to realize that the ones in the extension cards are not working (great!)
+- Went back to use zfs for home:
+  - Create a pool
+```
+zpool create home -o ashift=9 -m /home /dev/disk/by-id/nvme-Samsung_SSD_980_500GB_S64DNF0R533850A /dev/disk/by-id/nvme-Samsung_SSD_980_500GB_S64DNG0R404613K  /dev/disk/by-id/nvme-Samsung_SSD_980_500GB_S64DNG0R404659P /dev/disk/by-id/nvme-Samsung_SSD_980_500GB_S64DNG0R404653E
+```
+  - Create a fs
+```
+zfs create home/pierre
+zfs set atime=off polkadot
+```
+  - Restore from backup
+```
+duplicity restore file:///data/backup/hornBackup/home/pierre /home/pierre
+```
+- Went back to use zfs for database which is not ideal at all for my use case
+  - Cleanup
+```
+nvme list | grep 2TB
+wipefs -a /dev/nvme3n1
+wipefs -a /dev/nvme4n1
+wipefs -a /dev/nvme5n1
+wipefs -a /dev/nvme6n1
+```
+  - Create a pool
+```
+zpool create -o ashift=9 polkadot mirror /dev/disk/by-id/nvme-Samsung_SSD_980_PRO_2TB_S69ENX0W330017T /dev/disk/by-id/nvme-Samsung_SSD_980_PRO_2TB_S69ENX0W322346F mirror /dev/disk/by-id/nvme-Samsung_SSD_980_PRO_2TB_S69ENX0W322290B /dev/disk/by-id/nvme-Samsung_SSD_980_PRO_2TB_S69ENX0W322276J
+```
+  - Create a fs
+```
+zfs create polkadot/polkadot-node-archive
+zfs create polkadot/postgres_data
+zfs create polkadot/postgres_ts_fast0
+zfs create polkadot/postgres_ts_fast1
+zfs create polkadot/postgres_ts_fast2
+zfs create polkadot/postgres_ts_fast3
+```
+  - Tune FS a bit
+```
+zfs set atime=off polkadot
+zfs set xattr=sa polkadot
+zfs set compression=off polkadot
+zfs set redundant_metadata=most polkadot
+# increase for node
+zfs set recordsize=32k polkadot/polkadot-node-archive
+# increase for pg
+zfs set recordsize=16k polkadot/postgres_data
+zfs set recordsize=16k polkadot/postgres_ts_fast0
+zfs set recordsize=16k polkadot/postgres_ts_fast1
+zfs set recordsize=16k polkadot/postgres_ts_fast2
+zfs set recordsize=16k polkadot/postgres_ts_fast3
+```
+  - Restore from backup
+```
+```
+
+
+### Jan
+
 - more issues with the card which is slowly dying
 - fans setup
   - get ip if ipmi via
@@ -12,7 +73,7 @@
   - current mapping
     - cpu -> cooler
     - opt -> vertical fan
-    - fan6 -> exhaust 
+    - fan6 -> exhaust
     - fan5 -> racks of fan for GPU and CPU
     - fan4 -> empty
     - fan3 -> motherboard fan (dead?)

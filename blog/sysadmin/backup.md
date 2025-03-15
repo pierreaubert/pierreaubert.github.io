@@ -87,9 +87,9 @@ crontab -e
 
 ## Restore
 
+Example for a backup of `/home/pierre` on `horn`:
 ```
-cd /data/backup/backupMachine
-mkdir restore-etc
-duplicity restore file:///data/backup/backupMachine/etc ./restore-etc
+cd /data/backup/hornBackup
+duplicity restore file:///data/backup/hornBackup/home/pierre /home/pierre
 ```
 
