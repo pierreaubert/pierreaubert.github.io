@@ -6,3 +6,7 @@
   [article](https://stackoverflow.com/questions/9683279/make-the-current-commit-the-only-initial-commit-in-a-git-repository)
   on stackoverflow.
 
+## add Lola
+
+- `git config --global alias.lola "log --graph --decorate --pretty=oneline --abbrev-commit --all"`
+

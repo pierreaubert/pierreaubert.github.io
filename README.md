@@ -30,7 +30,7 @@ New brands are also doing outstanding speakers: Mesanovic, March Audio, GGNTK, A
 
 Their is also a lot of crap out there, spend some time looking at [spinorama.org](https://spinorama.org) to get data and pointers to original reviews. It is worth having a look. Why buy a crappy one when you can have a better one for cheaper? There is enough choice among the good ones.
 
-# Reviews, data analysis, tutorial
+## Reviews, data analysis, tutorial
 
 - [How to do speaker data plots the easy way](/blog/tutorial/easyplot/easyplot.md) [pdf with results](/blog/tutorial/easyplot/easyplot.pdf)
 - [Devialet Phantom I](/blog/reviews/20230910-Devialet-Phantom/index.html)
@@ -41,6 +41,14 @@ Their is also a lot of crap out there, spend some time looking at [spinorama.org
 
 # Software
 
+## Web3 related
+
+- [dotidx](https://github.com/pierreaubert/dotidx) a Polkadot centric, open source block explorer. You can [play with it](https://dev.dotidx.xyz/index.html)).
+
+## Audio related
+- [gll2txt](https://github.com/pierreaubert/gll2txt): a windows application to automatically extract data from GLL files.
+- [Spinorama](https://github.com/pierreaubert/spinorama) : the software beind [spinorama.org](https://spinorama.org)
+- [EQ Converter](https://github.com/pierreaubert/AUpresetConverter) : the software enable transformation of an EQ from one format to another. A simple to use website is available [here](https://aupresetconverter.com/).
 - [AutoEQ](/blog/software/autoeq.md)
 - [Shape Optimisation Speaker](/blog/software/shape_optimisation_speaker.md)
 
@@ -72,9 +80,9 @@ Their is also a lot of crap out there, spend some time looking at [spinorama.org
 
 # Dev
 
-- [git tricks](/blog/dev/git.md)
-- [markdown debugging](/blog/dev/markdown.md)
-- [ray](/blog/dev/ray.md)
+- [git tricks](/blog/devs/git.md)
+- [markdown debugging](/blog/devs/markdown.md)
+- [ray](/blog/devs/ray.md)
 
 
 
