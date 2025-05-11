@@ -60,6 +60,7 @@ Their is also a lot of crap out there, spend some time looking at [spinorama.org
 - [apple mac m1](/blog/hardware/mac_m1.md)
 - [owc mercury elite pro](/blog/hardware/owc_mercury_elite_pro.md)
 - [samsung ssd m2 update](/blog/hardware/samsung_ssd_magician.md)
+- [highpoint controllers](/blog/hardware/highpoint.md)
 
 
 # SysAdmin
