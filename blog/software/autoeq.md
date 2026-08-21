@@ -1,5 +1,8 @@
 # [Blog](/) / Software / AutoEQ project
 
+- (2026) Added export to various software, matrix qa across platform, fir and rir support, etc
+- (2025) Added room eq, first stereo and then home cinema
+- (2024) Rewrote from scratch in Rust: does headphones and cea2034 well
 - (2023-08-01) Global optimiser is working significantly better than
   the greedy optimiser. Score computations have been ported to Cython
   for performance

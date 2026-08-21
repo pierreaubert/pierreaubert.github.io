@@ -1,59 +1,50 @@
-# Spinorama
+# Pierre's open source projects (and one which isnt yet)
 
-You are *probably* looking after the: [spinorama](https://www.spinorama.org/) gallery.
+SotF and Sonium are 2 significants projects developped in my limited spare time.
 
-It is a collection of loudspeakers measurements. They can
-help you to make an educated decision when you want to purchase a
-speaker. Price and quality are very loosely related. I do not have
-specific recommendations but I would buy for myself:
+## SotF project
+- Math-Audio: a set of crates for IIR, FIR, RIR and other DSP classical algorithms. Manual differentiation is there.
+- AutoEQ: a SOTA room equalizer that can optimise any number of channels for psychoacoustics objectives.
+- GPUI-Toolkit: a UI toolkit build on top of GPUI that also support mobile platforms. GPUI is developped by the Zed Team but they are not focusing on it today. The toolkit is diverging more and more from the original.
+- SotF: a TUI, Desktop, iOS, tvOS, Android app that is a swiss army knife for audio: stream and play music on headphones, stereo speakers or home cinema, optimise the sound, add effects, train your ears, a/b tests etc
+- symphonia-add-ons : a set of crates to complement Symphonia: added support for DVD, WVPACK etc
+- sofa-reader
 
-## For a bookshelves or desk speaker:
-- [JBL 306P](https://www.spinorama.org/speakers/JBL%20306P%20Mark%20ii/ASR/index_asr.html)
-  for a cheap and good one.
-- [Kali IN-8](https://www.spinorama.org/speakers/Kali%20IN-8/ErinsAudioCorner/index_eac.html)
-  with some more money.
-- For cost no object, I would go for [Genelec 8341](https://www.spinorama.org/speakers/Genelec%208341A/ASR/index_asr-vertical.html)
+Wants to know more? jump to [SotF homepage](https://sotf.spinorama.org), download the app, and play with it. Start it on github, give us feedback.
 
-Any bookshelves at the top of this [list](https://www.spinorama.org/?quality=high&page=1&shape=bookshelves&power=active&sort=score) is outstanding.
+## Sonium
 
-## Floorstanders or large speaker:
+A scientfic computation software for multiphysics. Jump here for [detailed informations](/blog/software/sonium.md).
 
-- In the US, I would likely buy a pair of Revel.
-- In Europe, I baught a pair of Genelec 8361A.
+## [Spinorama](https://www.spinorama.org/) gallery.
 
-Any floorstanders at the top of this [list](https://www.spinorama.org/?quality=high&page=1&shape=floorstanders&sort=score) is outstanding.
+A python+js website that collect speaker measurements and allow you to compare them. Surprisingly successfull with 1 million unique visior per year and 4 req/s averaged over a year after removing bots. Jump [here](/blog/software/spinorama.md) for more info.
 
-## Brands
+## Games
 
-Some brands sell high quality speakers in a consistent manner: Gelenec, Kali, Neumann, KEF, Revel, Kii, Dutch &amp; Dutch, Ascend Acoustics, Buchardt Audio, etc
-New brands are also doing outstanding speakers: Mesanovic, March Audio, GGNTK, AsciLab, MoFi or SunAudio, etc
+[NethackRS](https://github.com/pierreaubert/NethackRS): rewrote Nethack in Rust. Harder than it looks like since the code is really old and untested. TUI version is playable and 3D version is unfinished (it needs more tokens:)
 
-Their is also a lot of crap out there, spend some time looking at [spinorama.org](https://spinorama.org) to get data and pointers to original reviews. It is worth having a look. Why buy a crappy one when you can have a better one for cheaper? There is enough choice among the good ones.
+## Web3
+- [StkOpt](https://github.com/pierreaubert/stkopt): a staking optimiser for Polkadot in Rust: working, TUI, Desktop and iOS app.
+- [Confiture](https://github.com/pierreaubert/confiture): used quint and lean4 to look in details at Polkadot concensus
+- [DotIDX](https://github.com/pierreaubert/dotidx): a blockindex for Polkadot in Golang; currently down, it uses too much disk space (>50TB with 1 backup) and too much bandwidth (machine is behind a DSLAM)
 
-## Reviews, data analysis, tutorial
+## Tools
+- [R2Factor](https://github.com/pierreaubert/r2factor): refactor rust code into smaller files. Useful since LLMs have a hard time with a large ones.
 
-- [How to do speaker data plots the easy way](/blog/tutorial/easyplot/easyplot.md) [pdf with results](/blog/tutorial/easyplot/easyplot.pdf)
-- [Devialet Phantom I](/blog/reviews/20230910-Devialet-Phantom/index.html)
-- [Alcons Audio RR12 Line array](/blog/reviews/20221113-Alcons-Audio-beamforming/index.html)
-- [FBT Promaxx Serie](/blog/reviews/20221105-FBT-Promaxx/index.html)
-- [JBL PRX900 Serie](/blog/reviews/20221103-JBL-PRX900/index.html)
+## Contributions
 
+- Tokensave
+- Evo-HQ
 
-# Software
+## Other older stuff
 
-## Web3 related
-
-- [dotidx](https://github.com/pierreaubert/dotidx) a Polkadot centric, open source block explorer. You can [play with it](https://dev.dotidx.xyz/index.html)).
-
-## Audio related
+### Audio related apps
 - [gll2txt](https://github.com/pierreaubert/gll2txt): a windows application to automatically extract data from GLL files.
-- [Spinorama](https://github.com/pierreaubert/spinorama) : the software beind [spinorama.org](https://spinorama.org)
 - [EQ Converter](https://github.com/pierreaubert/AUpresetConverter) : the software enable transformation of an EQ from one format to another. A simple to use website is available [here](https://aupresetconverter.com/).
-- [AutoEQ](/blog/software/autoeq.md)
 - [Shape Optimisation Speaker](/blog/software/shape_optimisation_speaker.md)
 
-
-# Hardware
+### Hardware info
 
 - [asus designare z390 -- intel motherboard](/blog/hardware/asus_designare_z390.md)
 - [asus wrx80 -- threadripper motherboard](/blog/hardware/asus_wrx80.md)
@@ -63,7 +54,7 @@ Their is also a lot of crap out there, spend some time looking at [spinorama.org
 - [highpoint controllers](/blog/hardware/highpoint.md)
 
 
-# SysAdmin
+### SysAdmin info
 
 - [Backup with Duplicity](/blog/sysadmin/backup.md)
 - [Bootable window usb key](/blog/sysadmin/windows.md)
@@ -79,7 +70,7 @@ Their is also a lot of crap out there, spend some time looking at [spinorama.org
 - [ZFS and Postgresql](/blog/sysadmin/zfs.md)
 
 
-# Dev
+### Dev
 
 - [git tricks](/blog/devs/git.md)
 - [markdown debugging](/blog/devs/markdown.md)
