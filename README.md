@@ -1,14 +1,14 @@
 # Pierre's open source projects (and one which isnt yet)
 
-SotF and Sonium are 2 significants projects developped in my limited spare time.
+SotF and Sonium are 2 significants projects developped in my limited spare time. Spinorama is a collection of speaker measurements which had more success than anticipated. SotF is relatively well designed and Sonium is professional quality.
 
 ## SotF project
-- Math-Audio: a set of crates for IIR, FIR, RIR and other DSP classical algorithms. Manual differentiation is there.
-- AutoEQ: a SOTA room equalizer that can optimise any number of channels for psychoacoustics objectives.
-- GPUI-Toolkit: a UI toolkit build on top of GPUI that also support mobile platforms. GPUI is developped by the Zed Team but they are not focusing on it today. The toolkit is diverging more and more from the original.
-- SotF: a TUI, Desktop, iOS, tvOS, Android app that is a swiss army knife for audio: stream and play music on headphones, stereo speakers or home cinema, optimise the sound, add effects, train your ears, a/b tests etc
-- symphonia-add-ons : a set of crates to complement Symphonia: added support for DVD, WVPACK etc
-- sofa-reader
+- [Math-Audio](https://github.com/pierreaubert/math-audio): a set of crates for IIR, FIR, RIR and other DSP classical algorithms.
+- [AutoEQ](https://github.com/pierreaubert/autoeq): a SOTA room equalizer that can optimise any number of channels for psychoacoustics objectives.
+- [GPUI Toolkit](https://github.com/pierreaubert/gpui-toolkit): a UI toolkit build on top of GPUI that also support mobile platforms and wasm. GPUI is developped by the Zed Team but they are not focusing on it today. Note that the toolkit is diverging more and more from the original.
+- [Symphonia add-ons](https://github.com/pierreaubert/symphonia-add-ons) : a set of crates to complement Symphonia: added support for DVD, WVPACK etc
+- [SOFA Reader](https://github.com/pierreaubert/sofa-reader): read SOFA format without the full hdf5 library.
+- [SotF](https://github.com/pierreaubert/sotf): a TUI, Desktop, iOS, tvOS, Android app that is a swiss army knife for audio: stream and play music on headphones, stereo speakers or home cinema, optimise the sound, add effects, train your ears, a/b tests etc
 
 Wants to know more? jump to [SotF homepage](https://sotf.spinorama.org), download the app, and play with it. Start it on github, give us feedback.
 
@@ -18,7 +18,7 @@ A scientfic computation software for multiphysics. Jump here for [detailed infor
 
 ## [Spinorama](https://www.spinorama.org/) gallery.
 
-A python+js website that collect speaker measurements and allow you to compare them. Surprisingly successfull with 1 million unique visior per year and 4 req/s averaged over a year after removing bots. Jump [here](/blog/software/spinorama.md) for more info.
+A website that collect speaker measurements and allow you to compare them. Surprisingly successfull with 1 million unique visior per year and 4 req/s averaged over a year after removing bots. Jump [here](/blog/software/spinorama.md) for more info.
 
 ## Games
 

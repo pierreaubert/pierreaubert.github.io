@@ -6,8 +6,8 @@
     <title>GPUI Showcase (wasm)</title>
     
 <script type="module">
-import init, * as bindings from '/gpui-showcase-98619c7b0995ed4c.js';
-const wasm = await init({ module_or_path: '/gpui-showcase-98619c7b0995ed4c_bg.wasm' });
+import init, * as bindings from '/gpui-toolkit/showcase/gpui-showcase-98619c7b0995ed4c.js';
+const wasm = await init({ module_or_path: '/gpui-toolkit/showcase/gpui-showcase-98619c7b0995ed4c_bg.wasm' });
 
 
 window.wasmBindings = bindings;
@@ -20,6 +20,6 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
       html, body { margin: 0; padding: 0; width: 100%; height: 100%; }
       canvas { display: block; width: 100%; height: 100%; touch-action: none; user-select: none; outline: none; }
     </style>
-  <link rel="modulepreload" href="/gpui-showcase-98619c7b0995ed4c.js" crossorigin="anonymous" integrity="sha384-S/peYX7wpqaZaEmyxNohRXs9D1PXHZt+uudVgxnw903rnueuNn/GJIC5sCa9NYkU"><link rel="preload" href="/gpui-showcase-98619c7b0995ed4c_bg.wasm" crossorigin="anonymous" integrity="sha384-ig5/bAaaPWnA5gY0EIEhQs3/8EU01MCd9NvagI5xRRnMLTa0H6VAj58vQ9U/J71v" as="fetch" type="application/wasm"></head>
+  <link rel="modulepreload" href="/gpui-toolkit/showcase/gpui-showcase-98619c7b0995ed4c.js" crossorigin="anonymous" integrity="sha384-S/peYX7wpqaZaEmyxNohRXs9D1PXHZt+uudVgxnw903rnueuNn/GJIC5sCa9NYkU"><link rel="preload" href="/gpui-toolkit/showcase/gpui-showcase-98619c7b0995ed4c_bg.wasm" crossorigin="anonymous" integrity="sha384-ig5/bAaaPWnA5gY0EIEhQs3/8EU01MCd9NvagI5xRRnMLTa0H6VAj58vQ9U/J71v" as="fetch" type="application/wasm"></head>
   <body></body>
 </html>
