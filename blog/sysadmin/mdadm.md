@@ -38,9 +38,6 @@ zpool labelclear /dev/sda
 zpool labelclear /dev/sdb
 ```
 
-
-
-
 Create a raid volume:
 ```
 mdadm --create --verbose /dev/md0 --level=0 --raid-devices=2 /dev/sda /dev/sdb
@@ -67,5 +64,23 @@ Example to start with 3 disks over 4 and then add the missing one
 mdadm --verbose --assemble --force  /dev/md0
 mdadm --manage /dev/md0 --add /dev/nvme6n1
 ```
+
+## investigations
+
+For usb disk:
+```
+lsusb -t
+```
+you can possibly restart the controller via 
+```
+/usr/sbin/uhubctl
+sudo uhubctl -l 4-2 -p 3 -a cycle
+```
+with parameters coming from the previous command.
+This works well with the Terramaster boxes to wake them up if they
+didnt at boot time.
+
+
+
 
 
