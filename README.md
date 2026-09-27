@@ -58,6 +58,7 @@ A website that collect speaker measurements and allow you to compare them. Surpr
 
 - [Backup with Duplicity](/blog/sysadmin/backup.md)
 - [Bootable window usb key](/blog/sysadmin/windows.md)
+- [Gitea](/blog/sysadmin/gitea.md)
 - [ML configuration](/blog/sysadmin/ml.md)
 - [Monitoring configuration](/blog/sysadmin/monitoring.md)
 - [Nginx configuration](/blog/sysadmin/nginx.md)
